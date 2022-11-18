@@ -1,0 +1,80 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../lib/bridgetex2} 
+\usepackage{polyglossia}
+\setmainlanguage{polish}
+
+\title{Acol}
+\author{Bartek Słupik}
+
+\begin{document}
+    \maketitle
+    \section{Założenia}
+    \begin{itemize}
+        \item 22+ BAL lub dowolny \gf
+        \item Licytacja 2\clubs\ --- 2\hearts\ --- 2\nt\ --- \pass\ jest dopuszczalna - to jedyna sekwencja zwalniająca
+        z \gf, nie mamy bilansu na końcówkę.
+        \item System bazuje głównie na naturalnej licytacji otwierającego. Odpowiadający licytuje 
+        naturalnie, jeśli coś ma ciekawego, jak nie to zwykle następna odzywka do góry jest oczekująca.
+    \end{itemize}
+
+    \section{2\clubs\ --- ?}
+
+    \begin{itemize}
+        \item 2\diams\ - Oczekujące, co najmniej Król lub 4+\hcp
+        \item 2\hearts\ - Negat, 0-3\hcp, bez Króla
+        \item 2\spades\ - Własny kolor 5+\spades, 2 z top 3 honorów, 8+ \hcp
+        \item 2\nt\ - Własny kolor 5+\hearts, 2 z top 3 honorów, 8+ \hcp
+        \item 2\clubs\ - Własny kolor 6+\clubs, 2 z top 3 honorów, 8+ \hcp
+        \item 2\diams\ - Własny kolor 6+\diams, 2 z top 3 honorów, 8+ \hcp
+    \end{itemize}
+
+    \section{2\clubs\ --- 2\hearts \\ ?}
+    \begin{itemize}
+        \item 2\spades\ - 5+\spades, \fonce
+        \item 2\nt\ - 22-23 BAL, \nf. Jest to \textbf{jedyna} odzywka, która może zostać spasowana przez odpowiadającego
+        \item Inne naturalnie - \fonce. Każda następna odzywka otwierającego też jest \fonce.
+    \end{itemize}
+
+    \pagebreak
+    \section{2\clubs\ --- 2\diams}
+    \begin{itemize}
+        \item 2\hearts\ - Kokish Relay, wymusza automat 2\spades 
+        \item 2\spades\ - Naturalne, 5+\spades 
+        \subitem 2\nt\ - Oczekujące
+        \subitem 3\clubs, 3\diams, 3\hearts\ - 5+ naturalne z niezłej jakości kolorem
+        \subitem 3\spades\ - silne z fitem
+        \subitem 4\clubs, 4\diams, 4\hearts\ - splintery
+        \item 2\nt\ - 22-23 BAL, gramy systemowo
+        \item 3\clubs\ - 6+\clubs 
+        \subitem 3\diams\ - oczekujące
+        \subitem 3\hearts, 3\spades\ - Naturalne z piątki
+        \item 3\diams\ - 6+\diams
+        \subitem 3\hearts, 3\spades\ - Naturalne z piątki lub dobrej czwórki
+        \item 3\hearts, 3\spades, 4\clubs, 4\diams\ - samoustalenia
+        \item 3\nt - 26-27 BAL
+    \end{itemize}
+
+    \subsection{2\clubs\ --- 2\diams \\ 2\hearts\ --- 2\spades \\ ?}
+    \begin{itemize}
+        \item 2\nt\ - 24-25 BAL
+        \item 3\clubs\ - 6+\hearts, ręka jednokolorowa. Jest to zamienione z 3\hearts, żeby dało się sfitować przez 3\hearts
+        \item 3\diams\ - 5+\hearts, 4+\diams
+        \item 3\hearts\ - 5+\hearts, 4+\clubs 
+        \subitem 4\diams\ fituje \hearts\ silnie.
+        \item 3\spades\ - 5+\hearts, 4\spades
+        \subitem 4\clubs\ fituje \hearts\ silnie. 
+        \subitem 4\diams\ fituje \spades\ silnie. 
+    \end{itemize}
+
+    \pagebreak
+    \section{Po wejściu przeciwnika}
+    \begin{itemize}
+        \item \pass - Nic nie mówiący, ręka bez kształtu na kontrę wywoławczą
+        i bez 5-kartu do pokazania. Otwierający powinien wznowić kontrą z krótkością w kolorze wejścia
+        \item \dbl - wywoławcza
+        \item Kolor - 6+\hcp, nie musi być super jakość - chodzi o walkę jeśli podniosą blok 
+        \item 2\nt
+    \end{itemize}
+
+\end{document}
+
