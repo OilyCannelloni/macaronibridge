@@ -1,0 +1,121 @@
+% \NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{bridgetex2}[2022/11/18 Bridge notation]
+
+\RequirePackage{pifont}
+\RequirePackage[dvipsnames]{xcolor}
+\RequirePackage{xspace}
+\RequirePackage{bm}
+\RequirePackage{multirow}
+\RequirePackage{newfloat}
+\RequirePackage{caption}
+\RequirePackage{amsmath}
+\RequirePackage[letterspace=150]{microtype}
+\RequirePackage{makecell}
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{varwidth}
+
+\RequirePackage{array}
+\newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
+\newcolumntype{C}[1]{>{\PreserveBackslash\centering}p{#1}}
+\newcolumntype{R}[1]{>{\PreserveBackslash\raggedleft}p{#1}}
+\newcolumntype{L}[1]{>{\PreserveBackslash\raggedright}p{#1}}
+
+\newenvironment*{dummy}{}{}
+
+\newcommand{\clubs}{\color{OliveGreen}\ding{168}\color{black}}
+\newcommand{\diams}{\color{BurntOrange}\ding{169}\color{black}}
+\newcommand{\hearts}{\color{Maroon}\ding{170}\color{black}}
+\newcommand{\spades}{\color{Blue}\ding{171}\color{black}}
+
+
+\newcommand{\bclubs}{\color{OliveGreen}\makebox[11pt]{\ding{168}}\color{black}}
+\newcommand{\bdiams}{\color{BurntOrange}\makebox[11pt]{\ding{169}}\color{black}}
+\newcommand{\bhearts}{\color{Maroon}\makebox[11pt]{\ding{170}}\color{black}}
+\newcommand{\bspades}{\color{Blue}\makebox[11pt]{\ding{171}}\color{black}}
+\newcommand{\nt}{\textsc{nt}}
+\newcommand{\ntx}{{\small{NT}}}
+\newcommand{\hcp}{\textsc{hcp}}
+\newcommand{\gf}{\color{BrickRed}\textbf{GF}\color{black}}
+\newcommand{\nf}{\color{Green}\textbf{NF}\color{black}}
+\newcommand{\fonce}{\color{RedViolet}\textbf{F1}\color{black}\hspace{4pt}}
+\newcommand{\inv}{\color{PineGreen}\textbf{Inwit}\color{black}}
+\newcommand{\slamtry}{\color{WildStrawberry}\textbf{Slam Try}\color{black}\hspace{4pt}}
+\newcommand{\minor}{\color{OliveGreen}\ding{168}\hspace{-3pt}\color{BurntOrange}\ding{169}\color{black}}
+\newcommand{\major}{\color{Maroon}\ding{170}\hspace{-3pt}\color{Blue}\ding{171}\color{black}}
+\newcommand{\pass}{\textsc{pass}}
+\newcommand{\passx}{{\small{PASS}}}
+\newcommand{\stopp}{\color{Maroon}\textsc{stop}\color{black}\hspace{4pt}}
+\newcommand{\enemy}[1]{(#1)}
+\newcommand{\dbl}{\color{Red}$\bm{\times}$\color{black}}
+\newcommand{\rdbl}{\color{Blue}$\bm{\times\!\times}$\color{black}\hspace{4pt}}
+\newcommand{\alert}{\color{Cyan}\textsc{alert}\color{black}\hspace{4pt}}
+\newcommand{\conventional}[1]{\textbf{#1*}}
+\newcommand{\vul}[1]{\color{Red}\textbf{#1}\color{black}}
+\newcommand{\nvul}[1]{\color{PineGreen}\textbf{#1}\color{black}}
+\newcommand{\dealnr}[1]{\Large\textbf{#1}}
+\newcommand{\dealer}[1]{\fbox{#1}}
+\newcommand{\alrt}{\color{ProcessBlue}$^A$\color{black}}
+\newcommand{\soff}{\color{CadetBlue}\textsc{sign-off}\color{black}}
+\newcommand{\mixed}{\color{Fuchsia}\textbf{Mixed raise}\color{black}}
+
+\DeclareFloatingEnvironment[
+    fileext=frm,
+    placement={!ht},
+    name=xd
+]{xd}
+
+\DeclareFloatingEnvironment[
+    fileext=frm
+    placement={!ht}
+    name=Hand
+]{hand}
+
+\newcommand{\webidding}[1]{
+    \centering 
+    \begin{tabular}{cc}
+        #1
+    \end{tabular}
+}
+
+
+\newcommand{\hhand}[4]{
+    {\lsstyle \bspades #1 \bhearts #2 \bdiams #3 \bclubs #4}
+}
+
+\newcounter{vhand}
+\newcommand{\vhand}[4]{%
+    \begin{varwidth}{0.22\textwidth}
+        \textls{\bspades #1 \\
+        \bhearts #2 \\
+        \bdiams #3 \\
+        \bclubs #4 \\
+    }
+    \end{varwidth}%
+}
+
+
+
+
+\newcommand{\we}{
+    \begin{varwidth}{0.20\linewidth}
+        \centering
+        \vspace*{-1em}
+        W \qquad E
+    \end{varwidth}
+}
+
+\newcommand{\qverthand}[4]{%
+\begin{dummy}
+    \bspades #1 \\
+    \bhearts #2 \\
+    \bdiams #3 \\
+    \bclubs #4
+\end{dummy}
+}
+
+\RequirePackage{booktabs}
+\newcommand{\specialcell}[2][c]{%
+    \begin{tabular}[#1]{@{}l@{}}#2\end{tabular}}
+
+    \newcommand{\br}{\vspace{0.5em}}

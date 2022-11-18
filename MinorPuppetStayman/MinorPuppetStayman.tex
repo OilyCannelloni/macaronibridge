@@ -1,0 +1,152 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../lib/bridgetex2}
+\usepackage{polyglossia}
+\setmainlanguage{polish}
+\title{\vspace{-2cm}Minor Puppet Stayman}
+\author{Bartek Słupik}
+
+\begin{document}
+    \maketitle
+    \section{Motywacja}
+    Dawno dawno temu pewnemu sławnemu brydżyście przyszło następujące rozdanie:
+    \begin{hand}[h!]
+        \centering
+        \vhand{AK92}{97}{AKJ7}{AQx} \we \vhand{T}{AT84}{Q862}{K742}
+        \caption{Smutne, nudne 3 bułki}
+    \end{hand}
+
+    Na większości stołów licytacja przebiegła wedle schematów oczywistych dla
+    wszystkich grających silnym 2\nt\ i Puppet Staymanem:
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{cc}
+            2\nt & 3\clubs \\
+            3\diams & 3\spades \\
+            3\nt & 
+        \end{tabular}
+    \end{table}
+
+    Mamy spore nadwyżki bilansowe, ale nadal nie jest to inwit do szlemika. Pas na 3\nt\ jest smutny,
+    ale konieczny, gdyz 4\clubs\ i 4\diams\ obiecywałoby pięciokart. No to gramy i bierzemy +1. Czy dało się lepiej?
+
+    Na chwilę załóżmy, że żyjemy w utopijnym świecie, w którym partner rozumie nasze pozasystemowe odzywki dokładnie tak,
+    jak chcemy. Naturalnie chcielibyśmy poszukać fitu w kolorze młodszym, gdyż krótkość pik pozwoli nam bez
+    większych problemów zagrać szlemika. Niech zatem 4\clubs\ będzie pytaniem o skład.
+
+    Partner powinien móc rozróżnić młodsze czwórki i piątki, więc zalicytuje 4\diams\ jako "Mam młodszą czwórkę, ale nie mam piątki".
+    Odpowiadamy 4\hearts\ jako "Mam czwókę trefli", partner 4\nt\ "Nie mamy fitu", na co my 6\diams!
+    Tak na prawdę już przed rozgrywką możemy zapisać sobie 12 IMP.
+
+    \pagebreak
+    \section{System}
+    Sekwencje Minor Puppet Stayman rozpoczynają się zwykle od wyniesienia kontraktu 3\nt przez rękę niezlimitowaną.
+    Można później pokusić się o ustalenie rónież innych sekwencji, w których konwencja ta działa.
+
+    \subsection{4\clubs\ --- ?}
+    \begin{itemize}
+        \item 4\diams\ - Mam młodszą czwórkę, lecz nie mam piątki
+        \item 4\hearts\ - 5+\clubs
+        \item 4\spades\ - 5+\diams 
+        \item 4\nt\ - Brak 4+ \minor \br
+        \item 5\clubs\ - 5\clubs, 4\diams
+        \item 5\diams\ - 5\diams, 4\clubs 
+    \end{itemize}
+
+    \subsubsection{4\clubs\ --- 4\diams \\ ?}
+    \begin{itemize}
+        \item 4\hearts\ - 4\clubs
+        \item 4\spades\ - 4\diams
+        \item 4\nt\ - \soff
+    \end{itemize}
+
+    \subsubsection{4\clubs\ --- 4\diams \\ 4\hearts\ --- ?}
+    \begin{itemize}
+        \item 4\spades\ - Fit \clubs\ i 1 lub 4 asy
+        \item 4\nt\ - \soff
+        \item 5\clubs\ - Fit \clubs\ i 0 lub 3 asy
+        \item 5\diams\ - Fit \clubs\ i 2 asy bez \clubs Q
+        \item 5\hearts\ - Fit \clubs\ i 2 asy z \clubs Q
+    \end{itemize}
+    Licytacja po odpowiedzi 4\spades\ analogiczna.
+
+    \subsection{4\clubs\ --- 4\hearts}
+    \begin{itemize}
+        \item 4\spades\ - Fit \clubs\ i 1 lub 4 asy
+        \item 4\nt\ - \soff
+        \item 5\clubs\ - Fit \clubs\ i 0 lub 3 asy
+        \item 5\diams\ - Fit \clubs\ i 2 asy bez \clubs Q
+        \item 5\hearts\ - Fit \clubs\ i 2 asy z \clubs Q
+    \end{itemize}
+    Licytacja po odpowiedzi 4\spades\ analogiczna.
+
+    \section{Rozszerzenie - pseudotransfery}
+    Na początek mała zmiana zwykłej strefy - odpowiedź 3\spades\ na 2\nt\ wymusza automat 3\nt\ i może oznaczać:
+    \begin{itemize}
+        \item 6+\minor
+        \item 5+/4+ \minor
+    \end{itemize}
+    Wtedy zyskujemy kolejne dwie odzywki wynoszące 3\nt:
+    ...3\nt\ - 4\diams\ (transfer na \clubs) i ...3\nt\ - 4\hearts\ (tr. na \diams)
+    \subsection{2\ntx\ --- 3\spades \\ 3\ntx\ --- ?}
+    \begin{itemize}
+        \item 4\clubs\ - 6+\diams, \textbf{kolory na odwrót} żeby grać z dobrej strony
+        \item 4\diams\ - 6+\clubs 
+        \item 4\hearts\ - 5+\clubs, 4\diams
+        \item 4\spades\ - 4\clubs, 5+\diams 
+        \item 4\nt\ - 5+\clubs, 5+\diams
+    \end{itemize}
+    \subsection{...3\ntx\ --- 4\diams}
+    \begin{itemize}
+        \item 4\hearts\ fit \clubs\ i 1 lub 4 asy
+        \item 4\spades\ fit \clubs\ i 0 lub 3 asy
+        \item 4\nt\ - \soff
+        \item 5\clubs\ fit \clubs\ i 2 asy bez \clubs Q
+        \item 5\diams\ fit \clubs\ i 2 asy z \clubs Q
+    \end{itemize}
+    Licytacja po 4\hearts\ analogiczna
+
+    \section{Problemy licytacyjne}
+
+    \begin{hand}[h]
+        \centering
+        \vhand{AKJ7}{K76}{Q3}{AQJ2}
+        \webidding{
+            \vul{W} & \vul{E} \\
+            2\nt & 3\clubs \\
+            3\diams & 3\spades \\ 
+            3\nt & 4\clubs \\
+            4\diams & 4\hearts \\ 
+            5\hearts & 6\clubs
+        }
+        \vhand{9}{AQ43}{K972}{K984}
+        \caption{6\nt\ na impasie i podziale, 6\clubs\ idzie}
+    \end{hand}
+
+    \begin{hand}[h]
+        \centering
+        \vhand{KJ53}{A7}{QJ43}{AKQ}
+        \webidding{
+            \vul{W} & \vul{E} \\
+            2\nt & 3\clubs \\
+            3\diams & 4\clubs \\ 
+            4\diams & 4\hearts \\
+            4\nt & 6\diams \\ 
+        }
+        \vhand{4}{K62}{AKT98}{JT73}
+        \caption{6\nt\ na impasie, 6\diams\ idzie}
+    \end{hand}
+
+    \begin{hand}[h]
+        \centering
+        \vhand{AKQ}{A932}{QJ43}{A5}
+        \webidding{
+            \vul{W} & \vul{E} \\
+            2\nt & 3\spades \\
+            3\nt & 4\spades \\ 
+            6\diams
+        }
+        \vhand{832}{K6}{AKT98}{JT72}
+        \caption{6\nt\ bez szans, 6\diams\ idzie}
+    \end{hand}
+
+\end{document}
