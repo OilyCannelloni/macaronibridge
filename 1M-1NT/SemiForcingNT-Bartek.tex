@@ -1,0 +1,211 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../lib/bridgetex2}
+\usepackage{polyglossia}
+\setmainlanguage{polish}
+
+\title{Semi-Forsujące 1NT}
+\author{Bartek Słupik}
+
+\begin{document}
+    \maketitle
+    \section{Motywacja}
+    Sekwencje po 1\major\ --- 1\nt\ należą do najtrudniejszych, jeśli chodzi o znalezienie 
+    optymalnego kontraktu. Wersja, którą proponuję jest \textbf{bardzo skomplikowana},
+    jednak pozwala znaleźć dobry bilans i fit w niemalże każdym przypadku.
+    \begin{itemize}
+        \item \emph{"Co to kurwa znaczy 'półforsujące'? Że przed partią forsuje, a po partii nie?"}
+        
+        To znaczy, że z rękami 5332 w sile 12-(słabe 13) można na to spasować. 
+        Jest tak po to, żeby umożliwić dobre \textbf{zbilansowanie się} w każdej sekwencji.
+
+        \item \emph{"A co jak spasujesz a partner będzie miał 3 oczka z 7-4 w młodych? No dupa XD"}
+        
+        Owszem, zgadzam się. Ale po pierwsze najczęściej wtedy ci przyjdzie ręka na rebid swojego koloru,
+        a jak macie masywny fit w młodym, to przeciwnikom pewnie idzie 2 w drugi stary.
+        Dobre bilansowanie to IMO offsetuje.
+    \end{itemize}
+
+    \pagebreak
+    \section{Wykorzystywane konwencje}
+    \subsection{Courtesy Raise}
+    Rebidy otwierającego 2\clubs, 2\diams\ i 2\hearts\ są w bardzo szerokim przedziale siły.
+    Stąd wprowadzamy rozróżnienie:
+    \begin{itemize}
+        \item Bezpośrednie podniesienie rebidowanego koloru jest 7-10 z fitem \emph{(Courtesy Raise)}
+        \item Zalicytowanie go inaczej (o czym za chwilę) jest 11-12
+    \end{itemize}
+    Musimy podnosić z 7\hcp, bo partner może mieć 18!
+
+    \subsection{Transfer Bart'a}
+    Oryginalnie nazywa się \emph{Zmodyfikowany transfer Bart'a} ale w sumie nie wiem czemu zmodyfikowany.
+    Rebid odpowiadającego o stopień niżej od koloru otwarcia jest transferem na kolor otwarcia.
+    Może zawierać:
+    \begin{itemize}
+        \item Słabą rękę do pasa - pasujemy transfer
+        \item Dowolny inwit - wynosimy transfer
+    \end{itemize}
+    Konwencja zachodzi tylko, \textbf{jeśli mamy miejsce} na wykonanie transferu!
+
+    \subsection{Niemożliwe 2\spades}
+    W licytacji 1\hearts\ --- 1\nt\ --- 2X --- 2\spades\ ostatnia odzywka nie może być naturalna.
+    Wykorzystuje się ją do pokazania karty, która była za słaba na bezpośredni \gf, jednak
+    po rebidzie partnera szanse na końcówkę wzrosły.
+    Obiecuje 11-12\hcp\ z 4-kartowym fitem w kolorze rebidu.
+    
+    Jako otwierający, z 5332 licytujemy 2\nt\ (zauważmy że mamy wąski przedział (ładne 13)-14),
+    a z 5-4 - to na co mamy siłę.
+
+    \pagebreak
+    \section{System}
+    \subsection{1\hearts\ --- 1\ntx \\ ?}
+    \begin{itemize}
+        \item \pass\ - 5332, 11-12
+        \item 2\clubs\ - 13-18 5332 lub 11-18 z 4\clubs
+        \item 2\diams\ - 13-18 5332 lub 11-18 z 4\diams 
+        \item 2\hearts\ - 11-15, 6+\hearts 
+        \item 2\spades\ - \emph{Rewers.} 16+, 4\spades, \fonce 
+        \item 2\nt\ - Dowolny GF nie zawarty w innych odzywkach \gf 
+    \end{itemize}
+
+    \subsubsection{1\hearts\ --- 1\ntx \\ 2\clubs\ --- ?}
+    \begin{itemize}
+        \item 2\diams\ - \emph{Transfer Bart'a} na 2\hearts.
+        Może zawierać słabą rękę z kierami lub dowolny inwit.
+        \item 2\hearts\ \textbf{9-11} z dwukartowym fitem
+        \item 2\spades\ \emph{Niemożliwe 2\spades.} Prawie GFowa karta z 4+\clubs, pytanie o skład:
+        \subitem 2\nt\ = 5332 13-14
+        \subitem 3\clubs\ = 5-4, minimum
+        \subitem Inne - licytowane trzymanie, 5-4, maximum \gf
+        \item 2\nt\ - Transfer na 3\diams
+        \item 3\clubs\ - \emph{Courtesy Raise} 7-9, 5+\clubs
+    \end{itemize}
+
+    \subsubsection{1\hearts\ --- 1\ntx \\ 2\diams\ --- ?}
+    \begin{itemize}
+        \item 2\hearts\ \soff
+        \item 2\spades\ \emph{Niemożliwe 2\spades.} Prawie GFowa karta z 4+\diams, pytanie o skład:
+        \subitem 2\nt\ - 5332 13-14
+        \subitem 3\diams\ - 5-4, 11-12
+        \subitem Inne - licytowane trzymanie, 5-4, maximum \gf
+        \item 2\nt\ - Inwit na równym
+        \item 3\clubs\ - \soff
+        \item 3\diams\ - \emph{Courtesy Raise} 6-8, 5+\diams
+        \item 3\hearts\ - Inwit z 6+\hearts
+    \end{itemize}
+    
+
+    \subsection{1\spades\ --- 1\ntx \\ ?}
+    \begin{itemize}
+        \item \pass\ - 5332, 11-12
+        \item 2\clubs\ - 13+ 5332 lub 11+ z 4\clubs
+        \item 2\diams\ - 13+ 5332 lub 11+ z 4\diams 
+        \item 2\hearts\ - 11-18, 4+\hearts 
+        \item 2\spades\ - 11-15, 6+\spades
+        \item 2\nt\ - Dowolny GF nie zawarty w innych odzywkach \gf 
+    \end{itemize}
+
+    \subsubsection{1\spades\ --- 1\ntx \\ 2\clubs\ --- ?}
+    \begin{itemize}
+        \item 2\diams\ - \emph{Transfer Bart'a} na 2\hearts.
+        Inwit lub do pasa z 6+\hearts
+        \item 2\hearts\ - \emph{Transfer Bart'a} na 2\spades.
+        Może zawierać słabą rękę z pikami lub dowolny inwit.
+        \item 2\spades\ \textbf{9-11} z dwukartowym fitem
+        \item 2\nt\ - Transfer na \diams
+        \item 3\clubs\ - \emph{Courtesy Raise} 7-9, 5+\clubs
+    \end{itemize}
+
+    \subsubsection{1\spades\ --- 1\ntx \\ 2\diams\ --- ?}
+    \begin{itemize}
+        \item 2\hearts\ - \emph{Transfer Bart'a} na 2\spades.
+        Może zawierać słabą rękę z pikami lub dowolny inwit.
+        \item 2\spades\ \textbf{9-11} z dwukartowym fitem
+        \item 2\nt\ - Transfer na \clubs
+        \item 3\diams\ - \emph{Courtesy Raise} 7-9, 5+\diams
+    \end{itemize}
+
+    \subsubsection{1\spades\ --- 1\ntx \\ 2\hearts\ --- ?}
+    \begin{itemize}
+        \item 2\spades\ \soff\ z \spades
+        \item 2\nt\ - Bilansowy inwit do 3\nt
+        \item 3\clubs\ - Kolor + fit, 11-12
+        \item 3\diams\ - Kolor + fit, 11-12
+        \item 3\hearts\ \emph{Courtesy Raise}, 8-10, 4+\hearts
+    \end{itemize}
+
+
+    \pagebreak
+    \section{No dobra, a teraz jak to sztuczne g00wno spamiętać}
+    Okazjue się, że ten system bazuje na prostej algorytmice. 
+    Przejrzyjmy po kolei rebidy odpowiadającego:
+
+    \begin{itemize}
+        \item 2\diams
+        \subitem Jest \textbf{zawsze} transferem na 2\hearts.
+        \item 2\hearts
+        \subitem Jest z dubla w odpowiedniej sile, jeśli partner ma \hearts
+        \subitem Jest \emph{Transferem Bart'a}, jeśli partner ma \spades
+        \item 2\spades
+        \subitem Jest z dubla w odpowiedniej sile, jeśli partner ma \spades 
+        \subitem Jest \emph{Niemożliwym 2\spades}, jeśli partner ma \hearts
+        \item 2\nt
+        \subitem Jest \textbf{transferem} na nielicytowany młody, jeśli \emph{Bart} jest dostępny
+        \subitem Jest naturalnym inwitem, jeśli nie ma \emph{Bart'a}
+        \item 3\clubs
+        \subitem Jest \emph{Courtesy Raise}, jeśli partner zgłosił \clubs
+        \subitem Jest \textbf{do pasa}, jeśli partner zgłosił \diams\ i 2\nt\ nie jest transferem
+        \item 3\diams 
+        \subitem Jest \textbf{do pasa}, jeśli partner zgłosił \clubs\ i 2\nt\ nie jest transferem
+        \subitem Jest \emph{Courtesy Raise}, jeśli partner zgłosił \diams 
+    \end{itemize}
+
+    \pagebreak
+    \section{Problemy licytacyjne}
+
+    \begin{hand}[h!]
+        \vhand{96}{AQJ84}{KJ87}{43}
+        \webidding{
+            1\hearts & 1\nt \\
+            2\diams & 2\spades \\
+            3\diams & 3\nt
+        }
+        \vhand{A42}{T3}{AT643}{KT9}
+        \caption{Niemożliwe 2\spades.}
+    \end{hand}
+
+    \begin{hand}[h!]
+        \vhand{AQ654}{2}{KJ8}{A987}
+        \webidding{
+            1\spades & 1\nt \\
+            2\clubs & 2\hearts \\
+            2\spades & 3\clubs \\
+            3\nt
+        }
+        \vhand{T3}{KQ98}{Q6}{KJT52}
+        \caption{Transfer Bart'a z inwitem na treflach.}
+    \end{hand}
+
+    \begin{hand}[h!]
+        \vhand{K62}{AKQ84}{83}{JT3}
+        \webidding{
+            1\hearts & 1\nt \\
+            2\clubs & 2\nt \\
+            3\diams & \pass
+        }
+        \vhand{74}{T3}{AT9654}{Q52}
+        \caption{Transfer na karo. Bilansowy inwit wskazujemy przez transfer Bart'a.}
+    \end{hand}
+
+    \begin{hand}[h!]
+        \vhand{KQJ86}{QJ7}{A73}{T8}
+        \webidding{
+            1\spades & 1\nt \\
+            2\diams & 2\hearts \\
+            2\spades & 2\nt \\
+            3\nt
+        }
+        \vhand{97}{A932}{KJT9}{QJ2}
+        \caption{Bilansowy inwit do 3\nt.}
+    \end{hand}
+
+\end{document}
