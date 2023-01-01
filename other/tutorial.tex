@@ -1,0 +1,277 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../lib/bridgetex2}
+\usepackage{polyglossia}
+\setmainlanguage{polish}
+\newcommand{\cy}{\cellcolor{Yellow!25}}
+\newcommand{\co}{\cellcolor{Orange!25}}
+\newcommand{\cx}{\cellcolor{Red!25}}
+
+
+\title{\vspace{-2cm}Granie w karty wytłumaczone w 2 strony}
+\author{}
+\date{}
+
+\begin{document}
+    \maketitle
+    \section{Punktacja}
+    Cała taktyka gry w brydża jest w zasadzie pochodną punktacji za kontrakty.
+    Za wylicytowanie i ugranie kontraktów otrzymuje się punkty za lewy oraz premie:
+    \begin{table}[h!]
+        \centering
+        \begin{tabular}{cccccc}
+            \nvul{NS} & \clubs & \diams & \hearts & \spades & \nt \\
+            1 & 70 & 70 & 80 & 80 & 90 \\
+            2 & 90 & 90 & 110 & 110 & 120 \\
+            3 & 110 & 110 & 140 & 140 & \cy400 \\
+            4 & 130 & 130 & \cy420 & \cy420 & \cy430 \\
+            5 & \cy400 & \cy400 & \cy450 & \cy450 & \cy460 \\
+            6 & \co920 & \co920 & \co980 & \co980 & \co990 \\
+            7 & \cx1440 & \cx1440 & \cx1520 & \cx1520 & \cx1530 \\
+        \end{tabular}
+        \caption{Punktacja}
+    \end{table} 
+
+    Zwróćmy uwagę na następujące rzeczy:
+    \begin{itemize}
+        \item Kontrakty na wysokosci 6 i 7 przychodzą rzadko - dlatego najwięcej zysku
+        jest z grania w strefie żółtej, tzw. końcówek
+        \item Nie opłaca się grać w \clubs\ i \diams, bo żeby dostać premię, trzeba ugrać kontrakt na
+        wysokości 5! Dlatego często nawet mając fit w treflach lub karach, będziemy chcieć grać 3\nt.
+    \end{itemize}
+
+    Z tych powodów wszystkie systemy licytacji w brydżu mają na celu przede wszystkim sprawdzenie,
+    czy jesteśmy wystarczająco silni na końcówkę, oraz priorytetyzują grę w kolory starsze i \nt.
+
+    Na razie pominiemy też szukanie w licytacji szlemików i szlemów - zysk z tego jest niewspółmiernie
+    mały do zysku z prawidłowego znajdowania końcówek.
+
+    \pagebreak
+    \section{Bilans i fit}
+
+    Statystyka mówi, że jedną z najlepszych metod oceny siły kart jest skala punktowa,
+    gdzie za Asa dajemy 4, Króla 3, Damę 2 i Waleta 1 punkt. 
+    
+    Wówczas można dowieść, że jeśli na obu rękach w parze jest w sumie \textbf{co najmniej 25} punktów,
+    opłacalna jest próba zagrania \textbf{końcówki}. Dlatego w licytacji będziemy
+    się skupiać na sprawdzeniu tego warunku wystarczającego.
+
+    \subsection{W kolor czy \ntx?}
+    Generalnie granie w kolor jest lepsze, gdyż granie w \nt\ niesie ze sobą dużo zagrożeń.
+    Nawet mimo to, że w \hearts\ lub \spades\ trzeba wziąć 10 lew na końcówkę, a w \nt\ 9,
+    \textbf{wolimy grać w kolor} jeśli mamy fit, czyli co najmniej 8 kart w tym kolorze.
+
+    \subsection{Otwarcie}
+    Połowa z 25 to 12, więc otwieramy, jeśli mamy na ręce \textbf{co najmniej 12 punktów},
+    lub rękę, która nadrabia brakujące punkty układem.
+
+    \subsection{Strefy}
+    Jako odpowiadający możemy wpaść w cztery strefy:
+    \begin{itemize}
+        \item Nic (0-6 PC) - żeby tu szła końcówka, partner musi mieć $\geq$ 19 punktów,
+        na co szansa jest mała - \textbf{pasujemy}
+        \item Poparcie (7-10 PC) - tu wystarczy 15-18 punktów u partnera, trzeba \textbf{podtrzymać licytację}!
+        \item Inwit (11-12 PC) - Do końcówki brakuje nam minimalnej nadwyżki u partnera, chcemy żeby dołożył
+        mając 13-14. Licytujemy \textbf{wyżej}, ale jeszcze nie końcówkę
+        \item Forsing (13+ PC) - Wiemy, że mamy co najmniej 25 - \textbf{sami wrzucamy końcówkę}
+    \end{itemize}
+
+    \pagebreak
+    \section{Podstawy systemu}
+    \subsection{Otwarcie kolorem starszym}
+    1\hearts\ i 1\spades\ otwieramy z piątki w sile 12+ PC. Odpowiedzi w poniższej tabeli:
+    \begin{table}[h!]
+        \centering
+        \begin{tabular}{ccc}
+        1\hearts\ --- ? & Z fitem & Bez fitu \\
+        Poparcie & 2\hearts & 1\nt \\
+        Inwit & 3\hearts & 2\nt \\
+        Forsing & 4\hearts & 3\nt
+        \end{tabular}
+    \end{table}
+
+    \subsubsection{Przykłady licytacji}
+    Partner otwiera 1\hearts. * - wyjaśnione niżej.
+    \begin{table}[h!]
+        \centering
+        \setlength{\extrarowheight}{3pt}
+        \begin{tabular}{rc}
+        \multicolumn{1}{c}{Karta} & Licytuj \\
+        \hhand{A875}{K64}{KJT43}{2} & 3\hearts \\
+        \hhand{AQ75}{K64}{KJT43}{2} & 4\hearts \\
+        \hhand{AK3}{62}{QJ654}{KJ2} & 3\nt \\
+        \hhand{98}{J3}{Q87}{AQJ42} & 1\nt \\
+        \hhand{Q764}{2}{AJ65}{8742} & 1\spades*        
+        \end{tabular}
+    \end{table} 
+
+    Otworzyliśmy 1\spades, partner odpowiedział 2\nt.
+    \begin{table}[h!]
+        \centering
+        \setlength{\extrarowheight}{3pt}
+        \begin{tabular}{rc}
+        \multicolumn{1}{c}{Karta} & Licytuj \\
+        \hhand{KJT98}{K64}{KQT4}{2} & \pass \\
+        \hhand{KJT98}{KQ4}{KQT4}{2} & 3\nt \\
+        \hhand{AKJ983}{K4}{KT94}{2} & 4\spades
+        \end{tabular}
+    \end{table} 
+
+    Otworzyliśmy 1\hearts, partner odpowiedział 2\hearts.
+    \begin{table}[h!]
+        \centering
+        \setlength{\extrarowheight}{3pt}
+        \begin{tabular}{rc}
+        \multicolumn{1}{c}{Karta} & Licytuj \\
+        \hhand{K65}{AJ963}{KQT4}{2} & \pass \\
+        \hhand{K65}{AQ963}{AQJ4}{2} & 3\hearts \\
+        \hhand{K65}{AQJ63}{AKJ4}{2} & 4\hearts
+        \end{tabular}
+    \end{table} 
+
+    \pagebreak
+    \subsection{Otwarcie kolorem młodszym}
+    Nie chcemy grać w kolor młodszy, dlatego zawsze staramy się znaleźć fit w starszym.
+    \begin{itemize}
+        \item 1\clubs\ będziemy otwierać z 5+\clubs, lub ręką równą, która nie ma pięciokartu w sile 12-14 lub 18-20
+        (15-17 otworzymy 1\nt)
+        \item 1\diams\ będziemy otwierać z 5+\diams, lub mając rękę w składzie 4441.
+    \end{itemize}
+    Odpowiedzi:
+    \begin{table}[h!]
+        \centering
+        \begin{tabular}{cl}
+            1\clubs\ --- 1\diams & \textbf{słaba ręka} 0-6 PC, \pass\ nie, bo partner może nie mieć trefli! \\
+            1\hearts, 1\spades & z co najmniej \textbf{czwórki}, siła co najmniej poparcie (7+) \\
+            2\clubs, 2\diams, 2\hearts, 2\spades & z co najmniej  piątki, siła \gf\ (13+)\\
+            1\diams\ --- 2\diams & 7-9 z 4+\diams \\
+            1\nt, 2\nt, 3\nt & z bilansu punktowego, jak po otwarciu 1\hearts\ i 1\spades.
+        \end{tabular}
+        \caption{Odpowiedzi na otwarcia 1\clubs\ i 1\diams}
+    \end{table}
+    \subsubsection{Przykłady licytacji}
+    Partner otwiera 1\clubs.
+    \begin{table}[h!]
+        \centering
+        \setlength{\extrarowheight}{3pt}
+        \begin{tabular}{rc}
+        \multicolumn{1}{c}{Karta} & Licytuj \\
+        \hhand{KQ98}{6543}{AJ8}{32} & 1\hearts \\
+        \hhand{J8743}{KQ43}{A87}{2} & 2\spades \\
+        \hhand{KJ8}{K46}{AQ94}{2} & 3\nt \\
+        \hhand{T98}{K46}{AQ94}{2} & 1\nt
+        \end{tabular}
+    \end{table} 
+    
+    Otwarliśmy 1\clubs.
+    Partner odpowiada 1\spades.
+    Tutaj podniesienie koloru z fitem z bilansu, 1\nt\ = 12-14, 2\nt\ = 18-20.
+    \begin{table}[h!]
+        \centering
+        \setlength{\extrarowheight}{3pt}
+        \begin{tabular}{rc}
+        \multicolumn{1}{c}{Karta} & Licytuj \\
+        \hhand{A54}{7654}{KQJ8}{K2} & 1\nt \\
+        \hhand{A543}{765}{KQJ8}{K2} & 2\spades \\
+        \hhand{AK43}{7}{KQ8}{A9874} & 3\spades \\
+        \hhand{AKJ3}{765}{AQJ8}{K2} & 4\spades \\
+        \hhand{Q86}{AK8}{KQJ3}{A74} & 2\nt 
+        \end{tabular}
+    \end{table} 
+
+    \pagebreak
+    \subsection{Otwarcie 1\ntx}
+    1\nt\ = 15-17 PC, skład zbalansowany, czyli co najmniej 2 w każdym kolorze.
+
+    \subsubsection{Z czym otwierać 1\ntx?}
+    \begin{table}[h!]
+        \centering
+        \setlength{\extrarowheight}{3pt}
+        \begin{tabular}{rc}
+        \multicolumn{1}{c}{Karta} & Licytuj \\
+        \hhand{AKQ8}{54}{KQJ4}{432} & 1\nt \\
+        \hhand{AK8}{Q4}{AQJ87}{42} & 1\nt \\
+        \hhand{98}{AQJ52}{A94}{KJ5} & 1\nt \\
+        \end{tabular}
+    \end{table} 
+
+    Jak widać, 1\nt\ otwieramy z pięciokartami w składzie 5332. Dlaczego? Bo jeśli 
+    z ręką nr 3 otworzylibyśmy 1\hearts, a partner powie 1\spades, to nie mamy odzywki 
+    (na rebid 1\nt\ jesteśmy za silni). Lepiej jest ukryć czasami pięciokart,
+    a w przyszłości poznacie narzędzia do ujawnienia go później.
+
+    Mówiąc 1\nt, otwierający bardzo szczegółowo określa swoją siłę. Dlatego to odpowiadający będzie ciągnął licytację.
+    \subsubsection{Szukanie fitu 4-4 w kolorze starszym}
+    Odpowiedź 2\clubs\ (tzw. Stayman) to pytanie o starszą czwórkę. Siła co najmniej na inwit (tutaj 8+, bo partner ma 15-17!).
+    Na 2\clubs\ licytujemy posiadaną starszą czwórkę, a jak nie mamy, to 2\diams. Dalej licytacja jest naturalna z bilansu.
+    
+    Otwieramy 1\nt, partner odpowiada 2\clubs.
+    \begin{table}[h!]
+        \centering
+        \setlength{\extrarowheight}{3pt}
+        \begin{tabular}{rc}
+        \multicolumn{1}{c}{Karta} & Licytuj \\
+        \hhand{KQ98}{A54}{K8}{A832} & 2\spades \\
+        \hhand{KQ9}{A54}{K8}{A8432} & 2\diams \\
+        \hhand{KQ98}{A654}{K8}{A84} & 2\hearts \\
+        \end{tabular}
+    \end{table} 
+
+    Partner otwiera 1\nt, a na staymana 2\clubs\ odpowiada 2\hearts.
+    \begin{table}[h!]
+        \centering
+        \setlength{\extrarowheight}{3pt}
+        \begin{tabular}{rc}
+        \multicolumn{1}{c}{Karta} & Licytuj \\
+        \hhand{KQ9}{8743}{A5}{J876} & 2\clubs, potem 4\hearts \\
+        \hhand{KQ9}{8743}{K5}{J876} & 2\clubs, potem 3\hearts \\
+        \hhand{KQ9}{8743}{85}{J876} & \pass \\
+        \hhand{KQ97}{K46}{Q943}{52} & 2\clubs, potem 3\nt \\
+        \hhand{KQ97}{Q46}{Q943}{52} & 2\clubs, potem 2\nt
+        \end{tabular}
+    \end{table} 
+
+    \pagebreak
+    \subsubsection{Transfery}
+    Odpowiedzi 2\diams\ i 2\hearts\ oznaczają odpowiednio 5+\hearts\ i 5+\spades. Dlaczego?
+    \begin{itemize}
+        \item Chcemy podtrzymać licytację, by odpowiadający mógł się odezwać jeszcze raz
+        \item Lepiej, żeby rozgrywała ręka silniejsza, bo:
+        \item Figury są ukryte i przeciwnicy ich nie widzą
+        \item Wist jest w kierunku silnej ręki i czasami da nam to dodatkową lewę, np jak mamy AQ w kolorze wistu.
+        \item Z kartą typu \hhand{J9854}{7}{652}{9754} lepiej grać 2\spades\ na 7 atutach niż 1\nt.
+    \end{itemize}
+
+    Otwierający musi zaakceptować transfer licytując kolor o 1 wyżej. Zauważmy, że jeśli mamy 6+
+    kart w kolorze, na który transferujemy, to mamy fit, bo partner ma co najmniej dwie. Jeśli mamy dokładnie 5, należy
+    zaproponować grę w \nt, którą otwierający może poprawić na kolorową jeśli ma fit.
+
+    W poniższych przykładach partner otwiera 1\nt, a następnie akceptuje transfer na piki przez 2\spades.
+    \begin{table}[h!]
+        \centering
+        \setlength{\extrarowheight}{3pt}
+        \begin{tabular}{rc}
+        \multicolumn{1}{c}{Karta} & Licytuj \\
+        \hhand{65432}{432}{432}{32} & 2\hearts, potem \pass \\
+        \hhand{KJ9752}{43}{AQ3}{98} & 2\hearts, potem 4\spades \\
+        \hhand{KJ975}{432}{AQ3}{98} & 2\hearts, potem 3\nt \\
+        \hhand{KJ9752}{43}{A83}{98} & 2\hearts, potem 3\spades \\
+        \hhand{KJ975}{432}{AJ3}{98} & 2\hearts, potem 2\nt
+        \end{tabular}
+    \end{table} 
+
+    \subsubsection{Ani Stayman, ani transfer}
+    Licytujemy \nt\ z bilansu. Poniżej partner otwiera 1\nt.
+    \begin{table}[h!]
+        \centering
+        \setlength{\extrarowheight}{3pt}
+        \begin{tabular}{rc}
+        \multicolumn{1}{c}{Karta} & Licytuj \\
+        \hhand{KQ9}{654}{AJ84}{432} & 3\nt \\
+        \hhand{KQ9}{654}{A984}{432} & 2\nt \\
+        \hhand{KQ9}{654}{Q984}{432} & \pass \\
+        \hhand{KQ9}{AJ6}{AK98}{J83} & 6\nt
+        \end{tabular}
+    \end{table} 
+
+
+\end{document}

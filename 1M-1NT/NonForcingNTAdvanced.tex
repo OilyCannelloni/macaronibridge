@@ -1,0 +1,127 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../lib/bridgetex2}
+\usepackage{polyglossia}
+\setmainlanguage{polish}
+
+\title{1NT Nieforsujące - Advanced}
+\author{Bartek Słupik}
+
+\begin{document}
+    \maketitle
+    \section{Motywacja}
+    Ta stosunkowo prosta wersja systemu korzysta z kilku twardych założeń,
+    może trochę zbyt optymistycznych. Ale dzięki temu jest prosta i 
+    co najważniejsze, \textbf{przyjemna w grze} i \textbf{naturalna}
+
+    \subsection{Założenia}
+    Tak na prawdę jedynym założeniem jest to, że
+    sekwencje 1\major\ - 1\nt\ --- 2\minor zawsze pokazują kolor z czwórki. 
+    To \textbf{upraszcza} system dużo bardziej, niż mogłoby się wydawać!
+
+    \section{Wykorzystywane konwencje}
+    \subsection{Courtesy Raise}
+    Rebidy otwierającego 2\clubs, 2\diams\ i 2\hearts\ są w bardzo szerokim przedziale siły.
+    Stąd wprowadzamy rozróżnienie:
+    \begin{itemize}
+        \item Bezpośrednie podniesienie rebidowanego koloru jest 7-10 z fitem \emph{(Courtesy Raise)}
+        \item Zalicytowanie go inaczej (o czym za chwilę) jest 11-12
+    \end{itemize}
+    Musimy podnosić z 7\hcp, bo partner może mieć 18!
+
+    \subsection{Transfer Bart'a}
+    Rebid odpowiadającego o stopień niżej od koloru otwarcia jest transferem na kolor otwarcia.
+    Może zawierać:
+    \begin{itemize}
+        \item Słabą rękę do pasa - pasujemy transfer
+        \item Dowolny inwit - wynosimy transfer
+    \end{itemize}
+    Konwencja zachodzi tylko, \textbf{jeśli mamy miejsce} na wykonanie transferu!
+
+    \subsection{Niemożliwe 2\spades}
+    W licytacji 1\hearts\ --- 1\nt\ --- 2\minor\ --- 2\spades\ ostatnia odzywka nie może być naturalna.
+    Wykorzystuje się ją do pokazania karty, która była za słaba na bezpośredni \gf, jednak
+    po rebidzie partnera szanse na końcówkę wzrosły.
+    Obiecuje 11-12\hcp\ z 4-kartowym fitem w kolorze rebidu.
+
+    \pagebreak
+    \section{System}
+    \subsection{1\hearts\ --- 1\ntx \\ ?}
+    \begin{itemize}
+        \item \pass\ - 5332, 11-14
+        \item 2\clubs\ - 11-18, 4+\clubs
+        \item 2\diams\ - 11-18, 4+\diams 
+        \item 2\hearts\ - 11-15, 6+\hearts 
+        \item 2\spades\ - \emph{Rewers.} 16+, 4\spades, \fonce 
+        \item 2\nt\ - Dowolny GF nie zawarty w innych odzywkach \gf 
+    \end{itemize}
+
+    \subsubsection{1\hearts\ --- 1\ntx \\ 2\clubs\ --- ?}
+    \begin{itemize}
+        \item 2\diams\ - \emph{Transfer Bart'a} na 2\hearts.
+        Może zawierać słabą rękę z kierami lub dowolny inwit.
+        \subitem \pass\ - do gry, słaba preferencja
+        \subitem 2\spades\ - 
+        \subitem 2\nt\ - mocny równy inwit
+        \subitem 3\clubs\ - 10-11 z fitem \clubs
+        \subitem 3\diams\ - 10-11 z własnym kolorem 6+
+        \item 2\hearts\ \textbf{9-11} z dwukartowym fitem
+        \item 2\spades\ \emph{Niemożliwe 2\spades.} Prawie GFowa karta z 4+\clubs:
+        \item 2\nt\ - Równy inwit
+        \item 3\clubs\ - \emph{Courtesy Raise} 7-9, 5+\clubs
+    \end{itemize}
+
+    \subsubsection{1\hearts\ --- 1\ntx \\ 2\diams\ --- ?}
+    \begin{itemize}
+        \item 2\hearts\ \soff
+        \item 2\spades\ \emph{Niemożliwe 2\spades.} Prawie GFowa karta z 4+\diams, pytanie o skład:
+        \subitem 2\nt\ - 5332 13-14
+        \subitem 3\diams\ - 5-4, 11-12
+        \subitem Inne - licytowane trzymanie, 5-4, maximum \gf
+        \item 2\nt\ - Inwit na równym
+        \item 3\clubs\ - \soff
+        \item 3\diams\ - \emph{Courtesy Raise} 6-8, 5+\diams
+        \item 3\hearts\ - Inwit z 6+\hearts
+    \end{itemize}
+    
+
+    \subsection{1\spades\ --- 1\ntx \\ ?}
+    \begin{itemize}
+        \item \pass\ - 5332, 11-12
+        \item 2\clubs\ - 13+ 5332 lub 11+ z 4\clubs
+        \item 2\diams\ - 13+ 5332 lub 11+ z 4\diams 
+        \item 2\hearts\ - 11-18, 4+\hearts 
+        \item 2\spades\ - 11-15, 6+\spades
+        \item 2\nt\ - Dowolny GF nie zawarty w innych odzywkach \gf 
+    \end{itemize}
+
+    \subsubsection{1\spades\ --- 1\ntx \\ 2\clubs\ --- ?}
+    \begin{itemize}
+        \item 2\diams\ - \emph{Transfer Bart'a} na 2\hearts.
+        Inwit lub do pasa z 6+\hearts
+        \item 2\hearts\ - \emph{Transfer Bart'a} na 2\spades.
+        Może zawierać słabą rękę z pikami lub dowolny inwit.
+        \item 2\spades\ \textbf{9-11} z dwukartowym fitem
+        \item 2\nt\ - Transfer na \diams
+        \item 3\clubs\ - \emph{Courtesy Raise} 7-9, 5+\clubs
+    \end{itemize}
+
+    \subsubsection{1\spades\ --- 1\ntx \\ 2\diams\ --- ?}
+    \begin{itemize}
+        \item 2\hearts\ - \emph{Transfer Bart'a} na 2\spades.
+        Może zawierać słabą rękę z pikami lub dowolny inwit.
+        \item 2\spades\ \textbf{9-11} z dwukartowym fitem
+        \item 2\nt\ - Transfer na \clubs
+        \item 3\diams\ - \emph{Courtesy Raise} 7-9, 5+\diams
+    \end{itemize}
+
+    \subsubsection{1\spades\ --- 1\ntx \\ 2\hearts\ --- ?}
+    \begin{itemize}
+        \item 2\spades\ \soff\ z \spades
+        \item 2\nt\ - Bilansowy inwit do 3\nt
+        \item 3\clubs\ - Kolor + fit, 11-12
+        \item 3\diams\ - Kolor + fit, 11-12
+        \item 3\hearts\ \emph{Courtesy Raise}, 8-10, 4+\hearts
+    \end{itemize}
+
+
+\end{document}

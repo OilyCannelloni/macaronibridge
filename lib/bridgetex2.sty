@@ -2,7 +2,7 @@
 \ProvidesPackage{bridgetex2}[2022/11/18 Bridge notation]
 
 \RequirePackage{pifont}
-\RequirePackage[dvipsnames]{xcolor}
+\RequirePackage[dvipsnames, table]{xcolor}
 \RequirePackage{xspace}
 \RequirePackage{bm}
 \RequirePackage{multirow}
@@ -14,6 +14,10 @@
 \RequirePackage[T1]{fontenc}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage{varwidth}
+\RequirePackage{framed}
+\RequirePackage[strict]{changepage}
+\RequirePackage{soul}
+\setstcolor{red}
 
 \RequirePackage{array}
 \newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
@@ -48,7 +52,7 @@
 \newcommand{\stopp}{\color{Maroon}\textsc{stop}\color{black}\hspace{4pt}}
 \newcommand{\enemy}[1]{(#1)}
 \newcommand{\dbl}{\color{Red}$\bm{\times}$\color{black}}
-\newcommand{\rdbl}{\color{Blue}$\bm{\times\!\times}$\color{black}\hspace{4pt}}
+\newcommand{\rdbl}{\color{Blue}$\bm{\times\!\times}$\color{black}}
 \newcommand{\alert}{\color{Cyan}\textsc{alert}\color{black}\hspace{4pt}}
 \newcommand{\conventional}[1]{\textbf{#1*}}
 \newcommand{\vul}[1]{\color{Red}\textbf{#1}\color{black}}
@@ -118,4 +122,23 @@
 \newcommand{\specialcell}[2][c]{%
     \begin{tabular}[#1]{@{}l@{}}#2\end{tabular}}
 
-    \newcommand{\br}{\vspace{0.5em}}
+\newcommand{\br}{\vspace{0.5em}}
+
+
+\definecolor{formalshade}{rgb}{0.95,0.95,1}
+\definecolor{darkblue}{rgb}{0.2,0.2,0.6}
+\newenvironment{formal}{%
+    \def\FrameCommand{%
+      \hspace{1pt}%
+      {\color{darkblue}\vrule width 2pt}%
+      {\color{formalshade}\vrule width 4pt}%
+      \colorbox{formalshade}%
+    }%
+    \MakeFramed{\advance\hsize-\width\FrameRestore}%
+    \noindent\hspace{-4.55pt}% disable indenting first paragraph
+    \begin{adjustwidth}{}{7pt}%
+    \vspace{2pt}\vspace{2pt}%
+  }
+  {%
+    \vspace{2pt}\end{adjustwidth}\endMakeFramed%
+  }
