@@ -1,0 +1,197 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../lib/bridgetex2}
+\usepackage{polyglossia}
+\setmainlanguage{polish}
+
+\title{\vspace{-2cm}\#2 --- Ręce zbalansowane}
+\author{}
+\date{}
+
+\begin{document}
+    \maketitle
+    \section{Streszczenie}
+    Skala punktowa 4-3-2-1 sprawdza się szczególnie dobrze, jeśli w naszych kartach
+    występuje mało układu. W tym poradniku pokażę, jak wykorzystać ją, żeby zawsze znaleźć 
+    odpowiedni kontrakt, gdy na otwarciu jest ręka zbalansowana.
+
+    \begin{formal}
+        Ręka zbalansowana to ręka w składzie \textbf{4333}, \textbf{4432} lub \textbf{5332}. Czasami będziemy licytować
+        tak samo również składy 5422.
+    \end{formal}
+
+    Ręce zbalansowane dzielimy na kilka przedziałów pod względem siły. Rozróżniamy je otwarciem lub rebidem.
+    \begin{table}[h!]
+        \centering
+        \setlength{\extrarowheight}{3pt}
+        \begin{tabular}{crc}
+            Przedział & \multicolumn{1}{c}{Przykład} & Licytuj \\
+            12-14 & \hhand{QJ7}{J98}{AK873}{Q5} & 1\diams, potem 1\nt \\
+            15-17 & \hhand{QJ7}{KQ732}{AK5}{93} & 1\nt \\
+            18-20 & \hhand{KQJ}{AJ762}{AK5}{32} & 1\hearts, potem 2\nt \\
+            21-22 & \hhand{KQJ5}{AQJ6}{AK6}{Q5} & 2\nt \\
+            23+ & \hhand{KQJ}{AKQJ3}{AQJ}{J9} & 2\clubs*, potem 2\nt \\ 
+        \end{tabular}
+    \end{table}
+
+    \pagebreak
+    \section{12-14}
+    Załóżmy, że mamy kartę:
+    \begin{center}
+        \hhand{AJ873}{KQ9}{J543}{2}
+    \end{center}
+    Partner otwiera 1\clubs, odpowiadamy 1\spades, na co partner 1\nt. No i co teraz? Zauważmy problemy.
+    \begin{itemize}
+        \item Mamy kartę, z którą chcemy zainwitować końcówkę. Ale jaką?
+        \item Partner może nadal mieć 3 piki, ponieważ pokazaliśmy tylko 4.
+        \item 2\spades\ odpada, bo jest zarezerwowane na kartę słabą, która chce grać 2\spades.
+        \item 3\spades\ też nie, bo jak partner ma minimum z dublem pik to przegramy. 
+        Na tą odzywkę potrzebujemy szóstego pika, by ustalić fit.
+    \end{itemize}
+    A więc jak to rozwiązać?
+
+    \subsection{Magister}
+    Jak zwykle olejemy trochę kolory młodsze i wykorzystamy je jako 
+    \textbf{checkback'i}. To bardzo popularny ogólny schemat licytacji,
+    według którego działa Stayman po 1\nt\ - odbijamy piłeczkę do partnera
+    pytając go o skład.
+
+    \begin{formal}
+        W nienegatywnych (nie zaczynających się 1\clubs\ --- 1\diams) sekwencjach
+        typu 1X - 1Y --- 1Z, następujące odzywki są checkbackami:
+        \begin{itemize}
+            \item 2\clubs\ = dowolny \textbf{inwit}, na co partner musi powiedzieć 2\diams\,
+            a my licytujemy naturalnie 
+            (dlaczego tak wyjaśnię później).
+            \item 2\diams\ = dowolny \textbf{forsing}, na co partner licytuje naturalnie.
+        \end{itemize}
+    \end{formal}
+
+    Co to znaczy naturalnie? Pokazujemy to co jest potrzebne partnerowi.
+    Czyli:
+    \begin{itemize}
+        \item Jeśli odpowiadający licytował kolor, należy wskazać dodatkową
+        kartę w tym kolorze.
+        \item Jeśli odpowiadający licytował 1\spades, nadal może mieć 
+        5 pików i 4 kiery (mając 4-4 zalicytowałby kiera)
+        - należy wskazać czwórkę kierów jeśli ją mamy
+        \item Jeśli nic z tego nie mamy, licytujemy 2\nt.
+    \end{itemize}
+
+    \pagebreak
+    Partner otwiera 1\clubs, a następnie rebiduje 1\nt.
+    \begin{table}[h!]
+        \centering
+        \setlength{\extrarowheight}{3pt}
+        \begin{tabular}{rl}
+            \multicolumn{1}{c}{Ręka} & \multicolumn{1}{c}{Licytuj} \\
+            \hhand{AJ873}{KQ9}{J543}{2} & 1\spades, 2\clubs, potem 2\spades. Partner wybierze grę. \\
+            \hhand{AK873}{KQ9}{J543}{2} & 1\spades, 2\diams. Na 2\spades\ - 4\spades. Na 2\hearts\ lub 2\nt\ - 3\nt. \\
+            \hhand{AK873}{KQ95}{J43}{2} & 1\spades, 2\diams. Na 2\spades\ - 4\spades. Na 2\hearts\ - 4\hearts. Na 2\nt\ - 3\nt. \\
+            \hhand{A8732}{Q954}{J43}{2} & 1\spades, 2\spades. Nie mamy na końcówkę, partner ma dubla. \\
+            \hhand{AJ9732}{KQ3}{JT9}{2} & 1\spades, 3\spades\ - inwit na szóstce. \\
+            \hhand{AQJ732}{KQ3}{JT9}{2} & 1\spades, 4\spades\ - Jedyny kontrakt, nie ma co gadać. \\
+            \hhand{KJ32}{Q543}{AK93}{6} & 1\hearts, 3\nt! Partner nie powiedział 1\spades.
+        \end{tabular}
+    \end{table}
+
+    Partner otwiera 1\clubs, a następnie rebiduje 1\spades.
+    Różnica jest taka, że partner może mieć kartę niezbalansowaną, np:
+    \begin{center}
+        \hhand{Q983}{-}{AJ3}{KT9732}
+    \end{center}
+    Dlatego z rękami słabymi należy rozważyć drugą odzywkę 1\nt.
+    \begin{table}[h!]
+        \centering
+        \setlength{\extrarowheight}{3pt}
+        \begin{tabular}{rl}
+            \multicolumn{1}{c}{Ręka} & \multicolumn{1}{c}{Licytuj} \\
+            \hhand{A53}{KQ974}{8432}{2} & 1\hearts, 1\nt \\
+            \hhand{A53}{KQ974}{Q643}{J} & 1\hearts, 2\clubs, 2\hearts \\
+            \hhand{A53}{KQ974}{A643}{3} & 1\hearts, 2\diams, na 2\hearts\ - 4\hearts, na inne - 3\nt \\
+            \hhand{A53}{KQ9742}{Q63}{6} & 1\hearts, 2\clubs, 2\hearts. Na 2\nt\ - 3\hearts.
+        \end{tabular}
+    \end{table}
+
+    Otwarliśmy 1\clubs\ - 1\spades\ --- 1\nt\ - 2\diams.
+    \begin{table}[h!]
+        \centering
+        \setlength{\extrarowheight}{3pt}
+        \begin{tabular}{rl}
+            \multicolumn{1}{c}{Ręka} & \multicolumn{1}{c}{Licytuj} \\
+            \hhand{A53}{KQ4}{8432}{K32} & 2\spades \\
+            \hhand{A5}{KQ4}{8432}{KJ32} & 2\nt \\
+            \hhand{A5}{KQ43}{8432}{KJ2} & 2\hearts \\
+            \hhand{A53}{KQ43}{842}{KJ2} & 2\hearts* \\
+        \end{tabular}
+        \caption{*Jak partner ma 5 pików - powie 2\spades}
+    \end{table}
+
+    \pagebreak
+    \section{18-20}
+    Przedział ten sprzedajemy \textbf{silnym rebidem 2\ntx},
+    który forsuje do końcówki. W tej sekwencji \emph{nie musimy}
+    mieć koniecznie ręki zbalansowanej - czasami fajnie jest
+    najpierw sforsować do końcówki, a potem szukać koloru:
+
+    Poniżej partner licytuje 1\spades.
+    \begin{table}[h!]
+        \centering
+        \setlength{\extrarowheight}{3pt}
+        \begin{tabular}{rl}
+            \multicolumn{1}{c}{Ręka} & \multicolumn{1}{c}{Licytuj} \\
+            \hhand{AQ7}{AKQ83}{QJ8}{52} & 1\hearts, 2\nt\ - partner może mieć 5 pików \\
+            \hhand{AQ7}{AKJ542}{KQ32}{-} & 1\hearts, 2\nt\ - nadal możemy chcieć grać 4/6\spades \\
+            \hhand{AQ7}{AKQ8}{K98}{J92} & 1\clubs, 2\nt\ - każda końcówka wchodzi w grę
+        \end{tabular}
+    \end{table}
+    
+    \subsection{Checkback 3\clubs}
+    W sekwencjach 1X - 1Y --- 2\nt\ nie potrzebujemy rozróżnienia
+    na inwity i forsingi. Zatem wystarczy jeden \emph{checkback}.
+    3\clubs\ pyta o skład. Pokazujemy ekonomicznie dodatkową kartę
+    w kolorze, który może mieć znaczenie.
+
+    Partner otwiera 1\clubs. i rebiduje 2\nt.
+    \begin{table}[h!]
+        \centering
+        \setlength{\extrarowheight}{3pt}
+        \begin{tabular}{rl}
+            \multicolumn{1}{c}{Ręka} & \multicolumn{1}{c}{Licytuj} \\
+            \hhand{AJ832}{983}{Q43}{32} & 3\clubs - liczymy na 3\spades \\
+            \hhand{AJ832}{9832}{K4}{52} & 3\clubs - liczymy na 3\hearts\ lub 3\spades \\
+            \hhand{AJ8532}{764}{K4}{52} & 3\spades - pokazujemy szóstkę \\
+            \hhand{AJ83}{743}{K983}{52} & 3\nt
+        \end{tabular}
+    \end{table}
+
+    \section{21-22 i 23+}
+    Z 21-22 otwieramy 2\nt. Dalej licytujemy jak po 1\nt, czyli:
+    \begin{itemize}
+        \item 3\clubs\ - Stayman
+        \item 3\diams\ - Transfer na \hearts
+        \item 3\hearts\ - Transfer na \spades
+    \end{itemize}
+    Z 23+ otwieramy \textbf{2\clubs\ Acol}, co natychmiast forsuje do końcówki.
+    Na negatywne 2\diams\ partnera lub inną odzywkę, rebidujemy 2\nt\
+    i dalej jak po otwarciu 2\nt.
+
+    \pagebreak
+    \section{Jeszcze dodatek na koniec}
+    
+    W pierwszej części tutorialu zdefiniowałem \textbf{two over one}
+    z \textbf{przeskokiem} jako \gf\ z 5+ w kolorze.
+    Teraz jednak z takimi rękami możemy powiedzieć po prostu 1\spades,
+    a potem zbilansować się i znaleźć fit przy pomocy \textbf{magistra}. 
+    
+    Zatem przyjmijmy nowe ustalenie,
+    z którym przetrwamy znów tylko skończoną ilość czasu, ale raczej dłużej niż 1 część\dots 
+
+    \begin{formal}
+        \begin{itemize}
+            \item Odpowiedź Two Over One bez przeskoku jest \gf\ z piątki 
+            (z wyjątkiem 2\clubs)
+            \item Odpowiedź Two Over One z przeskokiem jest \gf\ \textbf{z szóstki}.
+        \end{itemize}
+    \end{formal}
+
+\end{document}
