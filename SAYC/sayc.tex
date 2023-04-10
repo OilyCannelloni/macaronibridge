@@ -1,6 +1,7 @@
 \documentclass[12pt, a4paper]{article}
 \usepackage{../lib/bridgetex2}
 \usepackage{polyglossia}
+\usepackage{enumitem}
 \setmainlanguage{polish}
 
 
@@ -49,10 +50,22 @@
     \item 2\hearts\ - 5\spades, 4+\hearts, 4-8 PC
     \item 2\spades\ - transfer na \nt, ręka co najmniej \inv.
     \item 2\nt\ - \gf\ BAL (jak wyżej)
-    \item 3\clubs\ - \inv\ z 5+\clubs, taki bardzo treflowy
+    \item 3\clubs\ - \inv\ z 6+\clubs, taki bardzo treflowy
 \end{itemize}
 
 \pagebreak
+
+
+\section{Otwarcie 1\major}
+\subsection{1\hearts\ --- ?}
+\begin{itemize}
+    \item 1\nt\ - semi-forsujące, może zawierać 3-6 z fitem lub zwykły inwit z fitem
+    \item 2\hearts\ - 7-10, konstruktywne
+    \item 2\nt\ - \textbf{Jacoby}, 4+\hearts, \gf. Wyklucza range silnych splinterów.
+    \item 3\clubs\ - 10-11
+    \item 3\diams\ - 7-9
+    \item 3\hearts\ - 0-6
+\end{itemize}
 
 \section{Licytacja po rebidzie 1\ntx\ (12-14) otwierającego}
 \begin{itemize}
@@ -72,9 +85,29 @@
     \item 3\nt\ - do gry
 \end{itemize}
 
-\pagebreak
 
+
+\pagebreak
+\section{Otwarcie 1\ntx}
+\subsection{1\ntx\ --- ?}
+\begin{itemize}
+    \item 2\spades\ - transfer na \clubs\ lub inwit do 2\nt
+    \subitem 2\nt\ - minimum bilansowe
+    \subitem 3\clubs\ - maksimum bilansowe
+    \item 2\nt\ - transfer na \diams\
+    \subitem 3\clubs\ - nie lubię kar i minimum
+    \subitem 3\diams\ - lubię kara lub maximum
+    \item 3\clubs\ - Puppet
+    \item 3\diams\ - 22(5/4)
+    \item 3\hearts, 3\spades\ - młode co najmniej 5/4, krótkość
+    \item 4\clubs\ - 5/5 \major\
+\end{itemize}
+
+
+
+\pagebreak
 \section{Licytacja po rebidzie 2\ntx\ (18-19) otwierającego}
+\subsection{Ogólna teoria}
 \begin{itemize}
     \item 2\nt\ \textbf{nie forsuje!}
     \item W dowolnej sekwencji 1X - 1Y --- 2\nt, odzywki 3\clubs, 3\diams, 3\hearts, 3\spades\
@@ -123,42 +156,146 @@
 
     \end{center}
 \end{itemize}
-    
+
+\subsection{Niemożliwe 4\diams}
+Zalicytowanie 4\diams, nie wykonując uprzednio transferu na \diams, jest odzywką niemożliwą, i ustala
+ten kolor, \textbf{którego ustalenie ma sens}. Stąd wniosek, że transfer na \diams trzeba wykonywać zawsze, 
+jeśli się go ma.
+
+\subsection{Dodatkowe ustalenia}
+\begin{itemize}
+    \item Skok przez odpowiadającego na 4\clubs\ jest pytaniem o asy w kolorze otwarcia,
+    a skok na 4\diams\ jest pytaniem o asy w kolorze odpowiedzi
+\end{itemize}
+
+% **** %
+% Acol %
+% **** %
 \pagebreak
-
-% \section{Licytacja po otwarciu 2\clubs}
-% \begin{itemize}
-%     \item Nie gramy na kontrole, bo to ma być maksymalnie intuicyjny system bez pamięciówy.
-%     \item Po objaśnieniu acola na niesamoustalającym kolorze, kolejna, wyższa odzywka \textbf{jest sztuczna}
-%     i relay'owo pyta o dalszy skład.
-%     \item Ze składem 5431 z młodszą piątką \textbf{rebidujemy \ntx!}
-% \end{itemize}
+\section{Licytacja po otwarciu 2\clubs}
+TODO
 
 
-% \subsection{2\clubs\ --- ?}
-% \begin{itemize}
-%     \item 2\diams\ - 4+PC. Dajemy to również z samotnym Królem, jest to nielimitowane od góry. \gf\
-%     \item 2\hearts\ - 0-3PC, supernegat. Po rebidzie 2\nt\ otwierającego można spasować.
-%     \item Wyższe odzywki - naturalny kolor 5(6)+ kartowy, zawierający \textbf{ściśle co najmniej KQ}. 2\nt\ jest na kierach.
-% \end{itemize}
+% ************************* %
+% Licytacja po naszym bloku %
+% ************************* %
+\pagebreak
+\section{Licytacja po blokach 2\diams, 2\hearts, 2\spades}
+\subsection{Styl bloków}
+\begin{itemize}
+    \item Na poziomie 2
+    \begin{itemize}
+        \item Na pierwszej i drugiej ręce \nvul{średnie}\ / \vul{dobre}
+        \item Na trzeciej ręce \nvul{bardzo agresywne}\ / \vul{bardzo agresywne} 
+    \end{itemize}
+    
+    \item 3\clubs
+    \begin{itemize}
+        \item Na pierwszej i drugiej ręce \nvul{średnie}\ / \vul{solidne}
+        \item Na trzeciej ręce \nvul{bardzo agresywne}\ / \vul{bardzo agresywne} 
+    \end{itemize}
 
-% \subsection{2\clubs\ --- 2\diams \\ ?}
-% \begin{itemize}
-%     \item 2\hearts\ - Kiery lub silne \nt. Wymusza automat 2\spades:
-%     \subitem 2\nt\ - 24-25 BAL
-%     \subitem 3\clubs\ - 6+\hearts. Zamienione, żeby się to dało sfitować przez 3\hearts.
-%     \subitem 3\diams\ - 5\hearts, 4+\diams
-%     \subitem 3\hearts\ - 5\hearts, 4+\clubs
-%     \subitem 3\spades\ - 5\hearts, 4\spades
-%     \subitem 3\nt\ - 26+ BAL
+    \item 3\diams\hearts\spades
+    \begin{itemize}
+        \item Na pierwszej i drugiej ręce \nvul{agresywne}\ / \vul{średnie}
+        \item Na trzeciej ręce \nvul{bardzo agresywne}\ / \vul{bardzo agresywne} 
+    \end{itemize}
+\end{itemize}
 
-%     \item 2\spades\ - Naturalne, 5+, ręka niezrównoważona. (odp. 2\nt\ pyta)
-%     \item 2\nt\ - 22-23 BAL
-%     \item 3\clubs\ - 6+\clubs, naturalne (odp. 3\diams pyta, 3\major\ z piątki)
-%     \item 3\diams\ - 6+\diams, brak starszej czwórki. (odp. 3\major\ z piątki)
-%     \item 3\hearts, 3\spades\ - samoustalające
-%     \item 3\nt\ - 6\diams\ + 4\major\ (jedyna pamięciówa, ale tego się nie da inaczej)
-% \end{itemize}
+\subsection{2\diams\ --- 2\ntx \\ ?}
+\inv+, z fitem lub bez.
+\begin{itemize}
+    \item 3\clubs\ - minimum, słaby kolor
+    \item 3\diams\ - maximum, słaby kolor
+    \item 3\hearts\ - minimum, dobry kolor
+    \item 3\spades\ - maximum, dobry kolor
+\end{itemize}
+
+\subsection{Definicje range'u i jakości}
+\begin{itemize}
+    \item Dobry kolor to co najmniej AQT na pierwszej i drugiej oraz co najmniej KJT na trzeciej
+    \item Maksimum to 8+PC lub wyrobialny kolor + dojście bokiem, np \\ \hhand{Kxx}{x}{KJT9xx}{xxx}
+\end{itemize}
+
+
+% ********************* %
+% Podniesienia z trójki %
+% ********************* %
+\pagebreak
+\section{Podniesienia z trójki}
+W licytacji 1X - 1M możemy podnieść kolor partnera z trójki, jeśli mamy fajną kartę.
+Streszczenie kontynuacji w 3 zdania:
+\begin{enumerate}[label=\textbf{\arabic*.}]
+    \item 2\nt\ i 3 w kolor otwarcia to zawsze \inv\ z czwórki, bez lub z fitem \minor\ 
+    \item Najniższa odzywka niewymieniona w kroku \textbf{1} to pytanie o krótkość z piątki, \inv+
+    \item Najniższa odzywka z tego, co zostało po \textbf{1 i 2}, to \gf\ z czwórki
+\end{enumerate}
+
+\subsection{1\clubs\ --- 1\hearts \\ 2\hearts\ --- ?}
+\begin{itemize}
+    \item 2\spades\ - pytanie o krótkość, 5+\spades, \inv+:
+    \begin{itemize}
+        \item 2\nt\ - brak krótkości
+        \item 3\clubs\ - krótkość niska
+        \item 3\diams\ - krótkość wysoka
+    \end{itemize}
+    \item 2\nt\ - \inv, pytanie o fit \spades, bez fitu w kol. otwarcia. Dalej nat.
+    \item 3\clubs\ (kol. otwarcia) - \inv\ z 4\spades\ i fitem 4+ w kolorze otwarcia
+    (zauważmy, że tu jest gwarancja jednego z fitów - bo nie podnosimy z trójki z 4333)
+    \item 3\diams\ - \gf\ z 4\spades\ (z pięcioma i slam try - pyt. o krótkość!)
+\end{itemize}
+
+\subsection{1\clubs\ --- 1\spades \\ 2\spades\ --- ?}
+\begin{itemize}
+    \item 2\nt\ - pytanie o fit, \inv+
+    \item 3\clubs\ - \inv\ z 4\spades\ i fitem w kolorze otwarcia
+    \item 3\diams\ - pytanie o krótkość*, 5+\spades
+    \item 3\hearts\ - \gf\ z 4\spades
+\end{itemize}
+* tutaj pokazanie krótkości wysokiej (\hearts) jest \gf\ NO I HUJ
+
+
+
+% **************** %
+% Kontra bilansowa %
+% **************** %
+\pagebreak
+\section{Kontra bilansowa}
+Kontra fit jest narzędziem wsadzonym do większości systemów przez wujotowych \emph{impostorów}. Wyrwijmy tę zarazę z korzeniami!
+Szczególnie, że potrzebujemy narzędzia do odlicytowania kart w średnim przedziale siły.
+\subsection{Rebid otwierającego}
+1X - 1Y, przeciwnik z prawej wchodzi do licytacji.
+Ogólna zasada:
+\begin{itemize}
+    \item \dbl\ lub \rdbl\ - (14)15+PC, oraz albo fit \textbf{3-kartowy}, albo brak \textbf{trzymania},
+    albo potężna \textbf{układówka}. Innymi słowy karta,
+    która chce sforsować, ale nie wie jeszcze, gdzie jej miejsce.
+
+    \item \textbf{Podniesienie} koloru partnera - 12-14, z czwórki lub z trójki, jeśli z trójki to nie na syfie
+    \item 2\nt\ - \inv\ z \textbf{6+ w kolorze otwarcia}
+    \item 3 w kolor otwarcia - 6+, słabe
+    \item 3 w inny kolor - słabe, dwukolorowe
+    \item \textbf{Kolor przeciwnika} - \gf\ z \textbf{fitem} w kolorze partnera
+\end{itemize}
+Przykład:
+\allbidding{
+    1\diams & \enemy{\pass} & 1\spades & \enemy{2\hearts} \\
+    ?
+}
+\begin{itemize}
+    \item \dbl\ - 14(15+), albo 3\spades, albo równa karta bez trzymania, albo układ
+    \item 2\spades\ - 3-4\spades
+    \item 2\nt\ - 6+\diams, \inv
+    \item 3\clubs\ - 5\diams, 5\clubs
+    \item 3\diams\ - 6+\diams, słabe
+    \item 3\hearts\ - \gf\ z 4\spades
+\end{itemize}
+
+\subsection{Ustalenia związane z kontrą bilansową}
+\begin{itemize}
+    \item Jeśli kontra bilansowa sforsowała nas do 3\nt, forsuje tylko do 4\minor\, ale \textbf{ustawia pas forsujący}.
+\end{itemize}
+
 
 
 %*********************%
@@ -221,6 +358,27 @@ TODO: Naprawić to
     \item 3\hearts\ - \inv+ na \spades
 \end{itemize}
 \dots
+
+
+
+
+% ***************************** %
+% Kontry karne i pasy forsujące %
+% ***************************** %
+\pagebreak
+\section{Sekwencje karne}
+\subsection{Ustalone sekwencje kontry karnej}
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{cccc}
+        1\nt & \enemy{\pass} & 2\diams/2\hearts & \enemy{3\clubs} \\
+        \dbl
+    \end{tabular}
+    \caption*{
+        Kontra wywoławcza oznaczałaby brak fitu (bo czemu nie 3\spades?), 
+        a co za tym idzie 3-4 trefle, partner nie może mieć kierów skoro nie dał 2\clubs. 
+    }
+\end{table}
 
 
 
