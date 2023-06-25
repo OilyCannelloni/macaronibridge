@@ -28,10 +28,10 @@
 \begin{itemize}
     \item 1\diams\ - ręka \gf\ z 5\diams\ lub ręka maksymalnie \inv\ z 5\diams\ \textbf{bez starszych czwórek}.
     \item 1\nt\ - 6-11 PC bez starszych czwórek.
-    \item 2\clubs\ - 4+\clubs, 10+PC, bez starszych czwórek, \textbf{forsuje do 3\clubs} (Inverted Minors)
+    \item 2\clubs\ - 5+\clubs, 10+PC, bez starszych czwórek, \textbf{forsuje do 3\clubs} (Inverted Minors)
         Otwierający licytuje trzymania ekonomicznie,
         gracz, który przekroczy swoją odzywką 3\clubs\ forsuje do końcówki.
-    \item 2\diams\ - ??? może \diams+\major?
+    \item 2\diams\ - Słabe Multi 3-5 PC
     \item 2\hearts\ - 5\spades, 4+\hearts, 4-8 PC
     \item 2\spades\ - transfer na \nt, ręka co najmniej \inv. Jest to jedyna droga do zainwitowania 3\nt
         z ręką zrównoważoną. Przyjęcie z bilansu.
@@ -214,10 +214,10 @@ jeśli się go ma.
 \begin{itemize}
     \item 2\hearts\ - relay do 2\spades, kiery lub 24-25 na równym
     \subitem 2\nt\ - 24-25 na równym
-    \subitem 3\clubs\ - 6+\hearts
-    \subitem 3\diams\ - 5\hearts\ + (4)5\diams
-    \subitem 3\hearts\ - 5\hearts\ + (4)5\clubs
-    \subitem 3\spades\ - 5\hearts\ + 4\spades, 4\clubs\ ustala \hearts, 4\diams\ ustala \spades.
+    \subitem 3\clubs\ - 5\hearts, 4+\diams
+    \subitem 3\diams\ - 6+\hearts\
+    \subitem 3\hearts\ - 5\hearts\ + 4\spades, 4\clubs\ ustala \hearts
+    \subitem 3\spades\ - 5\hearts\ + 4\clubs, 4\diams\ ustala \hearts
     \subitem 3\nt\ - 6\hearts 332, dobra karta do 3\nt
     \item 3\diams\ - 6+\diams, bez starszych czwórek
     \item 3\hearts\ = 5+\diams, 4\hearts
@@ -248,13 +248,13 @@ jeśli się go ma.
         \item Na trzeciej ręce \nvul{bardzo agresywne}\ / \vul{bardzo agresywne} 
     \end{itemize}
     
-    \item 3\clubs
+    \item 3\clubs\diams
     \begin{itemize}
         \item Na pierwszej i drugiej ręce \nvul{średnie}\ / \vul{solidne}
         \item Na trzeciej ręce \nvul{bardzo agresywne}\ / \vul{bardzo agresywne} 
     \end{itemize}
 
-    \item 3\diams\hearts\spades
+    \item 3\hearts\spades
     \begin{itemize}
         \item Na pierwszej i drugiej ręce \nvul{agresywne}\ / \vul{średnie}
         \item Na trzeciej ręce \nvul{bardzo agresywne}\ / \vul{bardzo agresywne} 
@@ -376,7 +376,7 @@ Przykład:
     ?
 }
 \begin{itemize}
-    \item \dbl\ - 14(15+), albo 3\spades, albo równa karta bez trzymania, albo układ
+    \item \dbl\ - 14(15+) łorewa
     \item 2\spades\ - 3-4\spades
     \item 2\nt\ - 6+\diams, \inv
     \item 3\clubs\ - 5\diams, 5\clubs
@@ -445,8 +445,50 @@ Inne kolory z przeskokiem to kolor+fit.
 
 \section{Licytacja po wejściu}
 
-\pagebreak
+\subsection{Styl wejść}
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{ccc}
+        \textbf{Kolor} & \nvul{Zielone} & \vul{Czerwone} \\
+        1\diams\hearts\spades & \textls{AQTxx} & Bardziej od 9PC \\
+        2\minor & \textbf{6-kart} i 12PC & \textbf{6-kart} i 12PC \\
+        2\major & 5-kart i 12PC & 5-kart i ładne 12PC \\
+    \end{tabular}
+    \caption{Minima wejść}
+\end{table}
 
+\subsection{Po wejściu kolorem na poziomie 1}
+\begin{itemize}
+    \item 1\major\ - \nf\ z czwórki
+    \item 1\nt\ - 8-12, konstruktywne
+    \item 2\nt\ - 13-15
+    \item 2\clubs\ po naszym pasie i wejściu 1\major\ - \textbf{Drury}
+    \item \textbf{Cue} - ???
+    \item \textbf{Cue z przeskokiem} - \mixed
+    \item Nowy kolor z przeskokiem = \gf, po pasie = K+F
+\end{itemize}
+
+\subsection{Po wejściu kolorem na poziomie 2}
+\begin{itemize}
+    \item 2\major\ - \fonce\ z piątki
+    \item 2\nt\ - 10-12
+\end{itemize}
+
+
+\subsection{Drugi przeciwnik licytuje \dbl\ negatywną na wejście 1\major}
+\begin{itemize}
+    \item \rdbl\ - Dokładnie dubel w kolorze wejścia i (9)10+
+    \item 1X - NAT z czwórki
+    \item Między 1\nt\ a 2W - transfery:
+    \subitem Transfer na cuebid = \inv\ z fitem
+    \subitem Transfer na nasz kolor = słabe z fitem
+    \subitem 2\major\ = konstruktywne z fitem
+    \item 2\nt - co najmniej inwit z 4-kartowym fitem. To obowiązuje też po zalicytowaniu koloru 
+    przez drugiego przeciwnika
+\end{itemize}
+
+
+\pagebreak
 
 \section{Licytacja po bloku przeciwnika}
 
@@ -491,6 +533,17 @@ Inne kolory z przeskokiem to kolor+fit.
     }
 \end{table}
 
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{cccc}
+        \enemy{X} & Y & \enemy{\dbl} & \pass \\
+        \enemy{Z} & \pass & \enemy{\pass} & \dbl
+    \end{tabular}
+    \caption*{
+        To nie jest wznówka, bo z dublem pik damy \rdbl\ w pierwszym kółku.
+    }
+\end{table}
+
 \subsection{Ustalone sekwencje pasa forsującego}
 \begin{itemize}
     \item Jeśli mamy \gf\ oraz fit, a przeciwnik wchodzi, \pass\ pokazuje krótkość lub wyłączenie w kolorze wejścia.
@@ -499,5 +552,14 @@ Inne kolory z przeskokiem to kolor+fit.
     naszej końcówki, \pass\ jest forsujący
 \end{itemize}
 
+\subsection{Inne pecjalne kontry}
+\begin{itemize}
+    \item Na Splintera:
+    \subitem w \nvul{korzystnych}\ - propozycja opłacalnej obrony
+    \subitem w \textbf{równych} lub \vul{niekorzystnych}\ - wskazuje wist w \textbf{starszy} z pozostałych kolorów
+    \item Na NT lub szlemika, jeśli dziadek licytował kolor - prosi o wist w kolor dziadka
+    \item Na NT lub szlemika, jeśli nie licytowano kolorów, a kontrakt wydaje się nadwyżkowy - ...
+      
+\end{itemize}
 
 \end{document} 

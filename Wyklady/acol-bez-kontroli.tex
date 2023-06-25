@@ -1,0 +1,121 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../lib/bridgetex2}
+\usepackage{polyglossia}
+\usepackage{enumitem}
+\setmainlanguage{polish}
+
+\author{}
+\date{}
+\title{Prosty Acol bez kontroli}
+
+\begin{document}
+\maketitle
+\section{Granie bez kontroli}
+\begin{itemize}
+    \item System jest prosty i przejrzysty, nie wymaga szczegółowych ustaleń
+    \item Miejsce na pokazanie składu, brak rozjazdów bez fitu na poziomie 5
+    \item Silne ręce odpowiadającego i tak da się rozlicytować
+\end{itemize}
+
+\section{Otwieranie acola}
+Ręka musi spełniać jeden z dwóch warunków:
+\begin{itemize}
+    \item 23+ PC
+    \item 9 lew w ręce lub $\leq 4$ przegrywające
+\end{itemize}
+
+Musimy posiadać także około 3 \textbf{lewy w obronie}. Jeśli przeciwnicy wejdą, partner musi 
+na jakiejś podstawie podjąć decyzję, czy kontrować. Np rękę
+\begin{center}
+    \hhand{AKQJ8753}{-}{QJ}{KQ5}
+\end{center}
+należy otworzyć 1\spades, a na 1\nt\ zalicytować np jakieś 4\hearts. Ryzyko że 1\spades\ zbiegnie jest minimalne,
+bo jak partner nie ma nic, to przeciwnikom wychodzi 4\hearts.
+
+\section{Odpowiedzi na acola}
+\begin{itemize}
+    \item 2\diams\ - dowolna sensowna ręka
+    \item 2\hearts\ - supernegat, 0-3\hcp, z Królem dajemy 2\diams. Rebid OTW \textbf{nie forsuje!}
+    \item (smaczek dla lubiących ustalenia): 2\spades, 2\nt, 3\clubs, 3\diams\ = naturalne z piątki,
+    co najmniej 4 honory (z AKQJT) w kolorze. 2\nt\ = \hearts
+\end{itemize}
+
+
+\pagebreak
+\section{2\clubs\ --- 2\diams \\ ?}
+\begin{itemize}
+    \item 2\hearts, 2\spades\ - naturalne, ręka raczej niezrównoważona
+    \item 2\nt\ - 23-24 PC, może być ze starszą piątką i młodszą czwórką, czasami też z singlem
+    \item 3\clubs\ - (5)6+\clubs
+    \item 3\diams\ - 6+\diams, raczej tylko długie kara, bo jest problem z pokazywaniem dwukolorówek. 
+    Z rękami dwukolorowymi na karach - 1\diams.
+    \item 3\hearts, 3\spades, 4\clubs, 4\diams\ - samoustalenia
+    \item 3\nt\ - 25+ BAL
+\end{itemize}
+
+\section{Licytacja relayowa odpowiadającego}
+\raggedright
+Odpowiadający w swojej drugiej odzywce może zalicytować odzywkę o 1 wyższą, by zapytać się OTW o skład.
+Przykładowo: \\[1em]
+\webidding{
+    2\clubs & 2\diams \\
+    2\hearts & \conventional{2\spades}
+}
+\webidding{
+    2\clubs & 2\diams \\
+    2\spades & \conventional{2\ntx}
+} \\[1em]
+\raggedright
+Te odzywki nie są naturalne i tylko pytają o skład.
+
+\begin{formal}
+    W sekwencji 2\clubs\ - 2\diams\ --- 3\diams\ relay \textbf{nie występuje}. 3\hearts\ i 3\spades\ są naturalne,
+    z piątki. Dlatego należy uważać z acolem na karach i ręce z 6\diams\ i 4\major\ otwierać 1\diams.
+\end{formal}
+
+Kiedy nie dawać relay'a? Kolor 5+ z czterama z pięciu honorów mogliśmy pokazać w pierwszym kółku.
+W drugim kółku - pokazujemy kolor naturalnie, jeśli ma \textbf{dokładnie 3 honory}. No i oczywiście
+QJTxx nie jest warte pokazywania - dajmy OTW się odlicytować!
+
+\pagebreak
+\section{Smaczki dla zaawansowanych}
+\raggedright
+Pojawia sie problem w sekwencjach typu: \\[1em]
+
+\webidding{
+    2\clubs\ & 2\diams \\
+    2\spades\ & 2\nt \\
+    3\spades\ & ?
+} \\[1em] \raggedright
+
+Jak tu silnie ustalić kiery? Rozwiązanie - transfery po pytającym relay'u!
+\subsection*{2\clubs\ - 2\diams\ --- 2\hearts\ - 2\spades\ --- ?}
+\begin{itemize}
+    \item 2\nt\ = 5\hearts, 4+\clubs
+    \item 3\clubs\ = 5\hearts, 4+\diams
+    \item 3\diams\ = 6+\hearts
+    \item 3\hearts\ = 5\hearts, 4\spades
+\end{itemize}
+
+Takie transfery przyjmujemy \textbf{tylko z fitem!} Bez fitu licytujemy naturalnie. Np:
+
+\webidding{
+    2\clubs\ & 2\diams \\
+    2\hearts\ & 2\spades \\
+    \conventional{3\diams} & 3\hearts
+} \\[1em] \raggedright
+
+3\diams\ pokazało szóstego kiera, więc 3\hearts\ ustala kiery silnie! Bez fitu dajemy 3\nt.
+
+\raggedright
+Pozwala to nam też pokazywać acola na 5-5 w sensowny sposób: \\[1em]
+\webidding{
+    2\clubs\ & 2\diams \\
+    2\spades\ & 2\nt \\
+    \conventional{3\spades} & 3\nt\ \\
+    4\clubs\
+} \\[1em] \raggedright
+
+W takich sekwencjach 4\spades\ i 4\nt\ powinny być do gry, a 4\diams\ - ustalać trefle silnie.
+
+\end{document}
