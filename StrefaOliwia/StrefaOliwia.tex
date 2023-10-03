@@ -1,0 +1,319 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../lib/bridgetex2}
+\usepackage{polyglossia}
+\usepackage{enumitem}
+\setmainlanguage{polish}
+
+\newcommand{\lsf}{\color{WildStrawberry}\textbf{ASK LSF}\color{black}}
+\newcommand{\leb}{\color{CadetBlue}\textbf{LEB}\color{black}}
+\newcommand{\relay}{\color{BurntOrange}\textbf{Relay}\color{black}}
+
+\title{\vspace{-2cm}Taka strefa, że ćmy latają}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\section{Założenia}
+\begin{itemize}
+    \item 1\clubs\ = 2+\clubs, otwarcia na poziomie 1 limitowane do Acola
+    \item System posiada niewielkie wady, które jednak go znacznie upraszczają i uodporniają na pomyłki
+    \item Gramy schematem pytania o krótkość Low Shortage First  - oznaczanym \lsf\ (dopóki ktoś mnie nie przekona że odwrotnie jest lepiej xd)
+    \item \textbf{Niszczymy Multi}
+    \item Gramy lebensohlem w wielu dziwnych miejscach - \leb
+    \item System został przystosowany do grania nim po piwie
+\end{itemize}
+
+
+\pagebreak
+\section{Two Over One}
+\subsection*{Założenia}
+\begin{itemize}
+    \item Gramy Niepoważnym 3\spades\ i 3\nt, zatem pokazujemy skład bez informacji o sile
+    \item 1\clubs\ - 2\clubs\, 1\clubs\ - 2\diams\ jest \gf
+    \item W kolorach młodszych każda odzywka poniżej 3\nt\ dotyczy 3\nt, a nie szlemika
+    \item Jeśli licytowane były 2 kolory, licytujemy posiadane zatrzymanie
+    \item Jeśli licytujemy 3 kolory, czwarty kolor wskazuje na problem z trzymaniem
+\end{itemize}
+
+\subsection*{Ustalenia}
+\subsubsection{Niepoważne}
+\begin{itemize}
+    \item Mając 2 asy z damą nie wolno dać fast arrival
+    \item Mając cuebid należy go pokazać jeśli partner pokazał poważną rękę
+    \item Ostatni cuebid to Last Train (żeby się wyratować z powyższego)
+\end{itemize}
+
+\subsubsection*{Rebid koloru}
+    Rebid koloru pokazuje 6+, np w sekwencji 1\hearts\ - 2\clubs\ --- 2\hearts.
+    Po takiej sekwencji:
+    \begin{itemize}
+        \item 2\spades\ = (2)3+\hearts\ \lsf\ brak/niska/średnia/wysoka
+        \item 2\nt\ = 5+\clubs, 4\spades lub 4144
+        \item 3\clubs\ = 6+\clubs
+        \item 3\diams\ = 5+\clubs, 4\diams
+        \item 3\hearts\ = dokładnie 2\hearts\ (niewytestowane czy działa)
+    \end{itemize}
+    Dwukartowy fit można generalnie ukrywać na rzecz pokazania reszty składu. Wtedy odzywka niemożliwa powyżej
+    3\nt\ ustala silnie kolor.
+    Na pikach analogicznie - 2\nt\ jest \lsf.
+
+\subsubsection*{Rebid 2\ntx}
+    Pokazuje dokładnie 5332. Można tak też dać z 5422, które bardzo nie chce pokazywać drugiej czwórki.
+    Dalsza licytacja NAT
+
+\subsubsection*{Rebid 3\clubs, 3\diams}
+    Pokazuje 5-4, raczej w składzie niezrównoważonym z niezłą czwórką.
+
+\subsubsection*{Rebid splinterem}
+    Rebid w nowy kolor z przeskokiem to splinter.
+    \begin{itemize}
+        \item Do 2\clubs\ jest z piątki: 1\spades\ - 2\clubs\ --- 3\diams\ = splinter 5+\clubs
+        \item Do 2\diams, 2\hearts\ z czwórki.
+    \end{itemize}
+
+\subsubsection*{Rebid w kolor z przeskokiem}
+    Np. 1\spades\ - 2\diams\ --- 3\spades. Samoustalenie koloru. Niepoważne ON.
+
+\subsubsection*{GF przez 1\spades}
+    Odpowiedź 1\spades, a potem sforsowanie do koncówki pokazuje 5+\spades. \\
+    Np. 1\diams\ - 1\spades\ --- 2\diams\ - 3\clubs\ = 5+\spades. \br
+
+    Jeśli chcemy sfitować \hearts\ do \gf\ pokazując najpierw \spades\ - skaczemy w 3\hearts:\\
+    1\hearts\ - 1\spades\ --- 2\clubs\ - 3\hearts. Ignorujemy Gazilli, jednak mając na uwadze że 2\clubs\ mogło być sztuczne
+
+\pagebreak
+\section{Otwarcie 1\clubs}
+\subsection*{1\diams\ Negat}
+\subsubsection*{Rebid odpowiadającego}
+\begin{itemize}
+    \item 1\spades, 1\nt, 2\clubs = słabe
+    \item 2\diams\ = 7-9(10) 5+\diams
+    \item 2\spades, 2\nt = 11-12, 5\diams, niezrównoważone. Zależy z której ręki chcemy \nt.
+    \item 3\diams\ = 10-12, 6+\diams
+\end{itemize}
+
+\subsection*{2\hearts\ Flannery 5+\spades\ 4+\hearts}
+\begin{itemize}
+    \item 2\nt\ = \lsf\ brak/niska/wysoka
+    \item 3\clubs\ = do gry
+    \item 3\diams\ = czwarty kolor \gf
+\end{itemize}
+
+\subsection*{2\spades\ Transfer na NT}
+\begin{itemize}
+    \item 2\nt\ = 11-12 BAL
+    \item 3\clubs\ = jak normalny rebid 2\clubs\ (11-15)
+    \item 3\diams\ = jak normalny rebid 3\clubs\ (15-17)
+    \item 3\hearts, 3\spades\ = krótkość (coś jak 1\nt\ - 3\hearts)
+    \item 3\nt\ = 13-14 BAL
+    \item 4\nt\ = 18-20 BAL
+\end{itemize}
+
+\subsection*{3\clubs\ Mixed Raise}
+6+\clubs, 7-9PC
+
+\subsection*{GF na \clubs}
+1\clubs\ -- 1\hearts\ --- 3\diams\ oraz 1\clubs\ -- 1\spades\ --- 3\hearts\ to \gf\ z 6+\clubs
+
+
+\pagebreak
+\section{Otwarcie 1\diams}
+\subsection{2\diams\ Inverted}
+\begin{itemize}
+    \item 10+PC, 4+\diams. Forsuje do 3\diams. Ten, kto przekracza 3\diams, przyjmuje inwit.
+    Licytujemy posiadane zatrzymania, lub \nt\ z bilansu mając wszystkie.
+    \item Rebid 3\hearts, 3\spades\ = splinter
+\end{itemize}
+
+\subsection*{2\hearts\ Flannery 5+\spades\ 4+\hearts}
+\begin{itemize}
+    \item 2\nt\ = \lsf\ brak/niska/wysoka
+    \item 3\clubs\ = czwarty kolor \gf
+    \item 3\diams\ = do gry
+\end{itemize}
+
+\subsection*{2\spades\ Transfer na NT}
+\begin{itemize}
+    \item 2\nt\ = 11-12 BAL
+    \item 3\clubs\ = jak normalny rebid 2\diams\ (11-15)
+    \item 3\diams\ = jak normalny rebid 3\diams\ (15-17)
+    \item 3\hearts, 3\spades\ = krótkość (coś jak 1\nt\ - 3\hearts)
+    \item 3\nt\ = 13-14 BAL
+    \item 4\nt\ = 18-20 BAL
+\end{itemize}
+
+\subsection*{3\clubs\ Inwit NAT}
+6+\clubs, 7-9
+
+\subsection*{3\diams\ Mixed Raise}
+4+\diams, 7-9
+
+\subsection*{GF na \diams}
+1\diams\ -- 1\spades\ --- 3\hearts\ = \gf\, 6+\diams. \\
+Po odpowiedzi 1\hearts\ dajemy 2\nt\ - więcej niżej
+
+
+\pagebreak
+\section{Podniesienie koloru po One Over One}
+Przykłady są dla sekwencji 1\clubs\ - 1\hearts, ale wszystkie działają analogicznie
+\subsection*{Podniesienie 2\hearts}
+\begin{itemize}
+    \item 2\spades\ = \lsf\ brak/niska/wysoka \gf\ 
+    \item 2\nt, 3\clubs, 3\diams\ = inwity wartościowe, 2\nt\ = \spades
+    \item 3\hearts\ = ogólny inwit
+    \item 3\spades, 4\clubs, 4\diams\ = splinter - tu nie gramy niewygodnym bo OTW jest ograniczony!
+    \item 3\nt\ = propozycyjne
+\end{itemize}
+
+\subsection*{Inwit 3\hearts}
+\begin{itemize}
+    \item 3\spades\ = \lsf\ brak/niska/wysoka
+    \item 3\nt\ = cue \spades\ - to nie jest propozycyjne, bo OTW jest niezrównoważony i na \spades\ nie jest dostępne, bo to LSF
+\end{itemize}
+
+\subsection*{Bezkrótkościowe 3\ntx}
+Jak nazwa wskazuje, fit \hearts\ i brak krótkości. Leciutko propozycyjne
+
+\subsection*{Splintery 3\spades, 4\clubs, 4\diams}
+Tu nie gramy niewygodnym, bo bezkrótkościowy \gf\ z fitem jest ważniejszy, szczególnie żeby odciążyć rebid 2\nt\ z rąk z fitem!
+Jest to owszem lekko teoretycznie nieoptymalne, ale come on, staram się napisać prosty system na grę przy piwie czyli 3 ligę.
+
+
+
+\pagebreak
+\section{Rebid na poziomie 1}
+\subsection*{Pozycja podwójnego magistra}
+\begin{itemize}
+    \item 2\clubs\ = inwit lub transfer na \diams\
+    \item 2\nt\ = transfer na \clubs\
+    \item 3\clubs, 3\diams\ = 5\minor-5\major, \gf, zależy co licytowaliśmy wcześniej
+    \item 1\clubs\ - 1\spades\ --- 1\nt\ - 3\spades\ = \gf\ 6+\spades, 3N = niepoważne. Na \hearts\ tak samo.
+    \item 3\nt\ = do gry
+    \item 2\clubs\ - 2\diams\ --- 3\nt\ = propozycyjne ze starszą piątką
+\end{itemize}
+
+
+
+\pagebreak
+\section{Rebid 2\ntx\ po otwarciu w kolor młodszy}
+Charakterystyka:
+\begin{itemize}
+    \item Nie może być z fitem do starszej czwórki partnera
+    \item Może być z 6+m na składzie nierównym w sekwencji 1\diams\ - 1\hearts\ --- 2\nt
+    \item W pozostałych przypadkach jest na równym lub 2=2=5=4 - z rękami które nie nadawały się na rebid 3\clubs.
+    \item Olewamy szukanie szlemika w karo po otwarciu 1\clubs, bo to zbyt rzadkie (skoro nie daliśmy 2\diams!)
+    \item \textbf{What we bypass, we deny!}
+    \item Skok w 4\clubs\ ustala kolor otwarcia i pyta o asy
+    \item Skok w 4\diams\ ustala kolor odopwiadającego i pyta o asy
+\end{itemize}
+
+\subsection*{1\clubs\ -- 1\hearts\ --- 2\ntx}
+\subsubsection*{3\clubs\ = 4+\clubs\ i/lub pytanie}
+\begin{itemize}
+    \item 3\diams\ = potencjalny fit \clubs
+    \item 3\hearts\ = 3\hearts, bez \clubs
+    \item 3\spades\ = 4\spades, bez \hearts\ i \clubs
+    \item 3\nt\ = 3253, bo to zostaje.
+\end{itemize}
+
+\subsection*{1\diams\ -- 1\hearts\ --- 2\ntx}
+\subsubsection*{3\clubs\ = Pytanie lub długie \clubs}
+\begin{itemize}
+    \item 3\diams\ = \textbf{6+\diams!}
+    \item 3\hearts\ = 3\hearts 
+    \item 3\spades\ = 4\spades\ w składzie 4=2=5=2
+    \item 3\nt\ = 3253, bo to zostaje.
+\end{itemize}
+
+
+
+\pagebreak
+\section{Rewersy}
+Wbrew głupiemu popularnemu przekonaniu rewersy są \fonce a nie \gf.
+\subsection*{Odpowiedzi na rewers}
+\subsubsection*{Slowdown Bid}
+Zalicytowanie po rewersie odzywki niższej z czwartego koloru lub 2\nt\ wskazuje bardzo słabą rękę
+(jakieś 6-8) i zwalnia z forsingu do końcówki. Następnie:
+\begin{itemize}
+    \item Odzywki poniżej 3 w kolor otwarcia są słabe i do gry (nie pokazuje 6+) - chyba że odpowiadający 
+    to na coś poprawi, wtedy to też jest do gry 
+    \item Jeśli Slowdown'em jest 2\nt, otwierający musi wrócić na swój kolor ze słabą ręką
+\end{itemize}
+
+\subsubsection*{Inne odzywki}
+Są \gf\ nawet jeśli są poniżej slowdown bid.
+
+\subsection*{Jump Shifty}
+Są to rewersy z przeskokiem. Pokazują 5-4 i są ściśle \gf!
+
+
+
+\pagebreak
+\section{Otwarcie 1\hearts}
+\begin{itemize}
+    \item 1\nt\ może zawierać 4-7 z fitem
+    \item 2\hearts\ = konstruktywne 8-10
+    \item 2\spades\ = inwit z krótkością, 2\nt\ = \lsf
+    \item 2\nt\ = inwit zwykły 3+\hearts
+    \item 3\clubs, 3\diams\ = inwit 6+\minor
+    \item 3\hearts\ = Mixed Raise 7-9 4+\hearts
+    \item 3\spades, 3\nt, 4\clubs\ = splinter
+    \item 4\diams\ = "chcę grać końca, ale za słabe na gf"
+\end{itemize}
+
+\section{Otwarcie 1\spades}
+\begin{itemize}
+    \item 1\nt\ może zawierać 4-7 z fitem, czasami też czterokartowym
+    \item 2\spades\ = konstruktywne 8-10
+    \item 2\nt\ = inwit z krótkością, 3\clubs\ = \lsf
+    \item 3\clubs, 3\diams\ = inwit 6+\minor
+    \item 3\hearts\ = inwit zwykły 3+\spades
+    \item 3\spades\ = Mixed Raise 7-9 4+\spades
+    \item 3\nt, 4\clubs, 4\diams\ = splinter
+    \item 4\hearts\ = "chcę grać końca, ale coś tam mam"
+\end{itemize}
+
+
+\pagebreak
+\section{Otwarcie 1\major\ na 3 i 4 ręce}
+\subsection*{Charakterystyka}
+\begin{itemize}
+    \item Styl: A i tak mnie nie spałujecie piwo piwo
+    \item Z czwórki: jeśli ma to sens
+\end{itemize}
+
+\subsection*{2\clubs\ Drury}
+Używamy agresywnie, dodając sobie za krótkości. Od ok. 9PC, ale zdarza się z 6PC!
+\begin{itemize}
+    \item 2\diams\ = 12+, mamy szansę na końcówkę
+    \item 2\major\ = Otworzyłem z czwórki albo równowartości czwórki
+\end{itemize}
+
+\subsection*{Inne odzywki} 
+\begin{itemize}
+    \item 3\hearts, 3\spades\ = blok
+    \item 3\nt\ = mini-splinter (z singla, 4\clubs\ = \lsf)
+    \item 4\clubs, 4\diams, 4\hearts = splinter z \textbf{renonsu}
+\end{itemize}
+
+\subsubsection*{Last Train 2\hearts}
+1\spades\ -- 2\clubs\ --- 2\diams\ -- 2\hearts\ = jakiś tam inwit, żeby siędało zatrzymać w 2\spades (nic o kierach)
+
+
+\section{Gazilli}
+\section{Otwarcie 1\ntx}
+\section{Otwarcie 2\ntx}
+\section{Otwarcie 2\clubs\ Acol}
+\section{Bloki}
+\section{Wejście kolorem}
+\section{Wejście dwukolorówką}
+\section{Przeciwnik wchodzi kolorem}
+\section{Przeciwnik wchodzi dwukolorówką}
+\section{Przeciwnik wchodzi kontrą}
+\section{Przeciwnik otwiera 2\diams\ Multi}
+\section{Przeciwnik otwiera dwukolorówką lub blokiem}
+\section{Strefa szlemowa}
+\section{Pas forsujący i kontry karne}
+
+\end{document}
