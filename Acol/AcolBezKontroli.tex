@@ -1,0 +1,62 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../lib/bridgetex2} 
+\usepackage{polyglossia}
+\setmainlanguage{polish}
+
+\title{Pełny Acol bez kontroli}
+\author{Bartek Słupik}
+
+\begin{document}
+    \maketitle
+
+    \section*{2\clubs\ --- ?}
+    \begin{itemize}
+        \item 2\diams\ - Dowolna pozytywna ręka, co najmniej Król lub 4+PC. Ustala \gf
+        \item 2\hearts\ - Negat, 0-3PC, bez Króla. Zwalnia z \gf
+        \br
+        \item 2\spades, 2\nt, 3\clubs, 3\diams\ - Kolor z co najmniej 4 z 5 honorów (AKQJT) lub ich równowartością.
+        Staramy się nie używać. 2\nt\ = \hearts.
+    \end{itemize}
+
+    \section*{2\clubs\ --- 2\hearts \\ ?}
+    \begin{itemize}
+        \item \pass\ - Niekiedy przychodzi taka ręka 
+        \item 2\spades\ - 5+\spades, \fonce.
+        \item 2\nt\ - 22-23 BAL, \nf
+        \item 3\clubs, 3\diams, 3\hearts\ = \gf
+    \end{itemize}
+
+    \pagebreak
+    \section*{2\clubs\ --- 2\diams}
+    \begin{itemize}
+        \item 2\hearts\ - \emph{Kokish Relay}, wymusza automat 2\spades. Zawiera \hearts, \hearts+X lub 25+BAL 
+        \item 2\spades\ - Naturalne, 5+\spades 
+        \item 2\nt\ - 23-24 BAL
+        \br
+        \item 3\clubs\ - 5+\clubs\ z możliwym drugim kolorem, 3\diams\ \textbf{relay}
+        \item 3\diams\ - 6+\diams, raczej bez drugiego koloru. 3\hearts, 3\spades\ NAT 5+.
+        \item 3\hearts, 3\spades, 4\clubs, 4\diams\ - samoustalenie
+    \end{itemize}
+
+    \section*{2\clubs\ --- 2\diams \\ 2\hearts\ --- 2\spades}
+    \begin{itemize}
+        \item 2\nt\ - 25+ BAL
+        \item 3\clubs\ - \hearts\ + \diams
+        \item 3\diams\ - 6+\hearts
+        \item 3\hearts\ - \hearts\ + \spades
+        \item 3\spades\ - \hearts\ + \clubs
+    \end{itemize}
+
+    \section*{2\clubs\ --- 2\diams \\ 2\spades}
+    \begin{itemize}
+        \item 2\nt\ - \textbf{relay} (wyklucza fit)
+        \item 3\clubs, 3\diams, 3\hearts\ - Kolor gorszy niż na pokazanie bezpośrednio po 2\clubs.
+        \item 3\spades\ - niezła karta z fitem, dalej 3\nt\ = \textbf{ask krt}.
+        \item 3\nt, 4\clubs, 4\diams\ - splintery (3\nt\ = \hearts)
+        \item 4\hearts\ - Mocna punktowo karta z fitem, bez żadnej krótkości ani cue-bidu
+        \item 4\spades\ - Fast Arrival (totalne minimum odpowiedzi 2\diams)
+    \end{itemize}
+
+    \section
+\end{document}
+
