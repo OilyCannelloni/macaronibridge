@@ -266,7 +266,7 @@ i są ściśle \gf!
     \item 2\spades\ = inwit z krótkością, 2\nt\ = \lsf
     \item 2\nt\ = inwit zwykły 3+\hearts
     \item 3\clubs, 3\diams\ = inwit 6+\minor
-    \item 3\hearts\ = Mixed Raise 7-9 4+\hearts
+    \item 3\hearts\ = Mixed Raise 7-9 4+\hearts, 3\spades\ = \lsf
     \item 3\spades, 3\nt, 4\clubs\ = splinter
     \item 4\diams\ = "chcę grać końca, ale za słabe na gf"
 \end{itemize}
@@ -278,7 +278,7 @@ i są ściśle \gf!
     \item 2\nt\ = inwit z krótkością, 3\clubs\ = \lsf
     \item 3\clubs, 3\diams\ = inwit 6+\minor
     \item 3\hearts\ = inwit zwykły 3+\spades
-    \item 3\spades\ = Mixed Raise 7-9 4+\spades
+    \item 3\spades\ = Mixed Raise 7-9 4+\spades, 3\nt\ = \lsf
     \item 3\nt, 4\clubs, 4\diams\ = splinter
     \item 4\hearts\ = "chcę grać końca, ale coś tam mam"
 \end{itemize}
@@ -477,13 +477,161 @@ Działa bezpośrednio po każdym bloku.
 
 \pagebreak
 \section{Wejście kolorem}
+\subsection*{Wejście na poziomie 1}
+\subsubsection*{(1\clubs) -- 1\hearts\ -- (\passx) -- ?}
+\begin{itemize}
+    \item 2\clubs\ = z fitem niezależnie od znaczenia 1\clubs
+    \item 2\nt\ = NAT 13-14
+    \item 3\clubs\ = Mixed raise 7-9 z 4-kartowym fitem
+    \item 3\hearts\ = Blokujące
+\end{itemize}
+
+\subsubsection*{(1\clubs) -- 1\hearts\ -- (coś) -- ?}
+\begin{itemize}
+    \item coś = 1 w kolor, wtedy 2\clubs\ jest z fitem, a 2 w kolor odpowiedzi jest NAT
+    \item coś = 2 w kolor, wtedy 2\clubs\ jest NAT
+    \item \dbl\ i \rdbl\ = 9+PC i dokładnie dubelek \hearts
+    \item 2\nt\ = 10+PC z \textbf{4-kartowym fitem}
+    \item 3\hearts\ = Blokujące
+    \item 3\clubs\ (k. otw. z przeskokiem) = Mixed raise 7-9 z 4-kartowym fitem
+\end{itemize}
+
+
+\pagebreak
 \section{Wejście dwukolorówką}
-\section{Przeciwnik wchodzi kolorem}
+\subsection*{Wejście 2\diams\ stare}
+\begin{itemize}
+    \item 2\nt\ = pytanie o krótkość (3\clubs\ = \clubs, 3\diams\ = \diams, 3\hearts\ = void \clubs, 3\spades\ = void \diams)
+    \item 3\clubs\ = INV+ z \hearts
+    \item 3\diams\ = INV+ z \spades
+    \item 3\major\ = Mixed Raise z dwoma grającymi wartościami
+\end{itemize}
+
+\subsection*{Wejście 2\ntx\ młode}
+\begin{itemize}
+    \item 3\hearts\ = INV+ z \clubs\
+    \item 3\spades\ = INV+ z \diams\
+\end{itemize}
+
+\subsection*{Wejście 2\hearts\ = \spades\ + \minor}
+\begin{itemize}
+    \item 2\nt\ = ask INV+
+    \subitem 3\hearts\ = dobre z \clubs
+    \subitem 3\spades\ = dobre z \diams
+    \item 3\diams\ = \textbf{INV+ z fitem} \spades
+    \item 3\spades\ = Mixed Raise z dwoma grającymi wartościami
+\end{itemize}
+
+\subsection*{Wejście 2\spades\ = \hearts\ + \minor}
+\begin{itemize}
+    \item 2\nt\ = ask INV+
+    \subitem 3\hearts\ = dobre z \clubs 
+    \subitem 3\spades\ = dobre z \diams
+    \item 3\diams\ = \textbf{INV+ z fitem} \hearts
+\end{itemize}  
+
+ 
+
+\pagebreak
 \section{Przeciwnik wchodzi dwukolorówką}
+\subsection*{Wejście dwukolorówką specyficzną}
+Stosujemy zasadę "Lower for lower". W naszym kolorze INV+, w nielicytowanym \gf.
+\\[.6em]
+
+\begin{minipage}{0.5\linewidth}
+    \subsubsection*{1\hearts\ -- (2\ntx) -- ?}
+    \begin{itemize}  
+        \item 3\clubs\ = INV+ z \hearts
+        \item 3\diams\ = \gf\ z 5+\spades
+        \item 3\hearts, 3\spades\ = do gry
+    \end{itemize} 
+\end{minipage}
+\begin{minipage}{0.3\linewidth}
+    \subsubsection*{1\spades\ -- (2\ntx) -- ?}
+        \begin{itemize} 
+            \item 3\clubs\ = \gf\ z 5+\hearts
+            \item 3\diams\ = INV+ z \spades
+            \item 3\hearts, 3\spades\ = do gry
+        \end{itemize}
+\end{minipage}
+
+\subsection*{Wejście dwukolorówką niespecyficzną}
+Stosujemy zasadę forsowania z 2\nt\ jak po wejściu kolorem
+\\[.6em]
+
+\begin{minipage}{0.5\linewidth}
+    \subsubsection*{1\hearts\ -- (2\hearts) -- ?}
+    \begin{itemize}  
+        \item 2\nt\ = \inv\ z fitem
+        \item 3\clubs, 3\diams\ = NAT słabe (wrr!)
+        \item 3\spades\ = \gf\ z fitem
+    \end{itemize} 
+\end{minipage}%
+\begin{minipage}{0.5\linewidth}
+    \subsubsection*{1\spades\ -- (2\spades) -- ?}
+        \begin{itemize} 
+            \item 2\nt\ = \gf\ z fitem
+            \item 3\clubs, 3\diams\ = NAT słabe (wrr!)
+            \item 3\hearts\ = \inv\ z fitem
+        \end{itemize}
+\end{minipage}
+
+\pagebreak
 \section{Przeciwnik wchodzi kontrą}
-\section{Przeciwnik otwiera 2\diams\ Multi}
+Na razie:
+\begin{itemize}
+    \item \rdbl\ 10+ (z fitem tylko \gf)
+    \item podniesienie = słabe
+    \item 1\nt\ = 8-10 z fitem
+    \item 2\nt\ = inwit z fitem
+    \item kolory \nf
+\end{itemize}
+
+
+\pagebreak
+\section{Przeciwnik otwiera 2\diams\ Multi lub Wilkosz}
+Ku chwale Erica Kokisha, JEBAĆ MULTI PAŁA PUNKTY
+\subsection*{Wejścia na multi}
+\subsubsection*{(2\diams*) --- ?}
+\begin{itemize}
+    \item \dbl\ = 14-16 BAL lub objaśniak
+    \item 2\nt\ = 17-19 BAL
+    \br
+    \item Z kontrą wywoławczą do jednego koloru pasujemy i czekamy co zrobią.
+    Wznowienie zbiegającego 2\hearts\ jest pełnobilansowe!
+\end{itemize}
+
+\subsection*{Partner kontruje na punkty}
+\subsubsection*{(2\diams*) --- \dbl\ --- (\rdbl**)}
+** Cokolwiek co grają P/C. Trzeba uważać bo po \pass\ nasza odzywka może byc wymuszona.
+\begin{itemize}
+    \item 2\hearts, 2\spades\ = do gry
+    \item 2\nt\ = \leb, relay 3\clubs
+    \subitem \pass, 3\diams\ = do gry
+    \subitem 3\hearts, 3\spades\ = \inv
+    \item 3\clubs\ = Puppet Stayman
+    \item 3\diams, 3\hearts\ = transfer (jak po otwarciu 2\nt)
+\end{itemize}
+
+\subsubsection*{(2\diams*) --- \dbl\ --- (3\hearts)}
+\begin{itemize}
+    \item \dbl\ = negatywna z \textbf{pikami} (do naturalnych kierów)
+    \item 3\spades\ = \gf
+\end{itemize}
+
+"Jeśli odpowiadający pokazał naturalnie jakiś kolor (np. 2\hearts/\spades\ albo \pass\ = 5+\diams),
+ to transfer na ten kolor bądź późniejsze zalicytowanie tego koloru jest pytaniem o trzymanie."
+
+\pagebreak
 \section{Przeciwnik otwiera dwukolorówką lub blokiem}
+
+
+
+\pagebreak
 \section{Strefa szlemowa}
+
+
+\pagebreak
 \section{Pas forsujący i kontry karne}
 
 \end{document}
