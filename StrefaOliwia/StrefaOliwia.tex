@@ -6,7 +6,10 @@
 
 \newcommand{\lsf}{\color{WildStrawberry}\textbf{ASK LSF}\color{black}}
 \newcommand{\leb}{\color{CadetBlue}\textbf{LEB}\color{black}}
-\newcommand{\relay}{\color{BurntOrange}\textbf{Relay}\color{black}}
+\newcommand*\link[1]{\hspace*{0em plus 1fill}\makebox{#1}}
+\newcommand{\imp}{\color{BurntOrange}\link{\textbf{\large!}}\color{black}}
+\newcommand{\vimp}{\color{OrangeRed}\link{\textbf{\large{!!}}}\color{black}}
+\newcommand{\exq}{\color{JungleGreen}\link{\textbf{\large{?!}}}\color{black}}
 
 \title{\vspace{-2cm}Taka strefa, że ćmy latają}
 \author{}
@@ -19,7 +22,7 @@
     \item 1\clubs\ = 2+\clubs, otwarcia na poziomie 1 limitowane do Acola
     \item System posiada niewielkie wady, które jednak go znacznie upraszczają i uodporniają na pomyłki
     \item Gramy schematem pytania o krótkość Low Shortage First  - oznaczanym \lsf\ (dopóki ktoś mnie nie przekona że odwrotnie jest lepiej xd)
-    \item \textbf{Niszczymy Multi}
+    \item \textbf{Niszczymy Multi} \imp
     \item Gramy lebensohlem w wielu dziwnych miejscach - \leb
     \item System został przystosowany do grania nim po piwie
 \end{itemize}
@@ -82,6 +85,23 @@
     Jeśli chcemy sfitować \hearts\ do \gf\ pokazując najpierw \spades\ - skaczemy w 3\hearts:\\
     1\hearts\ - 1\spades\ --- 2\clubs\ - 3\hearts. Ignorujemy Gazilli, jednak mając na uwadze że 2\clubs\ mogło być sztuczne
 
+\pagebreak
+\subsection*{Otwarcie w kolor młodszy}
+\subsubsection*{1\clubs\ --- 2\clubs}
+\begin{itemize}
+    \item 2\diams\ = 12-14 lub 18-19 BAL, może mieć starszą czwórkę \imp
+    \item 2\hearts\ = 5+\clubs, 4+\hearts\ niekoniecznie nadwyżkowe
+    \item 2\spades\ = 5+\clubs, 4+\spades 
+    \item 2\nt\ = 5+\clubs, 4+\diams \vimp
+\end{itemize}
+
+\subsubsection*{1\diams\ --- 2\clubs}
+\begin{itemize}
+    \item 2\diams\ = \textbf{6+}\diams\ może mieć starszą czwórkę \imp
+    \item 2\hearts\ = (4)5\diams, 4+\hearts\ niekoniecznie nadwyżkowe
+    \item 2\spades\ = (4)5\diams, 4+\spades 
+    \item 2\nt\ = 12-14 lub 18-19 5332
+\end{itemize}
 
 
 
@@ -99,16 +119,16 @@
 
 \subsection*{2\hearts\ Flannery 5+\spades\ 4+\hearts}
 \begin{itemize}
-    \item 2\nt\ = \lsf\ brak/niska/wysoka
+    \item 2\nt\ = \lsf\ brak/niska/wysoka \exq
     \item 3\clubs\ = do gry
     \item 3\diams\ = czwarty kolor \gf
 \end{itemize}
 
-\subsection*{2\spades\ Transfer na NT}
+\subsection*{2\spades\ Transfer i 2\ntx\ Inwit}
 \begin{itemize}
     \item 2\nt\ = 11-12 BAL
     \item 3\clubs\ = jak normalny rebid 2\clubs\ (11-15)
-    \item 3\diams\ = jak normalny rebid 3\clubs\ (15-17)
+    \item 3\diams\ = jak normalny rebid 3\clubs\ (15-17) \imp
     \item 3\hearts, 3\spades\ = krótkość (coś jak 1\nt\ - 3\hearts)
     \item 3\nt\ = 13-14 BAL
     \item 4\nt\ = 18-20 BAL
@@ -118,7 +138,7 @@
 6+\clubs, 7-9PC
 
 \subsection*{GF na \clubs}
-1\clubs\ -- 1\hearts\ --- 3\diams\ oraz 1\clubs\ -- 1\spades\ --- 3\diams\ to \gf\ z 6+\clubs
+1\clubs\ -- 1\hearts\ --- 3\diams\ oraz 1\clubs\ -- 1\spades\ --- 3\diams\ to \gf\ z 6+\clubs\ (podwójny rewers +1)
 
 
 \pagebreak
@@ -132,17 +152,17 @@
 
 \subsection*{2\hearts\ Flannery 5+\spades\ 4+\hearts}
 \begin{itemize}
-    \item 2\nt\ = \lsf\ brak/niska/wysoka
+    \item 2\nt\ = \lsf\ brak/niska/wysoka \exq
     \item 3\clubs\ = czwarty kolor \gf
     \item 3\diams\ = do gry
 \end{itemize}
 
-\subsection*{2\spades\ Transfer na NT}
+\subsection*{2\spades\ Transfer i 2\ntx\ Inwit}
 \begin{itemize}
     \item 2\nt\ = 11-12 BAL
-    \item 3\clubs\ = jak normalny rebid 2\diams\ (11-15)
-    \item 3\diams\ = jak normalny rebid 3\diams\ (15-17)
-    \item 3\hearts, 3\spades\ = krótkość (coś jak 1\nt\ - 3\hearts)
+    \item 3\clubs\ = NAT \nf
+    \item 3\diams\ = jak normalny rebid 2\diams, \nf! Z 15-17 na karach dajemy krótkość
+    \item 3\hearts, 3\spades\ = krótkość (coś jak 1\nt\ - 3\hearts\ ale może być z \diams)
     \item 3\nt\ = 13-14 BAL
     \item 4\nt\ = 18-20 BAL
 \end{itemize}
@@ -172,11 +192,11 @@ Przykłady są dla sekwencji 1\clubs\ - 1\hearts, ale wszystkie działają analo
 \subsection*{Inwit 3\hearts}
 \begin{itemize}
     \item 3\spades\ = \lsf\ brak/niska/wysoka
-    \item 3\nt\ = cue \spades\ - to nie jest propozycyjne, bo OTW jest niezrównoważony i na \spades\ nie jest dostępne, bo to LSF
+    \item 3\nt\ = krótkość \spades\ - to nie jest propozycyjne, bo OTW jest niezrównoważony i na \spades\ nie jest dostępne, bo to LSF
 \end{itemize}
 
 \subsection*{Bezkrótkościowe 3\ntx}
-Jak nazwa wskazuje, 1\clubs\ - 1\hearts\ -- 3\nt\ = fit \hearts\ i brak krótkości. Leciutko propozycyjne.
+Jak nazwa wskazuje, 1\clubs\ - 1\hearts\ -- 3\nt\ = fit \hearts\ i brak krótkości. Leciutko propozycyjne. \vimp
 
 \subsection*{Splintery 3\spades, 4\clubs, 4\diams}
 Tu nie gramy niewygodnym, bo bezkrótkościowy \gf\ z fitem jest ważniejszy, szczególnie żeby odciążyć rebid 2\nt\ z rąk z fitem!
@@ -190,10 +210,10 @@ Jest to owszem lekko teoretycznie nieoptymalne, ale come on, staram się napisa�
 \begin{itemize}
     \item 2\clubs\ = inwit lub transfer na \diams\
     \item 2\nt\ = transfer na \clubs\
-    \item 3\clubs, 3\diams\ = 5\minor-5\major, \gf, zależy co licytowaliśmy wcześniej
+    \item 3\clubs, 3\diams\ = 5\minor\ -- 5\major, \gf, zależy co licytowaliśmy wcześniej
     \item 1\clubs\ - 1\spades\ --- 1\nt\ - 3\spades\ = \gf\ 6+\spades, 3N = niepoważne. Na \hearts\ tak samo.
     \item 3\nt\ = do gry
-    \item 2\clubs\ - 2\diams\ --- 3\nt\ = propozycyjne ze starszą piątką
+    \item 2\clubs\ - 2\diams\ --- 3\nt\ = propozycyjne ze starszą piątką (5332) \imp
 \end{itemize}
 
 
@@ -202,13 +222,11 @@ Jest to owszem lekko teoretycznie nieoptymalne, ale come on, staram się napisa�
 \section{Rebid 2\ntx\ po otwarciu w kolor młodszy}
 Charakterystyka:
 \begin{itemize}
-    \item \textbf{Nie może} być z fitem do starszej czwórki partnera
-    \item Może być z 6+m na składzie nierównym w sekwencji 1\diams\ - 1\hearts\ --- 2\nt
+    \item \textbf{Nie może} być z fitem do starszej czwórki partnera (chyba że obrzydliwa karta 4333)
+    \item Może być z 6+m na składzie nierównym w sekwencji 1\diams\ - 1\hearts\ --- 2\nt \imp
     \item W pozostałych przypadkach jest na równym lub 2=2=5=4 - z rękami które nie nadawały się na rebid 3\clubs.
-    \item Olewamy szukanie szlemika w karo po otwarciu 1\clubs, bo to zbyt rzadkie (skoro nie daliśmy 2\diams!)
+    \item Olewamy szukanie szlemika w karo po otwarciu 1\clubs, bo to zbyt rzadkie (skoro nie daliśmy 2\nt!)
     \item \textbf{What we bypass, we deny!}
-    \item Skok w 4\clubs\ ustala kolor otwarcia i pyta o asy
-    \item Skok w 4\diams\ ustala kolor odopwiadającego i pyta o asy
 \end{itemize}
 
 \subsection*{1\clubs\ -- 1\hearts\ --- 2\ntx}
@@ -252,7 +270,7 @@ Są to rewersy z przeskokiem. Pokazują:
 \begin{itemize}
     \item 5-4 (1\minor\ - 1\hearts\ --- 2\spades\ oraz 1\diams\ - 1x --- 3\clubs)
     \item 5-5 (1\major\ - 1x --- 3\minor)
-    \item 6-5 (1\hearts\ - 1\nt\ --- 2\spades)
+    \item 6-5 (1\hearts\ - 1\nt\ --- 2\spades) \imp
 \end{itemize} 
 i są ściśle \gf!
 
@@ -307,8 +325,12 @@ Używamy agresywnie, dodając sobie za krótkości. Od ok. 9PC, ale zdarza się 
     \item 4\clubs, 4\diams, 4\hearts = splinter z \textbf{renonsu}
 \end{itemize}
 
-\subsubsection*{Last Train 2\hearts}
-1\spades\ -- 2\clubs\ --- 2\diams\ -- 2\hearts\ = jakiś tam inwit, żeby siędało zatrzymać w 2\spades (nic o kierach)
+\subsubsection*{Dziwne sekwencje}
+\begin{itemize}
+    \item 1\spades\ -- 2\clubs\ --- 2\diams\ -- 2\nt\ = \lsf\ brak/niska/średnia/wysoka \imp
+    \item 1\hearts\ -- 2\clubs\ --- 2\diams\ -- 2\spades\ = \lsf
+\end{itemize}
+
 
 
 \pagebreak
@@ -324,7 +346,7 @@ Używamy agresywnie, dodając sobie za krótkości. Od ok. 9PC, ale zdarza się 
 \end{itemize}
 \subsubsection*{1\hearts\ --- 1\spades \\ 2\clubs\ --- 2\diams \\ ?}
 \begin{itemize}
-    \item 2\spades\ = dokładnie 3\spades, 16+. 2\nt\ = ask o skład, 3\spades\ = ustalenie, 3\nt\ = \ns
+    \item 2\spades\ = dokładnie 3\spades, 16+. Dalej: 2\nt\ = ask o skład, 3\spades\ = ustalenie, 3\nt\ = \ns
     \item 2\nt\ = 2533
     \item 3\spades\ = 4\spades, \gf, raczej bez krótkości
 \end{itemize}
@@ -365,10 +387,10 @@ Używamy agresywnie, dodając sobie za krótkości. Od ok. 9PC, ale zdarza się 
     \item 2\hearts\ = 4+\hearts/4+\spades\ do pasa
     \item 2\spades\ = 5+\spades\ do pasa
     \item 3\clubs\ = pytanie o skład na młodych
-    \subitem 3\diams\ = 4+/4+\minor (3\hearts\ ustala \clubs, 3\spades\ ustala \diams)
+    \subitem 3\diams\ = 4+/4+\minor (3\hearts\ ustala \clubs, 3\spades\ ustala \diams) \imp
     \subitem 3\hearts\ = 5+\clubs
     \subitem 3\spades\ = 5+\diams
-    \subitem 3\nt\ = 4333 lub \textls{paskunda} karta z 4/4\minor
+    \subitem 3\nt\ = 4333 lub \textls{paskudna} karta z 4/4\minor
     \item 3\diams\ = pytanie o starsze trójki (4\clubs\ = obie -> 4\diams\hearts\ = trsf)
     \item 3\hearts\ = krótkość
     \item 3\spades\ = krótkość
@@ -411,6 +433,7 @@ Po transferze na \spades\ tak samo
 \end{itemize}
 
 \subsection*{4\clubs\ Minor Puppet o czwórki}
+Forsuje do szlemika, jeśli jest fit i asy
 \begin{itemize}
     \item 4\diams\ = posiadam młodszą czwórkę, ale nie piątkę
     \subitem 4\hearts\ = 4\clubs
@@ -440,7 +463,33 @@ Po transferze na \spades\ tak samo
 
 \pagebreak
 \section{Otwarcie 2\clubs\ Acol}
-Opisane w innym pliku
+\subsection*{Odpowiedzi}
+\begin{itemize}
+    \item 2\diams\ = pozytywne
+    \item 2\hearts\ = negatywne
+    \item 2\spades, 2\nt\, 3\clubs, 3\diams\ = kolor w sile co najmniej \hearts KQJTxx 
+\end{itemize}
+
+\subsection*{2\clubs\ --- 2\hearts\ --- ?}
+\begin{itemize}
+    \item \pass\ = dopuszczalne
+    \item 2\spades\ = forsuje raz, więc z maxem 2\hearts\ z fitem 4\spades!
+    \item 2\nt, 3\clubs, 3\diams\ = \nf
+    \item 3\hearts\ = \gf
+\end{itemize}
+
+\subsection*{2\clubs\ -- 2\diams\ --- 2\hearts\ -- ?}
+\begin{itemize}
+    \item 2\spades\ = pokaż układ transferem (od 2\nt)
+    \item 2\nt, 3\clubs, 3\diams\ = raczej singiel \hearts, własny długi kolor z 3 honorami
+\end{itemize}
+
+\subsection*{2\clubs\ -- 2\diams\ --- 2\spades\ -- ?}
+\begin{itemize}
+    \item 2\nt\ = pokaż układ transferem (od 3\clubs)
+    \item 3\clubs, 3\diams, 3\hearts\ = raczej singiel \spades, własny długi kolor z 3 honorami
+\end{itemize}
+
 
 
 \pagebreak
@@ -464,7 +513,7 @@ Naturalne, jakość zależna od założeń.
     \item W stare - bardzo agresywne również przed pasem partnera
 \end{itemize}
 
-\subsection*{4\clubs\ Preempt Keycard}
+\subsection*{4\clubs\ Preempt Keycard \vimp} 
 Działa bezpośrednio po każdym bloku.
 \begin{itemize}
     \item 4\diams\ = 0 asów
@@ -481,7 +530,7 @@ Działa bezpośrednio po każdym bloku.
 \subsubsection*{(1\clubs) -- 1\hearts\ -- (\passx) -- ?}
 \begin{itemize}
     \item 2\clubs\ = z fitem niezależnie od znaczenia 1\clubs
-    \item 2\nt\ = NAT 13-14
+    \item 2\nt\ = NAT 13-14 \imp
     \item 3\clubs\ = Mixed raise 7-9 z 4-kartowym fitem
     \item 3\hearts\ = Blokujące
 \end{itemize}
@@ -489,9 +538,9 @@ Działa bezpośrednio po każdym bloku.
 \subsubsection*{(1\clubs) -- 1\hearts\ -- (coś) -- ?}
 \begin{itemize}
     \item coś = 1 w kolor, wtedy 2\clubs\ jest z fitem, a 2 w kolor odpowiedzi jest NAT
-    \item coś = 2 w kolor, wtedy 2\clubs\ jest NAT
+    \item coś = 2 w kolor, wtedy 3\clubs\ jest NAT
     \item \dbl\ i \rdbl\ = 9+PC i dokładnie dubelek \hearts
-    \item 2\nt\ = 10+PC z \textbf{4-kartowym fitem}
+    \item 2\nt\ = 10+PC z \textbf{4-kartowym fitem} \imp
     \item 3\hearts\ = Blokujące
     \item 3\clubs\ (k. otw. z przeskokiem) = Mixed raise 7-9 z 4-kartowym fitem
 \end{itemize}
@@ -518,7 +567,7 @@ Działa bezpośrednio po każdym bloku.
     \item 2\nt\ = ask INV+
     \subitem 3\hearts\ = dobre z \clubs
     \subitem 3\spades\ = dobre z \diams
-    \item 3\diams\ = \textbf{INV+ z fitem} \spades
+    \item 3\diams\ = INV+ z fitem \spades \imp
     \item 3\spades\ = Mixed Raise z dwoma grającymi wartościami
 \end{itemize}
 
@@ -527,7 +576,7 @@ Działa bezpośrednio po każdym bloku.
     \item 2\nt\ = ask INV+
     \subitem 3\hearts\ = dobre z \clubs 
     \subitem 3\spades\ = dobre z \diams
-    \item 3\diams\ = \textbf{INV+ z fitem} \hearts
+    \item 3\diams\ = INV+ z fitem \hearts \imp
 \end{itemize}  
 
  
@@ -590,18 +639,18 @@ Na razie:
 
 \pagebreak
 \section{Przeciwnik otwiera 2\diams\ Multi lub Wilkosz}
-Ku chwale Erica Kokisha, JEBAĆ MULTI PAŁA PUNKTY
+Ku chwale Erica Kokisha, JEBAĆ MULTI PAŁA PUNKTY 
 \subsection*{Wejścia na multi}
 \subsubsection*{(2\diams*) --- ?}
 \begin{itemize}
-    \item \dbl\ = 14-16 BAL lub objaśniak
+    \item \dbl\ = 14-16 BAL lub objaśniak \vimp
     \item 2\nt\ = 17-19 BAL
     \br
     \item Z kontrą wywoławczą do jednego koloru pasujemy i czekamy co zrobią.
     Wznowienie zbiegającego 2\hearts\ jest pełnobilansowe!
 \end{itemize}
 
-\subsection*{Partner kontruje na punkty}
+\subsection*{Partner kontruje na punkty \vimp} 
 \subsubsection*{(2\diams*) --- \dbl\ --- (\rdbl**)}
 ** Cokolwiek co grają P/C. Trzeba uważać bo po \pass\ nasza odzywka może byc wymuszona.
 \begin{itemize}
@@ -609,7 +658,7 @@ Ku chwale Erica Kokisha, JEBAĆ MULTI PAŁA PUNKTY
     \item 2\nt\ = \leb, relay 3\clubs
     \subitem \pass, 3\diams\ = do gry
     \subitem 3\hearts, 3\spades\ = \inv
-    \item 3\clubs\ = Puppet Stayman
+    \item 3\clubs\ = Puppet Stayman \imp
     \item 3\diams, 3\hearts\ = transfer (jak po otwarciu 2\nt)
 \end{itemize}
 
@@ -622,16 +671,68 @@ Ku chwale Erica Kokisha, JEBAĆ MULTI PAŁA PUNKTY
 "Jeśli odpowiadający pokazał naturalnie jakiś kolor (np. 2\hearts/\spades\ albo \pass\ = 5+\diams),
  to transfer na ten kolor bądź późniejsze zalicytowanie tego koloru jest pytaniem o trzymanie."
 
-\pagebreak
+
+ \pagebreak
 \section{Przeciwnik otwiera dwukolorówką lub blokiem}
 
+\subsection*{(2\spades) --- \dbl\ --- (\passx) --- ?}
+\begin{itemize}
+    \item 3\clubs, 3\diams, 3\hearts\ = \inv
+    \item 3\spades\ = \gf\ bez 4\hearts
+    \item 3\nt\ = do gry \br
+    \item 2\nt\ \rightarrow\ 3\clubs, 3\diams, 3\hearts\ = do pasa
+    \item 2\nt\ \rightarrow\ 3\spades\ = \gf\ z 4\hearts
+    \item 2\nt\ \rightarrow\ 3\nt\ = \gf\ \textbf{z 4\hearts} z trzymaniem (choice of games)
+\end{itemize}
+
+\subsection*{(2\hearts) --- \dbl\ --- (\passx) --- ?}
+\begin{itemize}
+    \item 3\clubs, 3\diams, 3\spades\ = \inv
+    \item 3\hearts\ = \gf\ bez 4\spades
+    \item 3\nt\ = do gry \br
+    \item 2\nt\ \rightarrow\ 3\clubs, 3\diams\ = do pasa
+    \item 2\nt\ \rightarrow\ 3\hearts\ = \gf\ z 4\spades
+    \item 2\nt\ \rightarrow\ 3\nt\ = \gf\ \textbf{z 4\spades} z trzymaniem (choice of games)
+\end{itemize}
+
+\subsection*{Inne}
+\begin{itemize}
+    \item (2\hearts) 3\hearts\ = Michaels NIE \gf
+    \item (2\hearts) 4\clubs/4\diams\ = ULTRA dwukolorówka z licytowanym i \spades,
+    pierwszy schodek ustala \textbf{stary}, drugi ustala \textbf{młody}
+\end{itemize}
 
 
 \pagebreak
 \section{Strefa szlemowa}
+\subsection*{Asy}
+Odpowiedzi: bez bocznych króli. Pytanie o dame: \textbf{nie/tak} bez bocznych króli.
+\subsubsection*{4\ntx\ --- (5\minor\major) --- ?}
+Jeśli \textbf{możemy} zalicytować nasz kolor na poziomie 5:
+\begin{itemize}
+    \item \pass\ = 1/4 lub karny - \textbf{forsuje do kontry!}
+    \item \dbl\ = 0/3
+    \item +1 = 2 (jeśli to naszego koloru to nie pokazujemy Q)
+\end{itemize}
+Jeśli \textbf{nie możemy} zalicytować nasz kolor na poziomie 5:
+\begin{itemize}
+    \item \pass\ = 1/3 lub karny - \textbf{forsuje do kontry!}
+    \item \dbl\ = 0/2/4
+    \item +1 = renons w kolorze przeciwnika
+\end{itemize}
 
+\subsection*{Króle}
+\begin{itemize}
+    \item +1 = najniższy lub 2 pozostałe
+    \item +2 = środkowy lub 2 pozostałe
+    \item +3 = najwyższy lub 2 pozostałe
+    \item zjazd = 0 lub brak miejsca
+    \item z trzema dokładamy 7
+\end{itemize}
 
-\pagebreak
-\section{Pas forsujący i kontry karne}
+\subsection*{Exclusion}
+\begin{itemize}
+    \item 0/1/2
+\end{itemize}
 
 \end{document}
