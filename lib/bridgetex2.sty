@@ -64,6 +64,13 @@
 \newcommand{\soff}{\color{CadetBlue}\textsc{sign-off}\color{black}}
 \newcommand{\mixed}{\color{Fuchsia}\textbf{Mixed raise}\color{black}}
 \newcommand{\ns}{\color{BurntOrange}\textbf{Non-Serious}\color{black}}
+\newcommand{\lsf}{\color{WildStrawberry}\textbf{ASK LSF}\color{black}}
+\newcommand{\leb}{\color{CadetBlue}\textbf{LEB}\color{black}}
+\newcommand*\link[1]{\hspace*{0em plus 1fill}\makebox{#1}}
+\newcommand{\imp}{\color{BurntOrange}\link{\textbf{\large!}}\color{black}}
+\newcommand{\vimp}{\color{OrangeRed}\link{\textbf{\large{!!}}}\color{black}}
+\newcommand{\exq}{\color{JungleGreen}\link{\textbf{\large{?!}}}\color{black}}
+
 
 \DeclareFloatingEnvironment[
     fileext=frm,
@@ -78,7 +85,6 @@
 ]{hand}
 
 \newcommand{\webidding}[1]{
-    \centering 
     \begin{tabular}{cc}
         #1
     \end{tabular}

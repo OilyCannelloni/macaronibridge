@@ -1,0 +1,191 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../lib/bridgetex2}
+\usepackage{polyglossia}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{parskip}
+\setmainlanguage{polish}
+
+
+
+\title{Gazilli, czyli system łatwiejszy niż jego brak}
+\date{\vspace*{-2cm}}
+\begin{document}
+
+\maketitle
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\linewidth]{gazilli-1.jpg}
+\end{figure}
+\section*{A po co to komu}
+Licytacja biegnie do nas: 1\spades\ -- 1\nt\ --- 2\diams. Trzymamy:
+\begin{center}
+    \hhand{Q4}{K9732}{QJ75}{72}
+\end{center}
+Jakie mamy opcje?
+\begin{itemize}
+    \item Decydujemy się na \pass. Rozgrywający posiadał akurat 17 punktów i 3\nt\ było z góry. Och jak przykro!
+    \item Wybieramy 2\hearts. Rozgrywający ma 11 punktów w składzie 5242 i przegrywamy 2\nt.
+    \item Nieco agresywnie próbujemy 3\diams. Rozgrywający dokłada końcówkę ze swoim ładnym piętnastakiem,
+    ale to za mało.
+    \item Wywalamy karty przez okno
+\end{itemize}
+
+\pagebreak
+\section*{Koncepcja}
+Czego nam brakowało? Przede wszystkim poznania \textbf{bilansu otwierającego} na poziomie 2. A teraz jak temu zaradzić:
+W sekwencjach 1\hearts\ -- 1\spades, 1\hearts\ -- 1\nt\ oraz 1\spades\ -- 1\nt, mamy do dyspozycji następujące odzywki: 
+\begin{itemize}
+    \item \pass\ 
+    \subitem 12-14 w składzie 5332 - tak, czasami zagramy to na 26 PC. Ale i wtedy końcóka może być słaba.
+    A zysk z grania 1\nt\ zamiast 2\nt\ kiedy nie mamy bilansu jest ogromny.
+
+    \item 2\clubs\ \fonce
+    \subitem Dowolna \emph{mięsna} ręka \textbf{16+} (silne Gazilli) lub
+    \subitem 4+\clubs, 11-15
+
+    \item 2\diams, 2\hearts\ = 11-15, 4+
+\end{itemize}
+
+\subsection*{Odpowiedzi na 2\clubs}
+Po rebidzie 2\diams, 2\hearts\ licytujemy naturalnie - znamy bilans!
+Tutaj zamieszczam ogólny schemat, odzywki różnią się minimalnie w różnych sekwencjach.
+\begin{itemize}
+    \item 2\diams\ = Dowolna ręka \textbf{8+}. \emph{"Jeśli masz silne Gazilli, chcę ustalić GF"}
+    \item 2\hearts, 2\spades\ = 5-7 PC
+    \item 2\nt\ = oba młode z singlem lub renonsem w kolorze otwarcia, 5-7 PC
+    \item 3\clubs, 3\diams\ = 6+, 5-7 PC
+\end{itemize}
+
+\subsection*{Powrót na kolor otwarcia}
+Jeśli otwierający zalicytował 2\clubs, a następnie po 2\diams\ wrócił na kolor otwarcia,
+oznacza to że ma \textbf{słabą rękę} z naturalnymi treflami! Tu nie ma GF. Np:
+\begin{center}
+\webidding{1\spades\ & 1\nt \\ 2\clubs & 2\diams \\ 2\spades}
+11-15 PC 5\spades4\clubs.
+\\[1em] \webidding{1\spades\ & 1\nt \\ 2\clubs & 2\diams \\ 2\hearts}
+16+ PC 5\spades4\hearts.
+\end{center}
+
+
+\subsection*{Inne intuicyjne schematy}
+\begin{itemize}
+    \item Rebid odpowiadającego 2\nt\ to słaba ręka na młodych
+    \item Ręce układowe sprzedaje się bezpośrednio, a mięsne przez Gazilli. Np:
+    \subitem 1\spades\ -- 1\nt\ --- 3\clubs\ = ściśle 5/5 GF
+    \subitem 1\spades\ -- 1\nt\ --- 2\clubs\ -- 2\spades\ --- 3\clubs\ = 5/4 19+PC
+    \item Jeśli odpowiadający pokaże 5-7, licytacja jest naturalna. Raczej od razu widać co trzeba grać.
+    Główny system jest po 2\clubs\ -- 2\diams.
+\end{itemize}
+
+\subsection*{Co jeszcze zyskujemy?}
+Otwieramy 1\hearts, partner odpowiada 1\nt.
+\begin{center}
+    \hhand{K5}{AKQJ86}{AJ3}{J6}
+\end{center}
+Normalnie pokazujemy to przez 2\nt, lecz mało partnerów pamięta o obowiązkowym 3\clubs, żeby sprawdzić 
+właśnie ten przypadek... A nawet jeśli, to i tak jest mało miejsca!
+
+
+
+
+\pagebreak
+\section*{1\hearts\ --- 1\ntx}
+
+\subsection*{1\hearts\ --- 1\ntx \\ 2\clubs\ --- ?}
+\begin{itemize}
+    \item 2\diams\ = dowolna ręka \textbf{8+}
+    \item 2\hearts\ = 2-3 \hearts, 4-7
+    \item 2\spades\ = 5\clubs5\diams \vimp
+    \item 2\nt\ = Krótsza niż 5-5 karta na młodych z max. singlem \hearts \imp
+    \item 3\clubs\ = NAT 6+ 5-7
+    \item 3\diams\ = NAT 6+ 5-7
+\end{itemize}
+
+\subsection*{1\hearts\ --- 1\ntx \\ 2\clubs\ --- 2\diams \\ ?}
+\begin{itemize}
+    \item 2\hearts\ = 5\hearts, 4+\clubs, 11-15
+    \item 2\spades\ = 4\spades, 16+ (Jak zwykły rewers - bezpośredni rewers to co innego!)
+    \item 2\nt\ = 18+, 5332 (Bezpośrednie 2\nt\ to co innego!)
+    \item 3\clubs\ = 5\hearts, 4\clubs\ 16+
+    \item 3\diams\ = 5\hearts, 4\diams\ 16+
+    \item 3\hearts\ = 6+\hearts\ 16+
+\end{itemize}
+
+
+
+\pagebreak
+\section*{1\spades\ --- 1\ntx}
+\subsection*{1\spades\ --- 1\ntx \\ 2\clubs\ --- ?}
+\begin{itemize}
+    \item 2\diams\ = dowolna ręka \textbf{8+}
+    \item 2\hearts\ = 5+\hearts, 5-7 
+    \item 2\spades\ = 2-3\spades, 4-7
+    \item 2\nt\ = Młode z max. singlem \spades \imp
+    \item 3\clubs\ = NAT 6+ 5-7
+    \item 3\diams\ = NAT 6+ 5-7
+\end{itemize}
+
+\subsection*{1\spades\ --- 1\ntx \\ 2\clubs\ --- 2\diams \\ ?}
+\begin{itemize}
+    \item 2\hearts\ = 5\spades, 4+\hearts, 16+
+    \item 2\spades\ = 5\spades, 4\clubs, 11-15
+    \item 2\nt\ = 5332, 18+ (Bezpośrednie 2\nt\ to co innego!)
+    \item 3\clubs\ = 5\spades, 4\clubs\ 16+
+    \item 3\diams\ = 5\spades, 4\diams\ 16+
+    \item 3\hearts\ = 5\spades, 4\hearts\ 16+
+    \item 3\spades\ = 6+\spades, 16+
+\end{itemize}
+
+
+\pagebreak
+\section*{1\hearts\ --- 1\spades}
+\subsection*{1\hearts\ --- 1\spades \\ 2\clubs\ --- ?}
+\begin{itemize}
+    \item 2\diams\ = dowolna ręka \textbf{8+}
+    \item 2\hearts\ = 2\hearts, 5-7 
+    \item 2\spades\ = 5+ dobrych \spades, 5-7
+    \item 2\nt\ = 4\spades, singiel \hearts\ i jakieś młode
+    \item 3\clubs\ = NAT 6+ 5-7
+    \item 3\diams\ = NAT 6+ 5-7
+\end{itemize}
+
+\subsection*{1\hearts\ --- 1\spades \\ 2\clubs\ --- 2\diams \\ ?}
+\begin{itemize}
+    \item 2\hearts\ = 11-15, 5\hearts, 4+\clubs
+    \item 2\spades\ = 16+, \textbf{dokładnie} 3\spades\ \imp
+    \item 2\nt\ = 18+, 5332 (Bezpośrednie 2\nt\ to co innego!)
+    \item 3\clubs\ = 5\hearts, 4\clubs, 16+
+    \item 3\diams\ = 5\hearts, 4\diams, 16+
+    \item 3\hearts\ = 6+\hearts, 16+
+    \item 3\spades\ = 4\spades\ \gf
+\end{itemize}
+
+
+\pagebreak
+\section*{Inne bezsensowne ustalenia}
+\subsection*{1\hearts\ --- 1\ntx}
+\begin{itemize}
+    \item 2\spades\ = 6\hearts, 5\spades, \gf \imp
+    \item 2\nt\ = 6\hearts, 5\clubs\ lub 5\diams, \gf
+    \subitem 3\clubs\ pytanie, 3\diams\ = \clubs, 3\hearts\ = \diams
+    \item 3\clubs\ = 5\hearts, 5+\clubs
+    \item 3\diams\ = 5\hearts, 5+\diams
+\end{itemize}
+
+\subsection*{GF z fitem przez 1\spades}
+\begin{center}
+    \webidding{1\hearts & 1\spades \\ 2\clubs & 3\hearts\ }
+    \gf\ z fitem kier
+\end{center}
+
+\subsection*{GF samoustalenie}
+\begin{center}
+    \webidding{1\hearts & 1\spades \\ 3\hearts} 
+    \webidding{1\hearts & 1\nt \\ 3\hearts} 
+    \webidding{1\spades & 1\nt \\ 3\spades} 
+    \gf\ samoustalenie 
+\end{center}
+
+\end{document}
