@@ -1,5 +1,5 @@
 \documentclass[12pt, a4paper]{article}
-\usepackage{../lib/bridgetex2}
+\usepackage{../../lib/bridgetex2}
 \usepackage{polyglossia}
 \usepackage{enumitem}
 \setmainlanguage{polish}
@@ -51,7 +51,8 @@
 
     (1-3) \clubs A, K, x przebita (4) \hearts A, (5) \hearts 5 przebita,
     (6-7) \diams A, K, (8) \diams 3 przebita \spades J, (9) \hearts 7 przebita,
-    (10) \diams 6 przebita \spades K, (11) \hearts J przebity \spades T, (12) \spades Q, (13) \spades A 
+    (10) \diams 6 przebita \spades K, (11) \hearts J przebity \spades T, (12) \spades Q, (13) \spades A.
+    Wynik: +1. 
 
 
 
@@ -89,8 +90,8 @@
     Wistujemy w \hearts Q. Oczywiście w otwarte karty widać, że treflowy jest lepszy,
     ale raczej trudno jest na to wpaść. 
     S widzi, że wistujący nie ma \hearts K. Zatem ma go W. Jeśli rozgrywający weźmie tą lewę,
-    kontrakt jest już niemalże pewny. Patrząc na dziadka, odda \hearts A, \diams A i może trefla przy odrobinie szczęścia.
-    Musimy poszukać szansy przebitkowej.
+    kontrakt jest już niemalże pewny. Patrząc na dziadka, odda \hearts A, \diams A i zapisze +1.
+    Musimy poszukać szybkiej szansy przebitkowej.
 
     \hearts Q należy zabić asem i odegrać w karo - \diams A u partnera jest pewny, on 
     coś na wejście musi mieć, a z resztą to jedyna szansa na dojście. Ale skąd partner ma wiedzieć,
@@ -166,15 +167,17 @@
         \begin{tabular}{cccc}
             \vul{W} & \vul{N} & \vul {E} & \vul{S} \\
             1\nt & \pass & 2\clubs & \pass \\
-            2\spades\ & \pass & 3\spades & \pass \\
+            2\spades\ & \pass & 3\spades* & \pass \\
             4\spades & \pass &\pass & \pass
         \end{tabular}
     \end{table}
 
+    * Tu można się pokusić o 4\spades od razu jeśli wierzymy w umiejętności rozgrywkowe partnera.
+
     \subsubsection*{Analiza}
     Wistujemy w \hearts K. Partner powinien dołożyć \hearts 5. Kontynuujemy kiera, 
     a za trzecim razem rozgrywający przebija.
-    Wydaje się, że kontrakt jest z góry. Ściągamy atuty, jednak N nie dokłada do drugiego pika.
+    Wydaje się, że kontrakt jest z góry. Ściągamy atuty, N nie dokłada jednak do drugiego pika.
     Musimy zatem wyimpasować waleta u S.
     
     Jeśli jednak zrobimy to natychmiast - przegramy, gdyż pozbędziemy się atutów,
@@ -190,7 +193,7 @@
 
     \begin{center}
         \hspace*{-12mm}%
-        \vhand{953}{8732}{654}{AK7} \\
+        \vhand{KQJ784}{AKQ}{Q97}{T} \\
         \vhand{T2}{9}{A32}{Q986542}%
         \begin{minipage}{3cm}%
             \centering
@@ -209,9 +212,9 @@
         \centering
         \begin{tabular}{cccc}
             \nvul{W} & \vul{N} & \nvul {E} & \vul{S} \\
-            -    & -     & -     & 1\spades \\
-            \pass & 2\spades & \pass & 4\spades \\
-            \pass & \pass & \pass & 
+            -    & 1\spades & \pass & 2\spades \\
+            \pass & 4\spades & \pass & \pass \\
+            \pass &  &  & 
         \end{tabular}
     \end{table}
 
@@ -219,8 +222,8 @@
     Wistujemy w \hearts J. Wist treflowy jest słabą alternatywą,
     gdyż mamy dużo punktów - partner raczej nie ma dobrych trefli.
     Partner dokłada \hearts 9, a rozgrywający bije asem. 
-    Co się dzieje w kierach? Jeśli partner miałby figurę, dołożyłby 
-    małą blotkę! Zatem wszystkie figury ma rozgrywający, a 9 była singlowa
+    Co się dzieje w kierach? Brakuje nam A, K, Q, 9. Jeśli partner miałby figurę,
+    powinien przejąć waleta. Zatem z dużym prawdopodobieństwem 9 jest singlowa!
 
     Rozgrywający liczy przegrywające. \spades: 1, \hearts: 0, \diams: 3, \clubs: 0.
     Jedno z kar możemy wyrzucić na \clubs AK i należy zrobić to natychmiast,
@@ -266,11 +269,11 @@
     Po 2\nt, E powinien od razu skoczyć w 4\spades. 2\nt\ forsuje do
     końcówki, a gdy jesteśmy sforsowani, ze słabą kartą licytujemy szybko.
 
-    S wistuje w kolor partnera \diams 2. W liczy przegrywające:
+    S wistuje w kolor partnera \diams 2. E liczy przegrywające:
     \spades: 1, \hearts: 1, \diams: 1, \clubs: 0.
     Aby pozbyć się niektórych, można trafić impas kier, lub jeśli impas 
     trefl wychodzi, wyrzucić karo. Druga opcja jest jednak mało prawdopodobna, 
-    gdyż S licytował. Na początku ściągamy atuty.
+    gdyż N licytował. Na początku ściągamy atuty.
 
     N bije asem i gra \diams K, \diams 3. Tu W powinien przebić dziewiątką! Po wiście w dwójkę 
     widać co się dzieje w rozdaniu.
@@ -320,6 +323,9 @@
     \textbf{źródła lew}, dzięki którym mozemy dodać sobie lewę do naszego bilansu. Wychodzi nam
     12 lew, zatem 6\nt!
 
+    Na turnieju często widziałem licytacię 3\clubs\ od N - próba znalezienia fitu trefl to świetny 
+    pomysł! Tutaj jednak powinno to pokazywać pięciokart.
+
 
 
 
@@ -361,7 +367,7 @@
     Ta karta aż prosi się o grę własną. Dlatego należy zawalczyć do 3\hearts.
 
     To samo powinien pomyśleć W, do którego licytacja zbiega.
-    Ma niepokazanego piątego atuta okas AK, które przeciwnicy w 3\hearts 
+    Ma niepokazanego piątego atuta okas AK, które przeciwnicy w 3\hearts\ 
     przebiją kierami. Dlatego dajemy 3\spades.
 
 
