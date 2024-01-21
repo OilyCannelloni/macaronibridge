@@ -1,34 +1,39 @@
 #!/bin/bash
 
-if [ "$#" -ne 1 ]; then
-    echo "Usage: ./topdf filename (without .tex extension)"
-    exit 1
-fi
-
-FILENAME=$1
 SOURCE_DIR="./source"
 DOCS_DIR="./docs"
 BUILD_DIR="./build"
 
-if [ ! -f "$SOURCE_DIR/$FILENAME.tex" ]; then
-    echo "Source file $SOURCE_DIR/$FILENAME.tex not found"
-    exit 1
-fi
-
 mkdir -p "$DOCS_DIR"
 mkdir -p "$BUILD_DIR"
 
-cd "$SOURCE_DIR"
+convert_file() {
+    local FILENAME=$1
 
-lualatex --output-directory="../$BUILD_DIR" "$FILENAME.tex"
+    if [ ! -f "$SOURCE_DIR/$FILENAME.tex" ]; then
+        echo "Source file $SOURCE_DIR/$FILENAME.tex not found"
+        return 1
+    fi
 
-cd ..
+    cd "$SOURCE_DIR"
+    lualatex --output-directory="../$BUILD_DIR" "$FILENAME.tex"
+    cd ..
 
-if [ ! -f "$BUILD_DIR/$FILENAME.pdf" ]; then
-    echo "lualatex failed to create PDF"
-    exit 1
+    if [ ! -f "$BUILD_DIR/$FILENAME.pdf" ]; then
+        echo "lualatex failed to create PDF for $FILENAME"
+        return 1
+    fi
+
+    mv "$BUILD_DIR/$FILENAME.pdf" "$DOCS_DIR/"
+    echo "PDF generated: $DOCS_DIR/$FILENAME.pdf"
+}
+
+if [ "$#" -eq 1 ]; then
+    FILENAME=$1
+    convert_file "$FILENAME"
+else
+    for texfile in "$SOURCE_DIR"/*.tex; do
+        FILENAME=$(basename "$texfile" .tex)
+        convert_file "$FILENAME"
+    done
 fi
-
-mv "$BUILD_DIR/$FILENAME.pdf" "$DOCS_DIR/"
-
-echo "PDF generated: $DOCS_DIR/$FILENAME.pdf"
