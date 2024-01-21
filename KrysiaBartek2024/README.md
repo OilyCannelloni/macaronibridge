@@ -13,7 +13,7 @@ The *./docs* directory contains .pdf files with bidding system.
 Each file refers to a different convention and contains bidding
 arrangements with explanations and examples.
 
-## System creation
+## SYSTEM creation
 
 The system file (SYSTEM.pdf) is being created automatically from
 separate system files placed in docs. To produce the SYSTEM run:
@@ -22,7 +22,7 @@ separate system files placed in docs. To produce the SYSTEM run:
 ```
 in the terminal.
 
-## How the system is being created?
+## How the SYSTEM is being created?
 
 Each file in *./docs* contains bidding explanations and examples
 regarding discussed topic. The explanations are preceded by bare 
