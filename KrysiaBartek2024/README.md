@@ -7,9 +7,9 @@ The directory contains the notes for the bidding arrangements.
 The root directory contains main system file (SYSTEM.pdf) and 
 scripts used to generate SYSTEM files.
 
-The *./source* directory contains `.tex` files.
+The *./source* directory contains .tex files.
 
-The *./docs* directory contains `.pdf` files with bidding system.
+The *./docs* directory contains .pdf files with bidding system.
 Each file refers to a different convention and contains bidding
 arrangements with explanations and examples.
 
@@ -27,11 +27,11 @@ in the terminal.
 Each file in *./docs* contains bidding explanations and examples
 regarding discussed topic. The explanations are preceded by bare 
 arrangements. The `makeSystem.sh` script extracts those arrangements
-from each `.tex` file and puts it all together in SYSTEM file.
+from each .tex file and puts it all together in SYSTEM file.
 
 ### How to change the order or titles in the SYSTEM.pdf?
 
-The arrangements from the `.tex` file that are being placed in 
+The arrangements from the .tex file that are being placed in 
 the SYSTEM file are bordered with comments:
 ```
 %%% PRIORITY: 42
