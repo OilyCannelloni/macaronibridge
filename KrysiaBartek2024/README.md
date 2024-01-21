@@ -47,6 +47,19 @@ To change the title appearing in the SYSTEM or the order of contents,
 change the TITLE or PRIORITY in those comments. The higher priority (smaller number)
 the earlier given content will appear in the SYSTEM.
 
+## How to produce the separate doc file?
+
+Run:
+```
+./toPdf.sh filename
+```
+in the terminal. Write *filename* without extension. The LaTeX build files will
+be placed in *./build* directory. The output file will be placed in *./docs* directory.
+If you want to make pdfs from all the source files, run:
+```
+./toPdf.sh
+```
+
 ## Current docs content
 
 - Reverses, jump shifts and jump reverses
