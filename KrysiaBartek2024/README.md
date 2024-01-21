@@ -64,7 +64,7 @@ If you want to make pdfs from all the source files, run:
 
 - Reverses, jump shifts and jump reverses
 - 2nt overcall after major preempt
-- 1nt -- dealing with interference
+- 1nt - dealing with interference
 
 ## Roadmap
 
