@@ -5,7 +5,7 @@ The directory contains the notes for the bidding arrangements.
 ### Project structure
 
 The root directory contains main system file (SYSTEM.pdf) and 
-scripts used to generate system files.
+scripts used to generate SYSTEM files.
 
 The *./source* directory contains `.tex` files.
 
@@ -16,7 +16,7 @@ arrangements with explanations and examples.
 ### System creation
 
 The system file (SYSTEM.pdf) is being created automatically from
-separate system files placed in docs. To produce the system run:
+separate system files placed in docs. To produce the SYSTEM run:
 ```
 ./makeSystem.sh
 ```
