@@ -69,4 +69,9 @@ If you want to make pdfs from all the source files, run:
 ## Roadmap
 
 - add generating list of contents in the SYSTEM
+- Gazilli
+- dealing with preempts
+- acol 2c
+- dealing with multi/Wilkosz
+- balance double
 - TBD
