@@ -46,3 +46,12 @@ Content
 To change the title appearing in the SYSTEM or the order of contents,
 change the TITLE or PRIORITY in those comments. The higher priority (smaller number)
 the earlier given content will appear in the SYSTEM.
+
+## Current docs content
+
+- Reverses, jump shifts and jump reverses
+- 2nt overcall after major preempt
+
+## Roadmap
+
+TBD
