@@ -71,6 +71,9 @@
 \newcommand{\vimp}{\color{OrangeRed}\link{\textbf{\large{!!}}}\color{black}}
 \newcommand{\exq}{\color{JungleGreen}\link{\textbf{\large{?!}}}\color{black}}
 \newcommand{\addhcp}[1]{\color{JungleGreen}\link{\textbf{\large{#1}}}\color{black}}
+\newcommand{\anysuit}[1]{\color{PineGreen}{\textbf{{#1}}}\color{black}}
+\newcommand{\mins}{\textbf{m}}
+\newcommand{\majs}{\textbf{M}}
 
 \DeclareFloatingEnvironment[
     fileext=frm,
@@ -100,18 +103,13 @@
     \end{center}
 }
 
-\newcommand{\cihand}[4]{
-    \begin{minipage}{\linewidth}
-        \centerline{\hhand{#1}{#2}{#3}{#4}}
-        \vspace{0.2cm}
-    \end{minipage}
-}
-
 \newcommand{\cihandp}[5]{
-    \makebox[\linewidth][s]{
-        \hfill {\hhand{#1}{#2}{#3}{#4}} \hfill (#5)
+    \setlength{\fboxsep}{7pt}
+    \noindent\fcolorbox{white}{white}{
+        \makebox[\linewidth][s]{
+            \hfill {\hhand{#1}{#2}{#3}{#4}} \hfill (#5)
+        }
     }
-    \par\vspace{0.05cm}
 }
 
 \newcounter{vhand}
