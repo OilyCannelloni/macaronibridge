@@ -63,8 +63,10 @@ If you want to make pdfs from all the source files, run:
 ## Current docs content
 
 - Reverses, jump shifts and jump reverses
-- 2nt overcall after major preempt
+- 2nt overcall after major preempt [work in progress]
+- 1nt - dealing with interference [work in progress]
 
 ## Roadmap
 
-TBD
+- add generating list of contents in the SYSTEM
+- TBD
