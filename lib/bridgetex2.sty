@@ -70,7 +70,7 @@
 \newcommand{\imp}{\color{BurntOrange}\link{\textbf{\large!}}\color{black}}
 \newcommand{\vimp}{\color{OrangeRed}\link{\textbf{\large{!!}}}\color{black}}
 \newcommand{\exq}{\color{JungleGreen}\link{\textbf{\large{?!}}}\color{black}}
-
+\newcommand{\addhcp}[1]{\color{JungleGreen}\link{\textbf{\large{#1}}}\color{black}}
 
 \DeclareFloatingEnvironment[
     fileext=frm,
@@ -98,6 +98,20 @@
     \begin{center}
         \lsstyle \bspades #1 \bhearts #2 \bdiams #3 \bclubs #4
     \end{center}
+}
+
+\newcommand{\cihand}[4]{
+    \begin{minipage}{\linewidth}
+        \centerline{\hhand{#1}{#2}{#3}{#4}}
+        \vspace{0.2cm}
+    \end{minipage}
+}
+
+\newcommand{\cihandp}[5]{
+    \makebox[\linewidth][s]{
+        \hfill {\hhand{#1}{#2}{#3}{#4}} \hfill (#5)
+    }
+    \par\vspace{0.05cm}
 }
 
 \newcounter{vhand}
