@@ -32,4 +32,3 @@ fi
 mv "$BUILD_DIR/$FILENAME.pdf" "$DOCS_DIR/"
 
 echo "PDF generated: $DOCS_DIR/$FILENAME.pdf"
-
