@@ -27,10 +27,12 @@
 
 \newenvironment*{dummy}{}{}
 
-\newcommand{\clubs}{\color{OliveGreen}\ding{168}\color{black}}
-\newcommand{\diams}{\color{BurntOrange}\ding{169}\color{black}}
-\newcommand{\hearts}{\color{Maroon}\ding{170}\color{black}}
-\newcommand{\spades}{\color{Blue}\ding{171}\color{black}}
+\RequirePackage{xspace}
+\xspaceremoveexception{-}
+\newcommand{\clubs}{\color{OliveGreen}\ding{168}\color{black}\xspace}
+\newcommand{\diams}{\color{BurntOrange}\ding{169}\color{black}\xspace}
+\newcommand{\hearts}{\color{Maroon}\ding{170}\color{black}\xspace}
+\newcommand{\spades}{\color{Blue}\ding{171}\color{black}\xspace}
 
 
 \newcommand{\bclubs}{\color{OliveGreen}\makebox[11pt]{\ding{168}}\color{black}}
@@ -171,7 +173,6 @@
         \end{tabular}
     \end{table}
 }
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
