@@ -62,16 +62,30 @@ If you want to make pdfs from all the source files, run:
 
 ## Current docs content
 
+- 1m opening
+- 1nt opening
+- 2nt opening
+- 1nt - dealing with interference
+- Overcalling 1nt
 - Reverses, jump shifts and jump reverses
 - 2nt overcall after major preempt
-- 1nt - dealing with interference
+- Rebid with 3-card support
+- Responding to partner's preempt
+- Dealing with Multi/Wilkosz
+- Dealing with preempts
+- Acol 2c
+- Gazilli
+- Drury
+- Asking for shortness (LSF)
+- Mini Splinters
+- Transfers after 1M (X)
+- Overcalling 2nt
+- Other bids and rules
 
 ## Roadmap
 
 - add generating list of contents in the SYSTEM
-- Gazilli
-- dealing with preempts
-- acol 2c
-- dealing with multi/Wilkosz
-- balance double
-- TBD
+- complete system
+- add explanations and examples
+- 1M opening
+- non-serious 3nt
