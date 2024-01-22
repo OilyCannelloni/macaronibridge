@@ -1,2 +1,4 @@
 *.synctex.gz
 /ignore/*
+/KrysiaBartek2024/build
+.vscode

@@ -1,0 +1,138 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../../lib/bridgetex2}
+\usepackage{polyglossia}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\setmainlanguage{english}
+
+\title{1\ntx\ -- dealing with interference}
+\author{Krystyna Gasińska, Bartek Słupik}
+\begin{document}
+\maketitle
+
+%%% PRIORITY: 80
+%%% TITLE: 1\ntx\ -- dealing with interference
+%%% SYSTEM BEGIN %%%
+
+\subsubsection*{1\ntx\ -- (2\clubs) -- ?}
+2\clubs\ = \clubs
+\begin{itemize}
+    \item \dbl\ = Stayman
+\end{itemize}
+
+SYSTEM ON
+
+\subsubsection*{1\ntx\ -- (2\clubs\alrts) -- ?}
+2\clubs\ = 5/4 \major
+\begin{itemize}
+    \item \dbl\ = 8+
+    \item 2\hearts, 2\spades, 3\clubs\ = to play
+    \item 2\nt\ = minors
+\end{itemize}
+
+\subsubsection*{1\ntx\ -- (2\diams) -- ?}
+2\diams\ = \diams
+\begin{itemize}
+    \item \dbl\ = negative
+    \item 2\hearts, 2\spades\ = to play
+    \item 2\nt\ = Lebensohl
+    \item 3\clubs\ = 5+\hearts, inv+
+    \item 3\diams\ = 1-\diams, inv+
+    \item 3\hearts\ = 5+\spades, inv+
+    \item 3\spades\ = 5+\clubs, inv+
+    \item 3\nt\ = no \diams\ stopper
+    \item 4\diams, 4\hearts\ = Texas
+\end{itemize}
+
+\subsubsection*{1\ntx\ -- (2\diams\alrts) -- ?}
+2\diams\ = 6+ \major
+\begin{itemize}
+    \item \dbl\ = 8+
+    \item 2\hearts, 2\spades\ = to play
+    \item 2\nt\ = Lebensohl
+    \item 3\clubs\ = 5+\diams, inv+
+    \item 3\diams\ = 5+\hearts, inv+
+    \item 3\hearts\ = 5+\spades, inv+
+    \item 3\spades\ = 5/5 \minor
+    \item 3\nt\ = to play
+    \item 4\diams, 4\hearts\ = Texas
+\end{itemize}
+
+
+\subsubsection*{1\ntx\ -- (2\hearts) -- ?}
+\begin{itemize}
+    \item \dbl\ = negative
+    \item 2\spades\ = to play
+    \item 2\nt\ = Lebensohl
+    \item 3\clubs\ = 5+\diams, inv+
+    \item 3\diams\ = 5+\spades, inv+
+    \item 3\hearts\ = 1-\hearts, inv+
+    \item 3\spades\ = 55 \minor, \gf
+    \item 3\nt\ = no \hearts\ stopper
+    \item 4\hearts\ = Texas
+\end{itemize}
+
+\subsubsection*{1\ntx\ -- (2\spades) -- ?}
+\begin{itemize}
+    \item \dbl\ = negative
+    \item 2\nt\ = Lebensohl
+    \item 3\clubs\ = 5+\diams, inv+
+    \item 3\diams\ = 5+\hearts, inv+
+    \item 3\hearts\ = 55 \minor, \gf
+    \item 3\spades\ = 1-\spades, inv+
+    \item 3\nt\ = no \spades\ stopper
+    \item 4\diams\ = Texas
+\end{itemize}
+
+\subsubsection*{1\ntx\ -- (2\nt\alrts) -- ?}
+2\nt\ = minor
+\begin{itemize}
+    \item \dbl\ = 10+
+    \item 3\clubs\ = Stayman
+    \item 3\diams\ = 5+\hearts, inv+
+    \item 3\hearts\ = 5+\spades, inv+
+\end{itemize}
+
+\subsubsection*{1\ntx\ -- (3\clubs) -- ?}
+\begin{itemize}
+    \item \dbl\ = negative
+    \item 3\diams\ = 5+\hearts, inv+
+    \item 3\hearts\ = 5+\spades, inv+
+    \item 3\spades\ = 5+\diams, inv+
+    \item 3\nt\ = to play
+\end{itemize}
+
+\subsubsection*{1\ntx\ -- (3\diams) -- ?}
+\begin{itemize}
+    \item \dbl\ = negative
+    \item 3\hearts\ = 5+\spades, inv+
+    \item 3\spades\ = 5+\hearts, \gf
+    \item 3\nt\ = to play
+\end{itemize}
+
+\subsubsection*{1\ntx\ -- (\dbl\alrts) -- ?}
+\dbl\ artificial
+
+SYSTEM ON
+
+
+\subsubsection*{1\ntx\ -- (\dbl) -- ?}
+\dbl\ = penalty
+\begin{itemize}
+    \item \pass\ = forces \rdbl
+    \item \rdbl\ = forces 2\clubs
+    \item 2\anysuit{x}\ = forces \anysuit{x+1}
+\end{itemize}
+
+\subsubsection*{1\ntx\ -- (\dbl) -- P\alrts\ -- (P)\\
+                \rdbl\ -- (P) -- ?}
+\begin{itemize}
+    \item \pass\ = penalty
+    \item 2\clubs\ = 4\clubs\ + 4\anysuit{x}\ or 4333 or any other edge case
+    \item 2\diams\ = 4\diams\ + 4\major
+    \item 2\hearts\ = 4\hearts\ + 4\spades
+\end{itemize}
+
+%%% SYSTEM END %%%
+
+\end{document}

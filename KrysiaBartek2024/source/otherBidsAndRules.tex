@@ -1,0 +1,71 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../../lib/bridgetex2}
+\usepackage{polyglossia}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\setmainlanguage{english}
+
+\title{Other bids and rules}
+\author{Krystyna Gasińska, Bartek Słupik}
+\begin{document}
+\maketitle
+
+How to rebid with a strong hand if our partner passed and 
+opponents found major fit? In general: Do not rebid.
+With any strength and balanced hand: \pass. With unbalanced hand
+bid \dbl\ to show other (unbid) major, 2\nt\ to show 
+minors or 3\clubs\ to show clubs.
+
+\subsubsection*{Example}
+\begin{enumerate}
+    \item {
+        Bidding:\\
+        1\clubs\ -- (1\spades) -- P -- (2\spades)\\
+        \dbl\ -- (P) -- ?\\
+        What to do next?\\
+        \cihandp{T871}{82}{KJ852}{T5}{4}
+        Opponents showed \spades-fit, so our partner has at most 1\spades.
+        With 5\hearts\ he would open 1\hearts, so he has 4\hearts (\dbl\ showed
+        \clubs\ and \hearts). It means that we most probably have fit in \diams.\\
+        Correct bid: 3\diams.
+    }
+\end{enumerate}
+
+
+%%% PRIORITY: 1000
+%%% TITLE: Other
+%%% SYSTEM BEGIN %%%
+
+\subsubsection*{1\clubs\ -- (1\hearts) -- P -- (2\hearts) \\ ?}
+\begin{itemize}
+    \item \dbl\ = \clubs\spades, choose
+    \item 2\nt\ = \clubs\diams, choose
+    \item 3\clubs\ = to play
+\end{itemize}
+
+\subsubsection*{1\clubs\ -- (1\spades) -- P -- (2\spades) \\ ?}
+\begin{itemize}
+    \item \dbl\ = \clubs\hearts, choose
+    \item 2\nt\ = \clubs\diams, choose
+    \item 3\clubs\ = to play
+\end{itemize}
+
+\subsubsection*{1\diams\ -- (1\spades) -- P -- (2\spades) \\ ?}
+\begin{itemize}
+    \item \dbl\ = \diams\hearts, choose
+    \item 3\clubs\ = \clubs\diams, choose
+\end{itemize}
+
+\subsubsection*{1\diams\ -- (1\hearts) -- P -- (2\hearts) \\ ?}
+\begin{itemize}
+    \item \dbl\ = \diams\spades, choose
+    \item 3\clubs\ = \clubs\diams, choose
+\end{itemize}
+
+%%% SYSTEM END %%%
+
+% to do: dealing with blackwood interference
+% gambling 3nt
+
+
+\end{document}
