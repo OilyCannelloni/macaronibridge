@@ -37,7 +37,6 @@
 \newcommand{\bdiams}{\color{BurntOrange}\makebox[11pt]{\ding{169}}\color{black}}
 \newcommand{\bhearts}{\color{Maroon}\makebox[11pt]{\ding{170}}\color{black}}
 \newcommand{\bspades}{\color{Blue}\makebox[11pt]{\ding{171}}\color{black}}
-\newcommand{\nt}{\textsc{nt}}
 \newcommand{\ntx}{{\small{NT}}}
 \newcommand{\hcp}{\textsc{hcp}}
 \newcommand{\gf}{\color{BrickRed}\textbf{GF}\color{black}}
@@ -48,7 +47,6 @@
 \newcommand{\slamtry}{\color{WildStrawberry}\textbf{Slam Try}\color{black}\hspace{4pt}}
 \newcommand{\minor}{\color{OliveGreen}\ding{168}\hspace{-3pt}\color{BurntOrange}\ding{169}\color{black}}
 \newcommand{\major}{\color{Maroon}\ding{170}\hspace{-3pt}\color{Blue}\ding{171}\color{black}}
-\newcommand{\pass}{\textsc{pass}}
 \newcommand{\passx}{{\small{PASS}}}
 \newcommand{\stopp}{\color{Maroon}\textsc{stop}\color{black}\hspace{4pt}}
 \newcommand{\enemy}[1]{(#1)}
@@ -172,4 +170,117 @@
             #1
         \end{tabular}
     \end{table}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{luacode}
+
+\begin{luacode}
+    function isBold()
+    local f = font.getfont(font.current())
+    if f then
+        return (string.find(f.name, "bold") ~= nil)
+    end
+    return false
+    end
+
+    is_section_title = false
+
+    function setSectionTitleFlag()
+        is_section_title = true
+    end
+
+    function resetSectionTitleFlag()
+        is_section_title = false
+    end
+
+    function isSectionTitle()
+        return is_section_title
+    end
+\end{luacode}
+
+\let\oldsection\section
+
+\renewcommand{\section}[1]{%
+  \directlua{setSectionTitleFlag()}%
+  \oldsection{#1}
+  \directlua{resetSectionTitleFlag()}%
+}
+
+\makeatletter
+\let\oldsubsubsection\subsubsection
+
+\renewcommand{\subsubsection}{%
+  \@ifstar{\mysubsubsectionStar}{\mysubsubsectionNoStar}%
+}
+
+\newcommand{\mysubsubsectionNoStar}[1]{%
+  \directlua{setSectionTitleFlag()}%
+  \oldsubsubsection{#1}%
+  \directlua{resetSectionTitleFlag()}%
+}
+
+\newcommand{\mysubsubsectionStar}[1]{%
+  \directlua{setSectionTitleFlag()}%
+  \oldsubsubsection*{#1}%
+  \directlua{resetSectionTitleFlag()}%
+}
+\makeatother
+
+\let\oldsubsection\subsection
+\let\oldparagraph\paragraph
+
+\makeatletter
+\renewcommand{\subsection}{%
+  \@ifstar{\mysubsectionStar}{\mysubsectionNoStar}%
+}
+
+\newcommand{\mysubsectionNoStar}[1]{%
+  \directlua{setSectionTitleFlag()}%
+  \oldsubsection{#1}%
+  \directlua{resetSectionTitleFlag()}%
+}
+
+\newcommand{\mysubsectionStar}[1]{%
+  \directlua{setSectionTitleFlag()}%
+  \oldsubsection*{#1}%
+  \directlua{resetSectionTitleFlag()}%
+}
+
+\renewcommand{\paragraph}{%
+  \@ifstar{\myparagraphStar}{\myparagraphNoStar}%
+}
+
+\newcommand{\myparagraphNoStar}[1]{%
+  \directlua{setSectionTitleFlag()}%
+  \oldparagraph{#1}%
+  \directlua{resetSectionTitleFlag()}%
+}
+
+\newcommand{\myparagraphStar}[1]{%
+  \directlua{setSectionTitleFlag()}%
+  \oldparagraph*{#1}%
+  \directlua{resetSectionTitleFlag()}%
+}
+\makeatother
+
+\newcommand{\nt}{%
+  \directlua{%
+    if isSectionTitle() then
+      tex.print("{\\small{NT}}")
+    else
+      tex.sprint("\\textsc{nt}")
+    end
+  }%
+}
+
+\newcommand{\pass}{%
+  \directlua{%
+    if isSectionTitle() then
+      tex.print("{\\small{PASS}}")
+    else
+      tex.sprint("\\textsc{pass}")
+    end
+  }%
 }
