@@ -25,7 +25,7 @@ in the terminal.
 ## How the SYSTEM is being created?
 
 Each file in *./docs* contains bidding explanations and examples
-regarding discussed topic. The explanations are preceded by bare 
+regarding discussed topic. The explanations are accompanied by bare 
 arrangements. The `makeSystem.sh` script extracts those arrangements
 from each .tex file and puts it all together in SYSTEM file.
 
