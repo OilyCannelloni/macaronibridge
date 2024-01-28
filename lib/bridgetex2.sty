@@ -202,14 +202,6 @@
     end
 \end{luacode}
 
-\let\oldsection\section
-
-\renewcommand{\section}[1]{%
-  \directlua{setSectionTitleFlag()}%
-  \oldsection{#1}
-  \directlua{resetSectionTitleFlag()}%
-}
-
 \makeatletter
 \let\oldsubsubsection\subsubsection
 
@@ -223,6 +215,27 @@
   \directlua{resetSectionTitleFlag()}%
 }
 
+%%%
+\let\oldsection\section
+
+\renewcommand{\section}{%
+  \@ifstar{\mysectionStar}{\mysectionNoStar}%
+}
+
+\newcommand{\mysectionNoStar}[1]{%
+  \directlua{setSectionTitleFlag()}%
+  \oldsection{#1}%
+  \directlua{resetSectionTitleFlag()}%
+}
+
+\newcommand{\mysectionStar}[1]{%
+  \directlua{setSectionTitleFlag()}%
+  \oldsection*{#1}%
+  \directlua{resetSectionTitleFlag()}%
+}
+%%%
+
+
 \newcommand{\mysubsubsectionStar}[1]{%
   \directlua{setSectionTitleFlag()}%
   \oldsubsubsection*{#1}%
@@ -230,14 +243,17 @@
 }
 \makeatother
 
+% subsection
 \let\oldsubsection\subsection
 \let\oldparagraph\paragraph
 
 \makeatletter
+% subsection
 \renewcommand{\subsection}{%
   \@ifstar{\mysubsectionStar}{\mysubsectionNoStar}%
 }
 
+% subsection
 \newcommand{\mysubsectionNoStar}[1]{%
   \directlua{setSectionTitleFlag()}%
   \oldsubsection{#1}%
