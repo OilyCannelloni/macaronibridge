@@ -84,7 +84,6 @@ If you want to make pdfs from all the source files, run:
 
 ## Roadmap
 
-- add generating list of contents in the SYSTEM
 - complete system
 - add explanations and examples
 - 1M opening
