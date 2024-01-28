@@ -48,7 +48,7 @@ bidding higher suit denies lower stopper
 
 \subsubsection*{1\minor\ -- 2\hearts \\ ?}
 \begin{itemize}
-    \item 2\nt\ = ASK LSF
+    \item 2\nt\ = \lsf
 \end{itemize}
 
 \subsubsection*{1\clubs\ -- 2\spades \\ ?}
@@ -357,7 +357,56 @@ SYSTEM ON
 
 \section{\texorpdfstring{Drury}{drury}}\label{sec:drury}
 
-TBD
+{\textbf{OFF}} in competition
+
+\subsubsection*{P -- 1\majs \\ ?}
+\begin{itemize}
+    \item 1\nt = 8-11, no fit
+    \item 2\clubs = 4-fit mixed raise (7)8-10\dps OR 3-fit (9)10-11\dps
+    \item 2\majs = 3-fit, 4-8\dps
+    \item 2\anysuit{x} = (9)10, solid 5\anysuit{x}
+    \item 3\clubs = (9)10, \inv, 6\clubs
+    \item 3\anysuit{x} = 4-fit, solid 5\anysuit{x}
+    \item 2\nt = 4-fit, solid 5\clubs
+    \item 3\majs = 5-fit 4-6\dps (or 4 with shortness)
+    \item 3\nt = Two Tiered Splinters 4+\majs (unspecified singleton, (10)11\dps)
+    \item 4\clubs/4\diams/4\hearts = void splinter
+\end{itemize}
+
+\subsubsection*{P -- 1\hearts \\ 2\clubs -- ?}
+\begin{itemize}
+    \item 2\hearts = no interest in the game
+    \item 2\diams = \inv
+    \item 2\nt = 18-20 BAL
+    \item 2\spades/3\clubs/3\diams = 55(54) Slam Try
+    \item 3\spades/4\clubs/4\diams = splinter
+    \item 4\hearts = to play
+\end{itemize}
+
+\subsubsection*{P -- 1\spades \\ 2\clubs -- ?}
+\begin{itemize}
+    \item 2\spades = no interest in the game
+    \item 2\diams = \inv
+    \item 2\nt = 18-20 BAL
+    \item 3\clubs/3\diams/3\hearts = 55(54) Slam Try
+    \item 4\clubs/4\diams/4\hearts = splinter
+    \item 4\spades = to play
+\end{itemize}
+
+\subsubsection*{P -- 1\majs \\ 2\clubs -- 2\majs \\ ?}
+\begin{itemize}
+    \item 3\anysuit{x} = NAT, unspecified singleton, +4-fit \majs support
+\end{itemize}
+
+\subsubsection*{P -- 1\majs \\ 2\clubs -- 2\diams \\ ?}
+\begin{itemize}
+    \item 2\hearts over 2\spades = Last Train (says nothing about \hearts)
+    \item 2\majs = \soff
+    \item 2\nt = 11, BAL
+    \item 3\majs = 4-card support
+    \item 4\majs = to play
+    \item any other bid = NAT, \inv
+\end{itemize}
 
 \section{\texorpdfstring{Reverses, jump shifts and jump reverses}{reverses}}\label{sec:reverses}
 
@@ -374,9 +423,18 @@ TBD
     \item 2\spades\ = 4\spades, (18)19+
 \end{itemize}
 
-\section{\texorpdfstring{Preempt opening}{respondingToPreempt}}\label{sec:respondingToPreempt}
+\section{\texorpdfstring{Preempt opening}{preemptOpening}}\label{sec:preemptOpening}
 
-TBD
+\subsubsection*{2\spades -- ?}
+\begin{itemize}
+    \item 2\nt = \lsf
+\end{itemize}
+
+\subsubsection*{2\hearts -- ?}
+\begin{itemize}
+    \item 2\spades = \lsf
+    \item 2\nt = 5+\spades
+\end{itemize}
 
 \section{\texorpdfstring{Acol 2{\color{OliveGreen}\clubsuit}}{acol2c}}\label{sec:acol2c}
 
@@ -456,7 +514,7 @@ TBD
 
 \subsubsection*{1\clubs -- 1\hearts \\ 2\hearts -- ?}
 \begin{itemize}
-    \item 2\spades = 5+\hearts, \inv+, ASK LSF
+    \item 2\spades = 5+\hearts, \inv+, \lsf
     \item 2\nt = 4\hearts, \inv
     \item 3\clubs = 4\hearts + 4\clubs, \inv
     \item 3\diams = 4\hearts, \gf
@@ -466,7 +524,7 @@ TBD
 \begin{itemize}
     \item 2\nt = 4\spades, \inv
     \item 3\clubs = 4\spades + 4\clubs, \inv
-    \item 3\diams = 5\spades, \inv+, ASK LSF
+    \item 3\diams = 5\spades, \inv+, \lsf
     \item 3\hearts = 4\spades, \gf
 \end{itemize}
 
@@ -599,12 +657,12 @@ any shortness 9-11, 4-card support, not \gf!
 
 \subsubsection*{1\hearts\ -- 2\spades \\ ?}
 \begin{itemize}
-    \item 2\nt\ = ASK LSF
+    \item 2\nt\ = \lsf
 \end{itemize}
 
 \subsubsection*{1\spades\ -- 2\nt \\ ?}
 \begin{itemize}
-    \item 3\clubs\ = ASK LSF
+    \item 3\clubs\ = \lsf
 \end{itemize}
 
 \subsubsection*{1\hearts\ -- 2\spades \\ 2\nt\ -- ?}
@@ -778,7 +836,12 @@ TBD
 
 \section{\texorpdfstring{Overcalling 2\ntx}{overcalling2nt}}\label{sec:overcalling2nt}
 
-TBD
+\subsubsection*{(2\nt) -- ?}
+\begin{itemize}
+    \item \dbl = \clubs\spades OR \diams\hearts
+    \item \clubs = \clubs\diams OR \hearts\spades
+    \item \diams = \clubs\hearts OR \diams\spades
+\end{itemize}
 
 \section{\texorpdfstring{Dealing with Multi/Wilkosz}{dealingWithMulti}}\label{sec:dealingWithMulti}
 

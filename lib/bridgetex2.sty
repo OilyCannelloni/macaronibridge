@@ -71,10 +71,14 @@
 \newcommand{\vimp}{\color{OrangeRed}\link{\textbf{\large{!!}}}\color{black}}
 \newcommand{\exq}{\color{JungleGreen}\link{\textbf{\large{?!}}}\color{black}}
 \newcommand{\addhcp}[1]{\color{JungleGreen}\link{\textbf{\large{#1}}}\color{black}}
-\newcommand{\anysuit}[1]{\color{PineGreen}{\textbf{{#1}}}\color{black}}
-\newcommand{\mins}{\textbf{m}}
-\newcommand{\majs}{\textbf{\small{M}}}
+\newcommand{\anysuit}[1]{\color{PineGreen}{\textbf{{#1}}}\color{black}\xspace}
+\newcommand{\mins}{\textbf{m}\xspace}
+\newcommand{\majs}{\textbf{\small{M}}\xspace}
 \newcommand{\alrts}{\textsuperscript{\textcolor{red}{A}}}
+
+\newcommand{\twosuit}[2]{%
+    #1\unskip\hspace{-3pt}#2%
+}
 
 \DeclareFloatingEnvironment[
     fileext=frm,
@@ -302,3 +306,14 @@
     end
   }%
 }
+
+\newcommand{\dps}{%
+  \directlua{%
+    if isSectionTitle() then
+      tex.print("{\\small{DP}}\\xspace")
+    else
+      tex.sprint("\\textsc{dp}\\xspace")
+    end
+  }%
+}
+
