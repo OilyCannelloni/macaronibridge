@@ -37,6 +37,13 @@ echo '\usepackage{../../lib/bridgetex2}' >> "$OUTPUT_FILE"
 echo '\usepackage{polyglossia}' >> "$OUTPUT_FILE"
 echo '\usepackage{graphicx}' >> "$OUTPUT_FILE"
 echo '\usepackage{enumitem}' >> "$OUTPUT_FILE"
+echo '\usepackage{hyperref}' >> "$OUTPUT_FILE"
+echo '\hypersetup{' >> "$OUTPUT_FILE"
+echo '    colorlinks=true,' >> "$OUTPUT_FILE"
+echo '    linkcolor=blue,' >> "$OUTPUT_FILE"
+echo '    filecolor=magenta,' >> "$OUTPUT_FILE"
+echo '    urlcolor=cyan,' >> "$OUTPUT_FILE"
+echo '}' >> "$OUTPUT_FILE"
 echo '\setmainlanguage{english}' >> "$OUTPUT_FILE"
 echo '' >> "$OUTPUT_FILE"
 echo '\title{Bridge Bidding System}' >> "$OUTPUT_FILE"
@@ -45,19 +52,36 @@ echo '\begin{document}' >> "$OUTPUT_FILE"
 echo '\maketitle' >> "$OUTPUT_FILE"
 echo '' >> "$OUTPUT_FILE"
 
+TOC_FILE="${SOURCE_DIR}/toc_entries.tex"
+> "$TOC_FILE"
+
+i=0
+
+echo '\begin{description}' >> "$OUTPUT_FILE"
 for priority in $(echo "${!file_groups[@]}" | tr ' ' '\n' | sort -n); do
     for file in ${file_groups[$priority]}; do
+        ((i++))
         title=$(sed -n 's/^%%% TITLE: \(.*\)$/\1/p' "$file")
+        file_id=$(basename "$file" .tex)
 
         content=$(sed -n '/%%% SYSTEM BEGIN/,/%%% SYSTEM END/p' "$file" | sed '1d;$d')
 
-        echo "\section{ $title }" >> "$OUTPUT_FILE"
-        echo "$content" >> "$OUTPUT_FILE"
-        echo '' >> "$OUTPUT_FILE"
+        echo "\section{\texorpdfstring{$title}{$file_id}}\label{sec:$file_id}" >> "$TOC_FILE"
+        echo "$content" >> "$TOC_FILE"
+        echo '' >> "$TOC_FILE"
+
+        echo "\def\hyperlinkedtitle{\hyperref[sec:$file_id]{${i}\, ${title}}}" >> "$OUTPUT_FILE"
+        echo "\item[\hyperlinkedtitle] \hfill \pageref{sec:$file_id}" >> "$OUTPUT_FILE"
     done
 done
 
+echo '\end{description}' >> "$OUTPUT_FILE"
+echo '\newpage' >> "$OUTPUT_FILE"
+
+cat "$TOC_FILE" >> "$OUTPUT_FILE"
+
 echo '\end{document}' >> "$OUTPUT_FILE"
+
 
 cd "$SOURCE_DIR"
 
@@ -70,6 +94,7 @@ if [ $LUALATEX_STATUS -ne 0 ] || [ ! -f "$BUILD_DIR/SYSTEM.pdf" ]; then
     echo "Error: lualatex failed to create PDF. See log for details."
     exit 1
 fi
+
 
 mv "$BUILD_DIR/SYSTEM.pdf" "./"
 
