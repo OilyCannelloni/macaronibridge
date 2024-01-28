@@ -44,7 +44,7 @@ if [ "$#" -eq 1 ]; then
 else
     for texfile in "$SOURCE_DIR"/*.tex; do
         FILENAME=$(basename "$texfile" .tex)
-        if [ "$FILENAME" != "SYSTEM" ]; then
+        if [ "$FILENAME" != "SYSTEM" ] && [ "$FILENAME" != "toc_entries" ]; then
             convert_file "$FILENAME"
         fi
     done
