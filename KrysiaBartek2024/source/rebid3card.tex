@@ -10,13 +10,76 @@
 \begin{document}
 \maketitle
 
+\section{3-card support}
+We can agree on the possibility of rebidding with 3-card support to get
+rid of the support double.
+
+\subsubsection*{1\clubs -- 1\hearts \\ ?}
+
+\begin{table}[h!]
+    \centering
+    \setlength{\extrarowheight}{3pt}
+    \begin{tabular}{rc}
+    \multicolumn{1}{c}{Hand} & Bid \\
+    \hhand{xx}{Kxx}{AQxx}{KJxx} & 2\hearts \\
+    \hhand{Kxx}{xxx}{AQxx}{KQx} & 1\nt \\     
+    \end{tabular}
+\end{table} 
+
+Features allowing to bid with 3-card support: shortness, doubleton, Aces, honors in partner's suit.
+
+\section{4-card support}
+With 4-card support invite more aggressively:
+
+\subsubsection*{1\clubs -- 1\spades \\ ?}
+
+\begin{table}[h!]
+    \centering
+    \setlength{\extrarowheight}{3pt}
+    \begin{tabular}{rc}
+    \multicolumn{1}{c}{Hand} & Bid \\
+    \hhand{KTxx}{x}{AKx}{Axxxx} & 3\spades \\
+    \end{tabular}
+\end{table} 
+
+Be even more aggressive in competition. Use opponents' suit to show shortness + 4-card support (\gf):
+\subsubsection*{1\clubs -- (2\hearts) -- 1\spades -- (2\hearts) \\ ?}
+
+\begin{table}[h!]
+    \centering
+    \setlength{\extrarowheight}{3pt}
+    \begin{tabular}{rc}
+    \multicolumn{1}{c}{Hand} & Bid \\
+    \hhand{Kxx}{xx}{Axx}{AJxxx} & 2\spades \\
+    \hhand{KTxx}{x}{AQxx}{Axxx} & 3\spades \\
+    \hhand{KQxx}{x}{AKxx}{Axxx} & 3\hearts \\
+    \hhand{KQxx}{Kx}{AKxx}{Axxx} & \dbl\alrts \\
+    \end{tabular}
+\end{table} 
+
+
 %%% PRIORITY: 142
 %%% TITLE: Rebid with 3-card support
 %%% SYSTEM BEGIN %%%
 
-TBD
+\subsubsection*{1\clubs -- 1\hearts \\ 2\hearts -- ?}
+\begin{itemize}
+    \item 2\spades = 5+\hearts, \inv+, ASK LSF
+    \item 2\nt = 4\hearts, \inv
+    \item 3\clubs = 4\hearts + 4\clubs, \inv
+    \item 3\diams = 4\hearts, \gf
+\end{itemize}
+
+\subsubsection*{1\clubs -- 1\spades \\ 2\spades -- ?}
+\begin{itemize}
+    \item 2\nt = 4\spades, \inv
+    \item 3\clubs = 4\spades + 4\clubs, \inv
+    \item 3\diams = 5\spades, \inv+, ASK LSF
+    \item 3\hearts = 4\spades, \gf
+\end{itemize}
 
 %%% SYSTEM END %%%
+
 
 
 \end{document}

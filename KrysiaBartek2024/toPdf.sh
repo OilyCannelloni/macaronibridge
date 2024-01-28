@@ -16,8 +16,18 @@ convert_file() {
     fi
 
     cd "$SOURCE_DIR"
-    lualatex --output-directory="../$BUILD_DIR" "$FILENAME.tex"
+    lualatex --output-directory="../$BUILD_DIR" --interaction=batchmode "$FILENAME.tex"
+    local LATEX_STATUS=$?
     cd ..
+
+    if [ $LATEX_STATUS -ne 0 ]; then
+        echo ""
+        echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+        echo "lualatex encountered an error processing $FILENAME.tex"
+        echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+        echo ""
+        return 1
+    fi
 
     if [ ! -f "$BUILD_DIR/$FILENAME.pdf" ]; then
         echo "lualatex failed to create PDF for $FILENAME"
@@ -34,6 +44,8 @@ if [ "$#" -eq 1 ]; then
 else
     for texfile in "$SOURCE_DIR"/*.tex; do
         FILENAME=$(basename "$texfile" .tex)
-        convert_file "$FILENAME"
+        if [ "$FILENAME" != "SYSTEM" ]; then
+            convert_file "$FILENAME"
+        fi
     done
 fi
