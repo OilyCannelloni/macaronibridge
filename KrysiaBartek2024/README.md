@@ -4,8 +4,11 @@ The directory contains the notes for the bidding arrangements.
 
 ## Project structure
 
-The root directory contains main system file (SYSTEM.pdf) and 
-scripts used to generate SYSTEM files.
+The root directory contains scripts used to generate SYSTEM files.
+
+The *./SYSTEM* directory contains the generated System files.
+
+The *./SYSTEM/config* directory contains the config files used to generate Systems.
 
 The *./source* directory contains .tex files.
 
@@ -15,26 +18,42 @@ arrangements with explanations and examples.
 
 ## SYSTEM creation
 
-The system file (SYSTEM.pdf) is being created automatically from
+The system files is being created automatically from
 separate system files placed in docs. To produce the SYSTEM run:
 ```
-./makeSystem.sh
+./makeSystem.sh config_file
 ```
-in the terminal.
+in the terminal. As *config_file* choose one of the files from the *./SYSTEM/config* directory.
 
 ## How the SYSTEM is being created?
 
 Each file in *./docs* contains bidding explanations and examples
 regarding discussed topic. The explanations are accompanied by bare 
 arrangements. The `makeSystem.sh` script extracts those arrangements
-from each .tex file and puts it all together in SYSTEM file.
+from each .tex file listed in the chosen *config_file* and puts it 
+all together in SYSTEM file.
+
+## How to create a new system?
+
+Create a *filename.conf* file in the *./SYSTEM/config* directory.
+The first line of this file should contain a title, which will be 
+displayed at the beginning of the system file. The second line contains
+the authors. The next line should contain the list of source file ids
+that will be considered in the system. Example:
+```
+Title
+Authors
+1-15, 17, 22 - 23, 16, 15
+``` 
+Get the ids from the appropriate source files.
 
 ## How to change the order or titles in the SYSTEM.pdf?
 
 The arrangements from the .tex file that are being placed in 
 the SYSTEM file are bordered with comments:
 ```
-%%% PRIORITY: 42
+%%% ID: 42
+%%% PRIORITY: 69
 %%% TITLE: Jebać multi
 %%% SYSTEM BEGIN %%%
 
