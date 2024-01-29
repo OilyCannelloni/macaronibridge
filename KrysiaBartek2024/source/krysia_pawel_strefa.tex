@@ -19,7 +19,7 @@
 \setmainlanguage{english}
 
 \title{Bridge Bidding System}
-\author{Krysia Gasińska, Bartek Słupik}
+\author{Krysia Gasińska, Paweł Skrzypek}
 \begin{document}
 \maketitle
 
@@ -28,22 +28,26 @@
 \item[\hyperlinkedtitle] \hfill \pageref{sec:1mOpening}
 \def\hyperlinkedtitle{\hyperref[sec:1ntOpening]{2\, 1\ntx\ opening}}
 \item[\hyperlinkedtitle] \hfill \pageref{sec:1ntOpening}
-\def\hyperlinkedtitle{\hyperref[sec:1ntInterference]{3\, 1\ntx\ -- dealing with interference}}
+\def\hyperlinkedtitle{\hyperref[sec:overcalling1nt]{3\, Overcalling 1\ntx}}
+\item[\hyperlinkedtitle] \hfill \pageref{sec:overcalling1nt}
+\def\hyperlinkedtitle{\hyperref[sec:gadget3c]{4\, Gadget 3\clubs}}
+\item[\hyperlinkedtitle] \hfill \pageref{sec:gadget3c}
+\def\hyperlinkedtitle{\hyperref[sec:majorsAfterGadget]{5\, Majors after gadget}}
+\item[\hyperlinkedtitle] \hfill \pageref{sec:majorsAfterGadget}
+\def\hyperlinkedtitle{\hyperref[sec:1ntInterference]{6\, 1\ntx\ -- dealing with interference}}
 \item[\hyperlinkedtitle] \hfill \pageref{sec:1ntInterference}
-\def\hyperlinkedtitle{\hyperref[sec:2ntOpening]{4\, 2\ntx\ opening}}
+\def\hyperlinkedtitle{\hyperref[sec:2ntOpening]{7\, 2\ntx\ opening}}
 \item[\hyperlinkedtitle] \hfill \pageref{sec:2ntOpening}
-\def\hyperlinkedtitle{\hyperref[sec:drury]{5\, Drury}}
+\def\hyperlinkedtitle{\hyperref[sec:drury]{8\, Drury}}
 \item[\hyperlinkedtitle] \hfill \pageref{sec:drury}
-\def\hyperlinkedtitle{\hyperref[sec:acol2c]{6\, Acol 2{\color{OliveGreen}\clubsuit}}}
+\def\hyperlinkedtitle{\hyperref[sec:reverses]{9\, Reverses, jump shifts and jump reverses}}
+\item[\hyperlinkedtitle] \hfill \pageref{sec:reverses}
+\def\hyperlinkedtitle{\hyperref[sec:acol2c]{10\, Acol 2{\color{OliveGreen}\clubsuit}}}
 \item[\hyperlinkedtitle] \hfill \pageref{sec:acol2c}
-\def\hyperlinkedtitle{\hyperref[sec:dealingWithPreempts]{7\, Dealing with preempts}}
-\item[\hyperlinkedtitle] \hfill \pageref{sec:dealingWithPreempts}
-\def\hyperlinkedtitle{\hyperref[sec:askLSF]{8\, Ask LSF}}
-\item[\hyperlinkedtitle] \hfill \pageref{sec:askLSF}
-\def\hyperlinkedtitle{\hyperref[sec:gazilli]{9\, Gazilli}}
+\def\hyperlinkedtitle{\hyperref[sec:gazilli]{11\, Gazilli}}
 \item[\hyperlinkedtitle] \hfill \pageref{sec:gazilli}
-\def\hyperlinkedtitle{\hyperref[sec:dealingWithMulti]{10\, Dealing with Multi/Wilkosz}}
-\item[\hyperlinkedtitle] \hfill \pageref{sec:dealingWithMulti}
+\def\hyperlinkedtitle{\hyperref[sec:miniSplinter]{12\, Mini Splinters}}
+\item[\hyperlinkedtitle] \hfill \pageref{sec:miniSplinter}
 \end{description}
 \newpage
 \section{\texorpdfstring{1\mins\ opening}{1mOpening}}\label{sec:1mOpening}
@@ -207,6 +211,131 @@ After any 1\anysuit{x}\ -- 1\anysuit{y}\ -- 1\anysuit{z}\ sequence (except:
 \begin{itemize}
     \item \pass, 3\spades\ = to play
     \item 3\nt, 4\hearts, 4\spades\ = to play
+\end{itemize}
+
+\section{\texorpdfstring{Overcalling 1\ntx}{overcalling1nt}}\label{sec:overcalling1nt}
+
+\subsubsection*{(1\ntx) -- ?}
+\begin{itemize}
+    \item \dbl\ = 5\minor\ + 4\major
+    \item 2\clubs\ = 54 \major
+    \item 2\diams\ = 6+ \major
+    \item 2\hearts\ = 5\hearts\ + 4\minor
+    \item 2\spades\ = 5\spades\ + 4\minor
+\end{itemize}
+
+\subsubsection*{(1\ntx) -- \dbl\ -- (P) -- ?}
+\begin{itemize}
+    \item 2\clubs\ = \pass/correct
+    \item 2\diams\ = own suit
+    \item 2\hearts\ = \pass/correct
+    \item 2\spades\ = own suit
+    \item 2\nt\ = show minor
+    \item 3\diams\ = show major
+\end{itemize}
+
+\subsubsection*{(1\ntx) -- 2\clubs\ -- (P) -- ?}
+\begin{itemize}
+    \item 2\diams\ = show better major
+    \item 2\hearts, 2\spades\ = preference
+\end{itemize}
+
+\subsubsection*{(1\ntx) -- 2\diams\ -- (P) -- ?}
+\begin{itemize}
+    \item 2\hearts\ = \pass/correct
+    \item 2\spades\ = inv with \hearts
+\end{itemize}
+
+\section{\texorpdfstring{Gadget 3\clubs}{gadget3c}}\label{sec:gadget3c}
+
+\subsubsection*{1\clubs -- 1\spades \\ 2\nt -- ?}
+\begin{itemize}
+    \item 3\clubs = gadget
+    \item 3\diams = 4+\diams
+    \item 3\hearts = 5\spades4\hearts
+    \item 3\spades = fixing \spades
+\end{itemize}
+
+\subsubsection*{1\clubs -- 1\spades \\ 2\nt -- 3\clubs}
+\begin{itemize}
+    \item 3\diams = 4+\clubs
+    \item 3\hearts = 3\spades4+\clubs
+    \item 3\spades = 3\spades
+    \item 3\nt = no 3\spades, no 4\clubs
+    \item 4\clubs/4\diams/4\hearts = 4\spades cue
+\end{itemize}
+
+\subsubsection*{1\clubs -- 1\hearts \\ 2\nt -- ?}
+\begin{itemize}
+    \item 3\clubs = gadget
+    \item 3\diams = 4+\diams
+    \item 3\hearts = 5\spades4\hearts OR fixing \hearts
+    \item 3\spades = 4\hearts4\spades
+\end{itemize}
+
+\subsubsection*{1\clubs -- 1\hearts \\ 2\nt -- 3\clubs}
+\begin{itemize}
+    \item 3\diams = 4+\clubs
+    \item 3\hearts = 3\hearts
+    \item 3\spades = 3\hearts4\clubs
+    \item 3\nt = no 3\hearts, no 4\clubs
+    \item 4\clubs/4\diams/4\hearts = 4\hearts cue
+\end{itemize}
+
+\subsubsection*{1\diams -- 1\spades \\ 2\nt -- ?}
+\begin{itemize}
+    \item 3\clubs = gadget
+    \item 3\diams = 3+\diams
+    \item 3\hearts = 5\spades4\hearts
+    \item 3\spades = fixing \spades
+\end{itemize}
+
+\subsubsection*{1\diams -- 1\spades \\ 2\nt -- 3\clubs}
+\begin{itemize}
+    \item 3\diams = 6\diams, no 3\spades
+    \item 3\hearts = 3\spades6\diams
+    \item 3\spades = 3\spades
+    \item 3\nt = no 3\spades, no 6\diams
+    \item 4\clubs/4\diams/4\hearts = 4\spades cue
+\end{itemize}
+
+\subsubsection*{1\diams -- 1\hearts \\ 2\nt -- ?}
+\begin{itemize}
+    \item 3\clubs = gadget
+    \item 3\diams = 3+\diams
+    \item 3\hearts = 5\spades4\hearts OR fixing \hearts
+    \item 3\spades = 4\hearts4\spades
+\end{itemize}
+
+\subsubsection*{1\clubs -- 1\hearts \\ 2\nt -- 3\clubs}
+\begin{itemize}
+    \item 3\diams = 6\diams, no 3\hearts4
+    \item 3\hearts = 3\hearts
+    \item 3\spades = 3\hearts6\diams
+    \item 3\nt = no 3\hearts, no 6\diams
+    \item 4\clubs/4\diams/4\hearts = 4\hearts cue
+\end{itemize}
+
+\section{\texorpdfstring{Majors after gadget}{majorsAfterGadget}}\label{sec:majorsAfterGadget}
+
+\subsubsection*{1\minor -- 1\hearts \\ 2\nt -- ?}
+\begin{itemize}
+    \item 3\hearts = 5+\hearts4\spades OR fixing \hearts
+    \item 3\spades = 4\hearts4\spades
+\end{itemize}
+
+\subsubsection*{1\minor -- 1\hearts \\ 2\nt -- 3\hearts \\ ?}
+\begin{itemize}
+    \item 3\spades  = 4\spades
+    \item 3\nt = no 4\spades, no 4\hearts
+    \item 4\clubs/4\diams = 4\hearts, cue
+\end{itemize}
+
+\subsubsection*{1\minor -- 1\hearts \\ 2\nt -- 3\spades \\ ?}
+\begin{itemize}
+    \item 3\nt = no 4\spades, no 4\hearts
+    \item 4\clubs = fixing \hearts
+    \item 4\diams = fixing \spades
 \end{itemize}
 
 \section{\texorpdfstring{1\ntx\ -- dealing with interference}{1ntInterference}}\label{sec:1ntInterference}
@@ -423,6 +552,21 @@ SYSTEM ON
     \item any other bid = NAT, \inv
 \end{itemize}
 
+\section{\texorpdfstring{Reverses, jump shifts and jump reverses}{reverses}}\label{sec:reverses}
+
+\subsubsection*{1\anysuit{x}\ -- 1\anysuit{y}\ -- ?}
+\begin{itemize}
+    \item 2\anysuit{z}, \anysuit{y}\ < \anysuit{z}\ = reverse
+    \item 3\anysuit{y}, \anysuit{y}\ > \anysuit{z}\ = jump shift
+    \item 3\anysuit{z}, \anysuit{y}\ < \anysuit{z}\ = jump reverse
+\end{itemize}
+
+\subsubsection*{1\mins\ -- 1\hearts\ -- ?}
+\begin{itemize}
+    \item 1\spades\ = 4\spades, 12-17
+    \item 2\spades\ = 4\spades, (18)19+
+\end{itemize}
+
 \section{\texorpdfstring{Acol 2{\color{OliveGreen}\clubsuit}}{acol2c}}\label{sec:acol2c}
 
 2\clubs\ opening = 23+ HCP or 9.5 winning tricks
@@ -492,94 +636,6 @@ System as after 2\nt\ opening
     \item \dbl\ = negative
     \item \pass\ = positive
 \end{itemize}
-
-\section{\texorpdfstring{Dealing with preempts}{dealingWithPreempts}}\label{sec:dealingWithPreempts}
-
-\subsubsection*{(2\hearts) -- ?}
-\begin{itemize}
-    \item 3\spades = strong hand, solid suit
-    \item 3\hearts = Michaels, \ftwon to 4\anysuit{x}
-    \item 4\clubs/4\diams = Leaping Michaels, \gf
-    \item 4\hearts = \minor, strong
-    \item 4\nt = \minor, weaker then 4\hearts
-\end{itemize}
-
-\subsubsection*{(2\hearts) -- \dbl -- (P) -- ?}
-\begin{itemize}
-    \item 2\nt = Better Minor Lebensohl
-    \item 3\clubs = 0-11, 5+\clubs
-    \item 2\spades = weak
-    \item 3\diams = \inv (8-11)
-    \item 3\hearts = no 4\spades, no \hearts stopper
-    \item 3\spades = 5\spades, \inv (8-11) \imp
-    \item 3\nt = no 4\spades, \hearts stopper
-    \item 4\hearts = \minor, no \hearts control, Slam Try
-    \item 4\spades = to play
-\end{itemize}
-
-\subsubsection*{(2\hearts) -- \dbl -- (P) -- 2\nt \\
-                (P) -- 3\mins -- (P) -- ?}
-\begin{itemize}
-    \item 3\diams = weak
-    \item 3\hearts = 4\spades, no \hearts stopper
-    \item 3\spades = 4\spades, \inv (8-11) \imp
-    \item 3\nt = 4\spades, \hearts stopper
-\end{itemize}
-
-\subsubsection*{(2\hearts) -- \dbl -- (3\hearts) -- ?}
-\begin{itemize}
-    \item \dbl = no 4\spades, 10+
-\end{itemize}
-
-\subsubsection*{(2\spades) -- ?}
-\begin{itemize}
-    \item 3\spades = Michaels, \ftwon to 4\anysuit{x}
-    \item 4\clubs/4\diams = Leaping Michaels, \gf
-    \item 4\spades = \minor, strong
-    \item 4\nt = \minor, weaker then 4\hearts
-\end{itemize}
-
-\subsubsection*{(2\spades) -- \dbl -- (P) -- ?}
-\begin{itemize}
-    \item 2\nt = Better Minor Lebensohl
-    \item 3\clubs = 0-11, 5+\clubs
-    \item 3\diams/3\hearts = \inv (8-11)
-    \item 3\spades = no 4\hearts, no \spades stopper
-    \item 3\nt = no 4\hearts, \spades stopper
-    \item 4\hearts = to play
-    \item 4\hearts = \minor, no \spades control, Slam Try
-\end{itemize}
-
-\subsubsection*{(2\spades) -- \dbl -- (P) -- 2\nt \\
-                (P) -- 3\mins -- (P) -- ?}
-\begin{itemize}
-    \item 3\hearts/3\diams = to play
-    \item 3\spades = 4\hearts, no \spades stopper
-    \item 3\nt = 4\hearts, \spades stopper
-\end{itemize}
-
-\subsubsection*{(2\spades) -- \dbl -- (4\spades) -- ?}
-\begin{itemize}
-    \item 4\nt = two-suited OR weak \hearts
-    \item 5\clubs/5\diams = to play
-    \item 5\hearts = Slam Try
-\end{itemize}
-
-\section{\texorpdfstring{Ask LSF}{askLSF}}\label{sec:askLSF}
-
-\subsubsection*{All basic ASK LSF sequences:}
-\begin{itemize}
-    \item 1\majs\ -- 2\majs\ \\ 2\majs+1\alrts
-    \item 1\minor\ -- 1\majs\ \\ 2\majs\ -- 2\majs+1\alrts
-    \item 1\majs\ -- 2\anysuit{x} \\ 2\majs\ -- 2\majs+1\alrts
-    \item 1\minor\ -- 1\majs \\ 3\majs\ -- 3\majs+1\alrts
-\end{itemize}
-
-More in: \textbf{mini splinter} and \textbf{responding to partner's preempt}.
-
-\subsubsection*{Answering:}
-
-no shortness / lowest shortness / medium shortness / (highest shortness)
 
 \section{\texorpdfstring{Gazilli}{gazilli}}\label{sec:gazilli}
 
@@ -676,133 +732,46 @@ no shortness / lowest shortness / medium shortness / (highest shortness)
     \item 3\spades\ = 6\spades\ 16+
 \end{itemize}
 
-\section{\texorpdfstring{Dealing with Multi/Wilkosz}{dealingWithMulti}}\label{sec:dealingWithMulti}
+\section{\texorpdfstring{Mini Splinters}{miniSplinter}}\label{sec:miniSplinter}
 
-\subsubsection*{(2\diams) -- ?}
+any shortness 9-11, 4-card support, not \gf!
+
+\subsubsection*{1\hearts\ -- ?}
 \begin{itemize}
-    \item \dbl = (13)14-16 BAL, no 5M, may have minor singleton
-    \item 2\hearts = 11-15, 5+\hearts
-    \item 2\spades = 11-15, 5+\spades
-    \item 2\nt = 17-19, BAL, may have 5M
-    \item 3\clubs = \clubs, not 5332/5422
-    \item 3\diams = \diams, not 5332/5422
-    \item 3\hearts, 3\spades = solid suit, weaker then power double
-    \item 3\nt = minors
-    \item 4\clubs = \clubs + \major
-    \item 4\diams = \diams + \major
+    \item 2\spades\ = mini splinter
+    \item 2\nt\ = inv + fit
 \end{itemize}
 
-\subsubsection*{(2\diams) -- P -- (P\alrts) -- ?}
-System like after 2\diams preempt.
-
-\subsubsection*{(2\diams) -- P -- (2\hearts) -- ?}
+\subsubsection*{1\spades\ -- ?}
 \begin{itemize}
-    \item \pass = no suitable call OR takeout with \spades shortness
-    \item \dbl = 14-16 BAL \vimp
-    \item 2\spades = 11-15, 5+\spades, may be solid 4\spades with 1-\hearts
-    \item 2\nt = 17-19, BAL
+    \item 2\nt\ = mini splinter
+    \item 3\hearts\ = inv + fit
 \end{itemize}
 
-\subsubsection*{(2\diams) -- P -- (2\spades) -- ?}
+\subsubsection*{1\hearts\ -- 2\spades \\ ?}
 \begin{itemize}
-    \item \pass = no suitable call OR takeout with \hearts shortness
-    \item \dbl = takeout with \spades shortness \imp
-    \item 2\nt = 17-19, BAL
+    \item 2\nt\ = \lsf
 \end{itemize}
 
-\subsubsection*{(2\diams) -- P -- (>2\spades) -- ?}
+\subsubsection*{1\spades\ -- 2\nt \\ ?}
 \begin{itemize}
-    \item \dbl = takeout \imp
+    \item 3\clubs\ = \lsf
 \end{itemize}
 
-\subsubsection*{(2\diams) -- P -- (2\hearts) -- P \\
-                (P) -- ?}        
+\subsubsection*{1\hearts\ -- 2\spades \\ 2\nt\ -- ?}
 \begin{itemize}
-    \item 2\nt = minors
+    \item 3\clubs\ = \clubs\ shortness
+    \item 3\diams\ = \diams\ shortness
+    \item 3\hearts\ = \spades\ shortness
+    \item 3\spades\ = \spades\ shortness \gf\ (max)
 \end{itemize}
 
-\subsubsection*{(2\diams) -- \dbl -- (\rdbl/\pass) -- ?}        
+\subsubsection*{1\spades\ -- 2\nt \\ 3\clubs\ -- ?}
 \begin{itemize}
-    \item \pass = want to defend, doubles are penalty
-    \item 2\major = 5+\major, to play
-    \item 2\nt = Lebensohl (see below)
-    \item 3\clubs = Stayman
-    \item 3\diams = $\rightarrow$ \hearts, \gf + superaccepts
-    \item 3\hearts = $\rightarrow$ \spades, \gf + superaccepts
-    \item 3\spades = $\rightarrow$ \nt, no \major stoppers
-    \item 4\diams, 4\hearts = Texas
+    \item 3\diams\ = \clubs\ shortness
+    \item 3\hearts\ = \diams\ shortness
+    \item 3\spades\ = \hearts\ shortness
+    \item 3\nt\ = \hearts\ shortness \gf\ (max)
 \end{itemize}
-
-\subsubsection*{(2\diams) -- \dbl -- (\rdbl/\pass) -- 2\nt \\
-                (P) -- 3\clubs -- (P) -- ?}        
-\begin{itemize}
-    \item \pass = to play
-    \item 3\diams = \gf, no 4\majs
-    \item 3\hearts, 3\spades = \inv
-\end{itemize}
-
-\subsubsection*{(2\diams) -- \dbl -- (\hearts/\spades) -- ?}        
-\begin{itemize}
-    \item \dbl = 9+, \ftwon to 2\nt, no 5\major, no \major shortness
-    \item 2\nt = Lebensohl (see below)
-    \item 3\clubs = Stayman
-    \item 3\diams = $\rightarrow$ \hearts, \gf + superaccepts
-    \item 3\hearts = $\rightarrow$ \spades, \gf + superaccepts
-    \item 3\spades = takeout with opps' suit shortness, \gf
-    \item 4\diams, 4\hearts = Texas
-\end{itemize}
-
-\subsubsection*{(2\diams) -- \dbl -- (2\hearts/\spades) -- 2\nt \\
-                (P) -- 3\clubs -- (P) -- ?}        
-\begin{itemize}
-    \item \pass/3\diams = to play
-    \item 3\hearts, 3\spades = \inv
-\end{itemize}
-
-\subsubsection*{(2\diams) -- \dbl -- (2\hearts/\spades) -- \dbl \\
-                (P) -- ?}        
-\begin{itemize}
-    \item \pass = to play
-    \item 2\spades = 4\spades, \fonce
-    \item 2\nt = NAT, minimum
-    \item 3\clubs = NAT, minimum
-    \item 3\diams = NAT, minimum
-    \item 3\hearts over 2\spades = NAT, minimum
-    \item cue 3\hearts, 3\spades = maximum, no stopper, no 4\spades
-    \item 3\nt = maximum, stopper, no 4\spades
-\end{itemize}
-
-\subsubsection*{(2\diams) -- \dbl -- (2\hearts) -- \dbl \\
-                (2\spades) -- ?}        
-\begin{itemize}
-    \item \pass = \fonce
-    \item \dbl = penalty
-    \item 2\nt = do not want to defend, \gf
-    \item 3\clubs = NAT, \gf
-    \item 3\diams = NAT, \gf
-    \item 3\hearts = NAT, \gf
-    \item 3\spades = maximum, no \spades stopper
-    \item 3\nt = maximum, stopper
-\end{itemize}
-
-\subsubsection*{(2\diams) -- \dbl -- (2\hearts) -- \dbl \\
-                (2\spades) -- P -- (P) -- ?}
-\begin{itemize}
-    \item 3\spades = \spades shortness, \gf %%% Can be ask for stop??
-\end{itemize}
-
-\subsubsection*{(2\diams) -- \dbl -- (2\spades) -- \dbl \\
-                (3\hearts) -- ?}  
-\begin{itemize}
-    \item \pass = 14-16, no 4\spades OR power double, \fonce
-    \item \dbl = 14-16, 4\spades, defensive
-    
-\end{itemize}
-
-% \subsubsection*{(2\diams) -- P -- (2\hearts) -- P \\
-%                 (2\spades) -- ?}        
-% \begin{itemize}
-%     \item 2\nt = any hand with \hearts
-% \end{itemize}
 
 \end{document}

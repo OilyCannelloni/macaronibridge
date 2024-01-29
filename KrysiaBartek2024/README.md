@@ -31,7 +31,7 @@ Each file in *./docs* contains bidding explanations and examples
 regarding discussed topic. The explanations are accompanied by bare 
 arrangements. The `makeSystem.sh` script extracts those arrangements
 from each .tex file listed in the chosen *config_file* and puts it 
-all together in SYSTEM file.
+all together in SYSTEM file. The SYSTEM file will be named after the config file.
 
 ## How to create a new system?
 
@@ -43,7 +43,7 @@ that will be considered in the system. Example:
 ```
 Title
 Authors
-1-15, 17, 22 - 23, 16, 15
+1-15, 17, 22-23, 16, 15
 ``` 
 Get the ids from the appropriate source files.
 
@@ -99,6 +99,7 @@ If you want to make pdfs from all the source files, run:
 - Mini Splinters
 - Transfers after 1M (X)
 - Overcalling 2nt
+- Gadget 3c
 - Other bids and rules
 
 ## Roadmap

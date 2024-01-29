@@ -1,9 +1,41 @@
 #!/bin/bash
 
+# Check for the command line argument
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 <config>"
+    exit 1
+fi
+
+CONFIG_FILE="./SYSTEM/config/$1.conf"
+
+# Check if the config file exists
+if [ ! -f "$CONFIG_FILE" ]; then
+    echo "Error: Config file not found."
+    exit 1
+fi
+
+# Reading the config file
+TITLE=$(sed -n '1p' "$CONFIG_FILE")
+AUTHOR=$(sed -n '2p' "$CONFIG_FILE")
+FILE_IDS=$(sed -n '3p' "$CONFIG_FILE" | tr ',' ' ')
+
+# Create a list of IDs to include
+INCLUDE_IDS=()
+for id_range in $FILE_IDS; do
+    if [[ $id_range == *-* ]]; then
+        IFS='-' read -ra RANGE <<< "$id_range"
+        for i in $(seq ${RANGE[0]} ${RANGE[1]}); do
+            INCLUDE_IDS+=($i)
+        done
+    else
+        INCLUDE_IDS+=($id_range)
+    fi
+done
+
 SOURCE_DIR="./source"
 BUILD_DIR="./build"
 
-OUTPUT_FILE="${SOURCE_DIR}/SYSTEM.tex"
+OUTPUT_FILE="${SOURCE_DIR}/$1.tex"
 
 > "$OUTPUT_FILE"
 
@@ -11,7 +43,12 @@ declare -A file_groups
 
 for file in "${SOURCE_DIR}"/*.tex; do
     if [ -f "$file" ]; then
-        if [[ "$(basename "$file")" == "SYSTEM.tex" ]]; then
+        if [[ "$(basename "$file")" == "$1.tex" ]]; then
+            continue
+        fi
+
+        file_id=$(sed -n 's/^%%% ID: \([0-9]*\)$/\1/p' "$file")
+        if [[ ! " ${INCLUDE_IDS[@]} " =~ " ${file_id} " ]]; then
             continue
         fi
 
@@ -46,8 +83,8 @@ echo '    urlcolor=cyan,' >> "$OUTPUT_FILE"
 echo '}' >> "$OUTPUT_FILE"
 echo '\setmainlanguage{english}' >> "$OUTPUT_FILE"
 echo '' >> "$OUTPUT_FILE"
-echo '\title{Bridge Bidding System}' >> "$OUTPUT_FILE"
-echo '\author{Krystyna Gasińska, Bartek Słupik}' >> "$OUTPUT_FILE"
+echo "\\title{$TITLE}" >> "$OUTPUT_FILE"
+echo "\\author{$AUTHOR}" >> "$OUTPUT_FILE"
 echo '\begin{document}' >> "$OUTPUT_FILE"
 echo '\maketitle' >> "$OUTPUT_FILE"
 echo '' >> "$OUTPUT_FILE"
@@ -85,17 +122,30 @@ echo '\end{document}' >> "$OUTPUT_FILE"
 
 cd "$SOURCE_DIR"
 
-lualatex -interaction=batchmode --output-directory="../$BUILD_DIR" "SYSTEM.tex"
+lualatex -interaction=batchmode --output-directory="../$BUILD_DIR" "$1.tex"
 LUALATEX_STATUS=$?
 
 cd ..
 
-if [ $LUALATEX_STATUS -ne 0 ] || [ ! -f "$BUILD_DIR/SYSTEM.pdf" ]; then
+if [ $LUALATEX_STATUS -ne 0 ] || [ ! -f "$BUILD_DIR/$1.pdf" ]; then
     echo "Error: lualatex failed to create PDF. See log for details."
     exit 1
 fi
 
+cd "$SOURCE_DIR"
 
-mv "$BUILD_DIR/SYSTEM.pdf" "./"
+echo "Generating again for correct indexing..."
 
-echo "PDF generated: SYSTEM.pdf"
+lualatex -interaction=batchmode --output-directory="../$BUILD_DIR" "$1.tex"
+LUALATEX_STATUS=$?
+
+cd ..
+
+if [ $LUALATEX_STATUS -ne 0 ] || [ ! -f "$BUILD_DIR/$1.pdf" ]; then
+    echo "Error: lualatex failed to create PDF. See log for details."
+    exit 1
+fi
+
+mv "$BUILD_DIR/$1.pdf" "./SYSTEM/"
+
+echo "PDF generated: $1.pdf"
