@@ -82,6 +82,7 @@ If you want to make pdfs from all the source files, run:
 ## Current docs content
 
 - 1m opening
+- 1M opening
 - 1nt opening
 - 2nt opening
 - 1nt - dealing with interference
@@ -92,6 +93,7 @@ If you want to make pdfs from all the source files, run:
 - Responding to partner's preempt
 - Dealing with Multi/Wilkosz
 - Dealing with preempts
+- Non serious 3nt
 - Acol 2c
 - Gazilli
 - Drury
@@ -100,11 +102,9 @@ If you want to make pdfs from all the source files, run:
 - Transfers after 1M (X)
 - Overcalling 2nt
 - Gadget 3c
+- Majors after gadget
 - Other bids and rules
 
 ## Roadmap
 
-- complete system
 - add explanations and examples
-- 1M opening
-- non-serious 3nt
