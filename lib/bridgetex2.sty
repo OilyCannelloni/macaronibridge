@@ -29,6 +29,7 @@
 
 \RequirePackage{xspace}
 \xspaceremoveexception{-}
+\xspaceaddexceptions{+}
 \newcommand{\clubs}{\color{OliveGreen}\ding{168}\color{black}\xspace}
 \newcommand{\diams}{\color{BurntOrange}\ding{169}\color{black}\xspace}
 \newcommand{\hearts}{\color{Maroon}\ding{170}\color{black}\xspace}
@@ -39,11 +40,15 @@
 \newcommand{\bhearts}{\color{Maroon}\makebox[11pt]{\ding{170}}\color{black}}
 \newcommand{\bspades}{\color{Blue}\makebox[11pt]{\ding{171}}\color{black}}
 \newcommand{\ntx}{{\small{NT}}}
-\newcommand{\hcp}{\textsc{hcp}}
+\newcommand{\hcp}{\textsc{hcp}\xspace}
+\newcommand{\bal}{\textsc{bal}\xspace}
+\newcommand{\nat}{\textsc{nat}\xspace}
+\newcommand{\unbal}{\st{\textsc{bal}}\xspace}
 \newcommand{\gf}{\color{BrickRed}\textbf{GF}\color{black}\xspace}
 \newcommand{\nf}{\color{Green}\textbf{NF}\color{black}\xspace}
 \newcommand{\fonce}{\color{RedViolet}\textbf{F1}\color{black}\hspace{4pt}\xspace}
-\newcommand{\ftwon}{\color{RedViolet}\textbf{F}\color{black}\xspace}
+\newcommand{\fton}[1]{\color{RedViolet}\textbf{F}\color{black}\xspace to {#1}}
+\newcommand{\trsf}[1]{\textsc{trsf}\xspace to {#1}}
 \newcommand{\inv}{\color{PineGreen}\textbf{INV}\color{black}\xspace}
 \newcommand{\invp}{\color{Blue}\textbf{INV$^+$}\color{black}\xspace}
 \newcommand{\slamtry}{\color{WildStrawberry}\textbf{Slam Try}\color{black}\hspace{4pt}}
@@ -74,7 +79,7 @@
 \newcommand{\anysuit}[1]{\color{PineGreen}{\textbf{{#1}}}\color{black}\xspace}
 \newcommand{\mins}{\textbf{m}\xspace}
 \newcommand{\majs}{\textbf{\small{M}}\xspace}
-\newcommand{\alrts}{\textsuperscript{\textcolor{red}{A}}}
+\newcommand{\alrts}{\textsuperscript{\textcolor{red}{A}}\xspace}
 
 \newcommand{\twosuit}[2]{%
     #1\unskip\hspace{-3pt}#2%

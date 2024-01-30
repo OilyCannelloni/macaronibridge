@@ -101,8 +101,8 @@ If you want to make pdfs from all the source files, run:
 - Mini Splinters
 - Transfers after 1M (X)
 - Overcalling 2nt
-- Gadget 3c
-- Majors after gadget
+- Checkback 3c
+- Majors after checkback 3c
 - Other bids and rules
 
 ## Roadmap

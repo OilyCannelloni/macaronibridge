@@ -89,7 +89,7 @@ echo '\begin{document}' >> "$OUTPUT_FILE"
 echo '\maketitle' >> "$OUTPUT_FILE"
 echo '' >> "$OUTPUT_FILE"
 
-TOC_FILE="${SOURCE_DIR}/toc_entries.tex"
+TOC_FILE="${BUILD_DIR}/toc_entries.tex"
 > "$TOC_FILE"
 
 i=0
