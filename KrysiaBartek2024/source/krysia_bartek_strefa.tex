@@ -56,8 +56,8 @@
 \item[\hyperlinkedtitle] \hfill \pageref{sec:gazilli}
 \def\hyperlinkedtitle{\hyperref[sec:miniSplinter]{16\, Mini Splinters}}
 \item[\hyperlinkedtitle] \hfill \pageref{sec:miniSplinter}
-\def\hyperlinkedtitle{\hyperref[sec:Transfers1MX]{17\, Transfers after 1\majs\ (\dbl)}}
-\item[\hyperlinkedtitle] \hfill \pageref{sec:Transfers1MX}
+\def\hyperlinkedtitle{\hyperref[sec:transfers1MX]{17\, Transfers after 1\majs\ (\dbl)}}
+\item[\hyperlinkedtitle] \hfill \pageref{sec:transfers1MX}
 \def\hyperlinkedtitle{\hyperref[sec:preempt2nt]{18\, 2\ntx\ overcall after major preempt}}
 \item[\hyperlinkedtitle] \hfill \pageref{sec:preempt2nt}
 \def\hyperlinkedtitle{\hyperref[sec:overcalling2nt]{19\, Overcalling 2\ntx}}
@@ -284,11 +284,9 @@ After any 1\anysuit{x}\ -- 1\anysuit{y}\ -- 1\anysuit{z}\ sequence (except:
 \subsubsection*{(1\ntx) -- \dbl\ -- (P) -- ?}
 \begin{itemize}
     \item 2\clubs\ = \pass/correct
-    \item 2\diams\ = own suit
-    \item 2\hearts\ = \pass/correct
+    \item 2\diams\ = show major
+    \item 2\hearts\ = own suit
     \item 2\spades\ = own suit
-    \item 2\nt\ = show minor
-    \item 3\diams\ = show major
 \end{itemize}
 
 \subsubsection*{(1\ntx) -- 2\clubs\ -- (P) -- ?}
@@ -311,9 +309,9 @@ After any 1\anysuit{x}\ -- 1\anysuit{y}\ -- 1\anysuit{z}\ sequence (except:
     \item \dbl\ = Stayman
 \end{itemize}
 
-SYSTEM ON
+\textsc{system on}
 
-\subsubsection*{1\ntx\ -- (2\clubs\alrts) -- ?}
+\subsubsection*{1\ntx\ -- (\alrts{2\clubs}) -- ?}
 2\clubs\ = 5/4 \major
 \begin{itemize}
     \item \dbl\ = 8+
@@ -335,7 +333,7 @@ SYSTEM ON
     \item 4\diams, 4\hearts\ = Texas
 \end{itemize}
 
-\subsubsection*{1\ntx\ -- (2\diams\alrts) -- ?}
+\subsubsection*{1\ntx\ -- (\alrts{2\diams}) -- ?}
 2\diams\ = 6+ \major
 \begin{itemize}
     \item \dbl\ = 8+
@@ -369,14 +367,14 @@ SYSTEM ON
     \item 2\nt\ = Lebensohl
     \item 3\clubs\ = 5+\diams, \inv+
     \item 3\diams\ = 5+\hearts, \inv+
-    \item 3\hearts\ = 55 \minor, \gf
+    \item 3\hearts\ = 55\minor, \gf
     \item 3\spades\ = 1-\spades, \inv+
     \item 3\nt\ = no \spades\ stopper
     \item 4\diams\ = Texas
 \end{itemize}
 
-\subsubsection*{1\ntx\ -- (2\nt\alrts) -- ?}
-2\nt\ = minor
+\subsubsection*{1\ntx\ -- (\alrts{2\nt}) -- ?}
+2\nt\ = \minor
 \begin{itemize}
     \item \dbl\ = 10+
     \item 3\clubs\ = Stayman
@@ -401,11 +399,10 @@ SYSTEM ON
     \item 3\nt\ = to play
 \end{itemize}
 
-\subsubsection*{1\ntx\ -- (\dbl\alrts) -- ?}
+\subsubsection*{1\ntx\ -- (\alrts{\dbl}) -- ?}
 \dbl\ artificial
 
-SYSTEM ON
-
+\textsc{system on}
 
 \subsubsection*{1\ntx\ -- (\dbl) -- ?}
 \dbl\ = penalty
@@ -415,7 +412,7 @@ SYSTEM ON
     \item 2\anysuit{x}\ = forces \anysuit{x+1}
 \end{itemize}
 
-\subsubsection*{1\ntx\ -- (\dbl) -- P\alrts\ -- (P)\\
+\subsubsection*{1\ntx\ -- (\dbl) -- \alrts{P} -- (P)\\
                 \rdbl\ -- (P) -- ?}
 \begin{itemize}
     \item \pass\ = penalty
@@ -426,7 +423,7 @@ SYSTEM ON
 
 \section{\texorpdfstring{2\ntx\ opening}{2ntOpening}}\label{sec:2ntOpening}
 
-2\nt\alrts opening = 21-22 \bal, may have 5\majs
+\alrts{2\nt} opening = 21-22 \bal, may have 5\majs
 
 \subsubsection*{2\ntx\ -- ?}
 \begin{itemize}
@@ -728,10 +725,10 @@ System as after 2\nt\ opening
 
 \subsubsection*{All basic ASK LSF sequences:}
 \begin{itemize}
-    \item 1\majs\ -- 2\majs\ \\ 2\majs+1\alrts
-    \item 1\minor\ -- 1\majs\ \\ 2\majs\ -- 2\majs+1\alrts
-    \item 1\majs\ -- 2\anysuit{x} \\ 2\majs\ -- 2\majs+1\alrts
-    \item 1\minor\ -- 1\majs \\ 3\majs\ -- 3\majs+1\alrts
+    \item 1\majs\ -- 2\majs\ \\ \alrts{2\majs+1}
+    \item 1\minor\ -- 1\majs\ \\ 2\majs\ -- \alrts{2\majs+1}
+    \item 1\majs\ -- 2\anysuit{x} \\ 2\majs\ -- \alrts{2\majs+1}
+    \item 1\minor\ -- 1\majs \\ 3\majs\ -- \alrts{3\majs+1}
 \end{itemize}
 
 More in: \textbf{mini splinter} and \textbf{responding to partner's preempt}.
@@ -877,9 +874,9 @@ any shortness 9-11, 4-card support, not \gf!
     \item 3\nt\ = \hearts\ shortness \gf\ (max)
 \end{itemize}
 
-\section{\texorpdfstring{Transfers after 1\majs\ (\dbl)}{Transfers1MX}}\label{sec:Transfers1MX}
+\section{\texorpdfstring{Transfers after 1\majs\ (\dbl)}{transfers1MX}}\label{sec:transfers1MX}
 
-\subsubsection*{1\hearts -- (\dbl) -- ?}
+\subsubsection*{\alrts{1\hearts} -- (\dbl) -- ?}
 \begin{itemize}
     \item \rdbl = 10+ (may have 3\hearts)
     \item 1\spades = \nat, 4+\spades, \fonce
@@ -887,16 +884,16 @@ any shortness 9-11, 4-card support, not \gf!
     \item 2\clubs = \trsf{2\diams}
     \item 2\diams = \trsf{2\hearts}, constructive 8-10
     \item 2\hearts = 4-7, 3\hearts
-    \item 2\spades = \spades shortness, 4\hearts, 7-10, \inv \vimp
-    \item 2\nt = 4\hearts \inv \vimp
-    \item 3\clubs = \clubs+(3)4\hearts \inv \vimp
-    \item 3\diams = 4+\hearts, 6-9
-    \item 3\hearts = 4+\hearts, 0-5 \hcp
-    \item 3\spades = 4+\hearts, unspecified singleton \vimp
-    \item 3\nt = 4+\hearts, void \spades
-    \item 4\clubs = 4+\hearts, void \clubs
-    \item 4\diams = 4+\hearts, void \diams
-    \item 4\hearts = to play
+    \item 2\spades = \spades, (3)4\hearts \invp
+    \item 2\nt = 4+\hearts \inv
+    \item 3\clubs = \clubs, (3)4\hearts \invp
+    \item 3\diams = \diams, (3)4\hearts \invp
+    \item 3\hearts = 4+\hearts, 6-9
+    \item 3\spades = 4+\hearts, ask shortness (response \small{\textbf{NAT}}) \imp
+    \item 3\nt = semi-preempt, \spades, 4+\hearts \vimp
+    \item 4\clubs = semi-preempt, \clubs, 4+\hearts
+    \item 4\diams = semi-preempt, \diams, 4+\hearts
+    \item 4\hearts = preempt
 \end{itemize}
 
 \subsubsection*{1\spades -- (\dbl) -- ?}
@@ -907,16 +904,16 @@ any shortness 9-11, 4-card support, not \gf!
     \item 2\diams = \trsf{2\hearts}
     \item 2\hearts = \trsf{2\spades}, constructive 8-10
     \item 2\spades = 4-7, 3\spades
-    \item 2\nt = 4\spades \inv \vimp
-    \item 3\clubs = \clubs+(3)4\spades \inv \vimp
-    \item 3\diams = \diams+(3)4\spades \inv \vimp
-    \item 3\hearts = 4+\spades, 6-9
-    \item 3\spades = 4+\spades, 0-5 \hcp
-    \item 3\nt =  4+\spades, unspecified singleton \vimp
-    \item 4\clubs = 4+\spades, void \clubs
-    \item 4\diams = 4+\spades, void \diams
-    \item 4\hearts = 4+\spades, void \hearts
-    \item 4\spades = to play
+    \item 2\nt = 4\spades \inv
+    \item 3\clubs = \clubs, (3)4\spades \invp
+    \item 3\diams = \diams, (3)4\spades \invp
+    \item 3\hearts = \hearts, (3)4\spades \invp
+    \item 3\spades = 4+\spades, 6-9
+    \item 3\nt =  4+\spades, ask shortness (response \small{\textbf{NAT}}) \imp
+    \item 4\clubs = semi-preempt, \clubs, 4+\spades
+    \item 4\diams = semi-preempt, \diams, 4+\spades
+    \item 4\hearts = semi-preempt, \hearts, 4+\spades
+    \item 4\spades = preempt
 \end{itemize}
 
 \section{\texorpdfstring{2\ntx\ overcall after major preempt}{preempt2nt}}\label{sec:preempt2nt}
@@ -1093,7 +1090,7 @@ any shortness 9-11, 4-card support, not \gf!
     \item 4\diams = \diams+\major
 \end{itemize}
 
-\subsubsection*{(2\diams) -- P -- (P\alrts) -- ?}
+\subsubsection*{(2\diams) -- P -- (\alrts{P}) -- ?}
 System like after 2\diams preempt.
 
 \subsubsection*{(2\diams) -- P -- (2\hearts) -- ?}
