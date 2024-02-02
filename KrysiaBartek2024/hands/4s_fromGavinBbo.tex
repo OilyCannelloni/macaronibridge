@@ -1,0 +1,57 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../../lib/bridgetex2}
+\usepackage{polyglossia}
+\usepackage{enumitem}
+\usepackage[table]{xcolor}
+
+\begin{document}
+
+Cards face-up problem:
+
+\fhandp{\hhand{AQ62}{9765}{Q}{J942}}{9}
+        {\hhand{T}{Q832}{A76432}{K7}}{9}
+        {\hhand{KJ54}{AKT}{K98}{A65}}{18}
+        {\hhand{9873}{J4}{JT5}{QT83}}{3}
+        {NS}
+
+\begin{center}
+    \begin{tabular}{cccc}
+        \nvul{W} & \vul{N} & \nvul {E} & \vul{S} \\
+        \pass & \pass & 2\diams & 2\nt \\
+        \pass & 3\clubs & \pass & 3\spades \\
+        \pass & 4\spades & \multicolumn{2}{l}{all pass}
+    \end{tabular}
+\end{center}
+
+Lead: J\diams. Is there any winning line of play?
+\begin{center}
+    ***
+\end{center}
+Our goal is to end up with,
+losing, so far, at most 2 tricks.
+
+\fhandp{\hhand{--}{9}{--}{J94}}{}
+        {\hhand{--}{Q83}{--}{K}}{}
+        {\hhand{--}{KT}{--}{A6}}{}
+        {\hhand{--}{J}{--}{QT8}}{}
+        {NS}
+
+With this distribution, we can play A\clubs, K\hearts
+and 6\clubs. If W ducks, we win the 10$^\text{\tiny{TH}}$ trick
+with J\clubs. If he wins with Q\clubs, he is left with \clubs only
+so we will win the last trick as well (with J\clubs).
+
+So how to achieve this distribution? Take whatever E plays 
+(if it is a \diams -- throw away the \hearts), ruff
+the third diamond and duck a club. Then, take whatever
+the opponents play (if they play \clubs or \diams the contract is already secured)
+then draw trumps and here you are.
+
+\vspace{0.5cm}
+
+\noindent
+Do you agree with 2\diams bid? 
+A possibility worth considering is 3\diams bid (vulnerabilities!).
+Also, the left opponent could raise the preempt.
+
+\end{document}

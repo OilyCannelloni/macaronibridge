@@ -1,0 +1,64 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../../lib/bridgetex2}
+\usepackage{polyglossia}
+\usepackage{enumitem}
+\usepackage[table]{xcolor}
+
+\begin{document}
+
+\fhandp{\hhand{QJ6}{J93}{A7}{AJ653}}{13}
+        {}{}
+        {\hhand{74}{KT}{KQT542}{K82}}{11}
+        {}{}
+        {}
+
+
+\begin{center}
+\begin{tabular}{cccc}
+        \nvul{W} & \nvul{N} & \nvul {E} & \nvul{S} \\
+        --       & --      & \pass     & 1\diams \\
+        2\diams  & 3\clubs & \pass     & 3\diams \\
+        \pass    & 3\spades & 3\nt     & \multicolumn{1}{l}{all pass}
+\end{tabular}
+\end{center}
+
+Lead: 5\spades, E takes with the king and plays 6\hearts.
+W takes with the queen and plays A\spades and 8\spades
+(E follows with 9\spades and 3\spades).
+We take the third spade with Q\spades. What do you do next?
+\begin{center}
+    ***
+\end{center}
+
+By the left opponent Michaels bid, we know that he 
+started with 5 spades and 5 hearts. If he also has 3\clubs,
+it means that we can take at most 4 diamond (as they are
+divided 0-5), but we can also try to finesse Q\clubs
+and take 4 more tricks in that suit (if finesse wins).
+If, on the other hand, diamonds are divided
+no worse than 1-4, we can take all 6 diamonds (finessing
+the jack) and 2 top clubs. However, if diamonds are
+divided 2-3 or 3-2, we shouldn't finesse the jack, but start
+with cashing the top diamonds instead. Can we find out
+what the actual distribution is, before it is too late?
+Yes. We should play the A\diams first. If diamonds are
+0-5 we will know immediately, and still be able to collect
+3 more diamonds (finessing J\diams). If both opponents follow,
+we can cash two top clubs first, before handling the diamonds.
+This play will give us the full information about W's hand:
+if he follows twice, diamonds are 1-4, if he shows out to the
+second club, the diamonds were 2-3, and if he shows out to the first
+club already, then the diamonds are 3-2. This way we can play
+the minor suits with certainty.
+
+\vspace{0.3cm}
+
+The actual distribution was:
+
+\fhandp{\hhand{QJ6}{J93}{A7}{AJ653}}{13}
+        {\hhand{K93}{864}{J983}{QT7}}{6}
+        {\hhand{74}{KT}{KQT542}{K82}}{11}
+        {\hhand{AT852}{AQ752}{6}{94}}{10}
+        {}
+
+\end{document}

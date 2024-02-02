@@ -1,0 +1,51 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../../lib/bridgetex2}
+\usepackage{polyglossia}
+\usepackage{enumitem}
+\usepackage[table]{xcolor}
+
+\begin{document}
+
+After the concise bidding: 
+
+\begin{center}
+\begin{tabular}{cccc}
+    \vul{W} & \nvul{N} & \vul {E} & \nvul{S} \\
+    1\hearts & \pass & \pass & 4\spades \\
+    \pass & \pass & \pass & \pass 
+\end{tabular}
+\end{center}
+
+\noindent
+you find your dummy with:
+
+\fhandp{\hhand{J7}{872}{KJ82}{QT63}}{7}{}{}{\hhand{AKQ9863}{J5}{7}{AJ7}}{15}{}{}{WE}
+
+Lead: K\hearts, E takes with A\hearts and plays 4\hearts to ours J\hearts and W's Q\hearts. \\
+W continues with T\hearts, E shows out (5\clubs) and you ruff. What do you do next?
+\begin{center}
+    ***
+\end{center}
+
+In addition to the two \hearts losers, we see two more: \clubs and \diams.
+The right opponent, who passed their partner's opening bid, already came out with 4 points.
+It looks like he doesn't have even a queen more. Therefore, there is no point in finessing the K\clubs.
+There is also no chance to cash all trumps in order to endplay W: he will be left with 
+\hhand{--}{x}{A}{Kx} and will be able to go out with a \hearts. The only successful line of play is
+to hope that W has at most one trump. We can cash A\spades and lead a \diams towards the K\diams.
+If W ducks we can put down the K\diams, securing the contract. If he takes the \diams with an ace, he
+is endplayed. Playing \hearts allows us to throw \clubs loser away. Playing club will also take away
+one of our \clubs loser. If W plays \diams we can take with J\diams (Q\diams is also with W).
+We can later throw away our second \clubs loser on K\diams.
+
+\fhandp{\hhand{J7}{872}{KJ82}{QT63}}{7}{\hhand{T52}{A4}{T953}{9852}}{4}{\hhand{AKQ9863}{J5}{7}{AJ7}}{15}{\hhand{4}{KQT963}{AQ64}{K4}}{14}{WE}
+
+\noindent
+Why this play doesn't work if W has more trumps?
+
+\vspace{0.5cm}
+
+\noindent
+Do you see how \textbf{each} opponent could defeat the contract?
+
+\end{document}

@@ -1,4 +1,6 @@
 *.synctex.gz
 /ignore/*
 /KrysiaBartek2024/build
+*.aux
+*.log
 .vscode

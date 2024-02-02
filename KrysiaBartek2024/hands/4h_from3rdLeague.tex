@@ -1,0 +1,100 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../../lib/bridgetex2}
+\usepackage{polyglossia}
+\usepackage{enumitem}
+\usepackage[table]{xcolor}
+
+\begin{document}
+
+\fhandp{\hhand{KQ963}{843}{32}{A85}}{9}
+        {}{}
+        {\hhand{A4}{AKJT92}{KT4}{QJ}}{18}
+        {}{}
+        {}
+
+\begin{center}
+    \begin{tabular}{cccc}
+        \nvul{W} & \nvul{N} & \nvul {E} & \nvul{S} \\
+        -- & -- & \pass & 1\hearts \\
+        \pass & 2\hearts & \pass & 4\hearts \\
+        \multicolumn{4}{l}{all pass}
+    \end{tabular}
+\end{center}
+
+Lead: 9\clubs.
+\begin{center}
+    ***
+\end{center}
+The correct play is to draw one trump (both opponents
+follow) and then
+take care of spades (throw a club on Q\spades).
+If spades are no worse then 2-6, we will lose 
+2 diamonds and one trump. Even if opponents
+ruff the third spade (we still throw away the club,
+unless it is a Q\hearts, in which case we overruff),
+they will (probably$^*$) have no possibility to use the last trump.
+
+\vspace{0.2cm}
+
+\noindent
+$*$ There is are slight chance that the lead was a singleton and
+opponents can now ruff (or overruff) the club,
+but that would mean that E started with:
+\cihandp{J5}{65}{J5}{KT96432}{5}
+
+\noindent
+and in that case he would probably open 3\clubs (or
+we are truly unlucky).
+
+The second case is that E started with 3 trumps and 
+a singleton diamond, but we counted 2 diamond losers 
+anyway, so it does not matter if one of the diamonds
+ends up ruffed. 
+
+\vspace{0.2cm}
+
+And what will happen if we decide to draw 2 trumps
+at the beginning? W follows only once, throwing out
+6\diams. If the third spade gets ruffed, E will play
+a trump, and we will have no more trumps in dummy to
+ruff a third diamond. But that is not the case here.
+W turns out to have only 2 spades, so we throw away the
+club on Q\spades. And what now? We have to try finesse
+A\diams. We play 2\diams, E follows with 5\diams, 
+W takes the king with ace, and plays a diamond
+to E's jack or queen, E plays a Q\hearts and we lost the contract.
+But what if we put T\diams instead of king? If ace is
+with E we will win anyway, if not, there is still 
+chance W has AQ\diams. He takes ten with the queen, and
+has no communication to partner, he must play a club,
+which we ruff and play K\diams. W takes it with ace and
+plays a club again, we also ruff it and now we can ruff
+our third diamond (it does not matter if E overruffs, 
+Q\hearts will win a trick anyway).
+
+Of course, if E would play jack to our 2\diams, we would
+play king.
+
+\vspace{0.2cm}
+
+Both lines of play work out if A\diams is with E.
+Both lose, if spades are worse then 2-4 and hearts worse then 2-2. Both wins
+with the distribution as below. However, the first one
+wins also with Q\diams being with E, while W loses.
+So is there any distribution where the second play
+is superior? Yes, if hearts are 2-2 and spades are 5-1.
+However it is less possible then the Q\diams being with E.
+
+\vspace{0.2cm}
+
+The complete hand was:
+
+\fhandp{\hhand{KQ963}{843}{32}{A85}}{9}
+        {\hhand{JT75}{Q65}{J5}{K643}}{7}
+        {\hhand{A4}{AKJT92}{KT4}{QJ}}{18}
+        {\hhand{82}{7}{AQ9876}{T972}}{6}
+        {}
+
+
+
+\end{document}
