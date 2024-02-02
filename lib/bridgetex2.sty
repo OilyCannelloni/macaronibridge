@@ -136,6 +136,45 @@
   \vspace{0.5cm}
 }
 
+\newsavebox{\VHandBox}
+\newlength{\VHandHeight}
+
+\newcounter{vfhand}
+\newcommand{\vfhand}[4]{%
+    \begin{varwidth}{0.4\textwidth}
+        \textls{\bspades #1 \\
+        \bhearts #2 \\
+        \bdiams #3 \\
+        \bclubs #4 \\
+    }
+    \end{varwidth}%
+}
+
+% vertical layout
+\RequirePackage{changepage}
+\RequirePackage{xstring}
+\RequirePackage{multirow}
+\newcommand{\fvhandp}[5]{
+  \begin{adjustwidth}{-0.9cm}{-0.4cm}
+    \savebox{\VHandBox}{#4}
+    \setlength{\VHandHeight}{\dimexpr 0.41\linewidth - \wd\VHandBox \relax}
+    \vspace{0.5cm}
+    \noindent
+    \begin{tabular}{>{\raggedleft\arraybackslash}m{0.41\linewidth}m{0.021\linewidth}m{0.02\linewidth}m{0.025\linewidth}>{\raggedright\arraybackslash}m{0.42\linewidth}}
+    & \multicolumn{4}{l}{#1}  
+    \\ [5pt]
+    \multicolumn{1}{l}{\multirow{3}{*}{\hspace{\VHandHeight}#4}} &  & \IfSubStr{#5}{N}{{\textbf{\vul N}}}{{\textbf{\nvul N}}} &  & \multirow{3}{*}{#2} \\
+    \\ [-10pt]
+      & \IfSubStr{#5}{W}{{\textbf{\vul W}}}{{\textbf{\nvul W}}} & & \IfSubStr{#5}{E}{{\textbf{\vul E}}}{{\textbf{\nvul E}}} &  \\
+    \\ [-10pt]  
+      & & \IfSubStr{#5}{S}{{\textbf{\vul S}}}{{\textbf{\,\nvul S}}} &  &  \\
+    \\ [5pt]
+    & \multicolumn{4}{l}{#3} \\
+    \end{tabular}
+  \end{adjustwidth}
+  \vspace{0.5cm}
+}
+
 \newcommand{\chhand}[4]{
     \begin{center}
         \lsstyle \bspades #1 \bhearts #2 \bdiams #3 \bclubs #4
