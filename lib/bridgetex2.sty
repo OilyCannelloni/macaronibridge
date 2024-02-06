@@ -27,41 +27,46 @@
 
 \newenvironment*{dummy}{}{}
 
-\newcommand{\clubs}{\color{OliveGreen}\ding{168}\color{black}}
-\newcommand{\diams}{\color{BurntOrange}\ding{169}\color{black}}
-\newcommand{\hearts}{\color{Maroon}\ding{170}\color{black}}
-\newcommand{\spades}{\color{Blue}\ding{171}\color{black}}
-
+\RequirePackage{xspace}
+\xspaceremoveexception{-}
+\xspaceaddexceptions{+}
+\newcommand{\clubs}{\color{OliveGreen}\ding{168}\color{black}\xspace}
+\newcommand{\diams}{\color{BurntOrange}\ding{169}\color{black}\xspace}
+\newcommand{\hearts}{\color{Maroon}\ding{170}\color{black}\xspace}
+\newcommand{\spades}{\color{Blue}\ding{171}\color{black}\xspace}
 
 \newcommand{\bclubs}{\color{OliveGreen}\makebox[11pt]{\ding{168}}\color{black}}
 \newcommand{\bdiams}{\color{BurntOrange}\makebox[11pt]{\ding{169}}\color{black}}
 \newcommand{\bhearts}{\color{Maroon}\makebox[11pt]{\ding{170}}\color{black}}
 \newcommand{\bspades}{\color{Blue}\makebox[11pt]{\ding{171}}\color{black}}
-\newcommand{\nt}{\textsc{nt}}
 \newcommand{\ntx}{{\small{NT}}}
-\newcommand{\hcp}{\textsc{hcp}}
-\newcommand{\gf}{\color{BrickRed}\textbf{GF}\color{black}}
-\newcommand{\nf}{\color{Green}\textbf{NF}\color{black}}
-\newcommand{\fonce}{\color{RedViolet}\textbf{F1}\color{black}\hspace{4pt}}
-\newcommand{\inv}{\color{PineGreen}\textbf{INV}\color{black}}
-\newcommand{\invp}{\color{Blue}\textbf{INV$^+$}\color{black}}
+\newcommand{\hcp}{\textsc{hcp}\xspace}
+\newcommand{\bal}{\textsc{bal}\xspace}
+\newcommand{\nat}{\textsc{nat}\xspace}
+\newcommand{\unbal}{\st{\textsc{bal}}\xspace}
+\newcommand{\gf}{\color{BrickRed}\textbf{GF}\color{black}\xspace}
+\newcommand{\nf}{\color{Green}\textbf{NF}\color{black}\xspace}
+\newcommand{\fonce}{\color{RedViolet}\textbf{F1}\color{black}\hspace{4pt}\xspace}
+\newcommand{\fton}[1]{\color{RedViolet}\textbf{F}\color{black}\xspace to {#1}}
+\newcommand{\trsf}[1]{\textsc{trsf}\xspace to {#1}}
+\newcommand{\inv}{\color{PineGreen}\textbf{INV}\color{black}\xspace}
+\newcommand{\invp}{\color{Blue}\textbf{INV$^+$}\color{black}\xspace}
 \newcommand{\slamtry}{\color{WildStrawberry}\textbf{Slam Try}\color{black}\hspace{4pt}}
-\newcommand{\minor}{\color{OliveGreen}\ding{168}\hspace{-3pt}\color{BurntOrange}\ding{169}\color{black}}
-\newcommand{\major}{\color{Maroon}\ding{170}\hspace{-3pt}\color{Blue}\ding{171}\color{black}}
-\newcommand{\pass}{\textsc{pass}}
+\newcommand{\minor}{\color{OliveGreen}\ding{168}\hspace{-3pt}\color{BurntOrange}\ding{169}\color{black}\xspace}
+\newcommand{\major}{\color{Maroon}\ding{170}\hspace{-3pt}\color{Blue}\ding{171}\color{black}\xspace}
 \newcommand{\passx}{{\small{PASS}}}
 \newcommand{\stopp}{\color{Maroon}\textsc{stop}\color{black}\hspace{4pt}}
 \newcommand{\enemy}[1]{(#1)}
-\newcommand{\dbl}{\color{Red}$\bm{\times}$\color{black}}
-\newcommand{\rdbl}{\color{Blue}$\bm{\times\!\times}$\color{black}}
-\newcommand{\alert}{\color{Cyan}\textsc{alert}\color{black}\hspace{4pt}}
+\newcommand{\dbl}{\color{Red}$\bm{\times}$\color{black}\xspace}
+\newcommand{\rdbl}{\color{Blue}$\bm{\times\!\times}$\color{black}\xspace}
+\newcommand{\alert}{\color{Cyan}\textsc{alert}\color{black}\hspace{4pt}\xspace}
 \newcommand{\conventional}[1]{\textbf{#1*}}
 \newcommand{\vul}[1]{\color{Red}\textbf{#1}\color{black}}
 \newcommand{\nvul}[1]{\color{PineGreen}\textbf{#1}\color{black}}
 \newcommand{\dealnr}[1]{\Large\textbf{#1}}
 \newcommand{\dealer}[1]{\fbox{#1}}
 \newcommand{\alrt}{\color{ProcessBlue}$^A$\color{black}}
-\newcommand{\soff}{\color{CadetBlue}\textsc{sign-off}\color{black}}
+\newcommand{\soff}{\color{CadetBlue}\textsc{sign-off}\color{black}\xspace}
 \newcommand{\mixed}{\color{Fuchsia}\textbf{Mixed raise}\color{black}}
 \newcommand{\ns}{\color{BurntOrange}\textbf{Non-Serious}\color{black}}
 \newcommand{\lsf}{\color{WildStrawberry}\textbf{ASK LSF}\color{black}}
@@ -71,10 +76,18 @@
 \newcommand{\vimp}{\color{OrangeRed}\link{\textbf{\large{!!}}}\color{black}}
 \newcommand{\exq}{\color{JungleGreen}\link{\textbf{\large{?!}}}\color{black}}
 \newcommand{\addhcp}[1]{\color{JungleGreen}\link{\textbf{\large{#1}}}\color{black}}
-\newcommand{\anysuit}[1]{\color{PineGreen}{\textbf{{#1}}}\color{black}}
-\newcommand{\mins}{\textbf{m}}
-\newcommand{\majs}{\textbf{\small{M}}}
-\newcommand{\alrts}{\textsuperscript{\textcolor{red}{A}}}
+\newcommand{\anysuit}[1]{\color{PineGreen}{\textbf{{#1}}}\color{black}\xspace}
+\newcommand{\mins}{\textbf{m}\xspace}
+\newcommand{\majs}{\textbf{\small{M}}\xspace}
+% \newcommand{\alrts}{\textsuperscript{\textcolor{red}{A}}\xspace}
+
+\newcommand{\twosuit}[2]{%
+    #1\unskip\hspace{-3pt}#2%
+}
+
+\newcommand{\alrts}[1]{%
+    #1\unskip{\textsuperscript{\textcolor{red}{A}}\xspace}%
+}
 
 \DeclareFloatingEnvironment[
     fileext=frm,
@@ -173,3 +186,143 @@
         \end{tabular}
     \end{table}
 }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{luacode}
+
+\begin{luacode}
+    function isBold()
+    local f = font.getfont(font.current())
+    if f then
+        return (string.find(f.name, "bold") ~= nil)
+    end
+    return false
+    end
+
+    is_section_title = false
+
+    function setSectionTitleFlag()
+        is_section_title = true
+    end
+
+    function resetSectionTitleFlag()
+        is_section_title = false
+    end
+
+    function isSectionTitle()
+        return is_section_title
+    end
+\end{luacode}
+
+\makeatletter
+\let\oldsubsubsection\subsubsection
+
+\renewcommand{\subsubsection}{%
+  \@ifstar{\mysubsubsectionStar}{\mysubsubsectionNoStar}%
+}
+
+\newcommand{\mysubsubsectionNoStar}[1]{%
+  \directlua{setSectionTitleFlag()}%
+  \oldsubsubsection{#1}%
+  \directlua{resetSectionTitleFlag()}%
+}
+
+%%%
+\let\oldsection\section
+
+\renewcommand{\section}{%
+  \@ifstar{\mysectionStar}{\mysectionNoStar}%
+}
+
+\newcommand{\mysectionNoStar}[1]{%
+  \directlua{setSectionTitleFlag()}%
+  \oldsection{#1}%
+  \directlua{resetSectionTitleFlag()}%
+}
+
+\newcommand{\mysectionStar}[1]{%
+  \directlua{setSectionTitleFlag()}%
+  \oldsection*{#1}%
+  \directlua{resetSectionTitleFlag()}%
+}
+%%%
+
+
+\newcommand{\mysubsubsectionStar}[1]{%
+  \directlua{setSectionTitleFlag()}%
+  \oldsubsubsection*{#1}%
+  \directlua{resetSectionTitleFlag()}%
+}
+\makeatother
+
+% subsection
+\let\oldsubsection\subsection
+\let\oldparagraph\paragraph
+
+\makeatletter
+% subsection
+\renewcommand{\subsection}{%
+  \@ifstar{\mysubsectionStar}{\mysubsectionNoStar}%
+}
+
+% subsection
+\newcommand{\mysubsectionNoStar}[1]{%
+  \directlua{setSectionTitleFlag()}%
+  \oldsubsection{#1}%
+  \directlua{resetSectionTitleFlag()}%
+}
+
+\newcommand{\mysubsectionStar}[1]{%
+  \directlua{setSectionTitleFlag()}%
+  \oldsubsection*{#1}%
+  \directlua{resetSectionTitleFlag()}%
+}
+
+\renewcommand{\paragraph}{%
+  \@ifstar{\myparagraphStar}{\myparagraphNoStar}%
+}
+
+\newcommand{\myparagraphNoStar}[1]{%
+  \directlua{setSectionTitleFlag()}%
+  \oldparagraph{#1}%
+  \directlua{resetSectionTitleFlag()}%
+}
+
+\newcommand{\myparagraphStar}[1]{%
+  \directlua{setSectionTitleFlag()}%
+  \oldparagraph*{#1}%
+  \directlua{resetSectionTitleFlag()}%
+}
+\makeatother
+
+\newcommand{\nt}{%
+  \directlua{%
+    if isSectionTitle() then
+      tex.print("{\\small{NT}}\\xspace")
+    else
+      tex.sprint("\\textsc{nt}\\xspace")
+    end
+  }%
+}
+
+\newcommand{\pass}{%
+  \directlua{%
+    if isSectionTitle() then
+      tex.print("{\\small{PASS}}\\xspace")
+    else
+      tex.sprint("\\textsc{pass}\\xspace")
+    end
+  }%
+}
+
+\newcommand{\dps}{%
+  \directlua{%
+    if isSectionTitle() then
+      tex.print("{\\small{DP}}\\xspace")
+    else
+      tex.sprint("\\textsc{dp}\\xspace")
+    end
+  }%
+}
+
