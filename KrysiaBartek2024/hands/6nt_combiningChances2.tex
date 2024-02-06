@@ -1,0 +1,55 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{../../lib/bridgetex2}
+\usepackage{polyglossia}
+\usepackage{enumitem}
+\usepackage[table]{xcolor}
+
+\title{6\nt}
+\author{Krystyna Gasińska}
+\begin{document}
+\maketitle
+
+\fhandp
+        {\hhand{K4}{AJT}{A753}{A632}}{16}
+        {}{}
+        {\hhand{AQJ6}{75}{K962}{KQJ}}{16}
+        {}{}
+        {}
+
+West leads T\spades against 6\nt.
+\begin{center}
+    ***
+\end{center}
+
+We have 11 top tricks. Two finesses in the 
+heart suit give 76\% chance for
+the 12$^{\text{th}}$ trick, diamond suit gives 68\% chance 
+(3-2 break).
+We can take only one of those chances. 
+However, the combined chances are:
+\begin{itemize}
+        \item If W holds 4 diamonds, we can finesse twice
+        into the safe E's hand, succeeding if the
+        honors are split (52\%).
+        \item If E holds 4 diamonds, we can make the
+        contract if W holds both \hearts honors (24\%).
+\end{itemize}
+
+We can find out the diamonds distribution playing 
+two top diamonds first. Overall that gives us
+$$68\%+32\%\cdot\frac{52\%+24\%}{2} = 80\%.$$
+
+\newpage
+
+Extra: if W has diamond length and W has both heart honors,
+we can still try to endplay E extracting his black suits before
+finessing the heart!
+
+\fhandp
+        {\hhand{K4}{AJT}{A753}{A632}}{16}
+        {\hhand{532}{KQ862}{J}{T854}}{6}
+        {\hhand{AQJ6}{75}{K962}{KQJ}}{16}
+        {\hhand{T987}{973}{QT54}{97}}{2}
+        {}
+
+\end{document}
