@@ -1,8 +1,7 @@
 \documentclass[12pt, a4paper]{article}
-\usepackage{../../lib/bridgetex2}
-\usepackage{polyglossia}
-\usepackage{graphicx}
-\usepackage{enumitem}
+\usepackage{import}
+
+\import{../../lib/}{bridge.sty}
 \setmainlanguage{english}
 
 \title{Other bids and rules}
@@ -23,7 +22,7 @@ minors or 3\clubs\ to show clubs.
         1\clubs\ -- (1\spades) -- P -- (2\spades)\\
         \dbl\ -- (P) -- ?\\
         What to do next?\\
-        \cihandp{T871}{82}{KJ852}{T5}{4}
+        \chandp{T871}{82}{KJ852}{T5}{4}
         Opponents showed \spades-fit, so our partner has at most 1\spades.
         With 5\hearts\ he would open 1\hearts, so he has 4\hearts (\dbl\ showed
         \clubs\ and \hearts). It means that we most probably have fit in \diams.\\
@@ -98,7 +97,7 @@ minors or 3\clubs\ to show clubs.
 3\nt = not \gf
 
 \item Still too weak for Leaping Michaels: \\
-\cihandp{7}{AKJT7}{AQ852}{A2}{18}\\
+\chandp{7}{AKJT7}{AQ852}{A2}{18}\\
 (2\spades) -- 3\spades
 
 \item 2\clubs -- 2\hearts \\ 3\nt -- ?
@@ -109,11 +108,11 @@ minors or 3\clubs\ to show clubs.
 \end{itemize}
 
 \item Too weak for Michaels: \\
-\cihandp{KQ986}{3}{AT986}{A7}{13}\\
+\chandp{KQ986}{3}{AT986}{A7}{13}\\
 (3\hearts) -- 3\spades
 
 \item Not enough points/shape for 3\spades:\\
-\cihandp{KQT8}{85}{KJ8}{A642}{13} \\
+\chandp{KQT8}{85}{KJ8}{A642}{13} \\
 1\clubs -- 1\spades \\
 2\spades
 
@@ -127,7 +126,7 @@ minors or 3\clubs\ to show clubs.
 
 \item \gf in \vul{VUL}, \soff in \nvul{non-VUL}:
 
-\cihandp{T6}{K9832}{T62}{A95}{7} \\
+\chandp{T6}{K9832}{T62}{A95}{7} \\
 (2\spades) -- 2\nt -- (P) -- 3\diams \\
 (P) -- 3\hearts -- (P) -- ?
 
@@ -156,7 +155,7 @@ minors or 3\clubs\ to show clubs.
 2\diams = two-way checkback
 
 \item Good enough for Leaping Michaels:\\
-\cihandp{--}{AKJ42}{K2}{AKJ852}{19}
+\chandp{--}{AKJ42}{K2}{AKJ852}{19}
 
 (2\diams$^\text{6\major}$) -- 4\clubs
 

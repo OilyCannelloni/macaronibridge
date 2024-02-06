@@ -1,8 +1,7 @@
 \documentclass[12pt, a4paper]{article}
-\usepackage{../../lib/bridgetex2}
-\usepackage{polyglossia}
-\usepackage{enumitem}
-\usepackage[table]{xcolor}
+\usepackage{import}
+
+\import{../../lib/}{bridge.sty}
 
 \begin{document}
 
@@ -19,7 +18,7 @@ After the concise bidding:
 \noindent
 you find your dummy with:
 
-\fhandp{\hhand{J7}{872}{KJ82}{QT63}}{7}{}{}{\hhand{AKQ9863}{J5}{7}{AJ7}}{15}{}{}{WE}
+\handdiagramh{\hhand{J7}{872}{KJ82}{QT63}}{7}{}{}{\hhand{AKQ9863}{J5}{7}{AJ7}}{15}{}{}{WE}
 
 Lead: K\hearts, E takes with A\hearts and plays 4\hearts to ours J\hearts and W's Q\hearts. \\
 W continues with T\hearts, E shows out (5\clubs) and you ruff. What do you do next?
@@ -38,7 +37,7 @@ is endplayed. Playing \hearts allows us to throw \clubs loser away. Playing club
 one of our \clubs loser. If W plays \diams we can take with J\diams (Q\diams is also with W).
 We can later throw away our second \clubs loser on K\diams.
 
-\fhandp{\hhand{J7}{872}{KJ82}{QT63}}{7}{\hhand{T52}{A4}{T953}{9852}}{4}{\hhand{AKQ9863}{J5}{7}{AJ7}}{15}{\hhand{4}{KQT963}{AQ64}{K4}}{14}{WE}
+\handdiagramh{\hhand{J7}{872}{KJ82}{QT63}}{7}{\hhand{T52}{A4}{T953}{9852}}{4}{\hhand{AKQ9863}{J5}{7}{AJ7}}{15}{\hhand{4}{KQT963}{AQ64}{K4}}{14}{WE}
 
 \noindent
 Why this play doesn't work if W has more trumps?

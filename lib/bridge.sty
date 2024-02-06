@@ -1,0 +1,95 @@
+\ProvidesPackage{bridge}[2022/11/18 Bridge notation]
+% This LaTeX file provides a comprehensive package for bridge notation,
+% designed to facilitate the creation of bridge-related documents.
+
+\RequirePackage{import}
+\subimport{}{common.sty}
+\subimport{}{envs.sty}
+\subimport{}{hands.sty}
+\subimport{}{sections.sty}
+
+\newcommand{\ntx}{{\small{NT}}}
+\newcommand{\hcp}{\textsc{hcp}\xspace}
+\newcommand{\bal}{\textsc{bal}\xspace}
+\newcommand{\nat}{\textsc{nat}\xspace}
+\newcommand{\unbal}{\st{\textsc{bal}}\xspace}
+\newcommand{\gf}{\color{BrickRed}\textbf{GF}\color{black}\xspace}
+\newcommand{\nf}{\color{Green}\textbf{NF}\color{black}\xspace}
+\newcommand{\fonce}{\color{RedViolet}\textbf{F1}\color{black}\hspace{4pt}\xspace}
+\newcommand{\fton}[1]{\color{RedViolet}\textbf{F}\color{black}\xspace to {#1}}
+\newcommand{\trsf}[1]{\textsc{trsf}\xspace to {#1}}
+\newcommand{\inv}{\color{PineGreen}\textbf{INV}\color{black}\xspace}
+\newcommand{\invp}{\color{Blue}\textbf{INV$^+$}\color{black}\xspace}
+\newcommand{\slamtry}{\color{WildStrawberry}\textbf{Slam Try}\color{black}\hspace{4pt}}
+\newcommand{\minor}{\color{OliveGreen}\ding{168}\hspace{-3pt}\color{BurntOrange}\ding{169}\color{black}\xspace}
+\newcommand{\major}{\color{Maroon}\ding{170}\hspace{-3pt}\color{Blue}\ding{171}\color{black}\xspace}
+\newcommand{\passx}{{\small{PASS}}}
+\newcommand{\stopp}{\color{Maroon}\textsc{stop}\color{black}\hspace{4pt}}
+\newcommand{\enemy}[1]{(#1)}
+\newcommand{\dbl}{\color{Red}$\bm{\times}$\color{black}\xspace}
+\newcommand{\rdbl}{\color{Blue}$\bm{\times\!\times}$\color{black}\xspace}
+\newcommand{\alert}{\color{Cyan}\textsc{alert}\color{black}\hspace{4pt}\xspace}
+\newcommand{\conventional}[1]{\textbf{#1*}}
+\newcommand{\dealnr}[1]{\Large\textbf{#1}}
+\newcommand{\dealer}[1]{\fbox{#1}}
+\newcommand{\alrt}{\color{ProcessBlue}$^A$\color{black}}
+\newcommand{\soff}{\color{CadetBlue}\textsc{sign-off}\color{black}\xspace}
+\newcommand{\mixed}{\color{Fuchsia}\textbf{Mixed raise}\color{black}}
+\newcommand{\ns}{\color{BurntOrange}\textbf{Non-Serious}\color{black}}
+\newcommand{\lsf}{\color{WildStrawberry}\textbf{ASK LSF}\color{black}}
+\newcommand{\leb}{\color{CadetBlue}\textbf{LEB}\color{black}}
+\newcommand*\link[1]{\hspace*{0em plus 1fill}\makebox{#1}}
+\newcommand{\imp}{\color{BurntOrange}\link{\textbf{\large!}}\color{black}}
+\newcommand{\vimp}{\color{OrangeRed}\link{\textbf{\large{!!}}}\color{black}}
+\newcommand{\exq}{\color{JungleGreen}\link{\textbf{\large{?!}}}\color{black}}
+\newcommand{\addhcp}[1]{\color{JungleGreen}\link{\textbf{\large{#1}}}\color{black}}
+\newcommand{\anysuit}[1]{\color{PineGreen}{\textbf{{#1}}}\color{black}\xspace}
+\newcommand{\mins}{\textbf{m}\xspace}
+\newcommand{\majs}{\textbf{\small{M}}\xspace}
+
+% Provide 2 suits as arguments, ex. \twosuit{\spades}{\diams}.
+% The command will produce suit characters slightly overlapped.
+\newcommand{\twosuit}[2]{%
+    #1\unskip\hspace{-3pt}#2%
+}
+
+% Provide the bid that will be alerted, ex. \alrts{1\spades}.
+\newcommand{\alrts}[1]{%
+    #1\unskip{\textsuperscript{\textcolor{red}{A}}\xspace}%
+}
+
+% The command produces 'NT' with correct font in both normal text
+% and section titles.
+\newcommand{\nt}{%
+  \directlua{%
+      if isSectionTitle() then
+      tex.print("{\\small{NT}}\\xspace")
+      else
+      tex.sprint("\\textsc{nt}\\xspace")
+      end
+  }%
+}
+
+% The command produces 'PASS' with correct font in both normal text
+% and section titles.
+\newcommand{\pass}{%
+  \directlua{%
+    if isSectionTitle() then
+      tex.print("{\\small{PASS}}\\xspace")
+    else
+      tex.sprint("\\textsc{pass}\\xspace")
+    end
+  }%
+}
+
+% The command produces 'DP' with correct font in both normal text
+% and section titles.
+\newcommand{\dps}{%
+  \directlua{%
+    if isSectionTitle() then
+      tex.print("{\\small{DP}}\\xspace")
+    else
+      tex.sprint("\\textsc{dp}\\xspace")
+    end
+  }%
+}

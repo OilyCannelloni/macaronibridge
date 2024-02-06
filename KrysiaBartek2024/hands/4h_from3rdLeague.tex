@@ -1,12 +1,11 @@
 \documentclass[12pt, a4paper]{article}
-\usepackage{../../lib/bridgetex2}
-\usepackage{polyglossia}
-\usepackage{enumitem}
-\usepackage[table]{xcolor}
+\usepackage{import}
+
+\import{../../lib/}{bridge.sty}
 
 \begin{document}
 
-\fhandp{\hhand{KQ963}{843}{32}{A85}}{9}
+\handdiagramh{\hhand{KQ963}{843}{32}{A85}}{9}
         {}{}
         {\hhand{A4}{AKJT92}{KT4}{QJ}}{18}
         {}{}
@@ -40,7 +39,7 @@ they will (probably$^*$) have no possibility to use the last trump.
 $*$ There is are slight chance that the lead was a singleton and
 opponents can now ruff (or overruff) the club,
 but that would mean that E started with:
-\cihandp{J5}{65}{J5}{KT96432}{5}
+\chandp{J5}{65}{J5}{KT96432}{5}
 
 \noindent
 and in that case he would probably open 3\clubs (or
@@ -89,7 +88,7 @@ However it is less possible then the Q\diams being with E.
 
 The complete hand was:
 
-\fhandp{\hhand{KQ963}{843}{32}{A85}}{9}
+\handdiagramh{\hhand{KQ963}{843}{32}{A85}}{9}
         {\hhand{JT75}{Q65}{J5}{K643}}{7}
         {\hhand{A4}{AKJT92}{KT4}{QJ}}{18}
         {\hhand{82}{7}{AQ9876}{T972}}{6}

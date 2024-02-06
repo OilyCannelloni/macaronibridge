@@ -1,15 +1,14 @@
 \documentclass[12pt, a4paper]{article}
-\usepackage{../../lib/bridgetex2}
-\usepackage{polyglossia}
-\usepackage{enumitem}
-\usepackage[table]{xcolor}
+\usepackage{import}
+
+\import{../../lib/}{bridge.sty}
 
 \title{6\nt}
 \author{Krystyna Gasińska}
 \begin{document}
 \maketitle
 
-\fhandp{\hhand{A875}{AK62}{75}{K92}}{14}
+\handdiagramh{\hhand{A875}{AK62}{75}{K92}}{14}
         {}{}
         {\hhand{Q6}{873}{AKQJ4}{AQ4}}{18}
         {}{}
@@ -28,7 +27,7 @@ we can try both. Play the small heart on the second trick
 and then cash all your top tricks 
 until you hold:
 
-\fhandp{\hhand{--}{K2}{--}{2}}{}
+\handdiagramh{\hhand{--}{K2}{--}{2}}{}
         {xxx}{}
         {\hhand{Q}{8}{--}{A}}{}
         {xxx}{}
@@ -54,7 +53,7 @@ significantly more then the initial 50\%.
 
 The complete hand:
 
-\fhandp{\hhand{A875}{AK62}{75}{K92}}{14}
+\handdiagramh{\hhand{A875}{AK62}{75}{K92}}{14}
         {\hhand{J943}{QT}{T832}{JT3}}{4}
         {\hhand{Q6}{873}{AKQJ4}{AQ4}}{18}
         {\hhand{KT2}{J954}{96}{8765}}{4}
