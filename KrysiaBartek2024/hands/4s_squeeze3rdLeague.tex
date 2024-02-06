@@ -1,14 +1,13 @@
 \documentclass[12pt, a4paper]{article}
-\usepackage{../../lib/bridgetex2}
-\usepackage{polyglossia}
-\usepackage{enumitem}
-\usepackage[table]{xcolor}
+\usepackage{import}
+
+\import{../../lib/}{bridge.sty}
 
 \begin{document}
 
 Cards face-up problem:
 
-\fhandp{\hhand{42}{A963}{A875}{A96}}{12}
+\handdiagramh{\hhand{42}{A963}{A875}{A96}}{12}
         {\hhand{--}{Q42}{KQJT3}{Q8432}}{10}
         {\hhand{AK98753}{8}{92}{KT5}}{10}
         {\hhand{QJT6}{KJT75}{64}{J7}}{8}
@@ -28,7 +27,7 @@ with KQ\diams and Q84\clubs and we still have two
 more trumps in our hand. So we play one of them and
 E is squeezed:
 
-\fhandp{\hhand{--}{9}{8}{A96}}{}
+\handdiagramh{\hhand{--}{9}{8}{A96}}{}
         {\hhand{--}{--}{KQ}{Q84}}{}
         {\hhand{87}{--}{--}{KT5}}{}
         {\hhand{--}{KJT}{--}{J7}}{}

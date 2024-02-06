@@ -1,14 +1,13 @@
 \documentclass[12pt, a4paper]{article}
-\usepackage{../../lib/bridgetex2}
-\usepackage{polyglossia}
-\usepackage{enumitem}
-\usepackage[table]{xcolor}
+\usepackage{import}
+
+\import{../../lib/}{bridge.sty}
 
 \begin{document}
 
 Cards face-up problem:
 
-\fhandp{\hhand{AQ62}{9765}{Q}{J942}}{9}
+\handdiagramh{\hhand{AQ62}{9765}{Q}{J942}}{9}
         {\hhand{T}{Q832}{A76432}{K7}}{9}
         {\hhand{KJ54}{AKT}{K98}{A65}}{18}
         {\hhand{9873}{J4}{JT5}{QT83}}{3}
@@ -30,7 +29,7 @@ Lead: J\diams. Is there any winning line of play?
 Our goal is to end up with,
 losing, so far, at most 2 tricks.
 
-\fhandp{\hhand{--}{9}{--}{J94}}{}
+\handdiagramh{\hhand{--}{9}{--}{J94}}{}
         {\hhand{--}{Q83}{--}{K}}{}
         {\hhand{--}{KT}{--}{A6}}{}
         {\hhand{--}{J}{--}{QT8}}{}

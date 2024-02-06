@@ -1,0 +1,51 @@
+\ProvidesPackage{envs}[2024/02/06 Bridge environments]
+
+\RequirePackage{import}
+\subimport{}{common.sty}
+
+\makeatletter
+\@ifundefined{envsstyloaded}{
+    \def\envsstyloaded{}
+
+    \definecolor{formalshade}{rgb}{0.95,0.95,1}
+    \definecolor{darkblue}{rgb}{0.2,0.2,0.6}
+    \newenvironment{formal}{%
+        \def\FrameCommand{%
+        \hspace{1pt}%
+        {\color{darkblue}\vrule width 2pt}%
+        {\color{formalshade}\vrule width 4pt}%
+        \colorbox{formalshade}%
+        }%
+        \MakeFramed{\advance\hsize-\width\FrameRestore}%
+        % Disable indenting first paragraph.
+        \noindent\hspace{-4.55pt}%
+        \begin{adjustwidth}{}{7pt}%
+        \vspace{2pt}\vspace{2pt}%
+    }
+    {%
+    \vspace{2pt}\end{adjustwidth}\endMakeFramed%
+    }
+
+    % The command creates the vertically centered bidding table.
+    \newcommand{\allbidding}[1]{
+        \begin{table}[h!]
+            \centering
+            \begin{tabular}{cccc}
+                #1
+            \end{tabular}
+        \end{table}
+    }
+
+    \newcommand{\webidding}[1]{
+        \begin{tabular}{cc}
+            #1
+        \end{tabular}
+    }
+    
+    \DeclareFloatingEnvironment[
+        fileext=frm
+        placement={!ht}
+        name=Hand
+    ]{hand}
+}
+\makeatother

@@ -1,0 +1,106 @@
+\ProvidesPackage{sections}[2024/02/06 Handling macros in sections]
+
+\RequirePackage{import}
+\subimport{}{common.sty}
+
+\begin{luacode}
+    function isBold()
+    local f = font.getfont(font.current())
+    if f then
+        return (string.find(f.name, "bold") ~= nil)
+    end
+    return false
+    end
+
+    is_section_title = false
+
+    function setSectionTitleFlag()
+        is_section_title = true
+    end
+
+    function resetSectionTitleFlag()
+        is_section_title = false
+    end
+
+    function isSectionTitle()
+        return is_section_title
+    end
+\end{luacode}
+
+\makeatletter
+\@ifundefined{sectionsstyloaded}{
+    \def\sectionsstyloaded{}
+        
+    \let\oldsubsubsection\subsubsection
+
+    \renewcommand{\subsubsection}{%
+    \@ifstar{\mysubsubsectionStar}{\mysubsubsectionNoStar}%
+    }
+
+    \newcommand{\mysubsubsectionNoStar}[1]{%
+    \directlua{setSectionTitleFlag()}%
+    \oldsubsubsection{#1}%
+    \directlua{resetSectionTitleFlag()}%
+    }
+
+    \let\oldsection\section
+
+    \renewcommand{\section}{%
+    \@ifstar{\mysectionStar}{\mysectionNoStar}%
+    }
+
+    \newcommand{\mysectionNoStar}[1]{%
+    \directlua{setSectionTitleFlag()}%
+    \oldsection{#1}%
+    \directlua{resetSectionTitleFlag()}%
+    }
+
+    \newcommand{\mysectionStar}[1]{%
+    \directlua{setSectionTitleFlag()}%
+    \oldsection*{#1}%
+    \directlua{resetSectionTitleFlag()}%
+    }
+
+    \newcommand{\mysubsubsectionStar}[1]{%
+    \directlua{setSectionTitleFlag()}%
+    \oldsubsubsection*{#1}%
+    \directlua{resetSectionTitleFlag()}%
+    }
+
+    \let\oldsubsection\subsection
+    \let\oldparagraph\paragraph
+
+    \renewcommand{\subsection}{%
+    \@ifstar{\mysubsectionStar}{\mysubsectionNoStar}%
+    }
+
+    \newcommand{\mysubsectionNoStar}[1]{%
+    \directlua{setSectionTitleFlag()}%
+    \oldsubsection{#1}%
+    \directlua{resetSectionTitleFlag()}%
+    }
+
+    \newcommand{\mysubsectionStar}[1]{%
+    \directlua{setSectionTitleFlag()}%
+    \oldsubsection*{#1}%
+    \directlua{resetSectionTitleFlag()}%
+    }
+
+    \renewcommand{\paragraph}{%
+    \@ifstar{\myparagraphStar}{\myparagraphNoStar}%
+    }
+
+    \newcommand{\myparagraphNoStar}[1]{%
+    \directlua{setSectionTitleFlag()}%
+    \oldparagraph{#1}%
+    \directlua{resetSectionTitleFlag()}%
+    }
+
+    \newcommand{\myparagraphStar}[1]{%
+    \directlua{setSectionTitleFlag()}%
+    \oldparagraph*{#1}%
+    \directlua{resetSectionTitleFlag()}%
+    }
+}
+\makeatother
+    

@@ -1,8 +1,7 @@
 \documentclass[12pt, a4paper]{article}
-\usepackage{../../lib/bridgetex2}
-\usepackage{polyglossia}
-\usepackage{graphicx}
-\usepackage{enumitem}
+\usepackage{import}
+
+\import{../../lib/}{bridge.sty}
 \setmainlanguage{english}
 
 \title{Overcalling 2\ntx}
@@ -19,9 +18,9 @@ the consecutive bids (\dbl/3\clubs/3\diams) show two suits of the same:
     \item {\color{Blue}\textbf{SH}}ape: \twosuit{\clubs}{\hearts} OR \twosuit{\diams}{\spades}
 \end{itemize}
 Overcall only with good quality suit, for example:\\
-\cihandp{QJT9x}{QJT9x}{xx}{x}{6}\\
+\chandp{QJT9x}{QJT9x}{xx}{x}{6}\\
 Do not overcall with:\\
-\cihandp{Axxxx}{Axxxx}{xx}{x}{8}
+\chandp{Axxxx}{Axxxx}{xx}{x}{8}
 
 %%% ID: 14
 %%% PRIORITY: 350

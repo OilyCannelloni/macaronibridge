@@ -1,0 +1,179 @@
+\ProvidesPackage{hands}[2024/02/06 Hand diagrams]
+
+\RequirePackage{import}
+\subimport{}{common.sty}
+
+\makeatletter
+\@ifundefined{handsstyloaded}{
+    \def\handsstyloaded{}
+
+    % Suit characters used in hand diagrams.
+    \newcommand{\bclubs}{\color{OliveGreen}\makebox[11pt]{\ding{168}}\color{black}}
+    \newcommand{\bdiams}{\color{BurntOrange}\makebox[11pt]{\ding{169}}\color{black}}
+    \newcommand{\bhearts}{\color{Maroon}\makebox[11pt]{\ding{170}}\color{black}}
+    \newcommand{\bspades}{\color{Blue}\makebox[11pt]{\ding{171}}\color{black}}
+
+    % The command produces 1-hand diagram. It takes 4 arguments, the cards 
+    % in each suit: spades, hearts, diamonds, clubs accordingly.
+    \newcommand{\hhand}[4]{
+        {\lsstyle \bspades #1 \bhearts #2 \bdiams #3 \bclubs #4}
+    }
+
+    % Similar to hhand command, additionally: centered.
+    \newcommand{\chhand}[4]{
+        \begin{center}
+            \lsstyle \bspades #1 \bhearts #2 \bdiams #3 \bclubs #4
+        \end{center}
+    }
+
+    % The command is similar to chhand but takes also HCP as a 5th
+    % argument. The command can be used in the item of itemize
+    % environment and will be correctly alligned with the item marker.
+    % The hand is centered and therefore should be the only element 
+    % in the line.
+    \newcommand{\chandp}[5]{
+        \setlength{\fboxsep}{7pt}
+        \noindent\fcolorbox{white}{white}{
+            \makebox[\linewidth][s]{
+                \hfill {\hhand{#1}{#2}{#3}{#4}} \hfill (#5)
+            }
+        }
+    }
+
+    % Vertically aligned hand (each suit in separate line).
+    % Similar to hhand.
+    \newcounter{vhand}
+    \newcommand{\vhand}[4]{%
+        \begin{varwidth}{0.4\textwidth}
+            \textls{\bspades #1 \\
+            \bhearts #2 \\
+            \bdiams #3 \\
+            \bclubs #4 \\
+        }
+        \end{varwidth}%
+    }
+
+    % Variables used to measure the length of the
+    % vertically-aligned hands (vhand), for the correct 
+    % behaviour of handdiagramv command.
+    \newsavebox{\VHandBox}
+    \newlength{\VHandHeight}
+
+    % Vertical layout template. It will produce the diagram
+    % of 4-players card distribution, with vulnerability
+    % considered. The diagram is centered and therefore
+    % should be the only element in the line.
+    % The first 4 arguments should be \vhand{}{}{}{},
+    % corresponding to the hands of: N, E, S, W accordingly.
+    % The last argument is the vulnerability. Provide all
+    % vulnerable hands: ex. NS, EWNS or EW. You can leave 
+    % this argument empty (if neither side is vulnerable).
+    % You can leave any of the arguments empy (for example
+    % provide only N and S hands or omit HCP)
+    \newcommand{\handdiagramv}[5]{
+    % The lines are expanded and can overlap the margins.
+    \begin{adjustwidth}{-0.9cm}{-0.4cm}
+        % Calculating the size of the diagram.
+        \savebox{\VHandBox}{#4}
+        \setlength{\VHandHeight}{\dimexpr 0.41\linewidth - \wd\VHandBox \relax}
+        \vspace{0.5cm}
+        
+        \noindent
+        \begin{tabular}{
+        % Tbh no idea what is this line for.
+        >{\raggedleft\arraybackslash}m{0.41\linewidth}
+        m{0.021\linewidth}
+        m{0.02\linewidth}
+        m{0.025\linewidth}
+        >{\raggedright\arraybackslash}m{0.42\linewidth}
+        }
+
+        % The cards of N.
+        & \multicolumn{4}{l}{#1}
+        \\ [5pt]
+
+        % The cards of W.
+        \multicolumn{1}{l}{\multirow{3}{*}{\hspace{\VHandHeight}#4}}
+        % 'N' with appropriate vulnerability color.
+        &  & \IfSubStr{#5}{N}{{\textbf{\vul N}}}{{\textbf{\nvul N}}}
+        % The cards of E.
+        &  & \multirow{3}{*}{#2} \\
+        \\ [-10pt]
+
+        % 'E' and 'W' with appropriate vulnerability color.
+        & \IfSubStr{#5}{W}{{\textbf{\vul W}}}
+            {{\textbf{\nvul W}}} & & \IfSubStr{#5}{E}{{\textbf{\vul E}}}
+            {{\textbf{\nvul E}}} &  \\
+
+        % 'S' with appropriate vulnerability color.
+        \\ [-10pt]  
+        & & \IfSubStr{#5}{S}{{\textbf{\vul S}}}{{\textbf{\,\nvul S}}} &  &  \\
+        
+        \\ [5pt]
+        % The cards of S.
+        & \multicolumn{4}{l}{#3} \\
+
+        \end{tabular}
+
+    \end{adjustwidth}
+    \vspace{0.5cm}
+    }
+
+    % Horizontal layout template. It will produce the diagram
+    % of 4-players card distribution, with vulnerability
+    % considered. The diagram is centered and therefore
+    % should be the only element in the line.
+    % The cards in each hand are presented horizontally.
+    % The first arguments: #1, #3, #4, #5 should be \hhand{}{}{}{},
+    % corresponding to the hands of: N, E, S, W accordingly.
+    % The arguments: #2, #4, #6, #8 should be the number of HCP
+    % of each player (N, E, S, W accordingly). This number will
+    % appear by each hand.
+    % The last argument is the vulnerability. Provide all
+    % vulnerable hands: ex. NS, EWNS or EW. You can leave 
+    % this argument empty (if neither side is vulnerable).
+    % You can leave any of the arguments empy (for example
+    % provide only N and S hands or omit HCP)
+    \newcommand{\handdiagramh}[9]{
+        % The lines are expanded and can overlap the margins.
+        \begin{adjustwidth}{-0.9cm}{-0.4cm}
+            \vspace{0.5cm}
+
+            \noindent
+            \begin{tabular}{
+                >{\raggedleft\arraybackslash}m{0.41\linewidth}
+                m{0.025\linewidth}
+                m{0.02\linewidth}
+                m{0.025\linewidth}
+                >{\raggedright\arraybackslash}m{0.42\linewidth}}
+
+            % The cards of N.
+            \multicolumn{5}{c}{$_{#2}\hspace{-5pt}$#1}  \\
+            \\[-10pt]
+
+            % 'N' with appropriate vulnerability color.
+            &  & \IfSubStr{#9}{N}{{\textbf{\vul N}}}{{\textbf{\nvul N}}} &  &  \\
+
+            % The cards of W.
+            $_{#8}$\hspace{-5pt}#7
+            % 'W' and 'E' with appropriate vulnerability color.
+            & \IfSubStr{#9}{W}{{\textbf{\vul W}}}
+            {{\textbf{\nvul W}}} & & \IfSubStr{#9}{E}
+            {{\textbf{\vul E}}}{{\textbf{\nvul E}}}
+            % The cards of E.
+            & $_{#4}\hspace{-5pt}$#3 \\
+
+            % 'S' with appropriate vulnerability color.
+            &  & \IfSubStr{#9}{S}{{\textbf{\vul S}}}{{\textbf{\nvul S}}} &  &  \\
+
+            % The cards of S.
+            \\[-10pt]
+            \multicolumn{5}{c}{$_{#6}\hspace{-5pt}$#5} \\
+
+            \end{tabular}
+
+        \end{adjustwidth}
+        \vspace{0.5cm}
+    }
+}
+\makeatother
