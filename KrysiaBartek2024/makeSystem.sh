@@ -35,7 +35,7 @@ done
 SOURCE_DIR="./source"
 BUILD_DIR="./build"
 
-OUTPUT_FILE="${SOURCE_DIR}/$1.tex"
+OUTPUT_FILE="${BUILD_DIR}/$1.tex"
 
 > "$OUTPUT_FILE"
 

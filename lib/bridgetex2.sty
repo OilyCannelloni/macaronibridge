@@ -61,8 +61,8 @@
 \newcommand{\rdbl}{\color{Blue}$\bm{\times\!\times}$\color{black}\xspace}
 \newcommand{\alert}{\color{Cyan}\textsc{alert}\color{black}\hspace{4pt}\xspace}
 \newcommand{\conventional}[1]{\textbf{#1*}}
-\newcommand{\vul}[1]{\color{Red}\textbf{#1}\color{black}}
-\newcommand{\nvul}[1]{\color{PineGreen}\textbf{#1}\color{black}}
+\newcommand{\vul}[1]{\color{Maroon}\textbf{#1}\color{black}}
+\newcommand{\nvul}[1]{\color{OliveGreen}\textbf{#1}\color{black}}
 \newcommand{\dealnr}[1]{\Large\textbf{#1}}
 \newcommand{\dealer}[1]{\fbox{#1}}
 \newcommand{\alrt}{\color{ProcessBlue}$^A$\color{black}}
@@ -79,7 +79,6 @@
 \newcommand{\anysuit}[1]{\color{PineGreen}{\textbf{{#1}}}\color{black}\xspace}
 \newcommand{\mins}{\textbf{m}\xspace}
 \newcommand{\majs}{\textbf{\small{M}}\xspace}
-% \newcommand{\alrts}{\textsuperscript{\textcolor{red}{A}}\xspace}
 
 \newcommand{\twosuit}[2]{%
     #1\unskip\hspace{-3pt}#2%
@@ -109,6 +108,71 @@
 
 \newcommand{\hhand}[4]{
     {\lsstyle \bspades #1 \bhearts #2 \bdiams #3 \bclubs #4}
+}
+
+
+
+\newcommand{\hhandp}[5]{
+    {\lsstyle \bspades #1 \bhearts #2 \bdiams #3 \bclubs #4 (#5)}
+}
+
+% horizontal layout
+\RequirePackage{changepage}
+\RequirePackage{xstring}
+\newcommand{\fhandp}[9]{
+  \begin{adjustwidth}{-0.9cm}{-0.4cm}
+    \vspace{0.5cm}
+    \noindent
+    \begin{tabular}{>{\raggedleft\arraybackslash}m{0.41\linewidth}m{0.025\linewidth}m{0.02\linewidth}m{0.025\linewidth}>{\raggedright\arraybackslash}m{0.42\linewidth}}
+    \multicolumn{5}{c}{$_{#2}\hspace{-5pt}$#1}  \\
+    \\[-10pt]
+      &  & \IfSubStr{#9}{N}{{\textbf{\vul N}}}{{\textbf{\nvul N}}} &  &  \\
+      $_{#8}$\hspace{-5pt}#7 & \IfSubStr{#9}{W}{{\textbf{\vul W}}}{{\textbf{\nvul W}}} & & \IfSubStr{#9}{E}{{\textbf{\vul E}}}{{\textbf{\nvul E}}} & $_{#4}\hspace{-5pt}$#3 \\
+      &  & \IfSubStr{#9}{S}{{\textbf{\vul S}}}{{\textbf{\nvul S}}} &  &  \\
+    \\[-10pt]
+      \multicolumn{5}{c}{$_{#6}\hspace{-5pt}$#5} \\
+    \end{tabular}
+  \end{adjustwidth}
+  \vspace{0.5cm}
+}
+
+\newsavebox{\VHandBox}
+\newlength{\VHandHeight}
+
+\newcounter{vfhand}
+\newcommand{\vfhand}[4]{%
+    \begin{varwidth}{0.4\textwidth}
+        \textls{\bspades #1 \\
+        \bhearts #2 \\
+        \bdiams #3 \\
+        \bclubs #4 \\
+    }
+    \end{varwidth}%
+}
+
+% vertical layout
+\RequirePackage{changepage}
+\RequirePackage{xstring}
+\RequirePackage{multirow}
+\newcommand{\fvhand}[5]{
+  \begin{adjustwidth}{-0.9cm}{-0.4cm}
+    \savebox{\VHandBox}{#4}
+    \setlength{\VHandHeight}{\dimexpr 0.41\linewidth - \wd\VHandBox \relax}
+    \vspace{0.5cm}
+    \noindent
+    \begin{tabular}{>{\raggedleft\arraybackslash}m{0.41\linewidth}m{0.021\linewidth}m{0.02\linewidth}m{0.025\linewidth}>{\raggedright\arraybackslash}m{0.42\linewidth}}
+    & \multicolumn{4}{l}{#1}  
+    \\ [5pt]
+    \multicolumn{1}{l}{\multirow{3}{*}{\hspace{\VHandHeight}#4}} &  & \IfSubStr{#5}{N}{{\textbf{\vul N}}}{{\textbf{\nvul N}}} &  & \multirow{3}{*}{#2} \\
+    \\ [-10pt]
+      & \IfSubStr{#5}{W}{{\textbf{\vul W}}}{{\textbf{\nvul W}}} & & \IfSubStr{#5}{E}{{\textbf{\vul E}}}{{\textbf{\nvul E}}} &  \\
+    \\ [-10pt]  
+      & & \IfSubStr{#5}{S}{{\textbf{\vul S}}}{{\textbf{\,\nvul S}}} &  &  \\
+    \\ [5pt]
+    & \multicolumn{4}{l}{#3} \\
+    \end{tabular}
+  \end{adjustwidth}
+  \vspace{0.5cm}
 }
 
 \newcommand{\chhand}[4]{
