@@ -86,7 +86,7 @@ If you want to make pdfs from all the source files, run:
 - 1nt opening
 - 2nt opening
 - 1nt - dealing with interference
-- Overcalling 1nt
+- Overcalls after 1nt opening
 - Reverses, jump shifts and jump reverses
 - 2nt overcall after major preempt
 - Rebid with 3-card support
@@ -100,7 +100,7 @@ If you want to make pdfs from all the source files, run:
 - Asking for shortness (LSF)
 - Mini Splinters
 - Transfers after 1M (X)
-- Overcalling 2nt
+- Overcalls after 2nt opening
 - Checkback 3c
 - Majors after checkback 3c
 - Other bids and rules
