@@ -3,5 +3,6 @@
 /KrysiaBartek2024/build
 *.aux
 *.log
+*.out
 .vscode
 /KrysiaBartek2024/source/*.pdf
