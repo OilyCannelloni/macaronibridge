@@ -1,0 +1,54 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{import}
+
+\import{../../lib/}{bridge.sty}
+\setmainlanguage{english}
+
+\title{Dealing with LSF interference}
+\author{Krystyna Gasińska, Bartek Słupik}
+\begin{document}
+\maketitle
+
+%%% ID: 31
+%%% PRIORITY: 150
+%%% TITLE: LSF -- dealing with interference
+%%% SYSTEM BEGIN %%%
+
+\subsubsection*{...\\{\color{WildStrawberry}\textbf{ASK}\color{black}} -- (\anysuit{\textbullet}) -- ?}
+\begin{itemize}
+    \item \pass = no shortness (all \dbl = penalty)
+    \item \dbl = shortness in \anysuit{\textbullet}
+    \item other suit = shortness in this suit
+    \item agreed suit = other shortness (if there is no place to bid it)
+\end{itemize}
+
+\subsubsection*{...\\{\color{WildStrawberry}\textbf{ASK}\color{black}} -- (\dbl) -- ?}
+\dbl = lead directing
+\begin{itemize}
+    \item \pass = shortness in other suit
+    \item \rdbl = shortness in doubled suit
+\end{itemize}
+
+\subsubsection*{...
+                \\{\color{WildStrawberry}\textbf{ASK}\color{black}} -- (\dbl) -- P -- (P)
+                \\?}
+\dbl = lead directing
+\begin{itemize}
+    \item \pass = penalty
+    \item \rdbl = \lsf
+\end{itemize}
+
+%%% SYSTEM END %%%
+
+\section*{Examples:}
+\subsubsection*{1\minor -- (P) -- 1\hearts -- (P)\\
+                2\hearts -- (P) -- \alrts{2\spades} -- (3\clubs)\\
+                ?}
+\begin{itemize}
+    \item \pass = no shortness
+    \item \dbl = \clubs shortness
+    \item 3\diams = \diams shortness
+    \item 3\hearts = \spades shortness (as it is the only one left)
+\end{itemize}
+
+\end{document}
