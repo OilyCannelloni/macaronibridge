@@ -32,6 +32,7 @@ minors or 3\clubs\ to show clubs.
 
 %%% ID: 12
 %%% PRIORITY: 1000
+%%% SECTION: other
 %%% TITLE: Other
 %%% SYSTEM BEGIN %%%
 
@@ -44,27 +45,55 @@ minors or 3\clubs\ to show clubs.
 
 \subsubsection*{1\clubs\ -- (1\spades) -- P -- (2\spades) \\ ?}
 \begin{itemize}
-    \item \dbl\ = \clubs\hearts, choose
-    \item 2\nt\ = \clubs\diams, choose
+    \item \dbl\ = \twosuit{\clubs}{\hearts}, choose
+    \item 2\nt\ = \twosuit{\clubs}{\diams}, choose
     \item 3\clubs\ = to play
 \end{itemize}
 
 \subsubsection*{1\diams\ -- (1\spades) -- P -- (2\spades) \\ ?}
 \begin{itemize}
-    \item \dbl\ = \diams\hearts, choose
-    \item 3\clubs\ = \clubs\diams, choose
+    \item \dbl\ = \twosuit{\diams}{\hearts}, choose
+    \item 3\clubs\ = \twosuit{\clubs}{\diams}, choose
 \end{itemize}
 
 \subsubsection*{1\diams\ -- (1\hearts) -- P -- (2\hearts) \\ ?}
 \begin{itemize}
-    \item \dbl\ = \diams\spades, choose
-    \item 3\clubs\ = \clubs\diams, choose
+    \item \dbl\ = \twosuit{\diams}{\spades}, choose
+    \item 3\clubs\ = \twosuit{\clubs}{\diams}, choose
 \end{itemize}
 
-%%% SYSTEM END %%%
+\subsubsection*{(1\diams) -- ?}
+\begin{itemize}
+    \item 3\diams = gambling \clubs
+\end{itemize}
 
-% to do: dealing with blackwood interference
-% gambling 3nt
+\subsubsection*{(1\clubs) -- ?}
+\begin{itemize}
+    \item 3\clubs = \clubs preempt
+\end{itemize}
+
+\subsubsection*{1\clubs -- (\dbl) -- ?}
+\begin{itemize}
+    \item 2\nt = preempt \clubs
+    \item 3\clubs = limit raise
+\end{itemize}
+
+\subsubsection*{1\clubs -- (1\anysuit{x}) -- ?}
+\begin{itemize}
+    \item 3\clubs = preempt
+\end{itemize}
+
+\subsubsection*{...5\anysuit{x} -- ?}
+5\anysuit{x} = query kings
+\begin{itemize}
+    \item agreed suit = no kings
+    \item 5\anysuit{x}+1 = lowest side-suit king or two other kings
+    \item 5\anysuit{x}+2 = middle side-suit king or two other kings
+    \item 5\anysuit{x}+3 = highest side-suit king or two other kings
+\end{itemize}
+
+
+%%% SYSTEM END %%%
 
 \definecolor{anti-flashwhite}{rgb}{0.95, 0.95, 0.96}
 \section{Random bids {\color{anti-flashwhite}logi z pierdolenia po piwie}}
@@ -158,7 +187,6 @@ minors or 3\clubs\ to show clubs.
 \chandp{--}{AKJ42}{K2}{AKJ852}{19}
 
 (2\diams$^\text{6\major}$) -- 4\clubs
-
 
 
 
