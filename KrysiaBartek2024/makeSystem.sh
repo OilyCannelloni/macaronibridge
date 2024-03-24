@@ -107,7 +107,6 @@ for ((j=0; j<$length; j++)); do
 
     section_for="${section_titles[$j]}"
     section_res="${section_result[$j]}"
-    echo "--------------Working with section-----------------: $section_for"
     echo "\def\hyperlinkedchaptertitle{\hyperref[chap:$section_for]{\textbf{$((j+1)) $section_res}}}" >> "$OUTPUT_FILE"
     echo "\item[\hyperlinkedchaptertitle] \hfill \pageref{chap:$section_for}" >> "$OUTPUT_FILE"
     echo "\chapter{$section_res}\label{chap:$section_for}" >> "$TOC_FILE"
@@ -121,7 +120,6 @@ for ((j=0; j<$length; j++)); do
             section=$(sed -n 's/^%%% SECTION: \(.*\)$/\1/p' "$file")
 
             if [ "$section" == "$section_for" ]; then
-                echo "Section: $section"
                 count=$((count+1))
 
                 content=$(sed -n '/%%% SYSTEM BEGIN/,/%%% SYSTEM END/p' "$file" | sed '1d;$d')
@@ -132,8 +130,6 @@ for ((j=0; j<$length; j++)); do
 
                 echo "\def\hyperlinkedtitle{\hyperref[sec:$file_id]{\hspace{5mm}$((j+1)).${count}\, ${title}}}" >> "$OUTPUT_FILE"
                 echo "\item[\hyperlinkedtitle] \hfill \pageref{sec:$file_id}" >> "$OUTPUT_FILE"
-            else
-                echo "Section not matched: $section"
             fi
         done
     done
