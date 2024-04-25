@@ -96,8 +96,8 @@ TOC_FILE="${BUILD_DIR}/toc_entries.tex"
 
 i=0
 
-section_titles=("oneside" "competitive" "defensive")
-section_result=("One side bidding" "Competitive bidding -- dealing with interference" "Defensive bidding -- how to overcall")
+section_titles=("oneside" "competitive" "defensive" "signaling")
+section_result=("One side bidding" "Competitive bidding -- dealing with interference" "Defensive bidding -- how to overcall" "Defensive signaling")
 length=${#section_titles[@]}
 
 echo '\begin{description}' >> "$OUTPUT_FILE"
