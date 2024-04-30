@@ -1,0 +1,34 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{import}
+\import{../../lib}{bridge.sty}
+
+\begin{document}
+\compsequence{{1\minor}{2\diams}{P}}
+\begin{compoptions}[4]
+    \item[2\hearts] Do gry
+    \item[2\spades] Do gry 
+    \item[2\nt] -
+    \item[3\clubs] \invp z \hearts \imp
+    \item[3\diams] \invp z \spades \imp
+    \item[3\hearts] Mixed Raise: 2 dobre wartości i 4+\hearts
+    \item[3\spades] Mixed Raise: 2 dobre wartości i 4+\spades     
+\end{compoptions}
+
+\compsequence{{1\hearts}{2\hearts}{P}}
+\begin{compoptions}[4]
+    \item[2\spades] Do gry 
+    \item[2\nt] Pytanie o kolor, \invp \imp
+    \item[3\clubs] Pasuj / popraw
+    \item[3\diams] \invp z fitem \spades \vimp
+    \item[3\spades] Mixed Raise: 2 dobre wartości i 4+\spades     
+\end{compoptions}
+
+\compsequence{{1\spades}{2\spades}{P}}
+\begin{compoptions}[4]
+    \item[2\nt] Pytanie o kolor, \invp \imp
+    \item[3\clubs] Pasuj / popraw
+    \item[3\diams] \invp z fitem \hearts \vimp
+    \item[3\hearts] Do gry
+\end{compoptions}
+
+\end{document}
