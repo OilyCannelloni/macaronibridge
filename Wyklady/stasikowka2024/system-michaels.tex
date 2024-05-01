@@ -3,6 +3,9 @@
 \import{../../lib}{bridge.sty}
 
 \begin{document}
+
+\section*{Partner wchodzi dwukolorówką}
+
 \compsequence{{1\minor}{2\diams}{P}}
 \begin{compoptions}[4]
     \item[2\hearts] Do gry
@@ -19,7 +22,7 @@
     \item[2\spades] Do gry 
     \item[2\nt] Pytanie o kolor, \invp \imp
     \item[3\clubs] Pasuj / popraw
-    \item[3\diams] \invp z fitem \spades \vimp
+    \item[3\diams] \invp \textbf{z fitem} \spades \vimp
     \item[3\spades] Mixed Raise: 2 dobre wartości i 4+\spades     
 \end{compoptions}
 
@@ -27,8 +30,63 @@
 \begin{compoptions}[4]
     \item[2\nt] Pytanie o kolor, \invp \imp
     \item[3\clubs] Pasuj / popraw
-    \item[3\diams] \invp z fitem \hearts \vimp
+    \item[3\diams] \invp \textbf{z fitem} \hearts \vimp
     \item[3\hearts] Do gry
+\end{compoptions}
+
+\compsequence{{1\hearts}{2N}{P}}
+\begin{compoptions}[4]
+    \item[3\clubs] Do gry
+    \item[3\diams] Do gry
+    \item[3\hearts] \gf, skład dowolny
+    \item[3\spades] Do gry na własnym  
+\end{compoptions}
+
+
+\pagebreak
+\section*{Przeciwnik wchodzi dwukolorówką}
+
+
+Do kolorów starszych stosujemy zasadę "wyższa z 2\nt i KP to inwit, niższa forsing"
+\compsequence{{1\hearts}{2\hearts}}
+\begin{compoptions}[3]
+    \item[2\spades] \gf z fitem \hearts \imp
+    \item[2\nt] \inv z fitem \hearts \imp
+    \item[3\minor] \gf naturalny
+\end{compoptions}
+
+\compsequence{{1\spades}{2\spades}}
+\begin{compoptions}[3]
+    \item[2\nt] \gf z fitem \spades \imp
+    \item[3\minor] \gf naturalny
+    \item[3\hearts] \inv z fitem \spades \imp
+\end{compoptions}
+\vspace{1cm}
+
+Jeśli przeciwnik pokazał dokładnie obydwa kolory, stosujemy zasadę "lower for lower",
+czyli niższy z KP to niższy kolor z naszych, a wyższy to wyższy.
+W kolorze otwarcia co najmniej inwit, w czwartym GF.
+\compsequence{{1\clubs}{2\diams}}
+\begin{compoptions}[3]
+    \item[2\hearts] \invp z \clubs
+    \item[2\spades] \gf z \diams  
+    \item[3\minor] Do gry  
+\end{compoptions}
+
+\compsequence{{1\hearts}{2N}}
+\begin{compoptions}[3]
+    \item[3\clubs] \invp \textbf{z fitem} \hearts \vimp
+    \item[3\diams] \gf z 5+\spades \imp
+    \item[3\hearts] Do gry
+    \item[3\spades] Do gry   
+\end{compoptions}
+
+\compsequence{{1\spades}{2N}}
+\begin{compoptions}[3]
+    \item[3\clubs] \gf z 5+\hearts \imp
+    \item[3\diams] \invp \textbf{z fitem} \spades \vimp
+    \item[3\hearts] Do gry
+    \item[3\spades] Do gry   
 \end{compoptions}
 
 \end{document}
