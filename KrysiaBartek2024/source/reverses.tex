@@ -9,8 +9,9 @@
 \begin{document}
 \maketitle
 
-%%% ID: 18
+%%% ID: 39
 %%% PRIORITY: 100
+%%% SECTION: oneside
 %%% TITLE: Reverses, jump shifts and jump reverses
 %%% SYSTEM BEGIN %%%
 
@@ -21,93 +22,61 @@
     \item 3\anysuit{z}, \anysuit{y}\ < \anysuit{z}\ = jump reverse
 \end{itemize}
 
-\subsubsection*{1\mins\ -- 1\hearts\ -- ?}
+\subsubsection*{1\mins\ -- 1\hearts\ \\
+                ?}
 \begin{itemize}
     \item 1\spades\ = 4\spades, 12-17
     \item 2\spades\ = 4\spades, (18)19+
 \end{itemize}
 
+3-color reverse biddings:
+
+\subsubsection*{\anysuit{x} -- \anysuit{y} \\ \anysuit{z} -- ?}
+\begin{itemize}
+    \item 2\anysuit{y} = slow down
+    \item 4th suit = ask for stopper \gf
+    \item 2\nt = ask shape \gf
+\end{itemize}
+
+% \subsubsection*{1\clubs -- 1\hearts \\ 2\diams -- ?}
+% \begin{itemize}
+%     \item 2\hearts = slow down
+%     \item 2\spades = ask stopper, \gf
+%     \item 2\nt = ask shape, \gf
+% \end{itemize}
+
+% \subsubsection*{1\clubs -- 1\spades \\ 2\diams -- ?}
+% \begin{itemize}
+%     \item 2\hearts = ask stopper, \gf
+%     \item 2\spades = slow down
+%     \item 2\nt = ask shape, \gf
+% \end{itemize}
+
+% \subsubsection*{1\clubs -- 1\spades \\ 2\hearts -- ?}
+% \begin{itemize}
+%     \item 2\spades = slow down
+%     \item 2\nt = ask shape, \gf
+%     \item 3\diams = ask stopper, \gf
+% \end{itemize}
+
+% \subsubsection*{1\diams -- 1\spades \\ 2\hearts -- ?}
+% \begin{itemize}
+%     \item 2\spades = slow down
+%     \item 2\nt = ask shape, \gf
+%     \item 3\clubs = ask stopper, \gf
+% \end{itemize}
+
+\subsubsection*{\anysuit{x} -- \anysuit{y} \\ 
+                \anysuit{z} -- 2\nt\\
+                ?}
+\begin{itemize}
+    \item 3\clubs = 3\anysuit{y}
+    \item 3\diams = 5\anysuit{x}4\anysuit{z}2\anysuit{y}2
+    \item 3\hearts = 6\anysuit{x}4+\anysuit{z}2\anysuit{y}1-
+    \item 3\spades = 6\anysuit{x}4+\anysuit{z}1\anysuit{y}2-
+    \item 3\nt = other
+\end{itemize}
+
 %%% SYSTEM END %%%
-
-\section{Reverse}
-\begin{itemize}
-    \item \fonce
-    \item (16)17+ 4-5 distribution
-    \item first suit always longer (with 5-5 we open higher suit)
-    \item do not jump above a reverse to show extra values
-    \item jump rebid of a minor denies 4\majs\ \vimp
-\end{itemize}
-
-\section{Jump shift}
-\begin{itemize}
-    \item \gf
-    \item (18)19+
-\end{itemize}
-
-\section{Jump reverse}
-\begin{itemize}
-    \item \gf
-    \item shows 6+ cards in first suit
-    \item does not promise anything in the second suit
-\end{itemize}
-
-% note: it is not necessarily a good idea to google 'latex transparent'
-
-\section{Reverse: responder's rebid}
-\begin{itemize}
-    \item Cheaper from $4^{\text{th}}$ suit and 2\nt\ = slow down bid ($\leq 7$pc), we are not in \gf.
-    \item Bid above slow down bid = \gf.
-    \item Bid below slow down bid = \fonce.
-    \item After slow down bid responder may sign off in any of the opener's suits.
-    \item Whatever responder bypass is denied. \vimp
-    \item Bidding $4^{\text{th}}$ suit if it is above 2\nt\ shows 5-5 in responder's suits.
-\end{itemize}
-
-\section{Reacting to slow down}
-\begin{itemize}
-    \item After slow down bid opener is requested to bid 3 of the suit they opened or, if there is room
-    below this bid, they can bid 2\nt\ or support for the responder's suit. All those bids are \nf.
-\end{itemize}
-
-\subsubsection*{Examples: opener's hand}
-
-\begin{enumerate}
-    \item
-        \chandp{9}{AK82}{A42}{KQJ75}{17}
-        Just in place for a reverse. Open 1\clubs\ and reverse 2\hearts.
-    \item
-        \chandp{K7}{AQ32}{AQJT96}{3}{16}
-        Open 1\diams\ and rebid 2\hearts. Remember that jump rebid of a minor 
-        denies 4\majs.
-    \item 
-        \chandp{7}{AQT42}{2}{AKQT63}{15}
-        Open 1\clubs, rebid 2\hearts\ and then bid again to show 5th \hearts.
-    \item 
-        You open 1\diams. Partner rebids 1\spades. \\
-        \chandp{J4}{AQT2}{AJ983}{AQ}{18}
-        The hand is strong enough to reverse, but
-        it is better to bid 2\nt\ showing balanced hand. We have two club stoppers. If we had no
-        club stopper, we would reverse.
-    \item 
-        \chandp{5}{A4}{KJ863}{AKQ63}{17}
-        This hand is not strong enough to jump shift. Open 1\diams\ and rebid 2\clubs.
-    \item
-        You open 1\clubs. Partner rebids 1\spades. \\
-        \chandp{4}{42}{AK2}{AKQ9732}{16}
-        Jump reverse to 3\diams\ single suited \clubs\ hand and \gf.
-        
-\end{enumerate}
-
-\subsubsection*{Examples: responder's hand}
-\begin{enumerate}
-    \item
-        Partner opened 1\diams, you bid 1\spades, partner rebid 2\hearts. \\
-        \chandp{KQ65}{T2}{QJ4}{A642}{12}
-        Bid 3\diams\ showing support for \diams. It is a \gf\ bid.
-    \item
-        Partner opened 1\diams, you bid 1\spades, partner rebid 2\hearts. \\
-        \chandp{K765}{T2}{Q84}{J642}{6}
-        Bid 2\nt\ -- \textbf{slow down}.
-\end{enumerate}
 
 \end{document}
