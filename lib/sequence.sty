@@ -1,0 +1,98 @@
+% Allows for table-like bid alignment
+\newcommand{\bidbox}[1]{\makebox[2.4em][l]{#1}}
+
+
+% Base macro for 4-wide bid sequence. Accepts a list of arguments in the form of {#1}{#2}{#3}...
+\newcommand*{\compsequence}[1]{%
+  \par\noindent\relax
+  \compSequenceScan#1\relax\relax\relax\relax
+  \par\relax\relax
+}
+
+
+% Recursive macro which parses the arguments from \compsequence
+\newcommand{\compSequenceScan}[4]{%
+  \ifx\relax#1\empty
+  \else
+    \textbf{\bidbox{#1} \bidbox{#2} \bidbox{#3} \bidbox{#4}}\\\relax
+    \expandafter\compSequenceScan % holy fuck that is genius
+  \fi
+}
+
+
+% Base macro for 2-wide bid sequence. Accepts a list of arguments in the form of {#1}{#2}{#3}...
+\newcommand*{\sequence}[1]{%
+  \par\noindent\relax
+  \sequenceScan#1\relax\relax
+  \par
+}
+
+
+% Recursive macro which parses the arguments from \sequence
+\newcommand{\sequenceScan}[2]{%
+  \ifx\relax#1\empty
+  \else
+    \textbf{\bidbox{#1} \bidbox{#2}}\\\relax
+    \expandafter\sequenceScan
+  \fi
+}
+
+
+% An environment representing a list of bid options in a sequence.
+% The parameter represents the position of the option column
+% 1 = left, 2 = right
+\newenvironment{options}[1][1]
+{%
+    \ifcase#1\relax
+    \or
+        \def\optionsunskip{-1.8em}
+        \def\optionsitemindent{4em}
+        \def\optionslabelwidth{6em}
+    \or 
+        \def\optionsunskip{-3em}
+        \def\optionsitemindent{4em}
+        \def\optionslabelwidth{3.2em}
+    \else
+        \def\optionsitemindent{1em}
+        \def\optionslabelwidth{5em}
+    \fi
+
+    \begin{itemize}[align=left, itemindent=\optionsitemindent, labelwidth=\optionslabelwidth, itemsep=-0.5em]
+        \vspace*{\optionsunskip}
+        
+}
+{%
+    \end{itemize}
+    \vspace*{1em}
+}
+
+
+% An environment representing a list of bid options in a competetive sequence.
+% The parameter represents the position of the option column
+% 1 = left, 2 = left-middle, 3 = right-middle, 4 = right
+\newenvironment{compoptions}[1][1]
+{%
+    \def\optionsunskip{-3em}
+    \def\optionsitemindent{9em}
+    \ifcase#1\relax
+    \or
+        \def\optionsunskip{-1.8em}
+        \def\optionslabelwidth{11.1em}
+    \or 
+        \def\optionslabelwidth{8.2em}
+    \or 
+        \def\optionslabelwidth{5.5em}
+    \or 
+        \def\optionslabelwidth{2.7em}
+    \else
+        \def\optionslabelwidth{11em}
+    \fi
+
+    \begin{itemize}[align=left, itemindent=\optionsitemindent, labelwidth=\optionslabelwidth, itemsep=-0.5em]
+        \vspace*{\optionsunskip}
+        
+}
+{%
+    \end{itemize}
+    \vspace*{1em}
+}

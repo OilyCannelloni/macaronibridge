@@ -1,0 +1,62 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{import}
+\import{../../lib}{bridge.sty}
+
+\begin{document}
+\sequence{{2\diams}}
+\begin{options}[2]
+    \item[2\hearts] Do koloru, może zawierać dobrą kartę do pików
+    \item[2\spades] Z pikami zostaw, z kierami \textbf{przyjmij/odrzuć inwit} \imp
+    \item[2\nt] Pytanie o kolor i siłę, \invp \imp
+    \item[3\hearts] Blok z fitami do obydwu kolorów
+    \item[4\diams] Blok z fitami do obydwu kolorów \vimp
+    \item[4\major] Do gry z własnego
+\end{options}
+
+\sequence{{2\diams}{2\ntx}}
+\begin{options}[1] 
+    \item[3\clubs] Minimum \vimp
+    \item[3\diams] Maximum z \hearts
+    \item[3\hearts] Maximum z \spades  
+\end{options}
+
+\sequence{{2\diams}{2\ntx}{3\clubs}}
+\begin{options}[2]
+    \item[3\diams] Pokaż kolor \textbf{odwrotnie}, \gf \vimp
+    \item[3\hearts] Pasuj / popraw
+    \item[3\spades] Pasuj z pikami, daj 4\hearts z kierami 
+\end{options}
+
+\sequence{{2\diams}{2\ntx}{3\diams}}
+\begin{options}[2]
+    \item[3\hearts] Próba szlemikowa, pytanie o krótkość (3\nt brak) \vimp
+    \item[Kolor] Próba szlemikowa, cue-bid z krótkości
+    \item[3\nt] Do gry 
+    \item[4\hearts] Do gry 
+\end{options}
+
+\compsequence{{2\diams}{\dbl}}
+\begin{compoptions}[3]
+    \item[\pass] Chcę grać 2\diams\!\!\dbl
+    \item[\rdbl] \textbf{Do koloru}
+    \item[2\hearts] 6+ własnych dobrych \hearts, \nf
+    \item[2\spades] 6+ własnych dobrych \spades, \nf
+\end{compoptions}
+
+\compsequence{{2\diams}{2\major}}
+\begin{compoptions}[3]
+    \item[\pass] Ręka niechętna do walki
+    \item[\dbl] \textbf{Do koloru}
+\end{compoptions}
+    
+\compsequence{{2\diams}{2\ntx}}
+\begin{compoptions}[3]
+    \item[\dbl] Karna
+\end{compoptions}
+
+\compsequence{{2\diams}{3\minor}}
+\begin{compoptions}[3]
+    \item[\dbl] Karna
+\end{compoptions}
+
+\end{document}

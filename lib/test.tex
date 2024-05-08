@@ -1,32 +1,79 @@
 \documentclass[12pt, a4paper]{article}
 \usepackage{import}
-
 \import{./}{bridge.sty}
 
 \begin{document}
-\begin{center}
-    \hspace*{-12mm}
-    \vhand{AT4}{K74}{862}{T532}\\
-    \vhand{K87}{92}{KJ97}{QJ64}%
-    \begin{minipage}{3cm}%
-        \centering
-        \vspace{-5mm}
-        \nvul{N} \\[4mm]
-        \nvul{W} \ \ \ \textbf{\large1} \ \ \ \nvul{E} \\[4mm]
-        \nvul{S}
-    \end{minipage}%
-    \vhand{532}{T653}{AQ4}{AK9} \\\hspace*{-7mm}%
-    \vhand{QJ96}{AQJ8}{T53}{87}
-\end{center}
 
-
-\allbidding{
-    \vul{W} & \nvul{N} & \vul{E} & \nvul{S} \\
-    - & - & - &\pass\\
-    1\spades & 3\hearts & 4\nt &?%
+\compsequence{
+  {2\diams}{P}{2N}{P}
 }
-\centering
-\hhand{5}{A853}{97532}{T83}
+\begin{compoptions}[1]
+    \item[3\clubs] Minimum, bad suit
+    \item[3\diams] Minimum, good suit
+    \item[3\hearts] Maximum, bad suit
+    \item[3\spades] Maximum, good suit
+\end{compoptions}
+\vspace*{1em}
+
+
+\compsequence{
+  {1\clubs}{1\hearts}{P}{1\spades}
+  {P}
+}
+\begin{compoptions}[2]
+    \item[1\nt] 2-\spades, wide range
+    \item[2\spades] 3\spades, weak
+    \item[2\clubs] 3\spades, strong
+\end{compoptions}
+\vspace*{1em}
+
+
+
+\compsequence{
+  {2\diams}{P}{2N}{P}
+  {3\clubs}  
+}
+\begin{compoptions}[3]
+    \item[3\diams] ASK for TRSF, \gf
+    \item[3\hearts] To play
+    \item[3\spades] To play   
+\end{compoptions}
+\vspace*{1em}
+
+
+\compsequence{
+  {2\hearts}{2N}{P}{3\clubs}
+  {}{3\diams}
+}
+\begin{compoptions}[4]
+    \item[3\hearts] 3-\spades
+    \item[3\spades] 4\spades
+    \item[3\nt] 5\spades
+    \item[4\clubs] 6+\spades\ SET   
+\end{compoptions}
+\pagebreak
+
+
+
+\sequence{{1\diams}{1\spades}{2\diams}{2\hearts}}
+\begin{options}[1]
+    \item[2\spades] 3\spades
+    \item[2\nt] \nat
+    \item[3\clubs] $R\rightarrow$  3\diams
+\end{options}
+
+\vspace*{1em}
+
+\sequence{{1\diams}{1\spades}{2\diams}}
+\begin{options}[2]
+    \item[2\hearts] \gf\ art
+    \item[2\spades] \nat
+    \item[2\nt] \inv art
+    \item[3\clubs] \nat
+\end{options}
+
 
 \end{document}
 
+
+  

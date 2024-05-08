@@ -14,6 +14,7 @@
 \begin{itemize}
     \item Licytacja przebiega anty-naturalnie, tzn. licytuje się to, czego się z grubsza nie ma.
     \item Licytacja zostawia szerokie pole do improwizacji i własnej interpretacji odzywek z grubsza.
+    \item Nie ma nigdy inwitu - przecież bilans łapiemy z grubsza.
 \end{itemize}
 W jednostronnej licytacji naturalnej, czyli takiej, która nie wpadnie w relay'e, występują 3 fazy:
 \begin{enumerate}[label=\textbf{\arabic*.}]
@@ -44,16 +45,51 @@ W jednostronnej licytacji naturalnej, czyli takiej, która nie wpadnie w relay'e
 
 \section{Otwarcia}
 \begin{itemize}
-    \item \pass\ - Z grubsza mało figur, skład równy lub z grubsza brak figur
-    \item 1\clubs\ - Z grubsza mało figur, skład niezrównoważony
-    \item 1\diams\ - Z grubsza średnio figur, skład równy
-    \item 1\hearts\ - Z grubsza średnio figur, skład niezrównoważony
-    \item 1\spades\ - Z grubsza dużo figur, skład równy, \fonce
-    \item 1\nt\ - Z grubsza dużo figur, skład niezrównoważony, \fonce
+    \item \pass\ = Z grubsza mało figur, skład równy lub z grubsza brak figur.
+    \item 1\clubs\ = \textbf{Z grubsza mało figur, skład niezrównoważony.} Granica w zależności od założeń, w korzystnych od 0PC,
+    w czerwonych od 9PC plus minus układ.
+    \item 1\diams\ = Z grubsza średnio figur, skład równy. Powiedzmy, że 10-15PC
+    \item 1\hearts\ = \textbf{Z grubsza średnio figur, skład niezrównoważony.}
+    Ręka na nienajgorsze otwarcie kolorem, w składzie co najmniej 5-4 na dowolnych. 5-4-2-2 można otworzyć równo lub nierówno.
+    5-4-3-1 można otworzyć nierówno lub na poziomie 2.
+    \item 1\spades\ = Z grubsza dużo figur, skład równy, powiedzmy że 16+PC \fonce 
+    \item 1\nt\ = Z grubsza dużo figur, skład niezrównoważony, \fonce
     \br
-    \item 2\clubs, 2\diams, 2\hearts, 2\spades\ - Z grubsza 4441, albo coś co przypomina 4441
-    \item 2\nt\ - Z grubsza dwa-trzy renonse
+    \item 2\clubs, 2\diams, 2\hearts, 2\spades\ = \textbf{4-4-4-1 z licytowaną krótkością.} Od biedy 5-4-3-1 to też 4-4-4-1.
+    \br
+    \item 2\nt\ = Młode
+    \item 3\clubs\ = \textbf{TurboPrecision:} 6+\clubs\ i starsza co-najmniej-czwórka lub 7+\clubs, 8-13PC
+    \item 3\diams\ = \textbf{TurboWilkosz:} Starsza szóstka i jakaś piątka, możliwe że też starsza.
 \end{itemize}
+
+
+\pagebreak
+\section{Schematy}
+\subsection{Schemat CRASH}
+\begin{itemize}
+    \item +1 = COLOR - czarne lub czerwone
+    \item +2 = RANGE - młode lub stare
+    \item +3 = SHAPE - ostre lub okrągłe
+\end{itemize}
+
+\subsection{Schemat 2\spades GF AFTER CRASH}
+\begin{itemize}
+    \item 2\nt\ = wersja bez pików
+    \item 3\clubs\ = wersja z pikami
+\end{itemize}
+
+\subsection{Schemat NIEFAJNE 3\diams}
+\begin{itemize}
+    \item 3\hearts\ = 
+    \subitem NIEFAJNE
+    \subitem brak nadwyżek układowych
+    \subitem coś tam w kolorach młodszych
+    \item 3\spades\ =
+    \subitem FAJNE
+    \subitem Nadwyżki układowe
+    \subitem coś tam w kolorach starszych
+\end{itemize}
+
 
 \pagebreak
 \section{Otwarcia niezrównoważone}
@@ -63,17 +99,17 @@ W jednostronnej licytacji naturalnej, czyli takiej, która nie wpadnie w relay'e
 \end{formal}
 \begin{itemize}
     \item \pass\ - Z grubsza nic w karcie, przydałoby się 5+\clubs, ale nie musi być, szczególnie w zielonych
-    \item 1\diams\ - pokaż swoje kolory CRASHem lub zalicytuj monokolor
-    \subitem 1\hearts\ - Czarne lub czerwone
-    \subitem 1\spades\ - Młode lub stare
-    \subitem 1\nt\ - Ostre lub okrągłe
+    \item 1\diams\ - pokaż swoje kolory CRASHem lub zalicytuj monokolor. \fonce
+    \subitem 1\hearts\ - Czarne lub czerwone \then 2\spades\ = \gf\ ART
+    \subitem 1\spades\ - Młode lub stare \then 2\spades\ = \gf\ ART
+    \subitem 1\nt\ - Ostre lub okrągłe \then 2\spades\ = \gf\ ART
     \subitem 2\clubs, 2\diams, 2\hearts, 2\spades\ - Z grubsza monokolorowa ręka
-    \item 1\hearts\ - Ręka z grubsza na częściówkę bez \hearts
-    \item 1\spades\ - Ręka z grubsza na częściówkę bez \spades
-    \item 1\nt\ - Ręka z grubsza na częściówkę z co najmniej dublem w każdym kolorze
-    \item 2\clubs, 2\diams, 2\hearts, 2\spades\ - \gf, krótkość licytowana
+    \item 1\hearts\ - Ręka z grubsza na częściówkę bez \hearts \then \soff
+    \item 1\spades\ - Ręka z grubsza na częściówkę bez \spades \then \soff
+    \item 1\nt\ - Ręka z grubsza na częściówkę z co najmniej dublem w każdym kolorze \then \soff
+    \item 2\clubs, 2\diams, 2\hearts, 2\spades\ - \gf, krótkość licytowana \then OTW pokazuje krótkość
     \item 2\nt\ - \gf\ bez krótkości
-    \subitem 3\clubs\ - pytanie o dubla (3\nt\ = dubel \clubs)
+    \subitem 3\clubs\ - pytanie o dubla (3\diams\ = dubel \clubs\ lub \diams)
     \subitem 3\diams\ - stayman (3\nt\ = brak starszych czwórek)
 \end{itemize}
 
@@ -86,12 +122,12 @@ W jednostronnej licytacji naturalnej, czyli takiej, która nie wpadnie w relay'e
 \begin{itemize}
     \item \pass\ - Z grubsza nic w karcie, przydałoby się 5+\hearts, ale nie musi być, szczególnie w zielonych
     \item 1\spades\ - pokaż swoje kolory CRASHem lub zalicytuj monokolor
-    \subitem 1\nt\ - Czarne lub czerwone
-    \subitem 2\clubs\ - Młode lub stare
-    \subitem 2\diams\ - Ostre lub okrągłe
+    \subitem 1\nt\ - Czarne lub czerwone \then 2\spades\ = \gf\ ART
+    \subitem 2\clubs\ - Młode lub stare \then 2\spades\ = \gf\ ART
+    \subitem 2\diams\ - Ostre lub okrągłe \then 2\spades\ = \gf\ ART
     \subitem 2\hearts, 2\spades, 3\clubs, 3\diams\ - Z grubsza monokolorowa ręka
-    \item 1\nt\ - Ręka z grubsza na częściówkę z co najmniej dublem w każdym kolorze
-    \item 2\clubs, 2\diams, 2\hearts, 2\spades\ - \gf, krótkość licytowana
+    \item 1\nt\ - Ręka z grubsza na częściówkę z co najmniej dublem w każdym kolorze, lub włąsnym monokolorem. \textbf{Forsuje do częściówki!}
+    \item 2\clubs, 2\diams, 2\hearts, 2\spades\ - \gf, krótkość licytowana, fity w innych kolorach
     \item 2\nt\ - \gf\ bez krótkości
     \subitem 3\clubs\ - pytanie o dubla (3\nt\ = dubel \clubs)
     \subitem 3\diams\ - stayman (3\nt\ = brak starszych czwórek)
@@ -165,62 +201,22 @@ W jednostronnej licytacji naturalnej, czyli takiej, która nie wpadnie w relay'e
 \end{itemize}
 
 \pagebreak
-\section{Wejście przeciwnika}
-\subsection{Na poziomie 1}
+\section{Wejścia}
+\subsection{Wejście przeciwnika}
 \begin{itemize}
-    \item \dbl\ - z grubsza niezła ręka bez krótkości.
-    \subitem Po otwarciu zrównoważonym - wysoki element karności
-    \subitem Po otwarciu niezrównoważonym - pokazuje 3-kartowy fit w każdym innym kolorze
-    \item 1\nt\ - krótkość w kolorze przeciwnika i ręka częściówkowa
-    \item \textbf{kolor przeciwnika} - krótkość w kolorze przeciwnika i \gf
-    \item 2\nt\ - \gf\ z niezłym trzymaniem w kolorze przeciwnika
-    \item Kolory bez przeskoku - naturalne, do pasa
-    \item Kolory z przeskokiem - \gf\ z krótkości
+    \item \dbl\ = z grubsza \gf\ na dowolnym, odpowiedzi CRASHem. Jak drugi przeciwnik coś powie
+    to \pass\ = brak dużego układu, inne NAT
+    \item 1\nt, 2\nt\ = Lebensohl, \textbf{forsuje do częściówki}
+    \item inne - z czwórki lub słąbej piątki, rozsądnie
 \end{itemize}
 
-\subsection{Na poziomie 2}
-\begin{itemize}
-    \item \dbl\ - z grubsza niezła ręka bez krótkości.
-    \subitem Po otwarciu zrównoważonym - wysoki element karności.
-    \subitem Po otwarciu niezrównoważonym - pokazuje 3-kartowy fit w każdym innym kolorze.
-    \item \textbf{+1 - krótkość w kolorze przeciwnika} i słaba ręka
-    \item \textbf{kolor przeciwnika} - krótkość w kolorze przeciwnika i \gf
-    \item 2\nt:
-    \subitem Na otwarcia zrównoważone - Lebensohl
-    \subitem Na otwarcia niezrównoważone - \gf\ z trzymaniem w kolorze wejścia
-    \item Kolory na poziomie 3 - \gf\ z krótkości
-    \item Inne kolory na poziomie 2 - naturalne, do pasa
-\end{itemize}
-
-\subsection{Wejście kontrą}
-\begin{itemize}
-    \item \rdbl\ - karna
-    \item Inne system ON
-\end{itemize}
-
-
-\pagebreak
-\section{Wejście do licytacji}
+\subsection{Wejście do licytacji}
 \begin{itemize}
     \item Na otwarcia zrównoważone (1\clubs, 1\nt) wchodzimy CRASHem od \dbl, powyżej CRASHa z krótkości lub jej braku
     \item Na otwarcia w kolor (1\diams, 1\hearts, 1\spades) wchodzimy:
     \subitem \dbl\ - z grubsza co najmniej średnio figur, bez krótkości
-    \subitem Kolorem bez przeskoku z co najmniej 4/4 w pozostałych dwóch
-    \subitem Kolorem z przeskokiem pokazując silną rękę z co najmniej 5/4 w pozostałych dwóch
-    \subitem \textbf{Kolorem przeciwnika}, pokazując pozostałe kolory (4441+)
-    \subitem 1\nt, pokazując jakiś długi kolor 
+    \subitem Kolorem - naturalnie
+    \subitem 1\nt\ - dwukolorowe na dowolnych
     \item Po dwóch odzywkach przeciwnika wchodzimy jak w normalnym systemie.
 \end{itemize}
-
-\section{Odzywka 3\diams\ w licytacji dwustronnej}
-Odzywka ta może mieć kilka znaczeń w zależności od przebiegu wcześniejszej licytacji,
-jednak zawsze ma dwie odpowiedzi: Negatywne 3\hearts\ i Pozytywne 3\spades.
-\begin{itemize}
-    \item Jeśli jest licytowana bezpośrednio do odzywki zrównoważonej, pyta o trzymanie w kolorze przeciwnika
-    \item Jeśli jest licytowana bezpośrednio do odzywki niezrównoważonej, w której partner pokazał kolor starszy,
-    pyta o piątą kartę w tym kolorze
-    \item Jeśli jest licytowana w dalszym okrążeniu i nie może być naturalna, wyraża wątpliwość co do
-    ogarnięcia o co chodzi w rozdaniu.
-\end{itemize}
-
 \end{document}
