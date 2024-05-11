@@ -1,0 +1,61 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{import}
+
+\import{../../lib/}{bridge.sty}
+\setmainlanguage{english}
+
+\title{Dealing with Michaels \textit{\&} Unusual 2\nt}
+\author{Krystyna Gasińska, Bartek Słupik}
+\begin{document}
+\maketitle
+
+%%% ID: 42
+%%% PRIORITY: 116
+%%% SECTION: competitive
+%%% TITLE: Dealing with Michaels \textit{\&} Unusual 2\nt
+%%% SYSTEM BEGIN %%%
+
+\subsubsection*{1\clubs -- (2\nt) -- ?}
+2\nt = \minor
+\begin{itemize}
+    \item 3\clubs = \hearts, \invp
+    \item 3\diams = \spades, \invp
+    \item 3\major = to play
+\end{itemize}
+
+\subsubsection*{1\diams -- (2\nt) -- ?}
+\begin{itemize}
+    \item 3\clubs = \invp, fit
+    \item 3\diams = simple raise 6-9
+    \item 3\hearts = 5+\spades, \gf
+    \item 3\spades = 6\spades, \nf \imp
+\end{itemize}
+
+\subsubsection*{1\spades -- (2\nt) -- ?}
+\begin{itemize}
+    \item 3\clubs = 5\hearts, \gf
+    \item 3\diams = \invp, fit
+    \item 3\hearts = 6\hearts, \nf \imp
+    \item 3\spades = simple raise 6-9
+\end{itemize}
+
+\subsubsection*{1\clubs -- (2\diams) -- ?}
+2\diams = \major
+\begin{itemize}
+    \item 2\hearts = \clubs, \invp
+    \item 2\spades = \diams, \gf
+\end{itemize}
+
+\subsubsection*{1\hearts -- (2\hearts) -- ?}
+\begin{itemize}
+    \item \dbl = ownership
+    \item 2\spades = \invp, fit
+    \item 3\minor = 5+, \gf
+    \item 3\hearts = simple raise 6-9
+    \item 3\spades = splinter
+    \item 4\minor = fit jump (5\minor with 2/3 honors, 7+, 4\hearts)
+\end{itemize}
+
+%%% SYSTEM END %%%
+
+\end{document}
