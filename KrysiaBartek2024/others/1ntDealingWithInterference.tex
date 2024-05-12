@@ -66,8 +66,8 @@ Wrzucamy 3\nt bez trzymania czy \dbl z trzema kierami?
 3.\\
 1\nt\ -- (2\hearts) -- ?\\
 Trzymamy:\\
-\chandp{AKJ43}{43}{T943}{32}{8 \hcp}\\
-Mamy 8 ładnych punktów, ale nie wiemy, czy odpowiedni dla nas kontrakt to
+\chandp{AJT43}{K3}{T943}{32}{8 \hcp}\\
+Nie wiemy, czy odpowiedni dla nas kontrakt to
 4\spades -- jeśli trafimy na fit, 3\nt -- jeśli mamy bilans, ale nie fit, czy może jedynie 2\spades,
 jeśli partner ma brzydkie 15\hcp bez fitu. Chcielibyśmy pokazać piki i zainwitować, 
 a możemy wybrać tylko między słabym 2\spades i \gf 3\spades.
@@ -100,7 +100,7 @@ Licytacja może przebiegać następująco:
 1\nt\ -- (2\spades) -- 2\nt -- (\pass)\\
 3\clubs -- (\pass) -- 3\hearts -- all \pass
 
-Analogicznie, zalicytowanie 3\spades lub 3\diams po 3\clubs partnera jest słabe (do pasa).
+Analogicznie, zalicytowanie 3\diams po 3\clubs partnera jest słabe (do pasa).
 Zauważmy, że jeśli mamy słabą rękę z \textbf{treflami}, możemy po prostu spasować na 3\clubs.
 
 Co w takim razie będzie oznaczało zalicytowanie 3\nt\ ,,przechodząc przez Lebensohla``?
@@ -184,7 +184,7 @@ przeciwnik wszedł 2\hearts. Jeśli jednak nasz kolor jest niższy, nie mamy tak
 4.\\
 1\nt\ -- (2\spades) -- ?\\
 Trzymamy:\\
-\chandp{43}{AKJ43}{T943}{32}{8 \hcp}\\
+\chandp{K3}{AJT43}{T943}{32}{8 \hcp}\\
 Analogicznie jak w problemie 3. nie mamy możliwości inwitu. Tym razem Lebensohl go nie rozwiązuje,
 bo mamy pecha i nasz kolor jest niższy niż kolor wejścia przeciwnika.
 
@@ -197,7 +197,7 @@ Trzymamy:\\
 Mamy ładne źródło lew, 3\nt może być dobrym kontraktem, ale to zależy jak rozłożone
 są punkty naszego partnera. Kara możemy pokazać tylko słabe lub \gf.
 
-6. Drugi problem, odrobinę bardziej subtelny, czyli dlaczego straciliśmy gwiazdkę!?
+6. Drugi problem, nieco bardziej subtelny, czyli dlaczego straciliśmy gwiazdkę!?
 
 \begin{figure}[H]
     \centering
@@ -294,6 +294,32 @@ Jeśli partner nie przyjmuje inwitu, zalicytuje 3\spades:
 1\nt\ -- (2\hearts) -- 2\nt -- (\pass)\\
 3\clubs -- (\pass) -- 3\diams -- (\pass)\\
 3\spades -- ...
+
+System zmienia się nieco po wejściu sztucznym 2\clubs,
+pokazującym kolory stare.
+2\diams i 2\hearts są nadal słabe (do pasa).
+Nie ma sensu, żeby 2\nt było Lebensohlem, bo kara możemy
+wygodnie pokazać na poziomie 2, zatem będzie to transfer na trefle.
+Zrzekamy się też naturalnego 2\spades, na rzecz
+pokazania \textbf{obu młodych} w sile inwit+. 
+Zauważmy, że skoro przeciwnik pokazuje stare, to
+my często chcemy pokazać młode (a rzadziej naturalne 2\spades).
+Jeśli natomiast chcemy grać 2\spades lub 3\clubs, 
+możemy wznowić po 2\hearts przeciwników!\\
+Kolory na poziomie 3 to nadal Rubensohl, czyli transfery
+w sile inwit+ (również na kolor stary!).
+
+\subsubsection*{1\ntx\ -- (\alrts{2\clubs}) -- ?}
+2\clubs\ = 5/4 \major
+\begin{itemize}
+    \item \dbl\ = 8+
+    \item 2\diams, 2\hearts = do gry
+    \item 2\spades = \minor, inwit+
+    \item 2\nt\ = transfer na trefle, inwit+
+    \item 3\clubs = transfer na kara, inwit+
+    \item 3\diams = transfer na kiery, inwit+
+    \item 3\hearts = transfer na piki, inwit+
+\end{itemize}
 
 Co z wejściami na poziomie 3? Nie mamy już Lebensohla,
 mamy jedynie możliwość inwitu lub \gf (no cóż, zostaliśmy
@@ -466,7 +492,7 @@ Przykłady:
 \begin{enumerate}
     \item 
         \chandp{3}{KJ53}{732}{KQ873}{9 \hcp}\\
-        Pała! Uwaga, na taki kontrakt \textbf{wistujemy w atu}!
+        Pała!
     \item 
         \chandp{AJ32}{63}{K32}{9873}{8 \hcp}\\
         Nasz partner nie mógł spałować kierów i my też nie mamy na kontrę.
@@ -481,11 +507,11 @@ Przykłady:
     \item 
         \chandp{J32}{KJ63}{73}{AQ73}{11 \hcp}\\
         Nasz partner spałował piki. Możemy spokojnie
-        spasować. Uwaga, na taki kontrakt \textbf{wistujemy w atu}!
+        spasować.
     \item
-        \chandp{3}{KJ53}{732}{KQ873}{9 \hcp}\\
+        \chandp{3}{KJ53}{J32}{KQ873}{10 \hcp}\\
         Nasz partner spałował piki, ale mógł to zrobić nawet z trzecim KJ...
-        Nie możemy spasować. Licytujemy 3\clubs
+        Nie możemy spasować. Licytujemy 3\nt.
 \end{enumerate}
 
 \begin{formal}
@@ -545,8 +571,12 @@ Przeciwnik wchodzi na nasze 1\nt:
 2\clubs\ = 5/4 \major
 \begin{itemize}
     \item \dbl\ = 8+
-    \item 2\diams, 2\hearts, 2\spades, 3\clubs\ = to play
-    \item 2\nt\ = minors
+    \item 2\diams, 2\hearts = to play
+    \item 2\spades = \minor, \invp
+    \item 2\nt\ = 5+\clubs, \invp
+    \item 3\clubs\ = 5+\diams, \invp
+    \item 3\diams\ = 5+\hearts, \invp
+    \item 3\hearts\ = 5+\spades, \invp
 \end{itemize}
 
 \subsubsection*{1\ntx\ -- (2\diams) -- ?}
@@ -629,27 +659,11 @@ Przeciwnik wchodzi na nasze 1\nt:
     \item 3\nt\ = to play
 \end{itemize}
 
-\subsubsection*{1\ntx\ -- (\alrts{\dbl}) -- ?}
-\dbl\ artificial
+\subsubsection*{1\ntx\ -- (\dbl) -- ?}
 
 \textsc{system on}
 
-\subsubsection*{1\ntx\ -- (\dbl) -- ?}
-\dbl\ = penalty
-\begin{itemize}
-    \item \pass\ = forces \rdbl
-    \item \rdbl\ = forces 2\clubs
-    \item 2\anysuit{x}\ = forces \anysuit{x+1}
-\end{itemize}
-
-\subsubsection*{1\ntx\ -- (\dbl) -- \alrts{P} -- (P)\\
-                \rdbl\ -- (P) -- ?}
-\begin{itemize}
-    \item \pass\ = penalty
-    \item 2\clubs\ = 4\clubs\ + 4\anysuit{x}\ or 4333 or any other edge case
-    \item 2\diams\ = 4\diams\ + 4\major
-    \item 2\hearts\ = 4\hearts\ + 4\spades
-\end{itemize}
+\newpage
 
 Behind the scenes:
 \begin{figure}[H]
