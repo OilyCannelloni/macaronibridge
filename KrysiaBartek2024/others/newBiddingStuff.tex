@@ -1,0 +1,80 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{import}
+
+\import{../../lib/}{bridge.sty}
+
+\title{New Bidding Stuff}
+\author{Krystyna Gasińska}
+\begin{document}
+\maketitle
+
+\section{Other}
+
+\subsubsection*{1\clubs -- ?}
+\begin{itemize}
+    \item 4\clubs = 5+\hearts5+\spades
+    \item 4\diams = \then 4\hearts
+    \item 4\hearts = \then 4\spades
+\end{itemize}
+
+\subsubsection*{1\clubs -- 1\hearts
+                1\spades -- 2\diams\\
+                ?}
+\begin{itemize}
+    \item 2\spades = 5\clubs4\spades (then 3\spades = 65)
+    \item 3\clubs = 6\clubs4\spades
+\end{itemize}
+
+\subsubsection*{(1\minor) -- 1\hearts -- (P) -- ?}
+\begin{itemize}
+    \item 3\minor = mixed raise
+\end{itemize}
+
+\subsubsection*{(1\anysuit{x}) -- 1\anysuit{y} -- (2\anysuit{x}) -- ?}
+\begin{itemize}
+    \item 2\nt = fit, \invp
+    \item 3\anysuit{x} = mixed raise
+    \item 3\anysuit{y} = preemptive
+\end{itemize}
+
+\subsubsection*{(1\diams) -- 1\spades -- \dbl -- (3\spades)\\
+                \dbl -- (\pass) -- ?}
+\begin{itemize}
+    \item 4\minor = \forc
+\end{itemize}
+
+\subsubsection*{1\hearts -- 2\hearts\\
+                2\nt -- 3\spades\\
+                4\clubs}
+2\nt = \invp, \spades
+3\spades = accept, 4+\spades
+4\clubs = agreeing \spades, cue
+
+\subsubsection*{1\hearts -- 1\spades\\
+                2\clubs -- 2\hearts\\
+                ?}
+\begin{itemize}
+    \item 2\spades = 3+\spades, \fonce
+    \item 2\nt = \gf
+    \item 3\minor = 4+\minor, \fonce
+    \item 3\hearts = 6+\hearts, \inv
+\end{itemize}
+
+\subsubsection*{1\hearts -- 1\spades\\
+                2\clubs -- 2\hearts\\
+                2\spades -- ?}
+\begin{itemize}
+    \item 2\nt = \gf
+    \item 3\minor = \gf
+    \item 3\hearts/3\spades = \nf
+\end{itemize}
+
+\subsubsection*{1\hearts -- 1\spades\\
+                2\clubs -- 2\hearts\\
+                3\minor -- ?}
+\begin{itemize}
+    \item 3\diams/3\nt = \gf
+    \item 3\hearts/3\spades/4\minor = \nf
+\end{itemize}
+
+\end{document}
