@@ -9,62 +9,93 @@
 \begin{document}
 \maketitle
 
-How to rebid with a strong hand if our partner passed and 
-opponents found major fit? In general: Do not rebid.
-With any strength and balanced hand: \pass. With unbalanced hand
-bid \dbl\ to show other (unbid) major, 2\nt\ to show 
-minors or 3\clubs\ to show clubs.
+% not anymore in use
 
-\subsubsection*{Example}
-\begin{enumerate}
-    \item {
-        Bidding:\\
-        1\clubs\ -- (1\spades) -- P -- (2\spades)\\
-        \dbl\ -- (P) -- ?\\
-        What to do next?\\
-        \chandp{T871}{82}{KJ852}{T5}{4}
-        Opponents showed \spades-fit, so our partner has at most 1\spades.
-        With 5\hearts\ he would open 1\hearts, so he has 4\hearts (\dbl\ showed
-        \clubs\ and \hearts). It means that we most probably have fit in \diams.\\
-        Correct bid: 3\diams.
-    }
-\end{enumerate}
+% How to rebid with a strong hand if our partner passed and 
+% opponents found major fit? In general: Do not rebid.
+% With any strength and balanced hand: \pass. With unbalanced hand
+% bid \dbl\ to show other (unbid) major, 2\nt\ to show 
+% minors or 3\clubs\ to show clubs.
+
+% \subsubsection*{Example}
+% \begin{enumerate}
+%     \item {
+%         Bidding:\\
+%         1\clubs\ -- (1\spades) -- P -- (2\spades)\\
+%         \dbl\ -- (P) -- ?\\
+%         What to do next?\\
+%         \chandp{T871}{82}{KJ852}{T5}{4}
+%         Opponents showed \spades-fit, so our partner has at most 1\spades.
+%         With 5\hearts\ he would open 1\hearts, so he has 4\hearts (\dbl\ showed
+%         \clubs\ and \hearts). It means that we most probably have fit in \diams.\\
+%         Correct bid: 3\diams.
+%     }
+% \end{enumerate}
 
 %%% ID: 12
 %%% PRIORITY: 1000
+%%% SECTION: defensive
 %%% TITLE: Other
 %%% SYSTEM BEGIN %%%
 
-\subsubsection*{1\clubs\ -- (1\hearts) -- P -- (2\hearts) \\ ?}
+% \subsubsection*{1\clubs\ -- (1\hearts) -- P -- (2\hearts) \\ ?}
+% \begin{itemize}
+%     \item \dbl\ = \clubs\spades, choose
+%     \item 2\nt\ = \clubs\diams, choose
+%     \item 3\clubs\ = to play
+% \end{itemize}
+
+% \subsubsection*{1\clubs\ -- (1\spades) -- P -- (2\spades) \\ ?}
+% \begin{itemize}
+%     \item \dbl\ = \twosuit{\clubs}{\hearts}, choose
+%     \item 2\nt\ = \twosuit{\clubs}{\diams}, choose
+%     \item 3\clubs\ = to play
+% \end{itemize}
+
+% \subsubsection*{1\diams\ -- (1\spades) -- P -- (2\spades) \\ ?}
+% \begin{itemize}
+%     \item \dbl\ = \twosuit{\diams}{\hearts}, choose
+%     \item 3\clubs\ = \twosuit{\clubs}{\diams}, choose
+% \end{itemize}
+
+% \subsubsection*{1\diams\ -- (1\hearts) -- P -- (2\hearts) \\ ?}
+% \begin{itemize}
+%     \item \dbl\ = \twosuit{\diams}{\spades}, choose
+%     \item 3\clubs\ = \twosuit{\clubs}{\diams}, choose
+% \end{itemize}
+
+\subsubsection*{(1\diams) -- ?}
 \begin{itemize}
-    \item \dbl\ = \clubs\spades, choose
-    \item 2\nt\ = \clubs\diams, choose
-    \item 3\clubs\ = to play
+    \item 3\diams = gambling \clubs
 \end{itemize}
 
-\subsubsection*{1\clubs\ -- (1\spades) -- P -- (2\spades) \\ ?}
+\subsubsection*{(1\clubs) -- ?}
 \begin{itemize}
-    \item \dbl\ = \clubs\hearts, choose
-    \item 2\nt\ = \clubs\diams, choose
-    \item 3\clubs\ = to play
+    \item 3\clubs = \clubs preempt
 \end{itemize}
 
-\subsubsection*{1\diams\ -- (1\spades) -- P -- (2\spades) \\ ?}
+\subsubsection*{1\clubs -- (\dbl) -- ?}
 \begin{itemize}
-    \item \dbl\ = \diams\hearts, choose
-    \item 3\clubs\ = \clubs\diams, choose
+    \item 2\nt = preempt \clubs
+    \item 3\clubs = limit raise
 \end{itemize}
 
-\subsubsection*{1\diams\ -- (1\hearts) -- P -- (2\hearts) \\ ?}
+\subsubsection*{1\clubs -- (1\anysuit{x}) -- ?}
 \begin{itemize}
-    \item \dbl\ = \diams\spades, choose
-    \item 3\clubs\ = \clubs\diams, choose
+    \item 3\clubs = preempt
 \end{itemize}
+
+\subsubsection*{...5\anysuit{x} -- ?}
+5\anysuit{x} = query kings
+\begin{itemize}
+    \item agreed suit = no kings
+    \item 5\anysuit{x}+1 = lowest side-suit king or two other kings
+    \item 5\anysuit{x}+2 = middle side-suit king or two other kings
+    \item 5\anysuit{x}+3 = highest side-suit king or two other kings
+\end{itemize}
+
 
 %%% SYSTEM END %%%
-
-% to do: dealing with blackwood interference
-% gambling 3nt
 
 \definecolor{anti-flashwhite}{rgb}{0.95, 0.95, 0.96}
 \section{Random bids {\color{anti-flashwhite}logi z pierdolenia po piwie}}
@@ -159,10 +190,27 @@ minors or 3\clubs\ to show clubs.
 
 (2\diams$^\text{6\major}$) -- 4\clubs
 
-
-
-
 \end{itemize}
 
+\subsubsection*{How to invite?}
+\begin{enumerate}
+    \item {
+        1\spades -- (2\clubs) -- 2\spades -- (3\clubs)\\
+        ?\\
+        As there are two suits available, bidding either of them is a natural
+        invite. Double is penalty.
+    }
+    \item {
+        1\spades -- (2\diams) -- 2\spades -- (3\diams)\\
+        ?\\
+        There is only one suit available, so bidding it is an artificial invite.
+        Double is penalty.
+    }
+    \item {
+        1\spades -- (2\hearts) -- 2\spades -- (3\hearts)\\
+        ?\\
+        There is no inviting suit. Double is invite.
+    }
+\end{enumerate}
 
 \end{document}
