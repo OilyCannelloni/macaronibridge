@@ -1,0 +1,57 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{import}
+
+\import{../../lib/}{bridge.sty}
+
+\title{\vspace*{-3.0cm}6\spades - A subtle hint}
+\author{Bartek Słupik}
+\begin{document}
+\maketitle
+
+After an auction I'd rather not waste your time on, East leads \xclubs2 against 6\spades.
+\begin{enumerate}
+    \item Find a double-dummy line of play to "win" the contract if the defence sleeps
+    \item Find a defensive play to beat the contract
+    \item Decide if it's possible to find it looking at just East's cards
+\end{enumerate}
+
+\handdiagramv
+        {\vhand{AK7}{KT84}{AQT}{A87}}
+        {\vhand{T5}{J765}{J8653}{92}}
+        {\vhand{J9832}{Q}{K72}{QJ64}}
+        {\vhand{Q64}{A932}{94}{KT53}}
+        {}
+
+\pagebreak
+
+Assuming we lose no spade tricks, there is still a club loser to cater for. A round suit squeeze
+against West would be possible, if he held the \xhearts J. We start by cashing three spades
+and play a low heart towards the \xhearts Q. West wins, yawns, and returns a diamond.
+That is a good start. 
+
+We win the \xdiams A and cash the \xhearts K. Then we play the \xhearts T and watch East carefully.
+He correctly covers with the Jack and we ruff. Great! Now, the heart threat is the \xhearts 9. If W holds it, 
+he is soon to be squeezed just as we planned! We cash the remaining spades, and the \xdiams K, reaching the following position: 
+
+\handdiagramv
+        {\vhand{-}{8}{Q}{8}}
+        {\vhand{-}{7}{J}{9}}
+        {\vhand{-}{-}{7}{Q6}}
+        {\vhand{-}{9}{}{T5}}
+        {}
+
+Upon leading the \xdiams 7 to the \xdiams Q, West must let go of one of the guards.
+
+This is called a Guard Transfer Play - it enables us to seemingly waste a high card in order
+for a lower guard to arise in a squeeze suit. If the other opponent holds it, the squeeze is going to operate.
+
+If East does not cover with the \xhearts J, nor does he show any behavior suggesting the posession of the honor,
+you should ruff the \xhearts T and proceed to play for West to have \xhearts AJ9x.
+
+This enticing squeeze is far from working though, as the defence posesses an even more beautiful resource.
+East, having seen the declarer pop in with the \xclubs J knows, that his partner posesses the \xclubs T.
+Therefore, when declarer plays a low heart, he should signal for a club return with the \xhearts 5!
+This cuts the dummy entries necessary for the squeeze and the contract has no more play.
+
+
+\end{document}
