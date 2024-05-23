@@ -1,0 +1,91 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{import}
+\import{../lib}{bridge.sty}
+
+
+
+\title{\vspace{-3cm}Strefodwrotka}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\section*{Strefodwrotka}
+
+\sequence{{1\clubs}{1\hearts}}
+\begin{options}[1]
+    \item[2\diams] \textbf{Strefodwrotka}, ANY 3+\hearts except 4333 \gf
+    \item[2\nt] \bal \gf \orr 5+\clubs4\diams \gf
+\end{options}
+
+\sequence{{1\clubs}{1\hearts}{2\diams}}
+\begin{options}[2]
+    \item[2\hearts] ASK 5+\hearts agrees
+    \item[2\spades] ASK 4\hearts 
+\end{options}
+
+\subsection*{2\hearts ASK 5+\hearts}
+
+\sequence{{1\clubs}{1\hearts}{2\xdiams*}{2\xhearts*}}
+\begin{options}[1]
+    \item[2\spades] unbalanced (2\nt \lsf\ lo/hi) \then 3\nt nonserious
+    \item[2\nt] \bal (3\clubs ASK dubel)
+\end{options}
+
+\sequence{{1\clubs}{1\hearts}{2\xdiams*}{2\xhearts*}{2N}{3\xclubs*}}
+\begin{options}[1]
+    \item[3\diams] dubel LO \then 3\nt nonserious
+    \item[3\hearts] dubel HI
+    \item[3\spades] 4\xhearts 333  \then 3\nt \soff
+    \item[3\nt] 43\xhearts 33 
+\end{options}
+
+\subsection*{2\spades ASK 4\hearts}
+
+\sequence{{1\clubs}{1\hearts}{2\xdiams*}{2\xspades*}}
+\begin{options}[1]
+    \item[2\nt] balanced with 4\hearts (3\clubs ASK dubel)
+    \item[3\clubs] unbalanced with 4\hearts (3\diams \lsf)
+    \item[3\diams] 3\hearts, 5\clubs 4\diams (rewers z "fitem")
+    \item[3\hearts] 3\hearts, 6+\clubs 
+\end{options}
+
+
+\section*{A teraz co nas ta przyjemność kosztuje}
+\sequence{{1\clubs}{1\hearts}}
+\begin{options}[1]
+    \item[2\nt] GF \bal z dublem \hearts \orr rewers \twosuit{\clubs}{\diams}
+    \item[3\nt] RIP 
+\end{options}
+
+\sequence{{1\clubs}{1\hearts}{2N}}
+\begin{options}[2]
+    \item[3\clubs] ASK
+    \item[3\diams] 6+\hearts przyjęcie fituje
+\end{options}
+
+\sequence{{1\clubs}{1\hearts}{2N}{3\clubs}}
+\begin{options}[1]
+    \item[3\diams] 5+\clubs, 4\diams \then 3\hearts \lsf \then 3\nt \soff
+    \item[3\hearts] 5+\clubs, ale bez 4\diams
+    \item[3\spades] 4+\diams, ale bez 5\clubs 
+\end{options}
+
+\section*{A to zwiększa przyjemność z gry}
+
+\sequence{{Otwarcie}{}}
+\begin{options}[1]
+    \item[1\clubs] += 5\xdiams332
+\end{options}
+
+\sequence{{1\diams}{1\hearts}}
+\begin{options}[1]
+    \item[2\nt] cośtam
+\end{options}
+
+\sequence{{1\diams}{1\spades}}
+\begin{options}[1]
+    \item[2\nt] cośtam
+\end{options}
+
+\end{document}
