@@ -1,0 +1,165 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{import}
+\import{../../lib}{bridge.sty}
+
+\newcommand*{\orr}{\quad|\quad}
+
+\title{\vspace{-2.5cm}Basic Strefa 2024}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{1\clubs}
+
+\sequence{{1\clubs}}
+\begin{options}[2]
+    \item[1\diams] dowolne 0-6 \orr 6+\diams 7-12 \orr 5+/4+\minor 7-12
+    \item[1\hearts] 4+ \fonce
+    \item[1\spades] 4+ \fonce  
+    \item[1\nt] 7-10 \bal (może zawierać 5\diams) 
+    \item[2\clubs] \gf (jeśli zawiera 4\major, zawiera też 5\clubs)
+    \item[2\diams] \gf z dobrymi 5+\diams
+    \item[2\hearts] 5+\spades 4+\hearts 6-9
+    \item[2\spades] 11+ \bal, bez 4\major
+    \item[2\nt] 11-12 \bal
+    \item[3\clubs] 6+\clubs, 6-9   
+\end{options}
+
+\subsection*{Negat}
+
+\sequence{{1\clubs}{1\diams}}
+\begin{options}[1]
+    \item[1\hearts] 3+\hearts słaba ręka
+    \item[1\spades] (3)4+\spades słaba ręka
+    \item[1\nt] 18-20 \bal
+    \item[2\clubs] 6+\clubs słaba ręka
+    \item[2\diams] rewers, \fonce
+    \item[2\hearts] rewers, \fonce
+    \item[2\spades] rewers, \fonce
+\end{options}
+
+\sequence{{1\clubs}{1\diams}{1\major}}
+\begin{options}[2]
+    \item[1\spades] \nf
+    \item[1\nt] \nf
+    \item[2\clubs] \nf
+    \item[2\diams] 6+\diams, 0-9
+    \item[2\major] góra negatu z fitem
+    \item[2NT] 5+/4+ \minor \imp
+    \item[3\diams] 6+\diams, 10-12 
+\end{options}
+
+\subsection*{Rebid po 1/1}
+
+\sequence{{1\clubs}{1\hearts}}
+\begin{options}[1]
+    \item[1\spades] 4+\spades \nf
+    \item[1\nt] 12-14 \bal
+    \item[2\clubs] 6+\clubs 12-15 lub =1345 
+    \item[2\diams] rewers, \fonce
+    \item[2\hearts] 4+\hearts, \nf
+    \item[2\spades] jump shift, \gf
+    \item[2\nt] \gf
+    \item[3\clubs] 6+\clubs 15-18 
+    \item[3\diams] \gf z długimi \clubs \vimp
+    \item[3\hearts] 4+\hearts, 15-17 
+\end{options}
+
+\sequence{{1\clubs}{1\spades}}
+\begin{options}[1]
+    \item[1\nt] 12-14 \bal
+    \item[2\clubs] 6+\clubs 12-15 lub 1345\clubs 
+    \item[2\diams] rewers, \fonce
+    \item[2\hearts] rewers, \fonce
+    \item[2\spades] 4+\spades, 12-14
+    \item[2\nt] \gf
+    \item[3\clubs] 6+\clubs 15-18 
+    \item[3\diams] \gf z długimi \clubs \vimp
+    \item[3\spades] 4+\spades, 15-17 
+\end{options}
+
+\pagebreak
+\subsection*{Rebid 1\spades}
+\sequence{{1\clubs}{1\hearts}{1\spades}}
+\begin{options}[2]
+    \item[\pass] OK
+    \item[1\nt] śmietnik, w tym ręce z 3\spades dające szanse na końcówkę do 17PC
+    \item[2\clubs] magister
+    \item[2\diams] magister
+    \item[2\hearts] \soff
+    \item[2\nt] transfer na 3\clubs \vimp
+    \item[3\clubs] 5\hearts 5\clubs \gf \imp
+    \item[3\diams] 5\hearts 5\diams \gf \imp
+\end{options}
+
+\subsection*{Rebid 1NT}
+\sequence{{1\clubs}{1\hearts}{1N}}
+\begin{options}[2]
+    \item[2\clubs] magister
+    \item[2\diams] magister
+    \item[2\hearts] \soff
+    \item[2\nt] transfer na 3\clubs \vimp
+    \item[3\clubs] 5\hearts 5\clubs \gf \imp
+    \item[3\diams] 5\hearts 5\diams \gf \imp
+\end{options}
+
+\sequence{{1\clubs}{1\hearts}{1N}{2\clubs}{2\diams}}
+\begin{options}[2]
+    \item[2\hearts] 5\hearts \inv
+    \item[2\nt] \bal \inv 
+    \item[3\clubs] 5\hearts 5\clubs \inv
+    \item[3\diams] 5\hearts 5\diams \inv
+    \item[3\nt] (5\hearts 332) wybór końcówki \vimp
+\end{options}
+
+
+
+\pagebreak
+\subsection*{Rebid 2\clubs}
+
+\sequence{{1\clubs}{1\hearts}{2\clubs}}
+\begin{options}[2]
+    \item[2\diams] sztuczny \gf, pytanie o skład \vimp
+    \item[2\hearts] \soff
+    \item[2\spades] \gf, pytanie o trzymania
+    \item[2\nt] \inv 
+    \item[3\clubs] \inv 
+\end{options}
+
+\sequence{{1\clubs}{1\spades}{2\clubs}}
+\begin{options}[2]
+    \item[2\diams] sztuczny \gf, pytanie o skład \vimp
+    \item[2\hearts] 5\spades, 4\hearts 10-11 \inv
+    \item[2\spades] \soff
+    \item[2\nt] \inv
+    \item[3\clubs] \inv 
+\end{options}
+
+
+\subsubsection*{Dodatkowe}
+\sequence{{1\clubs}{1\hearts}{2\clubs}{2\diams}}
+\begin{options}[1]
+    \item[2\hearts] 5+\clubs, 3\hearts
+    \item[2\spades] (6+\clubs322) nie chcę zajmować NT
+    \item[2\nt] (6\clubs322) okej ręka do zajęcia NT
+    \item[3\clubs] 7+\clubs
+    \item[3\diams+] 6+\clubs, krótkość 
+\end{options}
+
+\sequence{{1\clubs}{1\spades}{2\clubs}{2\diams}}
+\begin{options}[1]
+    \item[2\hearts] 5+\clubs, 4\hearts
+    \item[2\spades] 5+\clubs, 3\spades
+    \item[2\nt] (6\clubs322) okej ręka do zajęcia NT
+    \item[3\clubs] (6+\clubs322) nie chcę zajmować NT
+    \item[3\diams+] 6+\clubs, krótkość 
+\end{options}
+
+\pagebreak
+
+
+
+
+\end{document}
