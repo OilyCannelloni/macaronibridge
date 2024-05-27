@@ -112,13 +112,13 @@
 \sequence{{1\clubs}{1\hearts}{1\spades}}
 \begin{options}[2]
     \item[\pass] OK
-    \item[1\nt] śmietnik, w tym ręce z 3\spades dające szanse na końcówkę do 17PC
+    \item[1\nt] śmietnik, w tym ręce z 3\spades 9+PC (partner może mieć 17)
     \item[2\clubs] magister
     \item[2\diams] magister
     \item[2\hearts] \soff
     \item[2\nt] transfer na 3\clubs \vimp
-    \item[3\clubs] 5\hearts 5\clubs \gf \imp
-    \item[3\diams] 5\hearts 5\diams \gf \imp
+    \item[3\clubs] 5\hearts 5\clubs\ \gf \imp
+    \item[3\diams] 5\hearts 5\diams\ \gf \imp
 \end{options}
 
 \subsection*{Rebid 1NT}
@@ -128,18 +128,54 @@
     \item[2\diams] magister
     \item[2\hearts] \soff
     \item[2\nt] transfer na 3\clubs \vimp
-    \item[3\clubs] 5\hearts 5\clubs \gf \imp
-    \item[3\diams] 5\hearts 5\diams \gf \imp
+    \item[3\clubs] 5\hearts 5\clubs\ \gf \imp
+    \item[3\diams] 5\hearts 5\diams\ \gf \imp
 \end{options}
 
 \sequence{{1\clubs}{1\hearts}{1N}{2\clubs}{2\diams}}
 \begin{options}[2]
-    \item[2\hearts] 5\hearts \inv
-    \item[2\nt] \bal \inv 
-    \item[3\clubs] 5\hearts 5\clubs \inv
-    \item[3\diams] 5\hearts 5\diams \inv
+    \item[2\hearts] 5\hearts\ \inv
+    \item[2\nt] \bal\ \inv 
+    \item[3\clubs] 5\hearts 5\clubs\ \inv
+    \item[3\diams] 5\hearts 5\diams\ \inv
     \item[3\nt] (5\hearts 332) wybór końcówki \vimp
 \end{options}
+
+\pagebreak
+\subsection*{1\clubs --- 2\clubs}
+\sequence{{1\clubs}{2\clubs}}
+\begin{options}[1]
+    \item[2\diams] \textbf{Skład równy} może mieć 4\major, 12-14 i 18-20PC \vimp
+    \item[2\hearts] 5+\clubs, 4\hearts
+    \item[2\spades] 5+\clubs, 4\spades  
+\end{options}
+
+\sequence{{1\clubs}{2\clubs}{2\diams}}
+\begin{options}[2]
+    \item[2\hearts] 5+\clubs 4\hearts
+    \item[2\spades] 5+\clubs 4\spades
+    \item[2\nt] \textbf{Pytanie}  
+    \item[3\clubs] 6+\clubs (ustala) 
+\end{options}
+
+\sequence{{1\clubs}{2\clubs}{2\diams}{2N}}
+\begin{options}[1]
+    \item[3\clubs] 5+\clubs
+    \item[3\diams] dubel
+    \item[3\hearts] dubel
+    \item[3\spades] dubel   
+    \item[3\nt] 4333 \orr 4432\clubs 
+\end{options}
+
+\sequence{{1\clubs}{2\clubs}{2\hearts}{2N}}
+\begin{options}[1]
+    \item[3\clubs] 6+\clubs 4\hearts
+    \item[3\diams] 5\clubs 4\hearts 3\diams
+    \item[3\hearts] 6\clubs 5\hearts
+    \item[3\spades] 5\clubs 4\hearts 3\spades   
+    \item[3\nt] 5422
+\end{options}
+
 
 \pagebreak
 \subsection*{Rebid 2\nt}
@@ -271,6 +307,47 @@
 Po 1\spades analogicznie.
 
 \pagebreak
+\subsection*{1\diams\ --- 2\clubs}
+
+Jeśli gramy non-serious
+\sequence{{1\diams}{2\clubs}}
+\begin{options}[1]
+    \item[2\diams] 6+\diams bez 4\major
+    \item[2\hearts] 4\hearts
+    \item[2\spades] 4\spades
+    \item[2\nt] Równa ręka bez 4\major 
+\end{options}
+
+\sequence{{1\diams}{2\clubs}{2\diams}{2N}}
+\begin{options}[1]
+    \item[3\clubs] krótkość
+    \item[3\diams] default
+    \item[3\hearts] krótkość
+    \item[3\spades] krókość   
+    \item[3\nt] raczej trzymam kolory boczne
+\end{options}
+
+\sequence{{1\diams}{2\clubs}{2\hearts}{2N}}
+\begin{options}[1]
+    \item[3\clubs] 5\diams 4\hearts 3\clubs
+    \item[3\diams] 6+\diams
+    \item[3\hearts] 6\diams 5\hearts
+    \item[3\spades] 5\diams 4\hearts 3\spades
+\end{options}
+
+
+Jeśli gramy tradycyjnym 2/1
+\sequence{{1\diams}{2\clubs}}
+\begin{options}[1]
+    \item[2\diams] Default, słaba ręka 12-15
+    \item[2\hearts] 4\hearts w sile rewersu
+    \item[2\spades] 4\spades w sile rewersu
+    \item[2\nt] 18-20 BAL
+    \item[3\clubs] 4+\clubs, 16+PC unbalanced
+    \item[3\diams] 6+\diams 15+PC (planowałem rebid 3\diams lub \gf)  
+\end{options}
+
+\pagebreak
 
 \subsection*{1\diams\ --- 2\diams Inverted}
 \sequence{{1\diams}{2\diams}}
@@ -338,8 +415,8 @@ Ten, kto przekracza 3\diams, obiecuje przyjęcie inwitu.
     \item[1\nt] \nf śmietnik \orr 4-6PC, 3+\spades
     \item[2\spades] 7-10PC, 3+\spades
     \item[2\nt] Mini-Splinter 9-11PC, 4+\spades i krótkość \br
-    \item[3\clubs] Silny Bergen: 10-11PC, 4+\hearts, bez krótkości
-    \item[3\diams] Słaby Bergen: 6-9PC, 4+\hearts (może mieć krótkość)
+    \item[3\clubs] Silny Bergen: 10-11PC, 4+\spades, bez krótkości
+    \item[3\diams] Słaby Bergen: 6-9PC, 4+\spades (może mieć krótkość)
     \item[3\hearts] Inwit raczej z 3-kartowym fitem \spades \br
     \item[3\spades] Syf 0-5 4+\spades taktyczne
     \item[3\nt] Splinter \hearts 12-15PC  
