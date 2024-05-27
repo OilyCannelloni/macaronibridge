@@ -2,8 +2,6 @@
 \usepackage{import}
 \import{../../lib}{bridge.sty}
 
-\newcommand*{\orr}{\quad|\quad}
-
 \title{\vspace{-2.5cm}Basic Strefa 2024}
 \author{}
 \date{}
@@ -11,8 +9,36 @@
 \begin{document}
 \maketitle
 
-\section*{1\clubs}
+\section*{Co ustalamy z partnerem przed grą}
+\begin{itemize}
+    \item Podniesienia po otwarciach 1\hearts, 1\spades \vimp
+    \item 2\spades i 2\nt po otwarciu 1\nt
+    \item Co po 2/1 (tradycyjne | non-serious) 
+    \item Czy i jaki lebensohl po wejściu na 1\nt
+    \br
+    \item Silne przyjęcia transferów po otwarciu 2\nt \imp
+    \item Co po 2\clubs Acol
+    \item Czy otwarcie 2\hearts może być dwukolorowe z \spades
+    \item Czy pokazujemy króle razem z Q atu
+    \item Czym wistujemy z AK i jakie dokładamy sygnały
+    \item Czy i jaki lebensohl po \dbl na blok przeciwnika
+    \br
+    \item Czy na pewno gramy (1\clubs) 2\diams = stare \exq
+    \item Co przeciwko Multi 
+    \item Poziom 3 po otwarciu 1\nt
+    \item Czy gramy pasem forsującym
+    \item Jak gramy do \dbl wywoławczej partnera (1M \nf | \fonce\!)
+    \item Czy gramy 2\clubs Drury do wejścia i \textbf{czy po odzywce 3 gracza też}
+    \item Licytacja po \dbl wywoławczej przeciwnika na 1\major
+    \item Skok w 2\nt do wejścia partnera (3 ręka licytuje?)
+    \item Jak agresywnie blokujemy w danej pozycji i założeniach
+    \br 
+    \item Czy nowy kolor po wejściu 2\minor forsuje? \qq
+    \item Czy nowy kolor na poziomie 2 po wejściu partnera 1x forsuje?
+\end{itemize}
 
+\pagebreak
+\section*{1\clubs}
 \sequence{{1\clubs}}
 \begin{options}[2]
     \item[1\diams] dowolne 0-6 \orr 6+\diams 7-12 \orr 5+/4+\minor 7-12
@@ -35,7 +61,7 @@
     \item[1\spades] (3)4+\spades słaba ręka
     \item[1\nt] 18-20 \bal
     \item[2\clubs] 6+\clubs słaba ręka
-    \item[2\diams] rewers, \fonce
+    \item[2\diams] rewers, \fonce (slowdown 2\nt \nf, 2M = 5+)
     \item[2\hearts] rewers, \fonce
     \item[2\spades] rewers, \fonce
 \end{options}
@@ -47,7 +73,8 @@
     \item[2\clubs] \nf
     \item[2\diams] 6+\diams, 0-9
     \item[2\major] góra negatu z fitem
-    \item[2NT] 5+/4+ \minor \imp
+    \item[2\twosuit{\spades}{\hearts}] 5+/4+ \minor 7-9 (2\nt ask)
+    \item[2NT] 5+/4+ \minor 10-12 \imp
     \item[3\diams] 6+\diams, 10-12 
 \end{options}
 
@@ -63,7 +90,7 @@
     \item[2\spades] jump shift, \gf
     \item[2\nt] \gf
     \item[3\clubs] 6+\clubs 15-18 
-    \item[3\diams] \gf z długimi \clubs \vimp
+    \item[3\diams] \gf z długimi \clubs (bez nadzieji na grę w stary partnera)  \vimp
     \item[3\hearts] 4+\hearts, 15-17 
 \end{options}
 
@@ -76,7 +103,7 @@
     \item[2\spades] 4+\spades, 12-14
     \item[2\nt] \gf
     \item[3\clubs] 6+\clubs 15-18 
-    \item[3\diams] \gf z długimi \clubs \vimp
+    \item[3\diams] \gf z długimi \clubs (bez nadzieji na grę w stary partnera) \vimp
     \item[3\spades] 4+\spades, 15-17 
 \end{options}
 
@@ -114,10 +141,49 @@
     \item[3\nt] (5\hearts 332) wybór końcówki \vimp
 \end{options}
 
+\pagebreak
+\subsection*{Rebid 2\nt}
+
+\sequence{{1\clubs}{1\hearts}{2\ntx}}
+\begin{options}[2]
+    \item[3\clubs] \textbf{Sztuczne pytanie} \imp
+    \item[3\diams] 4+\diams 
+    \item[3\hearts] 6+\hearts, ustala kolor
+    \item[3\spades] 4\hearts, 4\spades 
+\end{options}
+
+\sequence{{1\clubs}{1\hearts}{2\ntx}{3\clubs}}
+\begin{options}[1]
+    \item[3\diams] 4+\clubs, brak fitu \hearts
+    \item[3\hearts] 3-\clubs, 3\hearts
+    \item[3\spades] 4+\clubs, 3\hearts 
+    \item[3\nt] Nic z powyższych
+    \item[4\clubs] 4\hearts  
+\end{options}
+
+\sequence{{1\clubs}{1\spades}{2\ntx}}
+\begin{options}[2]
+    \item[3\clubs] \textbf{Sztuczne pytanie} \imp
+    \item[3\diams] 4+\diams 
+    \item[3\hearts] 5\spades, 4\hearts 
+    \item[3\spades] 6+\spades, ustala kolor
+\end{options}
+
+\sequence{{1\clubs}{1\spades}{2\ntx}{3\clubs}}
+\begin{options}[1]
+    \item[3\diams] 4+\clubs, brak fitu \spades
+    \item[3\hearts] 4+\clubs, 4\spades
+    \item[3\spades] 3-\clubs, 4\spades 
+    \item[3\nt] Brak trefli i potencjalnego fitu \spades
+    \item[4\clubs] 4\spades  
+\end{options}
+
+
+
 
 
 \pagebreak
-\subsection*{Rebid 2\clubs}
+\subsection*{Rebid 2\clubs po 1\clubs}
 
 \sequence{{1\clubs}{1\hearts}{2\clubs}}
 \begin{options}[2]
@@ -137,29 +203,416 @@
     \item[3\clubs] \inv 
 \end{options}
 
+\subsection*{Inne rebidy po 1\clubs}
 
-\subsubsection*{Dodatkowe}
-\sequence{{1\clubs}{1\hearts}{2\clubs}{2\diams}}
-\begin{options}[1]
-    \item[2\hearts] 5+\clubs, 3\hearts
-    \item[2\spades] (6+\clubs322) nie chcę zajmować NT
-    \item[2\nt] (6\clubs322) okej ręka do zajęcia NT
-    \item[3\clubs] 7+\clubs
-    \item[3\diams+] 6+\clubs, krótkość 
+\sequence{{1\clubs}{1\hearts}{3\clubs}}
+\begin{options}[2]
+    \item[3\diams] \textbf{Sztuczne pytanie}, zazwyczaj o 3 kiery
+    \item[3\hearts] 6+\hearts  
 \end{options}
 
-\sequence{{1\clubs}{1\spades}{2\clubs}{2\diams}}
-\begin{options}[1]
-    \item[2\hearts] 5+\clubs, 4\hearts
-    \item[2\spades] 5+\clubs, 3\spades
-    \item[2\nt] (6\clubs322) okej ręka do zajęcia NT
-    \item[3\clubs] (6+\clubs322) nie chcę zajmować NT
-    \item[3\diams+] 6+\clubs, krótkość 
+\sequence{{1\clubs}{1\spades}{3\clubs}}
+\begin{options}[2]
+    \item[3\diams] \textbf{Sztuczne pytanie}, zazwyczaj o 3 piki
+    \item[3\hearts] 5/5 \twosuit{\hearts}{\spades}  
+\end{options}
+
+
+\sequence{{1\clubs}{1\hearts}{3\diams}}
+\begin{options}[2]
+    \item[3\hearts] 6+\hearts
+    \item[3\spades] transfer na 3\nt lub silne ustalenie \clubs cue-bidem 
 \end{options}
 
 \pagebreak
 
+\section*{1\diams}
+\sequence{{1\diams}}
+\begin{options}[2]
+    \item[1\hearts] 4+\hearts, 4+PC
+    \item[1\spades] 4+\spades, 4+PC
+    \item[1\nt] 7-10 PC
+    \item[2\clubs] \gf, jeśli zawiera starszą czwórkę, zawiera też 5\clubs
+    \item[2\diams] 10+PC, forsuje do 3\diams
+    \item[2\hearts] 5+\spades, 4+\hearts 6-9PC
+    \item[2\spades] 11+ \bal 
+    \item[2\nt] 11-12
+    \item[3\clubs] Inwit z \clubs
+    \item[3\diams] 4+\diams, 6-9
+    \item[3\hearts, 3\spades] Splinter          
+\end{options}
 
 
+\subsection*{Rebid po 1/1}
+\sequence{{1\diams}{1\hearts}}
+\begin{options}[1]
+    \item[2\clubs] 4+\clubs, 12-17
+    \item[2\diams] 6+\diams, 12-14
+    \item[2\spades] 4+\spades, \gf
+    \item[2\nt] 18-20 \bal \orr \gf na długich \diams
+    \item[3\clubs] co najmniej 5\diams4\clubs \gf
+    \item[3\diams] 15-17, 6+\diams    
+\end{options}
+
+\subsection*{Rebid 2\nt}
+\sequence{{1\diams}{1\hearts}{2\ntx}}
+\begin{options}[2]
+    \item[3\clubs] \textbf{Sztuczne pytanie}, często automatyczne \vimp
+    \item[3\diams] Ustalenie koloru
+    \item[3\hearts] 6+\hearts (uwaga!)
+\end{options}
+
+\sequence{{1\diams}{1\hearts}{2\ntx}{3\clubs}}
+\begin{options}[1]
+    \item[3\diams] Nie mam jednak 18-20 \bal, mam nierówny \gf na \diams \vimp
+    \item[3\hearts] 3\hearts (to ma priorytet)
+\end{options}
+
+Po 1\spades analogicznie.
+
+\pagebreak
+
+\subsection*{1\diams\ --- 2\diams Inverted}
+\sequence{{1\diams}{2\diams}}
+\begin{options}[1]
+    \item[2\hearts] trzymam \hearts, ale brakuje mi innego
+    \item[2\spades] trzymam \spades, ale nie \hearts
+    \item[2\nt] trzymam wszystko
+    \item[3\hearts] krótkość
+    \item[3\spades] krótkość  
+\end{options}
+Ten, kto przekracza 3\diams, obiecuje przyjęcie inwitu.
+
+\subsection*{Rebid 2\diams po otwarciu 1\diams}
+\sequence{{1\diams}{1\hearts}{2\diams}}
+\begin{options}
+    \item[2\hearts] \soff
+    \item[2\spades] trzeci kolor, \gf raczej w stronę sprawdzenia trzymań
+    \item[2\nt] \gf, pytanie o skład
+    \item[3\diams] inwit   
+\end{options}
+
+\sequence{{1\diams}{1\spades}{2\diams}}
+\begin{options}
+    \item[2\hearts] 5\spades, 4\hearts \fonce
+    \item[2\spades] \soff
+    \item[2\nt] \gf, pytanie o skład
+    \item[3\clubs] trzeci kolor, \gf raczej w stronę sprawdzenia trzymań 
+    \item[3\diams] inwit 
+\end{options}
+
+\subsection*{Inne rebidy}
+\sequence{{1\diams}{1\hearts}{3\diams}}
+\begin{options}[2]
+    \item[3\hearts] 5+\hearts \gf \imp
+\end{options}
+
+\sequence{{1\diams}{1\spades}{3\diams}}
+\begin{options}[2]
+    \item[3\hearts] Sztuczne pytanie
+    \item[3\spades] 6+\spades 
+\end{options}
+
+\pagebreak
+\section*{1\hearts}
+
+\sequence{{1\hearts}}
+\begin{options}[2]
+    \item[1\spades] 4+\spades \orr 5+\spades, 3+\hearts  \gf
+    \item[1\nt] \nf śmietnik \orr 4-6PC, 3+\hearts
+    \item[2\hearts] 7-10PC, 3+\hearts
+    \item[2\spades] Mini-Splinter 9-11PC, 4+\hearts i krótkość \br
+    \item[2\nt] Inwit raczej z 3-kartowym fitem  
+    \item[3\clubs] Silny Bergen: 10-11PC, 4+\hearts, bez krótkości
+    \item[3\diams] Słaby Bergen: 6-9PC, 4+\hearts (może mieć krótkość) \br
+    \item[3\hearts] Syf 0-5 4+\hearts taktyczne
+    \item[3\spades] Splinter 12-15PC
+    \item[3\nt] Splinter \diams 12-15PC   
+    \item[4\clubs] Splinter 12-15PC
+    \item[4\diams] Słabej jakości 11-12 z fitem  
+\end{options}
+
+\section*{1\spades}
+\sequence{{1\spades}}
+\begin{options}[2]
+    \item[1\nt] \nf śmietnik \orr 4-6PC, 3+\spades
+    \item[2\spades] 7-10PC, 3+\spades
+    \item[2\nt] Mini-Splinter 9-11PC, 4+\spades i krótkość \br
+    \item[3\clubs] Silny Bergen: 10-11PC, 4+\hearts, bez krótkości
+    \item[3\diams] Słaby Bergen: 6-9PC, 4+\hearts (może mieć krótkość)
+    \item[3\hearts] Inwit raczej z 3-kartowym fitem \spades \br
+    \item[3\spades] Syf 0-5 4+\spades taktyczne
+    \item[3\nt] Splinter \hearts 12-15PC  
+    \item[4\clubs] Splinter
+    \item[4\diams] Splinter
+    \item[4\hearts] Słabej jakości 11-12 z fitem    
+\end{options}
+
+
+\pagebreak
+\section*{1\ntx}
+\sequence{{1N}}
+\begin{options}[2]
+    \item[2\spades] transfer na 6+\clubs \orr \inv \bal
+    \item[2\nt] transfer na 6+\diams
+    \item[3\clubs] Puppet
+    \item[3\diams] 5/5 \twosuit{\clubs}{\diams}
+    \item[3\hearts] 3\spades1\hearts(54)    
+    \item[3\spades] 1\spades3\hearts(54) 
+    \item[4\clubs] 5/5 \twosuit{\hearts}{\spades} 
+\end{options}
+
+\subsection*{Stayman}
+\sequence{{1N}{2\clubs}{2\diams}}
+\begin{options}[2]
+    \item[2\hearts] 4-5\hearts, 4\spades do gry
+    \item[2\spades] 5\spades, 4\hearts do gry
+    \item[3\hearts] Smolen: 5\spades, 4\hearts \gf
+    \item[3\spades] Smolen: 5\hearts, 4\spades \gf 
+\end{options}
+
+\sequence{{1N}{2\clubs}{2\hearts}}
+\begin{options}[2]
+    \item[2\spades] Silne ustalenie \hearts \imp
+    \item[3\spades+] Splinter 
+\end{options}
+
+\sequence{{1N}{2\clubs}{2\spades}}
+\begin{options}[2]
+    \item[3\hearts] Silne ustalenie \spades \imp
+    \item[4\clubs+] Splinter 
+\end{options}
+
+
+\subsection*{Transfery}
+\sequence{{1N}{2\diams}{2\hearts}}
+\begin{options}[2]
+    \item[2\spades] Inwit z 5\hearts4\spades
+    \item[3\spades+] Splinter 
+    \item[4\hearts] Inwit do szlemika z 6\xhearts322  
+\end{options}
+
+\sequence{{1N}{2\hearts}{2\spades}}
+\begin{options}[2]
+    \item[3\hearts] Inwit z 5\spades4\hearts
+    \item[4\clubs+] Splinter 
+    \item[4\spades] Inwit do szlemika z 6\xspades322  
+\end{options}
+
+\subsection*{Transfery na młode}
+
+\sequence{{1N}{2\spades}}
+\begin{options}[1]
+    \item[2\nt] Odrzucenie inwitu
+    \item[3\clubs] Przyjęcie inwitu  
+\end{options}
+
+\sequence{{1N}{2\spades}{2N}}
+\begin{options}[2]
+    \item[3\clubs] \soff
+    \item[3\diams] krótkość
+    \item[3\hearts] krótkość
+    \item[3\spades] krótkość   
+\end{options}
+
+
+\sequence{{1N}{2N}}
+\begin{options}[1]
+    \item[3\clubs] Góra bilansowa \orr zachęta do 3\nt w oparciu o fit karo
+    \item[3\diams] Syf 
+\end{options}
+
+\sequence{{1N}{2N}{3\clubs}}
+\begin{options}[2]
+    \item[3\diams] \soff
+    \item[3\hearts] krótkość
+    \item[3\spades] krótkość   
+    \item[4\clubs] krótkość 
+\end{options}
+
+
+\pagebreak
+\section*{2\clubs Acol}
+
+\sequence{{2\clubs}}
+\begin{options}[2]
+    \item[2\diams] Co najmniej król lub 2 damy \gf
+    \item[2\hearts] Gorsze
+\end{options}
+
+\sequence{{2\clubs}{2\diams}}
+\begin{options}[1]
+    \item[2\hearts] 5+\hearts unbalanced
+    \item[2\spades] 5+\spades unbalanced
+    \item[2\nt] 23+ \bal
+    \item[3\clubs] 6+\clubs unbalanced
+    \item[3\diams] 6+\diams unbalanced bez 4M
+    \item[3\hearts+] samoustalenie
+\end{options}
+
+\sequence{{2\clubs}{2\diams}{2\hearts}}
+\begin{options}[2]
+    \item[2\spades] \textbf{Sztuczne pytanie}, raczej automat. Można ustalić odp trsf.
+\end{options}
+
+\sequence{{2\clubs}{2\diams}{2\spades}}
+\begin{options}[2]
+    \item[2\nt] \textbf{Sztuczne pytanie}, raczej automat
+\end{options}
+
+\sequence{{2\clubs}{2\diams}{3\clubs}}
+\begin{options}[2]
+    \item[3\diams] \textbf{Sztuczne pytanie}, odp. 3M \textbf{z krótkości} (z 6/4 1\clubs\then2\hearts)
+    \item[3\hearts] 5+ niezłych \hearts
+    \item[3\spades] 5+ niezłych \spades  
+\end{options}
+
+\sequence{{2\clubs}{2\diams}{3\diams}}
+\begin{options}[2]
+    \item[3\hearts] 5+ niezłych \hearts
+    \item[3\spades] 5+ niezłych \spades  
+\end{options}
+
+\compsequence{{2\clubs}{\textbf{coś}}}
+\begin{compoptions}[3]
+    \item[\pass] dobra ręka ok 5+PC
+    \item[\dbl] słaba ręka
+    \item[Kolor] naturalnie, raczej 6+  
+\end{compoptions}
+
+
+\pagebreak
+
+\section*{2\diams Multi}
+\sequence{{2\diams}}
+\begin{options}[2]
+    \item[2\hearts] Do koloru, może zawierać dobrą kartę do pików
+    \item[2\spades] Z pikami zostaw, z kierami \textbf{przyjmij/odrzuć inwit} \imp
+    \item[2\nt] Pytanie o kolor i siłę, \invp \imp
+    \item[3\hearts] Blok z fitami do obydwu kolorów
+    \item[4\diams] Blok z fitami do obydwu kolorów \vimp
+    \item[4\major] Do gry z własnego
+\end{options}
+
+\sequence{{2\diams}{2\ntx}}
+\begin{options}[1] 
+    \item[3\clubs] Minimum \vimp
+    \item[3\diams] Maximum z \hearts
+    \item[3\hearts] Maximum z \spades  
+\end{options}
+
+\sequence{{2\diams}{2\ntx}{3\clubs}}
+\begin{options}[2]
+    \item[3\diams] Pokaż kolor \textbf{odwrotnie}, \gf \vimp
+    \item[3\hearts] Pasuj / popraw
+    \item[3\spades] Pasuj z pikami, daj 4\hearts z kierami 
+\end{options}
+
+\sequence{{2\diams}{2\ntx}{3\diams}}
+\begin{options}[2]
+    \item[3\hearts] Próba szlemikowa, pytanie o krótkość (3\nt brak) \vimp
+    \item[Kolor] Próba szlemikowa, cue-bid z krótkości
+    \item[3\nt] Do gry 
+    \item[4\hearts] Do gry 
+\end{options}
+
+\compsequence{{2\diams}{\dbl}}
+\begin{compoptions}[3]
+    \item[\pass] Chcę grać 2\diams\!\!\dbl
+    \item[\rdbl] \textbf{Do koloru}
+    \item[2\hearts] 6+ własnych dobrych \hearts, \nf
+    \item[2\spades] 6+ własnych dobrych \spades, \nf
+\end{compoptions}
+
+\compsequence{{2\diams}{2\major}}
+\begin{compoptions}[3]
+    \item[\pass] Ręka niechętna do walki
+    \item[\dbl] \textbf{Do koloru}
+\end{compoptions}
+    
+\compsequence{{2\diams}{2\ntx}}
+\begin{compoptions}[3]
+    \item[\dbl] Karna
+\end{compoptions}
+
+\compsequence{{2\diams}{3\minor}}
+\begin{compoptions}[3]
+    \item[\dbl] Karna
+\end{compoptions}
+
+
+\pagebreak
+\section*{Rewersy}
+\begin{itemize}
+    \item Minimum na rewers 15PC
+    \item Niższa z 2\nt i 4 koloru = \textbf{Slowdown Bid}, zwalnia z \gf
+    \item Ten kto przekracza Slowdown nie licytując go ustawia \gf
+\end{itemize}
+
+\sequence{{1\clubs}{1\hearts}{2\diams}}
+\begin{options}[2]
+    \item[2\hearts] 5+\hearts \fonce
+    \item[2\spades] \textbf{Slowdown}
+    \item[2\nt] Pytanie o skład \gf  
+\end{options}
+
+\sequence{{1\clubs}{1\hearts}{2\diams}{2\spades}}
+\begin{options}[1]
+    \item[2\nt] \nf
+    \item[3\clubs] 6+\clubs \nf
+\end{options}
+
+\sequence{{1\clubs}{1\spades}{2\diams}{2\hearts}}
+\begin{options}[1]
+    \item[2\spades] 3\spades \nf
+    \item[2\nt] 2-\spades \nf
+    \item[3\clubs] 6+\clubs \nf 
+\end{options}
+
+\sequence{{1\diams}{1\spades}{2\hearts}}
+\begin{options}[2]
+    \item[2\spades] 5+\spades \fonce
+    \item[2\nt] \textbf{Slowdown}
+\end{options}
+
+\sequence{{1\diams}{1\spades}{2\hearts}{2N}}
+\begin{options}[1]
+    \item[3\clubs] 3\clubs, \nf
+    \item[3\diams] 2-\clubs, \nf  
+\end{options}
+
+
+\pagebreak
+\section*{GF po ustaleniu fitu / Pytanie o dubla}
+\begin{itemize}
+    \item Sekwencje: 1M -- 2M, 1m -- 1M --- 2M
+    \item +1 = sztuczne pytanie (2\spades na \hearts, 2\nt na \spades)
+    \item Na \hearts 2\nt = inwit przez \spades, 
+    \item Odpowiedzi: 
+    \subitem Powrót na kolor: 4333
+    \subitem Bez przeskoku: dubel licytowany (odpowiedź 2\nt na \hearts = dubel \spades)
+    \subitem Z przeskokiem: krótkość licytowana
+    \subitem 3\nt\!: Najwyższa krótkość
+\end{itemize}
+
+Przykład:
+\sequence{{1\clubs}{1\hearts}{2\hearts}}
+\begin{options}[2]
+    \item[2\spades] Pytanie o dubla \gf
+    \item[2\nt] Inwit przez piki
+    \item[3\clubs] Inwit przez trefle
+    \item[3\nt] Propozycja gry z 4333    
+\end{options}
+
+\sequence{{1\clubs}{1\hearts}{2\hearts}{2\spades}}
+\begin{options}[1]
+    \item[2\nt] Dubel \spades
+    \item[3\clubs] Dubel \clubs
+    \item[3\diams] Dubel \diams
+    \item[3\hearts] 4333
+    \item[3\spades] krótkość \spades
+    \item[3\nt] krótkość \diams
+    \item[4\clubs] krótkość \clubs (4\diams Last Train)
+\end{options}
 
 \end{document}
