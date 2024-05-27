@@ -1,0 +1,40 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{import}
+
+\import{../../lib/}{bridge.sty}
+
+\title{Jakieś dodatkowe ustalenia}
+\author{Krystyna Gasińska}
+\begin{document}
+\maketitle
+
+\section{Gazilli}
+
+\subsubsection*{1\hearts -- 1\spades\\
+                2\clubs -- 2\hearts\\
+                ?}
+\begin{itemize}
+    \item 2\spades = 3+\spades, \fonce
+    \item 2\nt = \gf
+    \item 3\minor = 4+\minor, \fonce
+    \item 3\hearts = 6+\hearts, \inv
+\end{itemize}
+
+\subsubsection*{1\hearts -- 1\spades\\
+                2\clubs -- 2\hearts\\
+                2\spades -- ?}
+\begin{itemize}
+    \item 2\nt = \gf
+    \item 3\minor = \gf
+    \item 3\hearts/3\spades = \nf
+\end{itemize}
+
+\subsubsection*{1\hearts -- 1\spades\\
+                2\clubs -- 2\hearts\\
+                3\minor -- ?}
+\begin{itemize}
+    \item 3\diams/3\nt = \gf
+    \item 3\hearts/3\spades/4\minor = \nf
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,272 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{import}
+
+\import{../../lib/}{bridge.sty}
+
+\title{New Bidding Stuff}
+\author{Krystyna Gasińska}
+\begin{document}
+\maketitle
+
+\section{\major preempts}
+
+\subsubsection*{2\hearts -- ?}
+\begin{itemize}
+    \item 2\spades = \lsf
+    \item 2\nt = ask \nt features
+    \item 3\clubs = \minor, \gf
+    \item 3\diams = 6+\spades, \invp \vimp
+    \item 3\spades = \spades, \inv, \nf
+    \item 3\hearts/3\nt/4\major/5\minor = to play
+    \item 4\clubs = RKCB
+\end{itemize}
+
+\subsubsection*{2\hearts -- 2\spades\\
+                2\nt -- ?}
+\begin{itemize}
+    \item 3\clubs/3\diams = \nat, \inv
+\end{itemize}
+
+\subsubsection*{2\hearts -- 2\spades\\
+                3\anysuit{x} -- ?}
+\begin{itemize}
+    \item 3\spades = cue
+    \item 3\nt = to play
+\end{itemize}
+
+\subsubsection*{2\hearts -- 2\nt\\
+                ?}
+\begin{itemize}
+    \item 3\clubs/3\diams/3\spades = \nat, \nt values
+    \item 3\hearts = weak hand
+    \item 3\nt = very strong suit (AKJ/AQJ)
+\end{itemize}
+
+\subsubsection*{2\hearts -- 2\nt\\
+                3\clubs -- ?}
+\begin{itemize}
+    \item 3\diams = \inv to 3\nt, \nat
+\end{itemize}
+
+\subsubsection*{2\hearts -- 2\nt\\
+                3\anysuit{x} -- ?}
+\begin{itemize}
+    \item 3\spades = 5\spades, \gf
+    \item 3\hearts/3\nt/4\major/5\minor = to play
+    \item 4\nt = \inv, \nat
+\end{itemize}
+
+\subsubsection*{2\hearts -- 3\clubs\\
+                ?}
+\begin{itemize}
+    \item 3\diams = 2+\clubs, 2+\diams
+    \item 3\hearts = 2+\clubs, 2+\diams, \spades shortness
+    \item 3\spades = \clubs shortness
+    \item 3\nt = \diams shortness
+\end{itemize}
+
+\subsubsection*{2\hearts -- 3\diams\\
+                ?}
+\begin{itemize}
+    \item 3\hearts = \spades shortness, weak hand
+    \item 3\spades = 2-3\spades, weak hand
+    \item 3\nt = \spades shortness, good hand
+    \item 4\minor = 3\spades, splinter
+    \item 4\hearts = \then 4\spades
+    \item 4\spades = slam try, no shortness
+\end{itemize}
+
+\vspace{1em}
+\hrule
+
+\subsubsection*{2\spades -- ?}
+\begin{itemize}
+    \item 2\nt = ask \nt features
+    \item 3\clubs = \lsf
+    \item 3\diams = 6+\hearts, \invp \vimp
+    \item 3\hearts = \minor, \gf
+    \item 3\spades/3\nt/4\major/5\minor = to play
+    \item 4\clubs = RKCB
+\end{itemize}
+
+\subsubsection*{2\spades -- 2\nt\\
+                ?}
+\begin{itemize}
+    \item 3\clubs/3\diams/3\hearts = \nat, \nt values
+    \item 3\spades = weak hand
+    \item 3\nt = strong suit (AKJ/AQJ)
+\end{itemize}
+
+\subsubsection*{2\spades -- 2\nt\\
+                3\clubs -- ?}
+\begin{itemize}
+    \item 3\diams = \inv to 3\nt, \nat
+\end{itemize}
+
+\subsubsection*{2\spades -- 2\nt\\
+                3\anysuit{x} -- ?}
+\begin{itemize}
+    \item 3\hearts = 5\hearts, \fton{3\spades}
+    \item 3\spades/3\nt/4\spades/5\minor = to play
+    \item 4\nt = \inv, \nat
+\end{itemize}
+
+\subsubsection*{2\spades -- 3\diams\\
+                ?}
+\begin{itemize}
+    \item 3\hearts = 2-3\hearts, weak hand
+    \item 3\spades = \hearts shortness, weak hand
+    \item 3\nt = \hearts shortness, good hand
+    \item 4\clubs = 3\hearts, splinter
+    \item 4\diams = \then 4\hearts
+    \item 4\hearts = slam try, no shortness or \diams shortness
+\end{itemize}
+
+\subsubsection*{2\spades -- 3\hearts\\
+                ?}
+\begin{itemize}
+    \item 3\spades = \clubs shortness
+    \item 3\nt = \diams shortness
+    \item 4\clubs = no \minor shortness
+\end{itemize}
+
+\subsubsection*{2\spades -- 3\hearts\\
+                4\clubs -- ?}
+\begin{itemize}
+    \item 4\diams = agreeing \diams
+    \item other = agreeing \clubs
+\end{itemize}
+
+\section{1\nt opening}
+
+\subsubsection*{1\nt -- 2\clubs\\
+                ?}
+\begin{itemize}
+    \item 2\nt = 6+\minor with AK or 3+ honors
+    \item 3\minor = other 6+\minor, \nf
+\end{itemize}
+
+\subsubsection*{1\nt -- 2\clubs\\
+                2\nt -- ?}
+\begin{itemize}
+    \item 3\clubs = \pass/correct
+    \item 3\diams = ask 3\major
+    \item 3\hearts = ask shortness
+    \item 3\spades = \then 3\nt
+    \item 3\nt = show minor (\then 4\nt to play, other agreeing)
+\end{itemize}
+
+\subsubsection*{1\nt -- 2\clubs\\
+                2\nt -- 3\diams\\
+                ?}
+\begin{itemize}
+    \item 3\hearts = 3\hearts (cue = agreeing)
+    \item 3\spades = 3\spades (cue = agreeing)
+    \item 3\nt = no 3\major
+    \item 4\clubs = 33(61)
+\end{itemize}
+
+\subsubsection*{1\nt -- 2\clubs\\
+                2\nt -- 3\diams\\
+                4\clubs -- ?}
+\begin{itemize}
+    \item 4\diams = \then 4\hearts (forces 4\hearts bid)
+    \item 4\hearts = agreeing \spades
+    \item 4\spades = to play
+\end{itemize}
+
+\subsubsection*{1\nt -- 2\clubs\\
+                2\nt -- 3\hearts\\
+                ?}
+\begin{itemize}
+    \item 3\spades = 6+\clubs, no \diams shortness
+    \item 3\nt = 6+\diams, no \clubs shortness
+    \item 4\clubs = 6+\clubs, \diams shortness
+    \item 4\diams = 6+\diams, \clubs shortness
+\end{itemize}
+
+\section{Gazilli}
+
+\subsubsection*{1\hearts -- 1\spades\\
+                2\clubs -- 2\hearts\\
+                ?}
+\begin{itemize}
+    \item 2\spades = 3+\spades, \nf
+    \item 2\nt = \gf
+    \item 3\minor = 4+\minor, \nf, 18.5+
+    \item 3\hearts = 6+\hearts, \inv
+\end{itemize}
+
+\subsubsection*{1\hearts -- 1\spades\\
+                2\clubs -- 2\hearts\\
+                2\spades -- ?}
+\begin{itemize}
+    \item 2\nt = \gf
+    \item 3\minor = \gf
+    \item 3\hearts = \nf
+    \item 3\spades = 5+\spades, \nf (bid forced)
+\end{itemize}
+
+\subsubsection*{1\hearts -- 1\spades\\
+                2\clubs -- 2\hearts\\
+                3\minor -- ?}
+\begin{itemize}
+    \item 3\diams = \then 3\nt
+    \item 3\nt = \gf
+    \item 3\hearts/3\spades/4\minor = \nf
+\end{itemize}
+
+\section{Other}
+
+\subsubsection*{1\clubs -- ?}
+\begin{itemize}
+    \item 4\clubs = 5+\hearts5+\spades
+    \item 4\diams = \then 4\hearts
+    \item 4\hearts = \then 4\spades
+\end{itemize}
+
+\subsubsection*{1\clubs -- 1\hearts
+                1\spades -- 2\diams\\
+                ?}
+\begin{itemize}
+    \item 2\spades = 5\clubs4\spades (then 3\spades = 65)
+    \item 3\clubs = 6\clubs4\spades
+\end{itemize}
+
+\subsubsection*{(1\minor) -- 1\hearts -- (P) -- ?}
+\begin{itemize}
+    \item 3\minor = mixed raise
+\end{itemize}
+
+\subsubsection*{(1\anysuit{x}) -- 1\anysuit{y} -- (2\anysuit{x}) -- ?}
+\begin{itemize}
+    \item 2\nt = fit, \invp
+    \item 3\anysuit{x} = mixed raise
+    \item 3\anysuit{y} = preemptive
+\end{itemize}
+
+\subsubsection*{1\diams -- 1\hearts\\
+                ?}
+\begin{itemize}
+    \item 3\clubs = \gf
+\end{itemize}
+
+\subsubsection*{1\diams -- (1\spades) -- \dbl -- (3\spades)\\
+                \dbl -- (P) -- ?}
+\begin{itemize}
+    \item 4\minor = \forc
+\end{itemize}
+
+\subsubsection*{(1\diams) -- 1\spades -- (3\diams) -- ?}
+\begin{itemize}
+    \item 3\hearts = \nf
+\end{itemize}
+
+\subsubsection*{1\hearts -- 2\hearts\\
+                2\nt -- 3\spades\\
+                4\clubs}
+2\nt = \invp, \spades
+3\spades = accept, 4+\spades
+4\clubs = agreeing \spades, cue
+
+\end{document}
