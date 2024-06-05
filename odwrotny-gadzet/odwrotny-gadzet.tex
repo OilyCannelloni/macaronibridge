@@ -1,0 +1,273 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{import}
+\import{../lib}{bridge.sty}
+
+\title{\vspace{-2.5cm}Odwrócony Gadżet 3\clubs}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\subsection*{Schemat}
+W każdej sekwencji po rebidzie 2NT odpowiadający wybiera \textbf{2 interesujące kolory}, które eksplorujemy.
+Dalsza licytacja jest tylko w kontekście tych kolorów.
+
+\noindent
+\begin{minipage}{.3\textwidth}
+    \sequence{{1\clubs}{1\hearts}{2\ntx}}
+    \begin{itemize}[align=left, itemindent=4em, labelwidth=3.2em, itemsep=0em]
+        \vspace*{-2.3em}
+        \item[3\clubs] \hearts i \clubs
+        \item[3\diams] \hearts i \diams
+        \item[3\hearts] \hearts i \spades \vimp
+        \item[3\spades] \hearts i \spades 
+    \end{itemize}
+\end{minipage}\hspace{2cm}%
+\begin{minipage}{.6\textwidth}
+    \sequence{{1\clubs}{1\spades}{2\ntx}}
+    \begin{itemize}[align=left, itemindent=4em, labelwidth=3.2em, itemsep=0em]
+        \vspace*{-2.3em}
+        \item[3\clubs] \spades i \clubs
+        \item[3\diams] \spades i \diams
+        \item[3\hearts] \spades i \hearts
+        \item[3\spades] \spades
+    \end{itemize}
+\end{minipage}
+\vspace*{1em}
+
+Dodatkowo:
+\begin{itemize}
+    \item Odpowiedź na gadżet \textbf{w kolor partnera} zawsze ustala go z \textbf{czwórki}
+    \item Odpowiedź na gadżet 3\diams pokazuje \textbf{3 karty} w kolrze partnera (i na razie nic o drugim kolorze)
+    \item Jeśli kolor da się ustalić naturalnie, wszystkie inne odzywki poza 
+    ustalającą dotyczą \textbf{drugiego z interesujących kolorów}.
+    \item Należy uważać na pasowanie na 3\nt jako otwierający! W wielu sekwencjach takie 3\nt zawiera już 
+    inwit do gry kolorowej (bo zostało zalicytowane przez Gadżet).
+\end{itemize}
+
+
+\pagebreak
+\subsection*{Rebid 2\nt po otwarciu 1\clubs i odwrócony gadżet}
+
+\sequence{{1\clubs}{1\hearts}{2\ntx}}
+\begin{options}[2]
+    \item[3\clubs] \textbf{Sztuczne pytanie} o trefle lub fit \hearts \imp
+    \item[3\diams] 4+\diams, zachęta do gry w kolor
+    \item[3\hearts] 6+\hearts \orr 5\hearts4\spades (nie ustala kierów!)  \vimp
+    \item[3\spades] 4\hearts, 4\spades (Ustalenie niższy/wyższy)
+    \item[4\clubs] Auto-splinter na 6\hearts
+    \item[4\diams] Auto-splinter na 6\hearts
+\end{options}
+
+\sequence{{1\clubs}{1\spades}{2\ntx}}
+\begin{options}[2]
+    \item[3\clubs] \textbf{Sztuczne pytanie} o trefle lub fit \spades \imp
+    \item[3\diams] 4+\diams, zachęta do gry w kolor
+    \item[3\hearts] 4\hearts 5\spades
+    \item[3\spades] 6+\spades (ustala)
+    \item[4\clubs] Auto-splinter na 6\spades
+    \item[4\diams] Auto-splinter na 6\spades
+\end{options}
+
+\subsubsection*{Pytanie 3\clubs}
+
+\sequence{{1\clubs}{1\hearts}{2\ntx}{3\clubs}}
+\begin{options}[1]
+    \item[3\diams] 3\hearts
+    \item[3\hearts] 4\hearts
+    \item[3\spades] 4+\clubs i 2\hearts \vimp
+    \item[3\nt] Nic z powyższych
+\end{options}
+
+\sequence{{1\clubs}{1\spades}{2\ntx}{3\clubs}}
+\begin{options}[1]
+    \item[3\diams] 3\spades
+    \item[3\hearts] 4+\clubs i 2\spades \vimp
+    \item[3\spades] 4\spades
+    \item[3\nt] Nic z powyższych
+\end{options}
+
+\sequence{{1\clubs}{1\hearts}{2\ntx}{3\clubs}{3\diams}}
+\begin{options}[2]
+    \item[3\hearts] Ustalenie koloru
+    \item[3\spades] Jeśli masz 4+\clubs, daj 4\clubs
+\end{options}
+
+\sequence{{1\clubs}{1\spades}{2\ntx}{3\clubs}{3\diams}}
+\begin{options}[2]
+    \item[3\hearts] Jeśli masz 4+\clubs, daj 4\clubs
+    \item[3\spades] Ustalenie koloru
+\end{options}
+
+\subsubsection*{Pytanie 3\diams}
+Jako otwierający, jeśli mamy 3\hearts i 4\diams, pokazujemy 3 kiery a następnie wynosimy 3\nt partnera w 4\diams!
+Użycie 3\diams zaprasza do przekroczenia 3\nt.
+
+\sequence{{1\clubs}{1\hearts}{2\ntx}{3\diams}}
+\begin{options}[1]
+    \item[3\hearts] 4\hearts
+    \item[3\spades] 3\hearts (4\clubs ustala, 4\diams jest NAT) \vimp
+    \item[3\nt] Nic ciekawego
+    \item[4\diams] 4+\diams i dubel \hearts 
+\end{options}
+
+\sequence{{1\clubs}{1\spades}{2\ntx}{3\diams}}
+\begin{options}[1]
+    \item[3\hearts] 3\spades
+    \item[3\spades] 4\spades
+    \item[3\nt] Nic ciekawego
+    \item[4\diams] 4+\diams i dubel \spades 
+\end{options}
+
+
+\subsubsection*{1\hearts \then 3\hearts --- 6 kierów (slam try) lub 5\hearts4\spades (może byc słabe)}
+
+\sequence{{1\clubs}{1\hearts}{2\ntx}{3\hearts}}
+\begin{options}[1]
+    \item[3\spades] 4\spades
+    \item[3\nt] Brak fitu w obu starych
+    \item[4\clubs+] 3+\hearts, cue-bid na \hearts
+\end{options}
+
+\sequence{{1\clubs}{1\hearts}{2\ntx}{3\hearts}{3\spades}}
+\begin{options}[2]
+    \item[3\nt] 6\hearts, brak 4\spades \imp
+    \item[4\clubs+] Cue na \spades
+\end{options}
+
+\sequence{{1\clubs}{1\hearts}{2\ntx}{3\hearts}{3\spades}{3\ntx}}
+\begin{options}[1]
+    \item[4\clubs+] Cue na \hearts
+\end{options}
+
+\sequence{{1\clubs}{1\hearts}{2\ntx}{3\hearts}{3\ntx}}
+\begin{options}[2]
+    \item[4\clubs+] Cue na 6+\hearts
+\end{options}
+
+\subsubsection*{Inne sekwencje}
+
+\sequence{{1\clubs}{1\hearts}{2\ntx}{3\spades}}
+\begin{options}[1]
+    \item[3\nt] Brak fitu w obu starych
+    \item[4\clubs] Nadzwyczaj silna karta z fitem \hearts
+    \item[4\diams] Nadzwyczaj silna karta z fitem \spades 
+    \item[4\hearts] Słabe
+    \item[4\spades] Słabe  
+\end{options}
+
+\sequence{{1\clubs}{1\spades}{2\ntx}{3\hearts}}
+\begin{options}[1]
+    \item[3\nt] Brak fitu w obu starych
+    \item[4\clubs] Nadzwyczaj silna karta z fitem \hearts
+    \item[4\diams] Nadzwyczaj silna karta z fitem \spades 
+    \item[4\hearts] Słabe
+    \item[4\spades] Słabe  
+\end{options}
+
+\sequence{{1\clubs}{1\spades}{2\ntx}{3\spades}}
+\vspace*{-0.7cm}Piki są ustalone.
+
+
+
+
+
+
+
+
+
+\pagebreak
+\subsection*{Rebid 2\nt po otwarciu 1\diams i odwrócony gadżet}
+\begin{itemize}
+    \item 1\diams \then 2\nt może zawierać rękę UnBAL z długimi \diams
+    \item 1\diams \then 2\nt \textbf{nie może} zawierać drugiej starszej czwóki \vimp
+\end{itemize}
+\vspace{1em}
+
+\sequence{{1\diams}{1\hearts}{2\ntx}}
+\begin{options}[2]
+    \item[3\clubs] \textbf{Sztuczne pytanie} o trefle lub fit \hearts \imp
+    \item[3\diams] 3+\diams, zachęta do gry w kolor
+    \item[3\hearts] 6+\hearts (nie ustala kierów! OTW może mieć krótkość)  \vimp
+    \item[3\spades] \st{4H 4S}
+    \item[4\clubs] Auto-splinter na 7\hearts
+    \item[4\diams] Auto-splinter na 7\hearts
+\end{options}
+
+\sequence{{1\diams}{1\spades}{2\ntx}}
+\begin{options}[2]
+    \item[3\clubs] \textbf{Sztuczne pytanie} o trefle lub fit \spades \imp
+    \item[3\diams] 3+\diams, zachęta do gry w kolor
+    \item[3\hearts] \st{4H 5S}
+    \item[3\spades] 6+\spades (nie ustala pików! OTW może mieć krótkość) 
+    \item[4\clubs] Auto-splinter na 7\spades
+    \item[4\diams] Auto-splinter na 7\spades
+\end{options}
+
+\subsubsection*{Pytanie 3\clubs}
+
+\sequence{{1\diams}{1\hearts}{2\ntx}{3\clubs}}
+\begin{options}[1]
+    \item[3\diams] 3\hearts
+    \item[3\hearts] 4\hearts
+    \item[3\spades] UnBAL z 6+\diams i max 2\hearts \vimp
+    \item[3\nt] Nic z powyższych
+\end{options}
+
+\sequence{{1\diams}{1\spades}{2\ntx}{3\clubs}}
+\begin{options}[1]
+    \item[3\diams] 3\spades
+    \item[3\hearts] UnBAL z 6+\diams i max 2\hearts \vimp
+    \item[3\spades] 4\spades
+    \item[3\nt] Nic z powyższych
+\end{options}
+
+\sequence{{1\diams}{1\hearts}{2\ntx}{3\clubs}{3\diams}}
+\begin{options}[2]
+    \item[3\hearts] Ustalenie koloru
+    \item[3\spades] Jeśli masz 3\clubs, daj 4\clubs
+\end{options}
+
+\sequence{{1\diams}{1\spades}{2\ntx}{3\clubs}{3\diams}}
+\begin{options}[2]
+    \item[3\hearts] Jeśli masz 3\clubs, daj 4\clubs
+    \item[3\spades] Ustalenie koloru
+\end{options}
+
+\subsubsection*{Pytanie 3\diams}
+Jako otwierający, jeśli mamy 3\hearts i 6+\diams, pokazujemy 3 kiery a następnie wynosimy 3\nt partnera w 4\diams!
+Użycie 3\diams zaprasza do przekroczenia 3\nt.
+
+\sequence{{1\diams}{1\hearts}{2\ntx}{3\diams}}
+\begin{options}[1]
+    \item[3\hearts] 4\hearts
+    \item[3\spades] 3\hearts (4\clubs ustala, 4\diams jest NAT) \vimp
+    \item[3\nt] Nic ciekawego
+    \item[4\diams] 6+\diams i max dubel \hearts 
+\end{options}
+
+\sequence{{1\diams}{1\spades}{2\ntx}{3\diams}}
+\begin{options}[1]
+    \item[3\hearts] 3\spades
+    \item[3\spades] 4\spades
+    \item[3\nt] Nic ciekawego
+    \item[4\diams] 6+\diams i max dubel \spades 
+\end{options}
+
+
+\subsubsection*{1\major \then 3\major --- 6M (może byc słabe)}
+\sequence{{1\diams}{1\hearts}{2\ntx}{3\hearts}}
+\begin{options}[1]
+    \item[3\spades] cue na \hearts
+    \item[3\nt] UnBAL z 6+\diams i max singlem \hearts
+    \item[4\clubs+] cue na \hearts
+\end{options}
+
+\sequence{{1\diams}{1\spades}{2\ntx}{3\spades}}
+\begin{options}[1]
+    \item[3\nt] UnBAL z 6+\diams i max singlem \spades
+    \item[4\clubs+] cue na \spades
+\end{options}
+
+\end{document}

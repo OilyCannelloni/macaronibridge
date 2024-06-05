@@ -178,39 +178,105 @@
 
 
 \pagebreak
-\subsection*{Rebid 2\nt i transferowy gadżet}
+\subsection*{Rebid 2\nt po otwarciu 1\clubs i odwrócony gadżet}
 
 \sequence{{1\clubs}{1\hearts}{2\ntx}}
 \begin{options}[2]
     \item[3\clubs] \textbf{Sztuczne pytanie} o trefle lub fit \hearts \imp
-    \item[3\diams] 5+\diams
+    \item[3\diams] 4+\diams, zachęta do gry w kolor
     \item[3\hearts] 6+\hearts \orr 5\hearts4\spades (nie ustala kierów!)  \vimp
-    \item[3\spades] 4\hearts, 4\spades 
+    \item[3\spades] 4\hearts, 4\spades (Ustalenie niższy/wyższy)
     \item[4\clubs] Auto-splinter na 6\hearts
     \item[4\diams] Auto-splinter na 6\hearts
 \end{options}
 
+\sequence{{1\clubs}{1\spades}{2\ntx}}
+\begin{options}[2]
+    \item[3\clubs] \textbf{Sztuczne pytanie} o trefle lub fit \spades \imp
+    \item[3\diams] 4+\diams, zachęta do gry w kolor
+    \item[3\hearts] 4\hearts 5\spades (3\spades ustala \spades, reszta cue na \hearts)
+    \item[3\spades] 6+\spades (ustala)
+    \item[4\clubs] Auto-splinter na 6\spades
+    \item[4\diams] Auto-splinter na 6\spades
+\end{options}
+
+\subsubsection*{Pytanie 3\clubs}
+
 \sequence{{1\clubs}{1\hearts}{2\ntx}{3\clubs}}
 \begin{options}[1]
-    \item[3\diams] 3\hearts, brak 5+\clubs \vimp
-    \item[3\hearts] 5+\clubs, brak 3\hearts \vimp
-    \item[3\spades] 5+\clubs i 3\hearts \vimp
+    \item[3\diams] 3\hearts
+    \item[3\hearts] 4\hearts
+    \item[3\spades] 4+\clubs i 2\hearts \vimp
     \item[3\nt] Nic z powyższych
-    \item[4\clubs+] 4\hearts  
 \end{options}
+
+\sequence{{1\clubs}{1\spades}{2\ntx}{3\clubs}}
+\begin{options}[1]
+    \item[3\diams] 3\spades
+    \item[3\hearts] 4+\clubs i 2\spades \vimp
+    \item[3\spades] 4\spades
+    \item[3\nt] Nic z powyższych
+\end{options}
+
+\sequence{{1\clubs}{1\hearts}{2\ntx}{3\clubs}{3\diams}}
+\begin{options}[2]
+    \item[3\hearts] Ustalenie koloru
+    \item[3\spades] Jeśli masz 4+\clubs, daj 4\clubs
+\end{options}
+
+\sequence{{1\clubs}{1\spades}{2\ntx}{3\clubs}{3\diams}}
+\begin{options}[2]
+    \item[3\hearts] Jeśli masz 4+\clubs, daj 4\clubs
+    \item[3\spades] Ustalenie koloru
+\end{options}
+
+\subsubsection*{Pytanie 3\diams}
+Jako otwierający, jeśli mamy 3\hearts i 4\diams, pokazujemy 3 kiery a następnie wynosimy 3\nt partnera w 4\diams!
+Użycie 3\diams zaprasza do przekroczenia 3\nt.
+
+\sequence{{1\clubs}{1\hearts}{2\ntx}{3\diams}}
+\begin{options}[1]
+    \item[3\hearts] 4\hearts
+    \item[3\spades] 3\hearts (4\clubs ustala, 4\diams jest NAT) \vimp
+    \item[3\nt] Nic ciekawego
+    \item[4\diams] 4+\diams i dubel \hearts 
+\end{options}
+
+\sequence{{1\clubs}{1\spades}{2\ntx}{3\diams}}
+\begin{options}[1]
+    \item[3\hearts] 3\spades
+    \item[3\spades] 4\spades
+    \item[3\nt] Nic ciekawego
+    \item[4\diams] 4+\diams i dubel \hearts 
+\end{options}
+
+
+\subsubsection*{1\hearts \then 3\hearts --- 6 kierów (slam try) lub 5\hearts4\spades (może byc słabe)}
 
 \sequence{{1\clubs}{1\hearts}{2\ntx}{3\hearts}}
 \begin{options}[1]
     \item[3\spades] 4\spades
     \item[3\nt] Brak fitu w obu starych
-    \item[4\clubs+] 3+\hearts, brak 4\spades (ustala kiery)
+    \item[4\clubs+] 3+\hearts, cue-bid na \hearts
 \end{options}
 
 \sequence{{1\clubs}{1\hearts}{2\ntx}{3\hearts}{3\spades}}
 \begin{options}[2]
-    \item[4\clubs] Ustalenie \hearts (niższy)
-    \item[4\diams] Ustalenie \spades (wyższy) 
+    \item[3\nt] 6\hearts, brak 4\spades \imp
+    \item[4\clubs+] Cue na \spades
 \end{options}
+
+\sequence{{1\clubs}{1\hearts}{2\ntx}{3\hearts}{3\spades}{3\ntx}}
+\begin{options}[1]
+    \item[4\clubs+] Cue na \hearts
+\end{options}
+
+\sequence{{1\clubs}{1\hearts}{2\ntx}{3\hearts}{3\ntx}}
+\begin{options}[2]
+    \item[4\clubs+] Cue na 6+\hearts
+\end{options}
+
+\subsubsection*{Inne sekwencje}
 
 \sequence{{1\clubs}{1\hearts}{2\ntx}{3\spades}}
 \begin{options}[1]
@@ -218,6 +284,16 @@
     \item[4\clubs] Nadzwyczaj silna karta z fitem \hearts
     \item[4\diams] Nadzwyczaj silna karta z fitem \spades 
 \end{options}
+
+\sequence{{1\clubs}{1\spades}{2\ntx}{3\hearts}}
+\begin{options}[1]
+    \item[3\nt] Brak fitu w obu starych
+    \item[4\clubs] Nadzwyczaj silna karta z fitem \hearts
+    \item[4\diams] Nadzwyczaj silna karta z fitem \spades 
+\end{options}
+
+\sequence{{1\clubs}{1\spades}{2\ntx}{3\spades}}
+\vspace*{-0.7cm}Piki są ustalone.
 
 
 \pagebreak
