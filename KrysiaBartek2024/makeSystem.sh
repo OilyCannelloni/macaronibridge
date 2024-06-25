@@ -6,6 +6,30 @@ if [ "$#" -ne 1 ]; then
     exit 1
 fi
 
+if [ "$1" == "strefujot" ]; then
+    echo "Compiling with lualatex for strefujot..."
+    
+    SOURCE_DIR="./SYSTEM"
+    BUILD_DIR="./build"
+    OUTPUT_FILE="strefujot.tex"
+
+    mkdir -p "$BUILD_DIR"
+
+    cd "$SOURCE_DIR"
+
+    lualatex -interaction=batchmode --output-directory="../$BUILD_DIR" "$OUTPUT_FILE"
+    LUALATEX_STATUS=$?
+
+    if [ $LUALATEX_STATUS -ne 0 ] || [ ! -f "../$BUILD_DIR/strefujot.pdf" ]; then
+        echo "Error: lualatex failed to create PDF. See log for details."
+        exit 1
+    fi
+
+    mv "../$BUILD_DIR/strefujot.pdf" "../$SOURCE_DIR/strefujot.pdf"
+    echo "PDF generated: strefujot.pdf"
+    exit 0
+fi
+
 CONFIG_FILE="./SYSTEM/config/$1.conf"
 
 # Check if the config file exists
@@ -161,7 +185,7 @@ fi
 
 cd "$SOURCE_DIR"
 
-echo "Generating again for correct indexing..."
+echo "----------- generating again for correct indexing -----------"
 
 lualatex -interaction=batchmode --output-directory="../$BUILD_DIR" "$1.tex"
 LUALATEX_STATUS=$?
