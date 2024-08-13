@@ -1,0 +1,388 @@
+\documentclass[12pt, a4paper]{report}
+\usepackage{import}
+
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{mathtools}  
+\usepackage{amsthm}  
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{enumerate}
+\usepackage{setspace}
+
+\import{../../lib/}{bridge.sty}
+\setmainlanguage{english}
+
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\lsf}{{\color{BrickRed}\textbf{ASK LSF}}}
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    {\Huge \clubs Strefujot \clubs\\}
+    \vspace{1.5cm}
+    \includegraphics[width=10cm]{../others/noe.jpg}\\
+    \vspace{1cm}
+    {\Large Krysia i Bartek\\}
+\end{titlepage}
+
+\begin{bidpage}
+\section{LSF}
+
+\lsf: answering Lowest Shortness First, `no shortness' last\\
+lo / me / hi / no
+\end{bidpage}
+
+\begin{bidpage}
+\section{Negate}
+
+\subsubsection*{1\clubs -- ?}
+\begin{itemize}
+    \item 1\diams\ = any 0-6 or 7-10 w/o 4\major or \diams\ \gf
+\end{itemize}
+\end{bidpage}
+
+\begin{bidpage}
+\subsubsection*{1\clubs -- 1\diams\\
+                ?}
+\begin{itemize}
+    \item 1\hearts = 12-14 \bal, 2+\hearts
+    \item 1\spades = 12-14 \bal, 4\spades
+    \item 1NT = 18-20 \bal
+    \item 2\clubs = 15+, 5+\clubs, \nf
+    \item 2\diams = 19+ \unbal (see next sections)
+    \item 2\hearts = Kokish relay
+    \item 2\spades = acol \spades (2\nt = relay \then transfers)
+    \item 2\nt = 23-24 \bal, \nf
+\end{itemize}
+\end{bidpage}
+
+\begin{bidpage}
+\subsubsection*{1\clubs -- 1\diams\\
+                2\diams -- ?}
+\begin{itemize}
+    \item 2\hearts = negate 0-4
+    \item 2\spades = \gf\ 4+
+\end{itemize}
+\end{bidpage}
+
+\begin{bidpage}
+\subsubsection*{1\clubs -- 1\diams\\
+                2\diams -- 2\hearts\\
+                ?}
+\begin{itemize}
+    \item 2\spades = minimum
+    \item 2\nt = maximum
+\end{itemize}
+\end{bidpage}
+
+\begin{bidpage}
+\section{Strefodwrotka}
+
+\subsubsection*{1\clubs\ -- 1\major\\
+                ?}
+\begin{itemize}
+    \item 2\diams = any 3+ support \gf
+    \item 2\nt = 5\clubs4\diams or \bal\ \gf (= 2\hearts)
+\end{itemize}
+\end{bidpage}
+
+\begin{bidpage}
+\subsubsection*{1\clubs\ -- 1\major\\
+                2\diams -- ?}
+\begin{itemize}
+    \item 2\hearts = agreeing \major (5+), relay
+    \item 2\spades = 4\major, relay
+\end{itemize}
+\end{bidpage}
+
+\begin{bidpage}
+\subsubsection*{1\clubs\ -- 1\major\\
+                2\diams -- 2\hearts\\
+                ?}
+\begin{itemize}
+    \item 2\spades = \unbal (2\nt = \lsf)
+    \item 2\nt = \bal\ + \lsf*
+\end{itemize}
+
+* may answer cue with no shortness or fast arrival with no slam interest
+\end{bidpage}
+
+\begin{bidpage}
+\subsubsection*{1\clubs\ -- 1\major\\
+                2\diams -- 2\spades\\
+                ?}
+\begin{itemize}
+    \item 2\nt = \bal, 4\hearts\ + \lsf*
+    \item 3\clubs = 4\hearts, \unbal (3\diams = \lsf)
+    \item 3\diams = 3\hearts
+    \item 3\hearts = 6\clubs3\hearts
+    \item 3\spades = 5\clubs4\diams3\hearts
+\end{itemize}
+\end{bidpage}
+
+\begin{bidpage}
+\subsubsection*{1\clubs\ -- 1\hearts\\
+                2\nt -- ?}
+\begin{itemize}
+    \item 3\clubs = relay
+\end{itemize}
+\end{bidpage}
+
+\begin{bidpage}
+\subsubsection*{1\clubs\ -- 1\hearts\\
+                2\nt -- 3\clubs\\
+                ?}
+\begin{itemize}
+    \item 3\diams = \bal\ 2\hearts (3\hearts = agreeing)
+    \item 3\hearts = 5\clubs4\diams, \hearts shortness
+    \item 3\spades = 5\clubs4\diams, \spades shortness
+    \item 3\nt = 5\clubs4\diams, no shortness
+\end{itemize}
+\end{bidpage}
+
+\begin{bidpage}
+\section{Precision}
+
+2\clubs = 11-15 5\clubs4\major or 6+\clubs
+
+\subsubsection*{2\clubs\ -- ?}
+\begin{itemize}
+    \item 2\diams = 10+, relay
+    \item 2\major = 6-11 own suit (solid)
+    \item 2\nt = preempt \clubs or 2-suiter w/o \clubs (\then 3\clubs)
+    \item 3\clubs = \inv\ + \clubs
+    \item 3\diams/3\hearts/3\spades = \inv, 6+
+    \item 3\nt = 12-15, no 4\major
+\end{itemize}
+\end{bidpage}
+
+\begin{bidpage}
+\subsubsection*{2\clubs\ -- 2\diams\\
+                ?}
+\begin{itemize}
+    \item 2\major = 4\major
+    \item 2\nt = no 4\major, 6+\clubs, \gf
+    \item 3\clubs = no 4\major, 6+\clubs, minimum
+\end{itemize}
+\end{bidpage}
+
+\begin{bidpage}
+\subsubsection*{2\clubs\ -- 2\diams\\
+                \anysuit{\textbullet} -- ?}
+\begin{itemize}
+    \item 3\diams = ask 3\major
+\end{itemize}
+\end{bidpage}
+
+\begin{bidpage}
+\subsubsection*{2\clubs\ -- 2\nt\\
+                3\clubs -- ?}
+\begin{itemize}
+    \item \pass = \clubs preempt
+    \item 3\diams/3\hearts/3\spades = 2-suiter \qq
+\end{itemize}
+\end{bidpage}
+
+\begin{bidpage}
+\subsubsection*{2\clubs\ -- 3\clubs\\
+                ?}
+\begin{itemize}
+    \item \pass/3\nt = to play
+    \item 3\diams/3\hearts/3\spades = values, \fton{4\clubs}
+\end{itemize}
+\end{bidpage}
+
+\begin{bidpage}
+\section{Acol}
+
+1\clubs = [...], 23+ \hcp or 9.5 winning tricks
+
+\subsubsection*{1\clubs\ -- 1\diams\\
+                ?}
+\begin{itemize}
+    \item 2\clubs = \nat 15+, \nf
+    \item 2\diams = multi: 5\clubs\ + 4 other (or 4441) 19+
+    \item 2\hearts = Kokish relay
+    \item 2\spades = acol spades
+    \item 2\nt = 23-24 \bal
+    \item 3\clubs = acol \diams
+\end{itemize}
+\end{bidpage}
+
+\begin{bidpage}
+\subsubsection*{1\clubs\ -- 1\hearts\\
+                ?}
+\begin{itemize}
+    \item 3\clubs = acol \diams
+    \item 3\diams = acol \spades
+\end{itemize}
+\end{bidpage}
+
+\begin{bidpage}
+\subsubsection*{1\clubs\ -- 1\spades\\
+                ?}
+\begin{itemize}
+    \item 3\clubs = acol \diams
+    \item 3\diams = acol \hearts
+\end{itemize}
+\end{bidpage}
+
+\begin{bidpage}
+\subsubsection*{1\clubs\ -- 1\nt\\
+                ?}
+\begin{itemize}
+    \item 2\major = acol \major \then relay + transfers
+    \item 2\nt = 23-24 \bal
+\end{itemize}
+\end{bidpage}
+
+\section{1\clubs -- 2\clubs sequence}
+
+1\clubs -- 2\clubs = \nat\ \gf
+
+1\clubs -- 2\nt = 12-14/18+ \bal
+
+1\clubs -- 3\nt = 15-17
+
+\vspace{1cm}
+
+\begin{bidpage}
+\subsubsection*{1\clubs\ -- 2\clubs\\
+                ?}
+\begin{itemize}
+    \item 2\diams = \bal 12-14/any acol
+    \item 2\hearts = stopper
+    \item 2\spades = stopper
+    \item 2\nt = \bal 18-19/22+
+    \item 3\clubs = \nat (5+)
+    \item 3\diams/3\major = spl
+\end{itemize}
+\end{bidpage}
+
+\begin{bidpage}
+    \subsubsection*{1\clubs\ -- 2\clubs\\
+                2\diams -- ?}
+\begin{itemize}
+    \item 2\major = nat 4\major
+    \item 2\nt = bal nat \clubs
+    \item 3\clubs = long \clubs
+\end{itemize}
+\end{bidpage}
+
+\begin{bidpage}
+\subsubsection*{1\clubs\ -- 2\clubs\\
+                2\diams -- 2\hearts\\
+                ?}
+\begin{itemize}
+    \item 2\spades = 4\spades/acol \spades
+    \item 2\nt = no 4\major
+    \item 3\clubs = nat \clubs
+    \item 3\diams = acol
+    \item 3\hearts = fit
+\end{itemize}
+\end{bidpage}
+
+\begin{bidpage}
+\subsubsection*{1\clubs\ -- 2\clubs\\
+                2\diams -- 2\spades\\
+                ?}
+\begin{itemize}
+    \item 2\nt = no 4\spades
+    \item 3\clubs = nat \clubs
+    \item 3\diams = acol
+    \item 3\hearts = acol
+    \item 3\spades = 4\spades
+\end{itemize}
+\end{bidpage}
+
+\begin{bidpage}
+\subsubsection*{1\clubs\ -- 2\clubs\\
+                2\diams -- 2\nt\\
+                ?}
+\begin{itemize}
+    \item 3\clubs = nat \clubs
+    \item 3\diams = acol
+    \item 3\hearts = acol
+    \item 3\spades = acol
+    \item 3\nt = 12-14 bal no \clubs support
+\end{itemize}
+\end{bidpage}
+
+
+\begin{bidpage}
+\subsubsection*{1\clubs\ -- 2\clubs\\
+                2\diams -- 3\clubs\\
+                ?}
+\begin{itemize}
+    \item 3\diams = val
+    \item 3\hearts = val
+    \item 3\spades = val
+    \item 3\nt = to play
+    \item 4\clubs = acol \diams
+    \item 4\diams = acol \hearts
+    \item 4\hearts = acol \spades
+\end{itemize}
+\end{bidpage}
+
+
+\end{document}
+
+% 1\clubs - 2\clubs
+% ?
+% 2\diams = \bal 12-14/any acol
+% 2\hearts = stopper
+% 2\spades = stopper
+% 2\nt = \bal 18-19/22+
+% 3\clubs = \nat (5+) 
+% 3\diams/3\major = spl
+
+% 1\clubs - 2\clubs
+% 2\diams - ?
+% 2\major = nat 4\major
+% 2\nt = bal nat \clubs
+% 3\clubs = long \clubs
+
+% 1\clubs - 2\clubs
+% 2\diams - 2\hearts
+% ?
+% 2\spades = 4\spades/acol \spades
+% 2\nt = no 4\major
+% 3\clubs = nat \clubs
+% 3\diams = acol
+% 3\hearts = fit
+
+% 1\clubs - 2\clubs
+% 2\diams - 2\spades
+% ?
+% 2\nt = no 4\spades
+% 3\clubs = nat \clubs
+% 3\diams = acol
+% 3\hearts = acol
+% 3\spades = 4\spades
+
+% 1\clubs - 2\clubs
+% 2\diams - 2\nt
+% ?
+% 3\clubs = nat \clubs
+% 3\diams = acol
+% 3\hearts = acol
+% 3\spades = acol
+% 3\nt = 12-14 bal no \clubs support
+
+% 1\clubs - 2\clubs
+% 2\diams - 3\clubs
+% ?
+% 3\diams = val
+% 3\hearts = val
+% 3\spades = val
+% 3\nt = to play
+% 4\clubs = acol \diams
+% 4\diams = acol \hearts
+% 4\hearts = acol \spades
+
+
+
+
