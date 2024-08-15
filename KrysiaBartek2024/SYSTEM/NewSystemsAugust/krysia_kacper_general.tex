@@ -1,0 +1,891 @@
+\documentclass[12pt, a4paper]{report}
+\usepackage{import}
+
+\import{../../../lib/}{bridge.sty}
+\setmainlanguage{english}
+
+\usepackage[colorlinks=true, linkcolor=blue]{hyperref}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
+\usepackage{changepage}
+
+\title{\spades\clubs Strefa \xdiams\xhearts}
+\author{Krysia Gasińska \& Kacper Kuflowski}
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\chapter*{\colorbox{Plum!30}{General assumptions}}
+\addcontentsline{toc}{chapter}{General assumptions} {
+
+    % \begin{adjustwidth*}{-2in}{-1in}
+    % \noindent
+    % \begin{tikzpicture}
+    %     \fill[blue!50!white, opacity=0.5] (0, 0) rectangle (1.2 * \paperwidth, 1.5\baselineskip);
+    %     \node[anchor=west, text width=\textwidth, align=left] at (2in, 0.75\baselineskip) {This is a line of text on a semi-transparent blue background.};
+    % \end{tikzpicture}
+    % \end{adjustwidth*}
+        
+    \section*{\colorbox{blue!30}{Offensive bidding}}
+    \addcontentsline{toc}{section}{Offensive bidding}
+        \begin{itemize}
+            \item 1\clubs = 2+ (Strefa)
+            \item weak 1\nt 11-14 (\nvul{non-vul})
+            \item Swedish 2\major openings (10-13)
+            \item 2\diams Multi
+            \item strong 2\nt (20-21)
+            \item Dutch 2\clubs (\diams preempt or Acol)
+            \item non-\gf reverses
+            \item \hsf\ schema (no shortness first)
+            \item Non-serious 3\nt. We do not show strength after 2/1 (shape only).
+            \item 5\minor+1 = RKCB for \minor (4\nt = \nat)
+            \item showing kings with 2 keycards + Q (lowest bid = no kings)
+            \item Specific King Query (agreed suit = no kings)
+            \item Exclusion 03/14
+        \end{itemize}
+
+    \section*{\colorbox{blue!30}{Competitive bidding}}
+    \addcontentsline{toc}{section}{Competitive bidding}
+
+        \begin{itemize}
+            \item Transfers after opponents' interference
+            \item DONT after 1\nt (\dbl)
+            \item Rubensohl + Lebensohl after 1\nt overcall
+        \end{itemize}
+
+    \section*{\colorbox{blue!30}{Defensive bidding}}
+    \addcontentsline{toc}{section}{Defensive bidding}
+
+        \begin{itemize}
+            \item Rubens advances
+            \item Kokish 2\diams Multi (Wilkosz) defense
+            \item CRASH 2\nt defense
+            \item Jassem 1\nt defense
+            \item Michaels -- full range (not mini-maxi)
+        \end{itemize}
+
+    \section*{\colorbox{blue!30}{Defensive signaling}}
+    \addcontentsline{toc}{section}{Defensive signaling}
+
+        \begin{itemize}
+            \item Polish (upside-down) opening lead
+            \item upside-down count and attitude (high-low odd/discouraging)
+            \item Lavinthal (suit preference) discards
+        \end{itemize}
+
+}
+
+\part*{\colorbox{RoyalPurple!30}{Offensive bidding}}
+\addcontentsline{toc}{part}{Offensive bidding}
+
+\chapter*{\colorbox{Plum!30}{Minor suit openings}}
+\addcontentsline{toc}{chapter}{Minor suit openings}
+
+\section*{\colorbox{blue!30}{1\clubs\ opening}}
+\addcontentsline{toc}{section}{1\clubs\ opening} {
+
+    \subsubsection*{1\clubs\ -- \alrts{2\clubs} \\ ?}
+    2\clubs = \gf\ \nat\ or \bal
+    \begin{itemize}
+        \item 2\diams\ = \bal
+        \item 2\hearts\ = 5\clubs4\hearts
+        \item 2\spades\ = 5\clubs4\spades
+        \item 2\nt\ = 5\clubs4\diams
+        \item 3\clubs\ = \clubs
+    \end{itemize}
+
+    \subsubsection*{1\clubs\ -- 2\clubs \\
+                2\diams -- ?}
+    \begin{itemize}
+        \item 2\hearts = 5\clubs4\hearts
+        \item 2\spades = 5\clubs4\spades
+        \item 2\nt = 12-14/18+ \bal
+        \item 3\clubs = 6\clubs, no 4\major
+        \item 3\diams = 5\clubs4\diams, \gf
+        \item 3\nt = 15-17 \bal
+    \end{itemize}
+}
+
+\section*{\colorbox{blue!30}{1\diams\ opening}}
+\addcontentsline{toc}{section}{1\diams\ opening} {
+
+    \subsubsection*{1\diams\ -- ?}
+    \begin{itemize}
+        \item 2\diams\ = no 4\major, 4+\diams, \invp
+        \item 2\hearts\ = 5\spades4\hearts\ 5-11
+        \item 2\spades\ = 11+ \bal, no 4\major
+        \item 2\nt = 11-12 \bal
+        \item 3\clubs\ = \then 3\diams, preempt or strong splinter
+        \item 3\diams\ = mixed raise
+        \item 3\nt = 15-17 \bal
+    \end{itemize}
+
+    \subsubsection*{1\diams -- 3\clubs\\
+                    3\diams -- ?}
+    \begin{itemize}
+        \item 3\hearts/3\spades/3\nt = \hearts/\spades/\clubs shortness
+    \end{itemize}
+
+    \subsubsection*{1\diams -- 1\major\\
+                    2\diams -- ?}
+    \begin{itemize}
+        \item 2\major = \nf
+        \item 3rd suit = stopper, \gf
+        \item 2\nt = \gf
+        \item 3\diams = \inv
+    \end{itemize}
+
+    \subsubsection*{1\diams\ -- 2\diams \\ ?}
+    \begin{itemize}
+        \item 2\hearts\ = \hearts\ stopper
+        \item 2\spades\ = \spades\ stopper
+        \item 2\nt\ = both major stoppers
+        \item 3\clubs = \nat
+        \item 3\diams = sign off (treshold for invite)
+    \end{itemize}
+
+    bidding higher suit denies lower stopper
+
+    \subsubsection*{1\diams\ -- 2\spades \\ ?}
+    \begin{itemize}
+        \item 2\nt\ = \bal min
+        \item 3\clubs\ = 4+\clubs\ min
+        \item 3\diams\ = 5+\diams\ min
+        \item 3\hearts\ = 1-\hearts, 5+\diams\ \gf
+        \item 3\spades\ = 1-\spades, 5+\diams\ \gf
+        \item 3\nt\ = to play
+    \end{itemize}
+}
+
+\section*{\colorbox{blue!30}{Negative 1\diams}}
+\addcontentsline{toc}{section}{Negative 1\diams} {
+
+    \subsubsection*{1\clubs -- ?}
+    \begin{itemize}
+        \item 1\diams = 0-6 or 16+ \bal or 5+\diams 7-11
+    \end{itemize}
+
+    \subsubsection*{1\clubs -- 1\diams\\
+                    ?}
+    \begin{itemize}
+        \item 1\major = 3+
+        \item 1\nt = 18-20 \bal
+        \item 2\clubs = 5+\clubs
+        \item 2\diams/2\hearts/2\spades = serious revers (19+)
+        \item 3\clubs = serious invite 19-20
+    \end{itemize}
+
+    \subsubsection*{1\clubs -- 1\diams\\
+                    1\major -- ?}
+    \begin{itemize}
+        \item 2\diams = 5+\diams 4-11
+        \item 2\spades over 1\hearts = \minor 10-11
+        \item 2\nt = 16+ \bal
+        \item 3\minor = 6+\minor 9-11
+    \end{itemize}
+}
+
+\section*{\colorbox{blue!30}{Two-way checkback}}
+\addcontentsline{toc}{section}{Two-way checkback}
+
+\section*{\colorbox{blue!30}{Flannery}}
+\addcontentsline{toc}{section}{Flannery}
+
+\chapter*{\colorbox{Plum!30}{Major suit openings}}
+\addcontentsline{toc}{chapter}{Major suit openings}
+
+\section*{\colorbox{blue!30}{1\major\ opening}}
+\addcontentsline{toc}{section}{1\major\ opening} {
+    \subsubsection*{1\major -- ?}
+    \begin{itemize}
+        \item 2\major = constructive raise
+        \item 2\spades (over 1\hearts) = preempt
+        \item 2\nt = limit raise
+        \item 3\clubs = mixed raise
+        \item 3\diams = mini splinter
+        \item 3\hearts (over 1\spades) = \nat\ \inv
+        \item 3\major = preemptive
+        \item 3\nt/4\anysuit{x} (3\spades) = splinter
+        \item 4\diams/4\hearts = \then 4\major
+    \end{itemize}
+}
+
+\section*{\colorbox{blue!30}{Drury}}
+\addcontentsline{toc}{section}{Drury}
+
+\section*{\colorbox{blue!30}{2\hearts\ opening}}
+\addcontentsline{toc}{section}{2\hearts\ opening} {
+
+    \subsubsection*{\alrts{2\hearts} -- ?}
+    \begin{itemize}
+        \item 2\spades = \nat 5+, \fton{3\hearts}
+        \item 2\nt = relay
+        \item 3\clubs = \minor\ \gf\ (3\diams = ask)
+        \item 3\diams = \invp, \hearts fit
+        \item 3\hearts = preemptive
+        \item 3\spades/4\minor = splinter
+        \item 3\nt = to play
+    \end{itemize}
+
+    \subsubsection*{2\hearts -- 2\spades\\
+                    ?}
+    \begin{itemize}
+        \item 2\nt = no \spades support
+        \item 3\clubs = 4+
+        \item 3\diams = 4+
+        \item 3\hearts = 7\hearts
+        \item 3\spades = 3\spades, weak
+        \item 3\nt = \spades shortness, better hand
+        \item 4\minor = splinter, 3+\spades
+        \item 4\spades = 3-4\spades, better hand
+    \end{itemize}
+
+    \subsubsection*{2\hearts -- 2\nt\\
+                    ?}
+    \begin{itemize}
+        \item 3\clubs = 4+\minor\ (3\diams = ask)
+        \item 3\diams = \minor\ feature (3\hearts = ask)
+        \item 3\hearts = bad hand
+        \item 3\spades = \spades feature
+        \item 3\nt = good hand, no shortness
+    \end{itemize}
+
+    \subsubsection*{2\hearts -- 2\nt\\
+                    3\clubs -- 3\diams\\
+                    ?}
+    \begin{itemize}
+        \item 3\hearts = 4\spades
+        \item 3\spades = 4\clubs
+        \item 3\nt = 4\diams
+    \end{itemize}
+
+    \subsubsection*{2\hearts -- 2\nt\\
+                    3\diams -- 3\hearts\\
+                    ?}
+    \begin{itemize}
+        \item 3\spades = \clubs feature
+        \item 3\nt = \diams feature
+    \end{itemize}
+
+    \subsubsection*{2\hearts -- 3\diams\\
+                    ?}
+    \begin{itemize}
+        \item 3\hearts = weak
+        \item 3\spades = better hand, shortness (3\nt = \ahsf)
+        \item 3\nt = better hand, no shortness
+    \end{itemize}
+}
+
+\section*{\colorbox{blue!30}{2\spades\ opening}}
+\addcontentsline{toc}{section}{2\spades\ opening} {
+
+    \subsubsection*{\alrts{2\spades} -- ?}
+    \begin{itemize}
+        \item 2\nt = relay
+        \item 3\clubs = 5+\hearts\ \fonce
+        \item 3\diams = \minor\ \gf\ (3\hearts = ask)
+        \item 3\hearts = \invp, \hearts fit
+        \item 3\spades = preemptive
+        \item 4\minor/4\hearts = splinter
+        \item 3\nt = to play
+    \end{itemize}
+
+    \subsubsection*{2\spades -- 2\nt\\
+                    ?}
+    \begin{itemize}
+        \item 3\clubs = 4+\minor\ (3\diams = ask)
+        \item 3\diams = \minor\ feature (3\hearts = ask)
+        \item 3\hearts = \hearts feature
+        \item 3\spades = weak hand
+        \item 3\nt = good hand, no shortness
+    \end{itemize}
+
+    \subsubsection*{2\spades -- 2\nt\\
+                    3\clubs -- 3\diams\\
+                    ?}
+    \begin{itemize}
+        \item 3\hearts = 4\hearts
+        \item 3\spades = 4\clubs
+        \item 3\nt = 4\diams
+    \end{itemize}
+
+    \subsubsection*{2\spades -- 2\nt\\
+                    3\diams -- 3\hearts\\
+                    ?}
+    \begin{itemize}
+        \item 3\spades = \clubs feature
+        \item 3\nt = \diams feature
+    \end{itemize}
+
+    \subsubsection*{2\spades -- 3\diams\\
+                    3\hearts -- ?}
+    \begin{itemize}
+        \item 3\spades = \clubs
+        \item 3\nt = \diams
+    \end{itemize}
+
+    \subsubsection*{2\spades -- 3\hearts\\
+                    ?}
+    \begin{itemize}
+        \item 3\spades = weak hand
+        \item 3\nt = good hand, shortness (4\clubs = \ahsf)
+        \item cue = good hand, no shortness
+    \end{itemize}
+}
+
+\chapter*{\colorbox{Plum!30}{\strut American rebid}\\
+          \colorbox{Plum!30}{\strut (with 3-card support)}}
+\addcontentsline{toc}{chapter}{American rebid (with 3-card support)} {
+
+    2\hearts rebid with 3-card does not deny 4\spades.
+
+    Do not rebid 2\spades with 3(244).\\
+    With 43(42) rebid 1\spades, not 2\hearts.
+
+    \subsubsection*{1\clubs -- 1\hearts\\
+                    2\hearts -- ?}
+    \begin{itemize}
+        \item 2\spades = \gf
+        \item 2\nt = \inv\ \spades
+        \item 3\minor/3\hearts = \inv
+    \end{itemize}
+
+    \subsubsection*{1\clubs -- 1\hearts\\
+                    2\hearts -- 2\spades\\
+                    ?}
+    \begin{itemize}
+        \item 2\nt = 4\hearts (3\clubs = ask)
+        \item 3\clubs = 3\hearts\ + shortness (3\diams = ask, does not agree \hearts)
+        \item 3\diams = 2326
+        \item 3\hearts = 2335
+        \item 3\spades = 3325
+        \item 3\nt = 2344
+    \end{itemize}
+
+    \subsubsection*{1\clubs -- 1\hearts\\
+                    2\hearts -- 2\spades\\
+                    2\nt -- 3\clubs\\
+                    ?}
+    \begin{itemize}
+        \item 3\diams = \bal
+        \item 3\hearts = 2425
+        \item 3\spades = 1435
+        \item 3\nt = 3415
+    \end{itemize}
+
+    \subsubsection*{1\clubs -- 1\spades\\
+                    2\spades -- ?}
+    \begin{itemize}
+        \item 2\nt = \gf
+        \item 3\anysuit{x} = \inv
+    \end{itemize}
+
+    \subsubsection*{1\clubs -- 1\spades\\
+                    2\spades -- 2\nt\\
+                    ?}
+    \begin{itemize}
+        \item 3\clubs = 4\spades (3\diams = ask)
+        \item 3\diams = 3\spades + shortness (3\hearts = ask, does not agree \spades)
+        \item 3\hearts = 3325
+        \item 3\spades = 3226
+        \item 3\nt = 3235
+    \end{itemize}
+
+    \subsubsection*{1\clubs -- 1\spades\\
+                    2\spades -- 2\nt\\
+                    3\clubs -- 3\diams\\
+                    ?}
+    \begin{itemize}
+        \item 3\hearts = \bal
+        \item 3\spades = 4225
+        \item 3\nt = 4135
+        \item 4\clubs = 4315
+    \end{itemize}
+
+    \subsubsection*{1\diams -- 1\hearts\\
+                    2\hearts -- ?}
+    \begin{itemize}
+        \item 2\spades = \gf
+        \item 2\nt = \inv\ \spades
+        \item 3\minor/3\hearts = \inv
+    \end{itemize}
+
+    \subsubsection*{1\diams -- 1\hearts\\
+                    2\hearts -- 2\spades\\
+                    ?}
+    \begin{itemize}
+        \item 2\nt = 4\hearts (3\clubs = ask)
+        \item 3\clubs = 3\hearts\ + shortness (3\diams = ask, does not agree \hearts)
+        \item 3\diams = 2362
+        \item 3\hearts = 2353
+        \item 3\spades = 3332
+        \item 3\nt = 2352
+    \end{itemize}
+
+    \subsubsection*{1\diams -- 1\hearts\\
+                    2\hearts -- 2\spades\\
+                    2\nt -- 3\clubs\\
+                    ?}
+    \begin{itemize}
+        \item 3\diams = 2452
+        \item 3\hearts = 1453/1444
+        \item 3\spades = 3451/4441
+    \end{itemize}
+
+    \subsubsection*{1\diams -- 1\spades\\
+                    2\spades -- ?}
+    \begin{itemize}
+        \item 2\nt = \gf
+        \item 3\anysuit{x} = \inv
+    \end{itemize}
+
+    \subsubsection*{1\diams -- 1\spades\\
+                    2\spades -- 2\nt\\
+                    ?}
+    \begin{itemize}
+        \item 3\clubs = 4\spades (3\diams = ask)
+        \item 3\diams = 3\spades + shortness (3\hearts = ask, does not agree \spades)
+        \item 3\hearts = 3262
+        \item 3\spades = 3253
+        \item 3\nt = 3352
+    \end{itemize}
+
+    \subsubsection*{1\diams -- 1\spades\\
+                    2\spades -- 2\nt\\
+                    3\clubs -- 3\diams\\
+                    ?}
+    \begin{itemize}
+        \item 3\hearts = \bal
+        \item 3\spades = 4252
+        \item 3\nt = 4153
+        \item 4\clubs = 4351
+    \end{itemize}
+
+    \subsubsection*{1\hearts -- 1\spades\\
+                    2\spades -- ?}
+    \begin{itemize}
+        \item 2\nt = \gf
+        \item 3\anysuit{x} = \inv
+    \end{itemize}
+
+    \subsubsection*{1\hearts -- 1\spades\\
+                    2\spades -- 2\nt\\
+                    ?}
+    \begin{itemize}
+        \item 3\clubs = 4\spades (3\diams = ask)
+        \item 3\diams = 3\spades + shortness (3\hearts = ask, does not agree \spades)
+        \item 3\hearts = 3622
+        \item 3\spades = 3523
+        \item 3\nt = 3532
+    \end{itemize}
+
+    \subsubsection*{1\hearts -- 1\spades\\
+                    2\spades -- 2\nt\\
+                    3\clubs -- 3\diams\\
+                    ?}
+    \begin{itemize}
+        \item 3\hearts = \bal
+        \item 3\spades = 4522
+        \item 3\nt = 4513
+        \item 4\clubs = 4531
+    \end{itemize}
+}
+
+\chapter*{\colorbox{Plum!30}{Ask shape 2\ntch\ schema}
+          \colorbox{Plum!30}{(reverses, 2/1, 2\ntch\ rebid)}}
+\addcontentsline{toc}{chapter}{Ask shape 2\ntx\ schema (reverses, 2/1, 2\ntx\ rebid)}
+
+\chapter*{\colorbox{Plum!30}{1\ntch\ opening}}
+\addcontentsline{toc}{chapter}{1\ntx\ opening} {
+    \subsubsection*{1\nt -- ?}
+    \begin{itemize}
+        \item 2\clubs = Stayman
+        \item 2\diams/2\hearts = \then \major
+        \item 2\spades = \then \clubs
+        \item 2\nt = 6+\diams weak/\gf or \minor weak (54)
+        \item 3\clubs = Puppet Stayman (like after 2\nt opening) \imp
+        \item 3\diams = 6+\diams\ \inv
+        \item 3\major = 4441 (\major shortness) \gf \qq
+    \end{itemize}
+
+    \subsubsection*{1\nt -- 2\clubs\\
+                    ?}
+    \begin{itemize}
+        \item 2\diams = no 4\major
+        \item 2\hearts = 4\hearts
+        \item 2\spades = 4\spades
+        \item 2\nt = both 4\major, min
+        \item 3\clubs = both 4\major, max
+    \end{itemize}
+
+    \subsubsection*{1\nt -- 2\clubs\\
+                    2\diams -- ?}
+    \begin{itemize}
+        \item 2\hearts = \major weak
+        \item 2\spades = 5\spades, \inv
+        \item 2\nt = \inv
+        \item 3\clubs = ask shape
+        \item 3\diams = ask 3\major
+        \item 3\hearts = \clubs shortness
+        \item 3\spades = \diams shortness
+    \end{itemize}
+
+    \subsubsection*{1\nt -- 2\clubs\\
+                    2\diams -- 3\clubs\\
+                    ?}
+    \begin{itemize}
+        \item 3\diams = 5\minor \qq
+        \item 3\hearts = 2\spades
+        \item 3\spades = 2\hearts
+        \item 3\nt = 33(34)
+    \end{itemize}
+
+    \subsubsection*{1\nt -- 2\clubs\\
+                    2\diams -- 3\diams\\
+                    3\major -- ?}
+    \begin{itemize}
+        \item 3\nt/4\major = to play
+        \item other = cuebid
+    \end{itemize}
+
+    \subsubsection*{1\nt -- 2\clubs\\
+                    2\hearts -- ?}
+    \begin{itemize}
+        \item 2\spades = relay (2\nt = min, 3\clubs = max)
+        \item 2\nt = 5\spades, \inv
+        \item 3\clubs = ask shape
+        \item 3\diams = \minor shortness
+        \item 3\hearts = \inv
+        \item 3\spades/4\minor = splinter
+    \end{itemize}
+
+    \subsubsection*{1\nt -- 2\clubs\\
+                    2\hearts -- 2\spades\\
+                    2\nt -- ?}
+    \begin{itemize}
+        \item \pass = \inv\ \bal
+        \item 3\clubs = 6\clubs4\spades\ \inv
+        \item 3\diams = 6\diams4\spades\ \inv
+        \item 3\hearts = 4\hearts slam try, no splinter
+        \item 3\nt = choice of games
+    \end{itemize}
+
+    \subsubsection*{1\nt -- 2\clubs\\
+                    2\hearts -- 2\spades\\
+                    3\clubs -- ?}
+    \begin{itemize}
+        \item 3\diams = 6\minor4\spades (3\hearts = ask)
+        \item 3\hearts = 4\hearts slam try, no splinter
+        \item 3\nt = to play
+    \end{itemize}
+
+    \subsubsection*{1\nt -- 2\clubs\\
+                    2\spades -- ?}
+    \begin{itemize}
+        \item 2\nt = \inv
+        \item 3\clubs = ask shape
+        \item 3\diams = \minor shortness
+        \item 3\hearts = 4\spades slam try, no splinter
+        \item 3\spades = \inv
+    \end{itemize}
+
+    \subsubsection*{1\nt -- 2\clubs\\
+                    2\major -- 3\clubs\\
+                    ?}
+    \begin{itemize}
+        \item 3\diams = 43\minor
+        \item 3\hearts = 4\clubs
+        \item 3\spades = 4\diams
+        \item 3\nt = 4333 (4\major)
+    \end{itemize}
+
+    \subsubsection*{1\nt -- 2\clubs\\
+                    2\nt -- ?}
+    \begin{itemize}
+        \item \pass = \inv\ \bal
+        \item 3\clubs = 6+\diams, \clubs shortness, no 4\major, \gf
+        \item 3\diams = 4+\hearts
+        \item 3\hearts = 4+\spades
+    \end{itemize}
+
+    \subsubsection*{1\nt -- 2\clubs\\
+                    3\clubs -- ?}
+    \begin{itemize}
+        \item 3\diams = 4+\hearts
+        \item 3\hearts = 4+\spades
+        \item 3\spades = 6+\diams, \clubs shortness, no 4\major, \gf
+    \end{itemize}
+
+    \subsubsection*{1\nt -- 2\diams/2\hearts\\
+                    ?}
+    \begin{itemize}
+        \item 2\major = acc
+        \item 2\nt = 4+\major max
+        \item 3\major = 4+\major min
+    \end{itemize}
+
+    \subsubsection*{1\nt -- 2\diams\\
+                    2\hearts -- ?}
+    \begin{itemize}
+        \item 2\spades = \inv
+        \item 2\nt = 4+\clubs\ \gf
+        \item 3\clubs = 4+\diams\ \gf
+        \item 3\diams = 6+\hearts\ \gf
+        \item 3\hearts = 5\hearts4\spades, \inv
+        \item 3\spades/4\minor = splinter
+    \end{itemize}
+
+    \subsubsection*{1\nt -- 2\diams\\
+                    2\hearts -- 2\spades\\
+                    ?}
+    \begin{itemize}
+        \item 2\nt/3\hearts = min
+        \item 3\clubs = max, no 3\hearts
+        \item 3\diams = max, 3\hearts
+        \item 3\nt = choice of games
+    \end{itemize}
+
+    \subsubsection*{1\nt -- 2\diams\\
+                    2\hearts -- 2\nt\\
+                    ?}
+    \begin{itemize}
+        \item 3\clubs = 3\hearts\ + 4\clubs
+        \item 3\diams = 3\hearts
+        \item 3\hearts = 4\clubs
+        \item 3\nt = to play
+    \end{itemize}
+
+    \subsubsection*{1\nt -- 2\hearts\\
+                    2\spades -- ?}
+    \begin{itemize}
+        \item 2\nt = 4+\clubs\ \gf
+        \item 3\clubs = 4+\diams\ \gf
+        \item 3\diams = 55\major, \inv
+        \item 3\hearts = 6+\spades\ \gf
+        \item 3\spades = 6+\spades\ \inv
+    \end{itemize}
+
+    \subsubsection*{1\nt -- 2\spades\\
+                    ?}
+    \begin{itemize}
+        \item 2\nt = min
+        \item 3\clubs = max
+    \end{itemize}
+
+    \subsubsection*{1\nt -- 2\nt\\
+                    ?}
+    \begin{itemize}
+        \item 3\minor = better minor
+    \end{itemize}
+
+    \subsubsection*{1\nt -- 2\nt\\
+                    3\minor -- ?}
+    \begin{itemize}
+        \item 3\diams = to play
+        \item 3\major = splinter (agreeing \diams)
+    \end{itemize}
+}
+
+\chapter*{\colorbox{Plum!30}{2\ntch\ opening}}
+\addcontentsline{toc}{chapter}{2\ntx\ opening} {
+    
+    \alrts{2\nt} opening = 21-22 \bal, may have 5\major
+
+    \subsubsection*{2\nt -- ?}
+    \begin{itemize}
+        \item 3\clubs\ = Puppet Stayman
+        \item 3\diams\ = \then\ \hearts\ + superaccepts
+        \item 3\hearts\ = \then\ \spades\ + superaccepts
+        \item 3\spades\ = forces 3\nt
+        \item 3\nt\ = 5\spades4\hearts, \nf \imp
+        \item 4\clubs\ = 55\major
+        \item 4\diams, 4\hearts\ = Texas
+        \item 4\nt\ = quantitative
+    \end{itemize}
+
+    \subsubsection*{2\ntx\ -- 3\diams \\ ?}
+    \begin{itemize}
+        \item 3\hearts\ = 2\hearts
+        \item 3\nt\ = 3+\hearts, propositional
+        \item cue = 3+\hearts
+    \end{itemize}
+
+    \subsubsection*{2\ntx\ -- 3\diams \\
+                    3\hearts -- ?}
+    \begin{itemize}
+        \item 3\spades = \then 3\nt (\then Minor Puppet)
+        \item 3\nt = \spades \nat
+        \item cue = agreeing \hearts
+    \end{itemize}
+
+    \subsubsection*{2\ntx\ -- 3\hearts \\ ?}
+    \begin{itemize}
+        \item 3\spades\ = 2\spades
+        \item 3\nt\ = 3+\spades, propositional
+        \item cue = 3+\spades
+    \end{itemize}
+
+    \subsubsection*{2\ntx\ -- 3\spades \\ 3\nt\ -- ?}
+    \begin{itemize}
+        \item 4\clubs\ = 6+\clubs
+        \item 4\diams\ = 6+\diams
+        \item 4\hearts\ = 54\minor\ 1-\hearts
+        \item 4\spades\ = 54\minor\ 1-\spades
+    \end{itemize}
+}
+
+\section*{\colorbox{blue!30}{Minor Puppet Stayman}}
+\addcontentsline{toc}{section}{Minor Puppet Stayman} {
+    \subsubsection*{2\nt -- 3\clubs\\
+                3\diams -- ?}
+    \begin{itemize}
+        \item 4\clubs = Minor Puppet Stayman
+    \end{itemize}
+
+    \subsubsection*{2\nt -- 3\clubs\\
+                    3\major -- ?}
+    \begin{itemize}
+        \item 4\clubs = Minor Puppet Stayman
+        \item 4\diams = Minor Puppet, ask 3s
+    \end{itemize}
+
+    \subsubsection*{2\nt -- 3\clubs\\
+                    (3\diams -- 3\major)\\
+                    3\nt -- ?}
+    \begin{itemize}
+        \item 4\clubs = Minor Puppet Stayman
+        \item 4\diams = Minor Puppet, ask 3s
+    \end{itemize}
+
+    All of the above apply also after 1\nt -- 3\clubs sequence.
+
+    \subsubsection*{2\nt -- 3\diams\\
+                    3\hearts -- 3\spades\\
+                    3\nt -- ?}
+    \begin{itemize}
+        \item 4\clubs = Minor Puppet Stayman
+        \item 4\diams = Minor Puppet, ask 3s
+    \end{itemize}
+
+    \subsubsection*{2\nt -- 3\hearts\\
+                    3\spades -- ?}
+    \begin{itemize}
+        \item 4\clubs = Minor Puppet Stayman
+        \item 4\diams = Minor Puppet, ask 3s
+    \end{itemize}
+
+    \subsubsection*{... -- 4\clubs\\
+                    ?}
+    \begin{itemize}
+        \item 4\diams = 4\minor, no 5\minor
+        \item 4\hearts = 5+\clubs
+        \item 4\spades = 5+\diams
+        \item 4\nt = no 4\minor
+        \item 5\clubs = 5\clubs, 4\diams
+        \item 5\diams = 5\diams, 4\clubs
+    \end{itemize}
+
+    \subsubsection*{... -- 4\clubs\\
+                    4\diams -- ?}
+    \begin{itemize}
+        \item 4\hearts = 4\clubs
+        \item 4\spades = 4\diams
+        \item 4\nt = \soff
+    \end{itemize}
+
+    \subsubsection*{... -- 4\diams\\
+                    ?}
+    \begin{itemize}
+        \item 4\hearts = 3+\clubs, 3+\diams
+        \item 4\spades = 3+\clubs, 2\diams (4\nt = \soff, other bids agreeing \clubs)
+        \item 4\nt = 2\clubs, 3+\diams (all bids agreeing \diams)
+    \end{itemize}
+
+    \subsubsection*{... -- 4\diams\\
+                    4\hearts -- ?}
+    \begin{itemize}
+        \item 4\spades = agreeing \clubs
+        \item 4\nt = \soff
+        \item 5\clubs = agreeing \diams
+    \end{itemize}
+
+    \vspace{0.5cm}
+
+    After showing \minor (5-card, 4-card or 3-card) 4\nt is a \soff, other bids
+    agree shown suit.
+}
+
+\chapter*{\colorbox{Plum!30}{2\clubs opening (Dutch Acol)}}
+\addcontentsline{toc}{chapter}{2\clubs\ opening (Dutch Acol)} {
+
+    2\clubs = weak with \diams or \gf\ with \clubs/\hearts/\spades or 22+, \bal.
+
+    ???
+
+    % \subsubsection*{2\clubs -- ?}
+    % \begin{itemize}
+    %     \item 2\diams\ = \pass/correct
+    %     \item 2\hearts/2\spades = own suit, \nf
+    %     \item 2\nt = \invp, relay. May contain \gf with \clubs or \major.
+    %     \item 3\clubs = own suit, \nf
+    %     \item 3\diams/4\diams/5\diams = preemptive
+    %     \item 3\hearts/3\spades = preemptive
+    % \end{itemize}
+
+    % \subsubsection*{2\clubs -- 2\diams\\
+    %                 ?}
+    % Acol with Kokish relay. Second suit by transfer.
+}
+
+\chapter*{\colorbox{Plum!30}{Preempt openings}}
+\addcontentsline{toc}{chapter}{Preempt openings}
+
+\section*{\colorbox{blue!30}{2\diams opening (Multi)}}
+\addcontentsline{toc}{section}{2\diams\ opening (Multi)}
+
+\section*{\colorbox{blue!30}{3-level openings}}
+\addcontentsline{toc}{section}{3-level openings}
+
+\section*{\colorbox{blue!30}{Higher-level openings}}
+\addcontentsline{toc}{section}{Higher-level openings} {
+    \subsubsection*{3\clubs -- ?}
+    \begin{itemize}
+        \item 3\diams/\hearts/\spades = \nat\ 5+, \gf
+        \item 4\diams = ask keycards
+        \item 4\major = to play
+    \end{itemize}
+
+    \subsubsection*{3\diams -- ?}
+    \begin{itemize}
+        \item 3\major = \nat\ 5+, \gf
+        \item 4\clubs = ask keycards
+        \item 4\major = to play
+    \end{itemize}
+
+    \subsubsection*{3\major -- ?}
+    \begin{itemize}
+        \item 4\clubs = ask keycards
+    \end{itemize}
+
+    \vspace{0.5cm}
+    ask keycards answers: 0/1-Q/1+Q/2-Q/2+Q
+    \vspace{0.4cm}
+
+    \subsubsection*{3\nt -- ?}
+    3\nt = constructive \major preempt
+    \begin{itemize}
+        \item 3\clubs = ask (answer with transfer)
+        \item 3\diams = ask
+    \end{itemize}
+}
+
+\part*{\colorbox{RoyalPurple!30}{Competitive bidding}}
+\addcontentsline{toc}{part}{Competitive bidding}
+
+\part*{\colorbox{RoyalPurple!30}{Defensive bidding}}
+\addcontentsline{toc}{part}{Defensive bidding}
+
+aa
+
+\end{document}
