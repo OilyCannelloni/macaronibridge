@@ -1,7 +1,7 @@
 \documentclass[12pt, a4paper]{report}
 \usepackage{import}
 
-\import{../../../lib/}{bridge.sty}
+\import{../../lib/}{bridge.sty}
 \setmainlanguage{english}
 
 \usepackage[colorlinks=true, linkcolor=blue]{hyperref}
@@ -38,7 +38,7 @@
             \item Dutch 2\clubs (\diams preempt or Acol)
             \item non-\gf reverses
             \item \hsf\ schema (no shortness first)
-            \item Non-serious 3\nt. We do not show strength after 2/1 (shape only).
+            \item Non-serious 3\nt; we do not show strength after 2/1 (shape only)
             \item 5\minor+1 = RKCB for \minor (4\nt = \nat)
             \item showing kings with 2 keycards + Q (lowest bid = no kings)
             \item Specific King Query (agreed suit = no kings)
@@ -89,8 +89,7 @@
     2\clubs = \gf\ \nat\ or \bal
     \begin{itemize}
         \item 2\diams\ = \bal
-        \item 2\hearts\ = 5\clubs4\hearts
-        \item 2\spades\ = 5\clubs4\spades
+        \item 2\major = 5\clubs4\major
         \item 2\nt\ = 5\clubs4\diams
         \item 3\clubs\ = \clubs
     \end{itemize}
@@ -98,11 +97,10 @@
     \subsubsection*{1\clubs\ -- 2\clubs \\
                 2\diams -- ?}
     \begin{itemize}
-        \item 2\hearts = 5\clubs4\hearts
-        \item 2\spades = 5\clubs4\spades
+        \item 2\major = 5\clubs4\major
         \item 2\nt = 12-14/18+ \bal
         \item 3\clubs = 6\clubs, no 4\major
-        \item 3\diams = 5\clubs4\diams, \gf
+        \item 3\diams = 5\clubs4\diams
         \item 3\nt = 15-17 \bal
     \end{itemize}
 }
@@ -112,7 +110,7 @@
 
     \subsubsection*{1\diams\ -- ?}
     \begin{itemize}
-        \item 2\diams\ = no 4\major, 4+\diams, \invp
+        \item 2\diams\ = 4+\diams, \invp
         \item 2\hearts\ = 5\spades4\hearts\ 5-11
         \item 2\spades\ = 11+ \bal, no 4\major
         \item 2\nt = 11-12 \bal
@@ -186,8 +184,76 @@
     \end{itemize}
 }
 
+\section*{\colorbox{blue!30}{Forcing 1\spades rebid}}
+\addcontentsline{toc}{section}{Forcing 1\spades rebid}
+
+\subsubsection*{1\clubs -- 1\hearts\\
+                1\spades -- ?}
+\begin{itemize}
+    \item 1\nt = 7-10 \bal
+    \item 2\clubs = two-way checkback (does not always force 2\diams)
+    \item 2\diams = any \gf
+    \item 2\hearts = 5+\hearts, \nf
+    \item 2\spades = 4+\spades
+\end{itemize}
+
+\subsubsection*{1\clubs -- 1\hearts\\
+                1\spades -- 1\nt\\}
+\begin{itemize}
+    \item 2\clubs = 5+\clubs, 11-14
+    \item 2\diams = art, any 15+ \unbal
+    \item 2\hearts = 3\hearts, 11-14
+    \item 2\nt = 18-19 \bal\ \gf
+\end{itemize}
+
+\section*{\colorbox{blue!30}{Jump reverses}}
+\addcontentsline{toc}{section}{Jump reverses}
+
+\subsubsection*{1\clubs -- 1\hearts\\
+                ?}
+\begin{itemize}
+    \item 2\spades = \clubs\ \gf
+\end{itemize}
+
+\subsubsection*{1\clubs -- 1\spades\\
+                ?}
+\begin{itemize}
+    \item 3\diams = \clubs\ \gf
+\end{itemize}
+
+\subsubsection*{1\diams -- 1\hearts\\
+                ?}
+\begin{itemize}
+    \item 2\spades = \diams\ \gf
+\end{itemize}
+
+\subsubsection*{1\diams -- 1\spades\\
+                ?}
+\begin{itemize}
+    \item 3\hearts = \diams\ \gf
+\end{itemize}
+
 \section*{\colorbox{blue!30}{Two-way checkback}}
 \addcontentsline{toc}{section}{Two-way checkback}
+
+After any 1\anysuit{x}\ -- 1\anysuit{y}\ -- 1\anysuit{z}\ sequence (except:
+1\clubs -- 1\diams = negative).
+
+\subsubsection*{1\anysuit{x}\ -- 1\anysuit{y} \\ 1\anysuit{z} -- ?}
+\begin{itemize}
+    \item 2\clubs\ = \then 2\diams
+    \item 2\diams\ = any \gf
+    \item 2\nt = \then 3\clubs, weak or 55
+\end{itemize}
+
+\subsubsection*{1\anysuit{x}\ -- 1\anysuit{y} \\ 
+                1\anysuit{z} -- 2\nt\\
+                3\clubs -- ?}
+\begin{itemize}
+    \item 3\diams = 5\anysuit{y}5\diams
+    \item 3\hearts = 5\anysuit{y}5\hearts
+    \item 3\spades = 5\anysuit{y}5\clubs
+\end{itemize}
 
 \section*{\colorbox{blue!30}{Flannery}}
 \addcontentsline{toc}{section}{Flannery}
@@ -882,6 +948,407 @@
 
 \part*{\colorbox{RoyalPurple!30}{Competitive bidding}}
 \addcontentsline{toc}{part}{Competitive bidding}
+
+\chapter*{\colorbox{Plum!30}{1-level opening overcall}}
+\addcontentsline{toc}{chapter}{1-level opening overcall}
+
+\section*{\colorbox{blue!30}{1\clubs\ opening overcall}}
+\addcontentsline{toc}{section}{1\clubs\ opening overcall}
+
+\subsubsection*{1\clubs -- (\dbl) -- ?}
+\begin{itemize}
+    \item \rdbl = 10+
+    \item 1\diams/1\hearts/1\spades = 7+\hcp, 4+
+    \item 1\nt = 7-11
+    \item 2\clubs/2\diams/2\hearts/2\spades = \trsf{\diams/\hearts/\spades/\clubs} 6+, weak/\gf
+    \item 2\nt = \minor weak/\gf
+    \item 3\clubs/3\diams = \inv
+\end{itemize}
+
+\subsubsection*{1\clubs -- (1\diams) -- ?}
+\begin{itemize}
+    \item \dbl = 7+, 4+\hearts
+    \item 1\hearts = 7+, 4+\spades
+    \item 1\spades = \then 1\nt
+    \item 1\nt = 7-10, \diams stopper
+    \item 2\clubs = 54\major 6-11
+    \item 2\diams/2\hearts/2\spades = \trsf{\hearts/\spades/\clubs} 6+, weak/\gf
+    \item 2\nt = \inv
+    \item 3\clubs = \inv
+    \item 3\diams = ask stopper, long \clubs
+\end{itemize}
+
+\subsubsection*{1\clubs -- (1\hearts) -- ?}
+\begin{itemize}
+    \item \dbl = 7+, 4+\spades
+    \item 1\spades = \then 1\nt
+    \item 1\nt = 7-10, \hearts stopper
+    \item 2\clubs/2\hearts/2\spades = \trsf{\diams/\spades/\clubs} 6+, weak/\gf
+    \item 2\diams = \invp, ask stopper (2\nt/3\clubs = \nf)
+    \item 2\nt = \inv
+    \item 3\clubs/3\diams/3\spades = \inv
+\end{itemize}
+
+\subsubsection*{1\clubs -- (1\spades) -- ?}
+\begin{itemize}
+    \item \dbl = 4-5\hearts
+    \item 1\nt = 7-10, \spades stopper
+    \item 2\clubs/2\diams/2\spades = \trsf{\diams/\hearts/\clubs} 6+, weak/\gf
+    \item 2\hearts = \invp, ask stopper (2\nt/3\clubs = \nf)
+    \item 2\nt = \inv
+    \item 3\clubs/3\diams/3\hearts = \inv
+\end{itemize}
+
+\subsubsection*{1\clubs -- (1\nt) -- ?}
+\begin{itemize}
+    \item \dbl = penalty 9+
+    \item 2\clubs = 54\major (44)
+    \item 2\diams/2\hearts/2\spades = \nf
+    \item 2\nt = 55\minor
+    \item 3\anysuit{x} = \inv\ \unbal
+\end{itemize}
+
+\subsubsection*{1\clubs -- (2\diams) -- ?}
+2\diams = \diams
+\begin{itemize}
+    \item \dbl = takeout
+    \item 2\hearts/2\spades = \nat\ \nf
+    \item 2\nt/3\diams/3\hearts = \trsf{\clubs/\hearts/\spades}\ \invp
+    \item 3\clubs = 54\major\ \gf
+    \item 3\spades = ask for \diams stopper
+\end{itemize}
+
+\subsubsection*{1\clubs -- (2\hearts) -- ?}
+\begin{itemize}
+    \item \dbl = takeout
+    \item 2\spades = \nat\ \nf
+    \item 2\nt/3\clubs/3\hearts = \trsf{\clubs/\diams/\spades}\ \invp
+    \item 3\diams = ask stopper
+    \item 3\spades = \minor
+\end{itemize}
+
+\subsubsection*{1\clubs -- (2\spades) -- ?}
+\begin{itemize}
+    \item \dbl = takeout
+    \item 2\nt/3\clubs/3\diams = \trsf{\clubs/\diams/\hearts}\ \invp
+    \item 3\hearts = ask stopper
+    \item 3\spades = \minor
+\end{itemize}
+
+\subsubsection*{1\clubs -- (3\clubs) -- ?}
+\begin{itemize}
+    \item \dbl = takeout, \gf
+    \item 3\diams/3\hearts = \trsf{\hearts/\spades}, \invp
+    \item 3\spades = \trsf{\diams}, \gf
+\end{itemize}
+
+\subsubsection*{1\clubs -- (3\diams) -- ?}
+\begin{itemize}
+    \item \dbl = takeout, \gf
+    \item 3\hearts = \trsf{\spades}, \invp
+    \item 3\spades = \trsf{\hearts}, \gf
+\end{itemize}
+
+\subsubsection*{1\clubs -- (3\hearts) -- ?}
+\begin{itemize}
+    \item \dbl = \spades, \invp
+    \item 3\spades = 4\spades, no \hearts stopper, \gf
+\end{itemize}
+
+\subsubsection*{1\clubs -- (3\spades) -- ?}
+\begin{itemize}
+    \item \dbl = 4\hearts, \gf, no \spades stopper
+\end{itemize}
+
+\section*{\colorbox{blue!30}{1\diams\ opening overcall}}
+\addcontentsline{toc}{section}{1\diams\ opening overcall}
+
+\subsubsection*{1\diams -- (\dbl) -- ?}
+\begin{itemize}
+    \item \rdbl = 10+
+    \item 1\hearts/1\spades = 7+\hcp, 4+
+    \item 1\nt = 7-11
+    \item 2\clubs = \diams raise weak/\gf
+    \item 2\diams/2\hearts/2\spades = \trsf{\hearts/\spades/\clubs} 6+, weak/\gf
+    \item 2\nt = 4+\diams, \invp
+    \item 3\clubs = \inv
+    \item 3\diams = preempt
+\end{itemize}
+
+\subsubsection*{1\diams -- (1\hearts) -- ?}
+\begin{itemize}
+    \item \dbl = 4+\spades
+    \item 1\spades = \then 1\nt
+    \item 1\nt = 7-10
+    \item 2\clubs/2\hearts/2\spades = \trsf{\diams/\spades/\clubs}, weak/\gf
+    \item 2\diams = \diams\ \inv
+    \item 2\nt = \inv
+    \item 3\clubs/3\spades = \nat, \inv
+    \item 3\diams = preempt
+\end{itemize}
+
+\subsubsection*{1\diams -- (1\spades) -- ?}
+\begin{itemize}
+    \item \dbl = 4-5\hearts
+    \item 1\nt = 7-10
+    \item 2\clubs/2\diams/2\spades = \trsf{\diams/\hearts/\clubs}, weak/\gf
+    \item 2\hearts = \diams\ \inv
+    \item 2\nt = \inv
+    \item 3\clubs/3\hearts = \nat, \inv
+    \item 3\diams = preempt
+\end{itemize}
+
+\subsubsection*{1\diams -- (1\nt) -- ?}
+\begin{itemize}
+    \item \dbl = penalty 10+
+    \item 2\clubs = 54\major (44)
+    \item 2\diams/2\hearts/2\spades = \nf
+    \item 2\nt = \inv\ \diams
+    \item 3\anysuit{x} = \nat, \inv\ \unbal
+    \item 3\diams = preempt
+\end{itemize}
+
+\subsubsection*{1\diams -- (2\clubs) -- ?}
+\begin{itemize}
+    \item \dbl = takeout
+    \item 2\diams = \nat
+    \item 2\hearts/2\spades = \nat, \fonce
+    \item 2\nt = 54\major
+    \item 3\clubs = \diams\ \invp
+    \item 3\diams = preempt
+    \item 3\hearts/3\spades = color+fit
+\end{itemize}
+
+\subsubsection*{1\diams -- (2\hearts) -- ?}
+\begin{itemize}
+    \item \dbl = takeout
+    \item 2\spades = \nat\ \nf
+    \item 2\nt/3\clubs/3\hearts = \trsf{\clubs/\diams/\spades} \invp
+    \item 3\diams = competitive
+\end{itemize}
+
+\subsubsection*{1\diams -- (2\spades) -- ?}
+\begin{itemize}
+    \item \dbl = takeout
+    \item 2\nt/3\clubs = \trsf{\clubs/\diams}, \invp
+    \item 3\diams = competitive
+    \item 3\hearts = \nat, \gf
+\end{itemize}
+
+\subsubsection*{1\diams -- (3\clubs) -- ?}
+\begin{itemize}
+    \item \dbl = takeout, \gf
+    \item 3\diams = competitive
+    \item 3\hearts = \spades, \invp
+    \item 3\spades = \hearts, \gf
+\end{itemize}
+
+\subsubsection*{1\diams -- (3\hearts) -- ?}
+\begin{itemize}
+    \item \dbl = \spades, \gf
+    \item 3\spades = 4\spades, no \hearts stopper, \gf
+\end{itemize}
+
+\subsubsection*{1\diams -- (3\spades) -- ?}
+\begin{itemize}
+    \item \dbl = \hearts, \gf
+\end{itemize}
+
+\section*{\colorbox{blue!30}{1\hearts\ opening overcall}}
+\addcontentsline{toc}{section}{1\hearts\ opening overcall}
+
+\subsubsection*{1\hearts -- (\dbl) -- ?}
+\begin{itemize}
+    \item \rdbl = 10+ (may have 3\hearts)
+    \item 1\spades = \nat, 4+\spades, \fonce
+    \item 1\nt = \trsf{2\clubs}
+    \item 2\clubs = \trsf{2\diams}
+    \item 2\diams = \trsf{2\hearts}, constructive 8-10
+    \item 2\hearts = 4-7, 3\hearts
+    \item \small{SYSTEM ON}
+\end{itemize}
+
+\subsubsection*{1\hearts -- (1\spades) -- ?}
+\begin{itemize}
+    \item \dbl = takeout
+    \item 1\nt = \clubs
+    \item 2\clubs = \diams
+    \item 2\diams = fit, constructive/\gf
+    \item 2\hearts = weak raise (4-6)
+    \item 2\spades = 4\hearts, \inv
+    \item \small{SYSTEM ON}
+\end{itemize}
+
+\subsubsection*{1\hearts -- (1\nt) -- ?}
+\begin{itemize}
+    \item \dbl = 10+, penalty
+    \item 2\clubs/2\diams/2\hearts/2\spades = \nat, \nf
+    \item 2\nt = \minor
+    \item 3\clubs = \inv\ + fit
+    \item 3\diams = mixed raise
+    \item 3\hearts = preempt
+    \item 3\spades/3\nt/4\clubs = \spades/\diams/\clubs\ + fit
+\end{itemize}
+
+\subsubsection*{1\hearts -- (2\clubs) -- ?}
+\begin{itemize}
+    \item \dbl = takeout
+    \item 2\diams = \fonce
+    \item 2\hearts = 6-10
+    \item 2\spades = \fonce
+    \item 2\nt = \gf\ + fit
+    \item 3\clubs = \inv\ + fit
+    \item 3\diams = mixed raise
+    \item 3\hearts = preempt
+    \item 3\spades/4\diams = color + fit
+\end{itemize}
+
+\subsubsection*{1\hearts -- (2\diams) -- ?}
+\begin{itemize}
+    \item \dbl = takeout
+    \item 2\hearts = 6-10
+    \item 2\spades = \fonce
+    \item 2\nt = \clubs, \invp
+    \item 3\clubs = \gf\ + fit
+    \item 3\diams = \inv\ + fit
+    \item 3\hearts = preempt
+    \item 3\spades/4\clubs = color + fit
+\end{itemize}
+
+\subsubsection*{1\hearts -- (2\spades) -- ?}
+\begin{itemize}
+    \item \dbl = takeout
+    \item 2\nt = \clubs, \invp
+    \item 3\clubs = \diams, \invp
+    \item 3\diams = \hearts competative/\gf
+    \item 3\hearts = \hearts\ \inv
+    \item 3\spades = splinter
+    \item 4\clubs/4\diams = color + fit
+\end{itemize}
+
+\subsubsection*{1\hearts -- (3\clubs) -- ?}
+\begin{itemize}
+    \item \dbl = takeout
+    \item 3\diams = \hearts, competative/\gf
+    \item 3\hearts = \hearts, \inv
+    \item 3\spades = \spades\ \gf
+    \item 4\clubs = slam try, no \clubs shortness
+    \item 4\diams = slam try, \clubs shortness
+\end{itemize}
+
+\subsubsection*{1\hearts -- (3\diams) -- ?}
+\begin{itemize}
+    \item \dbl = takeout
+    \item 3\hearts = competative
+    \item 3\spades = \spades, \gf
+    \item 4\clubs = slam try, no \diams shortness
+    \item 4\diams = slam try, \diams shortness
+\end{itemize}
+
+\subsubsection*{1\hearts -- (3\spades) -- ?}
+\begin{itemize}
+    \item \dbl = takeout
+    \item 4\clubs = slam try, no \spades shortness
+    \item 4\diams = slam try, \spades shortness
+    \item 4\spades = slam try, \spades void
+\end{itemize}
+
+\section*{\colorbox{blue!30}{1\spades\ opening overcall}}
+\addcontentsline{toc}{section}{1\spades\ opening overcall}
+
+\subsubsection*{1\spades -- (\dbl) -- ?}
+\begin{itemize}
+    \item \rdbl = 10+ (may have 3\spades)
+    \item 1\nt = \trsf{2\clubs}
+    \item 2\clubs = \trsf{2\diams}
+    \item 2\diams = \trsf{2\hearts}
+    \item 2\hearts = \trsf{2\spades}, constructive 8-10
+    \item 2\spades = 4-7, 3\spades
+    \item \small{SYSTEM ON}
+\end{itemize}
+
+\subsubsection*{1\spades -- (1\nt) -- ?}
+\begin{itemize}
+    \item \dbl = 10+, penalty
+    \item 2\clubs/2\diams/2\hearts/2\spades = \nat, \nf
+    \item 2\nt = \minor
+    \item 3\clubs = \inv\ + fit
+    \item 3\diams = mixed raise
+    \item 3\hearts/4\clubs/4\diams = color + fit
+\end{itemize}
+
+\subsubsection*{1\spades -- (2\clubs) -- ?}
+\begin{itemize}
+    \item \dbl = takeout
+    \item 2\diams/2\hearts = \fonce
+    \item 2\spades = 6-10
+    \item 2\nt = fit, \gf
+    \item 3\clubs = fit, \inv
+    \item 3\diams = mixed raise
+    \item 3\hearts = \hearts\ + fit, \inv
+    \item 3\spades = preempt
+    \item 4\diams/4\hearts = color + fit
+\end{itemize}
+
+\subsubsection*{1\spades -- (2\diams) -- ?}
+\begin{itemize}
+    \item \dbl = takeout
+    \item 2\hearts = \fonce
+    \item 2\spades = 6-10
+    \item 2\nt = \clubs\ \invp
+    \item 3\clubs = fit, \gf
+    \item 3\diams = fit, \inv
+    \item 3\hearts = mixed raise
+    \item 3\spades = preempt
+    \item 4\clubs/4\hearts = color + fit
+\end{itemize}
+
+\subsubsection*{1\spades -- (2\hearts) -- ?}
+\begin{itemize}
+    \item \dbl = takeout
+    \item 2\spades = 6-10
+    \item 2\nt = \clubs\ \invp
+    \item 3\clubs = \diams\ \invp
+    \item 3\diams = \spades, \gf
+    \item 3\hearts = \spades, \inv
+    \item 3\spades = preempt
+    \item 4\clubs/4\diams = color + fit
+\end{itemize}
+
+\subsubsection*{1\spades -- (3\clubs) -- ?}
+\begin{itemize}
+    \item \dbl = take out
+    \item 3\diams = \hearts, \invp
+    \item 3\hearts = \spades, competative/\gf
+    \item 3\spades = \spades, \inv
+    \item 3\nt = to play
+    \item 4\clubs = slam try, no \clubs shortness
+    \item 4\diams = slam try, \clubs shortness
+    \item 4\hearts/4\spades = to play
+\end{itemize}
+
+\subsubsection*{1\spades -- (3\diams) -- ?}
+\begin{itemize}
+    \item \dbl = takeout
+    \item 3\hearts = \hearts\ \gf
+    \item 3\spades = competitive
+    \item 3\nt = to play
+    \item 4\clubs = slam try, no \diams shortness
+    \item 4\diams = slam try, \diams shortness
+    \item 4\hearts/4\spades = to play
+\end{itemize}
+
+\subsubsection*{1\spades -- (3\hearts) -- ?}
+\begin{itemize}
+    \item \dbl = takeout
+    \item 3\spades = competitive
+    \item 3\nt = to play
+    \item 4\clubs = slam try, no \diams shortness
+    \item 4\diams = slam try, \diams shortness
+    \item 4\hearts = slam try, \hearts void
+    \item 4\spades = to play
+    \item 4\nt = minors
+\end{itemize}
 
 \part*{\colorbox{RoyalPurple!30}{Defensive bidding}}
 \addcontentsline{toc}{part}{Defensive bidding}
