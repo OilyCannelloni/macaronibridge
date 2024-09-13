@@ -1,0 +1,70 @@
+\documentclass[12pt, a4paper]{report}
+\usepackage{import}
+
+\import{../../../lib/}{bridge.sty}
+\setmainlanguage{english}
+
+\usepackage[colorlinks=true, linkcolor=blue]{hyperref}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
+\usepackage{changepage}
+
+\title{1\diams\ -- 1\major\ -- 2\ntx}
+\author{Krysia Gasińska}
+\begin{document}
+\maketitle
+
+\subsubsection*{1\diams\ -- 1\hearts \\
+                2\nt -- ?}
+\begin{itemize}
+    \item \pass
+    \item 3\clubs = ask
+    \item 3\diams/3\hearts = to play
+    \item 3\spades = ask \clubs
+\end{itemize}
+
+\subsubsection*{1\diams\ -- 1\hearts \\
+                2\nt -- 3\clubs\\
+                ?}
+\begin{itemize}
+    \item 3\diams = 3\hearts (3\hearts agreeing \hearts, 3\spades ask \clubs)
+    \item 3\hearts = 4\hearts (agreeing \hearts)
+    \item 3\spades = long \diams, 2\hearts (4\clubs = agreeing \hearts)
+\end{itemize}
+After any response 4\diams = agreeing \diams.
+
+\subsubsection*{1\diams\ -- 1\hearts \\
+                2\nt -- 3\spades\\
+                ?}
+\begin{itemize}
+    \item 4\clubs = 4\hearts (agreeing)
+    \item 4\diams = 4+\clubs (agreeing)
+\end{itemize}
+
+\subsubsection*{1\diams\ -- 1\spades \\
+                2\nt -- ?}
+\begin{itemize}
+    \item \pass
+    \item 3\clubs = ask
+    \item 3\diams/3\spades = to play
+    \item 3\hearts = 4\hearts\ + 5\spades (ask)
+\end{itemize}
+
+\subsubsection*{1\diams\ -- 1\spades \\
+                2\nt -- 3\clubs\\
+                ?}
+\begin{itemize}
+    \item 3\diams = long \diams or 4\clubs, 2\spades (3\hearts = ask, 3\spades = agreeing \spades)
+    \item 3\hearts = 3\spades (3\spades agreeing \spades)
+    \item 3\spades = 4\spades (agreeing \spades)
+\end{itemize}
+
+\subsubsection*{1\diams\ -- 1\spades \\
+                2\nt -- 3\hearts\\
+                ?}
+\begin{itemize}
+    \item 3\spades = 3-4\spades (agreeing \spades)
+    \item 4\clubs = 4\hearts (agreeing \hearts)
+\end{itemize}
+
+\end{document}

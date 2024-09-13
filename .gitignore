@@ -4,6 +4,7 @@
 *.aux
 *.log
 *.out
+*.toc
 .vscode
 /KrysiaBartek2024/source/*.pdf
 *.tmp
