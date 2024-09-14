@@ -1,0 +1,905 @@
+\documentclass[12pt, a4paper]{report}
+\usepackage{import}
+
+\import{../../lib/}{bridge.sty}
+\setmainlanguage{english}
+
+\usepackage[colorlinks=true, linkcolor=blue]{hyperref}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
+\usepackage{changepage}
+
+\title{\spades\clubs Strefa \xdiams\xhearts}
+% \author{Krysia Gasińska \& Kacper Kuflowski}
+\begin{document}
+\maketitle
+
+% \tableofcontents
+
+\section*{\colorbox{Plum!30}{Założenia}}
+\addcontentsline{toc}{chapter}{Założenia} {
+
+    \section*{\colorbox{blue!30}{Licytacja jednostronna}}
+    \addcontentsline{toc}{section}{Licytacja jednostronna}
+        \begin{itemize}
+            \item Strefa
+            \item 1\diams z dobrej czwórki
+            \item 2\major \nat blok
+            \item 2\diams \nat blok \imp
+            \item 2\nt 20-21 \bal
+            \item 2\clubs = Acol
+            \item Gazilli
+            \item podwójny magister
+            \item Flannery po 1\minor
+            \item Podniesienia z 3, kontra bilansowa
+            \item Niepoważne 3\nt, po 2/1 nie sprzedajemy siły do poziomu 3!!! 
+            (jako że na razie nie umiem inaczej)
+            \item 4\nt Blackwood na \major
+            \item 5\minor+1 = RKCB na \minor (4\nt = \nat) \imp
+            \item Exclusion 03/14
+            \item po pytaniu o krótkość LSF (brak najpierw)
+        \end{itemize}
+    
+    \section*{\colorbox{blue!30}{Licytacja dwustronna}}
+    \addcontentsline{toc}{section}{Competitive bidding}
+
+        \begin{itemize}
+            \item Po wejściu przeciwnika: nowy kolor 2\anysuit{x} = \nf, 3\anysuit{x} = \gf
+            \item Niższa z odzywek: [2\nt, KP] = \invp z fitem, wyższa: mixed raise
+            \item Po naszym wejściu na poziomie 1 nic nie forsuje chyba że z przeskokiem (lub KP), 
+            na poziomie 2 nowy kolor \fonce
+            \item DONT po 1\nt (\dbl)
+            \item Rubensohl + Lebensohl po wejściu na 1\nt
+            \item Na 1\nt -- Jassem
+            \item Michaels -- pełen przedział (nie mini-maxi)
+            \item Drury w jednostronnej, w dwustronnej KP jest \invp (\clubs = \nat, chyba że przeciwnik otwarł 1\clubs)
+        \end{itemize}
+
+    \section*{\colorbox{blue!30}{Sygnalizacja}}
+    \addcontentsline{toc}{section}{Sygnalizacja}
+
+        \begin{itemize}
+            \item Wist odmienny, marka/demarka, Lavinthale
+            \item Ilościówki (ale nie zawsze mi wychodzą)
+        \end{itemize}
+}
+
+\newpage
+
+\section*{\colorbox{blue!30}{Otwarcie 1\clubs}}
+\addcontentsline{toc}{section}{Otwarcie 1\clubs} {
+
+    \subsubsection*{1\clubs -- ?}
+    \begin{itemize}
+        \item 1\diams = negat (potem klasycznie)
+        \item 2\spades = transfer na \nt
+        \item 2\clubs = \gf\ \bal! (lub \clubs)
+    \end{itemize}
+
+    \subsubsection*{1\clubs\ -- {2\clubs} \\ ?}
+    \begin{itemize}
+        \item 2\diams\ = \bal (może mieć 4\major)
+        \item 2\major = 5\clubs4\major
+        \item 2\nt\ = 5\clubs4\diams
+        \item 3\clubs\ = \clubs
+    \end{itemize}
+
+    \subsubsection*{1\clubs\ -- 2\clubs \\
+                2\diams -- ?}
+    \begin{itemize}
+        \item 2\nt = 12-14/18+ \bal
+        \item 3\nt = 15-17 \bal
+        \item pozostałe odzwyki nat z treflami
+    \end{itemize}
+
+    \subsubsection*{1\clubs -- 1\major \\ 2\clubs -- ?}
+    \begin{itemize}
+        \item 2\diams = sztuczne, \invp, forsuje do 3\clubs 
+    \end{itemize}
+
+}
+
+\section*{\colorbox{blue!30}{Otwarcie 1\diams}}
+\addcontentsline{toc}{section}{Otwarcie 1\diams} {
+    Z dobrej czwórki!
+
+    \subsubsection*{1\diams\ -- ?}
+    \begin{itemize}
+        \item 2\diams\ = 4+\diams, \invp (inverted)
+        \item 2\hearts\ = Flannery
+        \item 2\spades\ = 11+ \bal, no 4\major
+        \item 2\nt = 11-12 \bal
+        \item 3\clubs\ = \then 3\diams, blok albo silny splinter
+        \item 3\diams\ = mixed raise
+        \item 3\nt = 15-17 \bal
+    \end{itemize}
+
+    \subsubsection*{1\diams -- 3\clubs\\
+                    3\diams -- ?}
+    \begin{itemize}
+        \item 3\hearts/3\spades/3\nt = \hearts/\spades/\clubs krótkość
+    \end{itemize}
+
+    \subsubsection*{1\diams -- 1\major\\
+                    2\diams -- ?}
+    \begin{itemize}
+        \item 2\major = \nf
+        \item 3rd suit = stopper, \gf
+        \item 2\nt = \gf
+        \item 3\diams = \inv
+    \end{itemize}
+
+    \subsubsection*{1\diams\ -- 2\diams \\ ?}
+    \begin{itemize}
+        \item 2\hearts\ = \hearts\ stopper
+        \item 2\spades\ = \spades\ stopper
+        \item 2\nt\ = stopery w \major
+        \item 3\clubs = \nat
+        \item 3\diams = \soff
+    \end{itemize}
+
+}
+
+\section*{\colorbox{blue!30}{Otwarcie 1\major}}
+\addcontentsline{toc}{section}{Otwarcie 1\major} {
+
+    \subsubsection*{1\major -- ?}
+    \begin{itemize}
+        \item 2\major = konstruktywne
+        \item 2\spades (po 1\hearts) = blok
+        \item 2\nt = limit raise
+        \item 3\clubs = mixed raise
+        \item 3\diams = mini splinter (3\hearts ask)
+        \item 3\hearts (po 1\spades) = \nat\ \inv
+        \item 3\major = blok
+        \item 3\nt/4\anysuit{x} (3\spades) = splinter
+        \item 4\diams/4\hearts = \then 4\major
+    \end{itemize}
+}
+
+\section*{\colorbox{blue!30}{Otwarcie 1\ntx}}
+\addcontentsline{toc}{section}{Otwarcie 1\ntx} {
+
+    Może mieć 5\major, 6\minor, singlową figurę, 54...
+
+    \subsubsection*{1\ntx\ -- ?}
+    \begin{itemize}
+        \item 2\spades\ = \inv lub \trsf{\clubs} (2\nt = min, 3\clubs = max)
+        \item 2\nt\ = \then {\diams} (3\clubs = góra)
+        \item 3\clubs\ = Puppet Stayman \imp
+        \item 3\hearts\ = 3-\spades1-\hearts, 54\minor
+        \item 3\spades\ = 3-\hearts1-\spades, 54\minor
+        \item 4\clubs\ = 55\major
+        \item 4\diams, 4\hearts\ = Texas
+    \end{itemize}
+
+    \subsubsection*{Smolen \\
+                    1\ntx\ -- 2\clubs \\
+                    2\diams\ -- ?}
+    \begin{itemize}
+        \item 2\major = do gry
+        \item 3\hearts\ = 5\spades4\hearts, \gf
+        \item 3\spades\ = 5\hearts4\spades, \gf
+    \end{itemize}
+
+    \subsubsection*{1\ntx\ -- 2\diams \\
+                    2\hearts\ -- ?}
+    \begin{itemize}
+        \item 2\spades\ = 5\hearts4\spades, \inv
+    \end{itemize}
+
+    \subsubsection*{1\ntx\ -- 2\hearts \\
+                    2\spades\ -- ?}
+    \begin{itemize}
+        \item 3\hearts\ = 5\spades4\hearts, \inv
+    \end{itemize}
+}
+
+\section*{\colorbox{blue!30}{Otwarcie 2\clubs}}
+\addcontentsline{toc}{section}{Otwarcie 2\clubs} {
+
+    \subsubsection*{2\clubs\ -- ?}
+    \begin{itemize}
+        \item 2\diams\ = 0-1 controls (2\hearts = Kokish relay)
+        \item 2\hearts\ = 2 controls (potem \nat)
+        \item 2\spades = 3+ controls (potem \nat)
+        \item 2\nt/3\clubs/3\diams/3\hearts = \clubs/\diams/\hearts/\spades, własny bardzo dobry kolor
+    \end{itemize}
+
+    \subsubsection*{2\clubs\ -- 2\diams\\
+                2\hearts -- 2\spades\\
+                ?}
+    \begin{itemize}
+        \item 2\nt = \nf\ \bal\ (potem jak po otw 2\nt)
+        \item 3\clubs = 5\hearts4\diams
+        \item 3\diams = 6\hearts
+        \item 3\hearts = 5\hearts4\spades
+        \item 3\spades = 5\hearts4\clubs
+    \end{itemize}
+
+    \subsubsection*{2\clubs\ -- 2\diams\\
+                2\spades -- 2\nt (relay)\\
+                ?}
+    \begin{itemize}
+        \item 3\clubs = 5\spades4\diams
+        \item 3\diams = 5\spades4\hearts
+        \item 3\hearts = 6\spades
+        \item 3\spades = 5\spades4\clubs
+    \end{itemize}
+
+    \subsubsection*{2\clubs\ -- 2\anysuit{x}\\
+                3\clubs -- ?}
+    \begin{itemize}
+        \item 3\diams = ask 4\major
+        \item 3\hearts/3\spades = 5\hearts/5\spades
+    \end{itemize}
+}
+
+\section*{\colorbox{blue!30}{Otwarcie blokiem}}
+\addcontentsline{toc}{section}{Otwarcie blokiem} {
+    Tu mi w sumie wszystko jedno, z każdym gram inaczej, może być np:
+
+    2\nt = ask \nt feature \invp\\
+    nowy kolor = \fonce\\
+    4\clubs = RKCB (0/1-Q/1+Q/2-Q/2+Q) (po 3\clubs : 4\diams) \\
+}
+
+\section*{\colorbox{blue!30}{Otwarcie 2\ntx}}
+\addcontentsline{toc}{section}{Otwarcie 2\ntx} {
+
+    \subsubsection*{2\nt -- ?}
+    \begin{itemize}
+        \item 3\clubs\ = Puppet Stayman
+        \item 3\diams\ = \then\ \hearts\ + superaccepts
+        \item 3\hearts\ = \then\ \spades\ + superaccepts
+        \item 3\spades\ = forsuje 3\nt \imp
+        \item 3\nt\ = 5\spades4\hearts, \nf \imp
+        \item 4\clubs\ = 55\major
+        \item 4\diams, 4\hearts\ = Texas
+    \end{itemize}
+
+    \subsubsection*{2\ntx\ -- 3\diams \\ ?}
+    tak samo po transferze na \spades
+    \begin{itemize}
+        \item 3\hearts\ = 2\hearts
+        \item 3\nt = fit, propozycja
+        \item cue = fit
+    \end{itemize}
+
+    \subsubsection*{2\ntx\ -- 3\spades \\ 3\nt\ -- ?}
+    \begin{itemize}
+        \item 4\clubs\ = 6+\clubs
+        \item 4\diams\ = 6+\diams
+        \item 4\hearts\ = 54\minor\ 1-\hearts
+        \item 4\spades\ = 54\minor\ 1-\spades
+    \end{itemize}
+
+    Puppet Stayman:
+    \subsubsection*{2\ntx\ -- 3\clubs \\ ?}
+    \begin{itemize}
+        \item 3\diams = 4\major, brak 5\major
+        \item 3\major = 5\major
+        \item 3\nt = brak 4\major
+    \end{itemize}
+
+    \subsubsection*{2\ntx\ -- 3\clubs \\ 
+                    3\diams -- ?}
+    \begin{itemize}
+        \item 3\major = 4OM
+        \item 4\diams = 4\hearts i 4\spades
+    \end{itemize}
+
+    {\color{red}Minor Puppet \leftarrow\ na końcu pliku}
+
+}
+
+\section*{\colorbox{blue!30}{Podniesienie z 3}}
+\addcontentsline{toc}{section}{Podniesienie z 3} {
+    Tu mam 2 wersje.\\
+    {\large wersja 1 (bardzo prosta)}
+
+    \begin{itemize}
+        \item 2\nt\ = \inv\ z 4\major\ \nf
+        \item 3[kolor otwarcia] = \nat\ \inv\ (z 4\major)
+        \item najniższa odzywka (poza powyższymi) = pytanie o krótkość z 5\major, \gf
+        \item druga najniższa odzwyka = \gf z 4\major
+    \end{itemize}
+
+    Na przykład:
+
+    \subsubsection*{1\clubs -- 1\hearts \\ 2\hearts -- ?}
+    \begin{itemize}
+        \item 2\spades = 5\hearts, \gf, \lsf
+        \item 2\nt = 4\hearts, \inv
+        \item 3\clubs = 4\hearts + 4\clubs, \inv
+        \item 3\diams = 4\hearts, \gf
+    \end{itemize}
+
+    \subsubsection*{1\clubs -- 1\spades \\ 2\spades -- ?}
+    \begin{itemize}
+        \item 2\nt = 4\spades, \inv
+        \item 3\clubs = 4\spades + 4\clubs, \inv
+        \item 3\diams = 5\spades, \gf, \lsf
+        \item 3\hearts = 4\spades, \gf
+    \end{itemize}
+
+    {\large wersja 2 (pełna)}
+    \subsubsection*{1\clubs -- 1\hearts\\
+                    2\hearts -- ?}
+    \begin{itemize}
+        \item 2\spades = \gf
+        \item 2\nt = \inv\ \spades
+        \item 3\minor/3\hearts = \inv
+    \end{itemize}
+
+    \subsubsection*{1\clubs -- 1\hearts\\
+                    2\hearts -- 2\spades\\
+                    ?}
+    \begin{itemize}
+        \item 2\nt = 4\hearts (3\clubs = ask)
+        \item 3\clubs = 3\hearts + krótkość (3\diams = ask, nie uzgadnia \hearts)
+        \item 3\diams = 2326
+        \item 3\hearts = 3325
+        \item 3\spades = 2335
+        \item 3\nt = 2344
+    \end{itemize}
+
+    \subsubsection*{1\clubs -- 1\hearts\\
+                    2\hearts -- 2\spades\\
+                    2\nt -- 3\clubs\\
+                    ?}
+    \begin{itemize}
+        \item 3\diams = \bal
+        \item 3\hearts = 2425
+        \item 3\spades = 3415
+        \item 3\nt = 1435
+    \end{itemize}
+
+    \subsubsection*{1\clubs -- 1\spades\\
+                    2\spades -- ?}
+    \begin{itemize}
+        \item 2\nt = \gf
+        \item 3\anysuit{x} = \inv
+    \end{itemize}
+
+    \subsubsection*{1\clubs -- 1\spades\\
+                    2\spades -- 2\nt\\
+                    ?}
+    \begin{itemize}
+        \item 3\clubs = 4\spades (3\diams = ask)
+        \item 3\diams = 3\spades + krótkość (3\hearts = ask, nie uzgadnia \spades)
+        \item 3\hearts = 3226
+        \item 3\spades = 3325
+        \item 3\nt = 3235
+    \end{itemize}
+
+    \subsubsection*{1\clubs -- 1\spades\\
+                    2\spades -- 2\nt\\
+                    3\clubs -- 3\diams\\
+                    ?}
+    \begin{itemize}
+        \item 3\hearts = \bal
+        \item 3\spades = 4225
+        \item 3\nt = 4315
+        \item 4\clubs = 4135
+    \end{itemize}
+
+    \subsubsection*{1\diams -- 1\hearts\\
+                    2\hearts -- ?}
+    \begin{itemize}
+        \item 2\spades = \gf
+        \item 2\nt = \inv\ \spades
+        \item 3\minor/3\hearts = \inv
+    \end{itemize}
+
+    \subsubsection*{1\diams -- 1\hearts\\
+                    2\hearts -- 2\spades\\
+                    ?}
+    \begin{itemize}
+        \item 2\nt = 4\hearts (3\clubs = ask)
+        \item 3\clubs = 3\hearts + krótkość (3\diams = ask, nie uzgadnia \hearts)
+        \item 3\diams = 2362
+        \item 3\hearts = 3352
+        \item 3\spades = 2335
+        \item 3\nt = 2352
+    \end{itemize}
+
+    \subsubsection*{1\diams -- 1\hearts\\
+                    2\hearts -- 2\spades\\
+                    2\nt -- 3\clubs\\
+                    ?}
+    \begin{itemize}
+        \item 3\diams = 2452
+        \item 3\hearts = 3451/4441
+        \item 3\spades = 1453/1444
+    \end{itemize}
+
+    \subsubsection*{1\diams -- 1\spades\\
+                    2\spades -- ?}
+    \begin{itemize}
+        \item 2\nt = \gf
+        \item 3\anysuit{x} = \inv
+    \end{itemize}
+
+    \subsubsection*{1\diams -- 1\spades\\
+                    2\spades -- 2\nt\\
+                    ?}
+    \begin{itemize}
+        \item 3\clubs = 4\spades (3\diams = ask)
+        \item 3\diams = 3\spades + krótkość (3\hearts = ask, nie uzgadnia \spades)
+        \item 3\hearts = 3262
+        \item 3\spades = 3352
+        \item 3\nt = 3252
+    \end{itemize}
+
+    \subsubsection*{1\diams -- 1\spades\\
+                    2\spades -- 2\nt\\
+                    3\clubs -- 3\diams\\
+                    ?}
+    \begin{itemize}
+        \item 3\hearts = \bal
+        \item 3\spades = 4252
+        \item 3\nt = 4351
+        \item 4\clubs = 4153
+    \end{itemize}
+
+    \subsubsection*{1\hearts -- 1\spades\\
+                    2\spades -- ?}
+    \begin{itemize}
+        \item 2\nt = \gf
+        \item 3\anysuit{x} = \inv
+    \end{itemize}
+
+    \subsubsection*{1\hearts -- 1\spades\\
+                    2\spades -- 2\nt\\
+                    ?}
+    \begin{itemize}
+        \item 3\clubs = 4\spades (3\diams = ask)
+        \item 3\diams = 3\spades + krótkość (3\hearts = ask, nie uzgadnia \spades)
+        \item 3\hearts = 3622
+        \item 3\spades = 3532
+        \item 3\nt = 3523
+    \end{itemize}
+
+    \subsubsection*{1\hearts -- 1\spades\\
+                    2\spades -- 2\nt\\
+                    3\clubs -- 3\diams\\
+                    ?}
+    \begin{itemize}
+        \item 3\hearts = \bal
+        \item 3\spades = 4522
+        \item 3\nt = 4531
+        \item 4\clubs = 4513
+    \end{itemize}
+
+    W tej wersji nie podnosimy 2\spades z 3(244).\\
+    Oraz z 43(42) należy dać rebid 1\spades (nie 2\hearts).
+}
+
+\section*{\colorbox{blue!30}{Gazilli (proste)}}
+\addcontentsline{toc}{section}{Gazilli} {
+
+    \subsubsection*{1\hearts\ -- 1\spades\ \\ ?}
+    \begin{itemize}
+        \item 2\clubs\ = 5\hearts4\clubs\ 11-15 OR 16+ HCP \fonce
+        \item 2\nt = 6\hearts4\minor, 15+
+    \end{itemize}
+
+    \subsubsection*{1\hearts\ -- 1\ntx\ \\ ?}
+    \begin{itemize}
+        \item 2\clubs\ = 5\hearts\clubs\ 11-15 OR 16+ HCP \fonce
+        \item 2\diams\ = 5\hearts4\diams\ 11-15
+        \item 2\hearts\ = 11-15
+        \item 2\spades\ = 6\hearts5\spades\ \gf
+        \item 2\ntx\ = 6\hearts4\minor\ 15+
+        \item 3\clubs\ = 5\hearts5\clubs\ \gf
+        \item 3\diams\ = 5\hearts5\diams\ \gf
+        \item 3\hearts\ = uzgadnia \hearts\ \gf
+    \end{itemize}
+
+    \subsubsection*{1\spades\ -- 1\ntx\ \\ ?}
+    \begin{itemize}
+        \item \pass\ = 5332 12-14
+        \item 2\clubs\ = 5\spades\clubs\ 11-15 OR 16+ HCP \fonce
+        \item 2\diams\ = 5\spades4\diams\ 11-15
+        \item 2\hearts\ = 5\spades4\hearts\ 11-15
+        \item 2\spades\ = 11-15
+        \item 2\ntx\ = 6\spades4\minor\ 15+
+        \item 3\clubs\ = 5\spades5\clubs\ \gf
+        \item 3\diams\ = 5\spades5\diams\ \gf
+        \item 3\hearts\ = 5\spades5\hearts\ \gf
+        \item 3\spades\ = uzgadnia \spades\ \gf
+    \end{itemize}
+
+    \subsubsection*{1\hearts\ -- 1\spades\ \\ 2\clubs\ -- ?}
+    \begin{itemize}
+        \item \diams\ = 8+
+        \item \hearts\ = 2\hearts\ 5-7
+        \item \spades\ = good 5\spades\ 5-7
+        \item 2\ntx\ = 1-\hearts\ 5-7
+        \item 3\clubs\ = 6+\clubs\ 5-7
+        \item 3\diams\ = 6+\diams\ 5-7
+        \item 3\hearts = \hearts\ fit, \gf
+    \end{itemize}
+
+    \subsubsection*{1\hearts\ -- 1\ntx\ \\ 2\clubs\ -- ?}
+    \begin{itemize}
+        \item 2\diams\ = 8+
+        \item 2\hearts\ = 2-3\hearts\ 5-7
+        \item 2\spades\ = 55\minor\ 5-7
+        \item 2\nt\ = 1-\hearts\ 5-7
+        \item 3\clubs\ = 6+\clubs\ 5-7
+        \item 3\diams\ = 6+\diams\ 5-7
+    \end{itemize}
+
+    \subsubsection*{1\spades\ -- 1\ntx\ \\ 2\clubs\ -- ?}
+    \begin{itemize}
+        \item 2\diams\ = 8+
+        \item 2\hearts\ = 5\hearts\ 5-7
+        \item 2\spades\ = 2-3\spades\ 5-7
+        \item 2\ntx\ = 1-\spades\ 5-7
+        \item 3\clubs\ = 6+\clubs\ 5-7
+        \item 3\diams\ = 6+\diams\ 5-7
+    \end{itemize}
+
+    \subsubsection*{1\hearts\ -- 1\spades\ \\ 2\clubs\ -- 2\diams \\ ?}
+    \begin{itemize}
+        \item 2\hearts\ = 5\hearts4\clubs\ 11-15
+        \item 2\spades\ = 5\hearts, =3\spades\ 16+
+        \item 2\ntx\ = 5332 18-20
+        \item 3\clubs\ = 5\hearts4\clubs\ 16+
+        \item 3\diams\ = 5\hearts4\diams\ 16+
+        \item 3\hearts\ = 6\hearts\ 16+
+        \item 3\spades\ = 5\hearts4\spades\ \gf
+    \end{itemize}
+
+    \subsubsection*{1\hearts\ -- 1\ntx\ \\ 2\clubs\ -- 2\diams \\ ?}
+    \begin{itemize}
+        \item 2\hearts\ = 5\hearts4\clubs\ 11-15
+        \item 2\spades\ = 5\hearts4\spades\ 16+
+        \item 2\ntx\ = 5332 18-20
+        \item 3\clubs\ = 5\hearts4\clubs\ 16+
+        \item 3\diams\ = 5\hearts4\diams\ 16+
+        \item 3\hearts\ = 6\hearts\ 16+
+    \end{itemize}
+
+    \subsubsection*{1\spades\ -- 1\ntx\ \\ 2\clubs\ -- 2\diams \\ ?}
+    \begin{itemize}
+        \item 2\hearts\ = 5\spades4\hearts\ 16+
+        \item 2\spades\ = 5\spades4\clubs\ 11-15
+        \item 2\ntx\ = 5332 18-20
+        \item 3\clubs\ = 5\spades4\clubs\ 16+
+        \item 3\diams\ = 5\spades4\diams\ 16+
+        \item 3\spades\ = 6\spades\ 16+
+    \end{itemize}
+
+}
+
+\section*{\colorbox{blue!30}{Rebid 2\ntx}}
+\addcontentsline{toc}{section}{Rebid 2\ntx} {
+
+    Akceptacja transferu ustala kolor.
+
+    \subsubsection*{1\clubs -- 1\hearts \\ 2\nt -- 3\clubs}
+    \begin{itemize}
+        \item 3\diams = 3\hearts
+        \item 3\hearts = 4\spades, bez 3\hearts
+        \item 3\spades = 5\clubs
+        \item 3\nt = 4\diams
+    \end{itemize}
+
+    \subsubsection*{1\diams -- 1\hearts \\ 2\nt -- 3\clubs}
+    \begin{itemize}
+        \item 3\diams = 3\hearts
+        \item 3\hearts = 4\spades, bez 3\hearts
+        \item 3\spades = 6\diams
+        \item 3\nt = 3+\clubs
+    \end{itemize}
+
+    \subsubsection*{1\clubs -- 1\spades \\ 2\nt -- 3\clubs}
+    \begin{itemize}
+        \item 3\diams = 4\hearts, może mieć 3\spades
+        \item 3\hearts = 3\spades, bez 4\hearts
+        \item 3\spades = 5\clubs
+        \item 3\nt = 4\diams
+    \end{itemize}
+
+    \subsubsection*{1\diams -- 1\spades \\ 2\nt -- 3\clubs}
+    \begin{itemize}
+        \item 3\diams = 4\hearts, może mieć 3\spades
+        \item 3\hearts = 3\spades, bez 4\hearts
+        \item 3\spades = 6\diams
+        \item 3\nt = 3+\clubs
+    \end{itemize}
+
+
+}
+
+
+\section*{\colorbox{blue!30}{Rewersy}}
+\addcontentsline{toc}{section}{Rewersy} {
+    Powtórzenie swojego koloru = slow down (nic nie mówi o składzie),
+    dzięki temu rewers jest 16+, nie-\gf. Np:
+
+    \subsubsection*{1\diams -- 1\spades \\ 2\hearts}
+    \begin{itemize}
+        \item 2\spades = slow down
+        \item 2\nt = \gf
+    \end{itemize}
+}
+
+\section*{\colorbox{blue!30}{2/1}}
+\addcontentsline{toc}{section}{2/1} {
+    Do poziomu 3 nie sprzedajemy siły (tylko skład), więc np:\\
+    
+    \subsubsection*{1\hearts -- 2\clubs \\ ?}
+    \begin{itemize}
+        \item 2\hearts = 6\hearts (dowolna siła)
+        \item 2\nt = 5(332) (dowolna siła)
+    \end{itemize}
+
+    Potem bilansowanie niepoważnym 3\nt\ (3\spades) lub cue.
+}
+
+\section*{\colorbox{blue!30}{Po wejściu przeciwnika na 1\ntx}}
+\addcontentsline{toc}{section}{Po wejściu przeciwnika na 1\ntx} {
+
+    \subsubsection*{1\ntx\ -- (2\clubs) -- ?}
+    2\clubs\ = \clubs
+    \begin{itemize}
+        \item \dbl\ = Stayman
+    \end{itemize}
+
+    \textsc{system on}
+
+    \subsubsection*{1\ntx\ -- (\alrts{2\clubs}) -- ?}
+    2\clubs\ = \major
+    \begin{itemize}
+        \item \dbl\ = 8+
+        \item 2\diams, 2\hearts = do gry
+        \item 2\spades = \minor, \invp
+        \item 2\nt/3\clubs/3\diams/3\hearts = \trsf{\clubs/\diams/\hearts/\spades}, 5+, \invp
+        \item 3\spades = \gf
+    \end{itemize}
+
+    \subsubsection*{1\ntx\ -- (2\diams) -- ?}
+    2\diams\ = \diams
+    \begin{itemize}
+        \item \dbl\ = negatywna
+        \item 2\hearts, 2\spades\ = do gry
+        \item 2\nt\ = Lebensohl
+        \item 3\clubs\ = 5+\hearts, \invp
+        \item 3\diams\ = 1-\diams, \invp
+        \item 3\hearts\ = 5+\spades, \invp
+        \item 3\spades\ = 5+\clubs, \invp
+        \item 3\nt\ = no \diams\ stopper
+        \item 4\diams, 4\hearts\ = Texas
+    \end{itemize}
+
+    \subsubsection*{1\ntx\ -- (\alrts{2\diams}) -- ?}
+    2\diams\ = 6+ \major
+    \begin{itemize}
+        \item \dbl\ = 8+
+        \item 2\hearts, 2\spades\ = do gry
+        \item 2\nt\ = Lebensohl
+        \item 3\clubs\ = 5+\diams, \invp
+        \item 3\diams\ = 5+\hearts, \invp
+        \item 3\hearts\ = 5+\spades, \invp
+        \item 3\spades\ = 5/5 \minor
+        \item 3\nt\ = do gry
+        \item 4\diams, 4\hearts\ = Texas
+    \end{itemize}
+
+    \subsubsection*{1\ntx\ -- (2\hearts) -- ?}
+    \begin{itemize}
+        \item \dbl\ = negatywna
+        \item 2\spades\ = do gry
+        \item 2\nt\ = Lebensohl
+        \item 3\clubs\ = 5+\diams, \invp
+        \item 3\diams\ = 5+\spades, \invp
+        \item 3\hearts\ = 1-\hearts, \invp
+        \item 3\spades\ = 55 \minor, \gf
+        \item 3\nt\ = no \hearts\ stopper
+        \item 4\hearts\ = Texas
+    \end{itemize}
+
+    \subsubsection*{1\ntx\ -- (2\spades) -- ?}
+    \begin{itemize}
+        \item \dbl\ = negatywna
+        \item 2\nt\ = Lebensohl
+        \item 3\clubs\ = 5+\diams, \invp
+        \item 3\diams\ = 5+\hearts, \invp
+        \item 3\hearts\ = 55\minor, \gf
+        \item 3\spades\ = 1-\spades, \invp
+        \item 3\nt\ = no \spades\ stopper
+        \item 4\diams\ = Texas
+    \end{itemize}
+
+    \subsubsection*{1\ntx\ -- (\alrts{2\nt}) -- ?}
+    2\nt\ = \minor
+    \begin{itemize}
+        \item \dbl\ = 10+
+        \item 3\clubs\ = Stayman
+        \item 3\diams\ = 5+\hearts, \invp
+        \item 3\hearts\ = 5+\spades, \invp
+    \end{itemize}
+
+    \subsubsection*{1\ntx\ -- (3\clubs) -- ?}
+    \begin{itemize}
+        \item \dbl\ = negatywna
+        \item 3\diams\ = 5+\hearts, \invp
+        \item 3\hearts\ = 5+\spades, \invp
+        \item 3\spades\ = 5+\diams, \invp
+        \item 3\nt\ = do gry
+    \end{itemize}
+
+    \subsubsection*{1\ntx\ -- (3\diams) -- ?}
+    \begin{itemize}
+        \item \dbl\ = negatywna
+        \item 3\hearts\ = 5+\spades, \invp
+        \item 3\spades\ = 5+\hearts, \gf
+        \item 3\nt\ = do gry
+    \end{itemize}
+
+    \subsubsection*{1\ntx\ -- (\alrts{\dbl}) -- ?}
+    \dbl\ sztuczna
+
+    \textsc{system on}
+
+    \subsubsection*{1\ntx\ -- (\dbl) -- ?}
+    \dbl\ = karna
+    \begin{itemize}
+        \item \pass\ = forces \rdbl
+        \item \rdbl\ = forces 2\clubs
+        \item 2\anysuit{x}\ = forces \anysuit{x+1}
+    \end{itemize}
+
+    \subsubsection*{1\ntx\ -- (\dbl) -- \alrts{P} -- (P)\\
+                    \rdbl\ -- (P) -- ?}
+    \begin{itemize}
+        \item \pass\ = karny
+        \item 2\clubs\ = 4\clubs\ + 4\anysuit{x}\ or 4333 albo inny edge case
+        \item 2\diams\ = 4\diams\ + 4\major
+        \item 2\hearts\ = 4\hearts\ + 4\spades
+    \end{itemize}
+
+}
+
+\section*{\colorbox{blue!30}{Dodatek: Minor Puppet}}
+\addcontentsline{toc}{section}{Dodatek: Minor Puppet} {
+    Tym nie musimy grać (raczej nie przyjdzie i tak) :)\\
+
+    Po 2\nt w różnych sekwencjach, w których nie udało się znaleźć fitu \major,
+    4\clubs jest pytaniem o młodsze czwórki i piątki, 4\diams o trójki.
+
+    \subsubsection*{2\nt -- 3\clubs\\
+                    3\diams -- ?}
+    \begin{itemize}
+        \item 4\clubs = Minor Puppet Stayman
+    \end{itemize}
+
+    \subsubsection*{2\nt -- 3\clubs\\
+                    3\major -- ?}
+    \begin{itemize}
+        \item 4\clubs = Minor Puppet Stayman
+        \item 4\diams = Minor Puppet, ask 3s
+    \end{itemize}
+
+    \subsubsection*{2\nt -- 3\clubs\\
+                    (3\diams -- 3\major)\\
+                    3\nt -- ?}
+    \begin{itemize}
+        \item 4\clubs = Minor Puppet Stayman
+        \item 4\diams = Minor Puppet, ask 3s
+    \end{itemize}
+
+    Każda z powyższych sekwencji tak samo po 1\nt -- 3\clubs.
+
+    \subsubsection*{2\nt -- 3\diams\\
+                    3\hearts -- ?}
+    \begin{itemize}
+        \item 4\clubs = Minor Puppet Stayman
+        \item 4\diams = Minor Puppet, ask 3s
+    \end{itemize}
+
+    \subsubsection*{2\nt -- 3\hearts\\
+                    3\spades -- ?}
+    \begin{itemize}
+        \item 4\clubs = Minor Puppet Stayman
+        \item 4\diams = Minor Puppet, ask 3s
+    \end{itemize}
+
+    \subsubsection*{... -- 4\clubs\\
+                    ?}
+    \begin{itemize}
+        \item 4\diams = 4\minor, no 5\minor
+        \item 4\hearts = 5+\clubs
+        \item 4\spades = 5+\diams
+        \item 4\nt = no 4\minor
+        \item 5\clubs = 5\clubs, 4\diams
+        \item 5\diams = 5\diams, 4\clubs
+    \end{itemize}
+
+    \subsubsection*{... -- 4\clubs\\
+                    4\diams -- ?}
+    \begin{itemize}
+        \item 4\hearts = 4\clubs
+        \item 4\spades = 4\diams
+        \item 4\nt = \soff
+    \end{itemize}
+
+    \subsubsection*{... -- 4\clubs\\
+                    4\diams -- 4\hearts\\
+                    ?}
+    \begin{itemize}
+        \item 4\spades = fit \clubs, 1/4 Aces
+        \item 4\nt = \soff
+        \item 5\clubs = fit \clubs, 0/3 Aces
+        \item 5\diams = fit \clubs, 2 Aces, no Q\clubs
+        \item 5\hearts = fit \clubs 2 Aces, Q\clubs
+    \end{itemize}
+
+    \subsubsection*{... -- 4\clubs\\
+                    4\diams -- 4\spades\\
+                    ?}
+    \begin{itemize}
+        \item 4\nt = \soff
+        \item 5\clubs = fit \diams, 1/4 Aces
+        \item 5\diams = fit \diams, 0/3 Aces
+        \item 5\hearts = fit \diams, 2 Aces, no Q\diams
+        \item 5\spades = fit \diams 2 Aces, Q\diams
+    \end{itemize}
+
+    \subsubsection*{... -- 4\clubs\\
+                    4\hearts -- ?}
+    \begin{itemize}
+        \item 4\spades = fit \clubs, 1/4 Aces
+        \item 4\nt = \soff
+        \item 5\clubs = fit \clubs, 0/3 Aces
+        \item 5\diams = fit \clubs, 2 Aces, no Q\clubs
+        \item 5\hearts = fit \clubs 2 Aces, Q\clubs
+    \end{itemize}
+
+    \subsubsection*{... -- 4\clubs\\
+                    4\spades -- ?}
+    \begin{itemize}
+        \item 4\nt = \soff
+        \item 5\clubs = fit \diams, 1/4 Aces
+        \item 5\diams = fit \diams, 0/3 Aces
+        \item 5\hearts = fit \diams, 2 Aces, no Q\diams
+        \item 5\spades = fit \diams 2 Aces, Q\diams
+    \end{itemize}
+
+    \subsubsection*{... -- 4\diams\\
+                    ?}
+    \begin{itemize}
+        \item 4\hearts = 3+\clubs, 3+\diams
+        \item 4\spades = 3+\clubs, 2\diams (4\nt = \soff, inne odzywki uzgadniają \clubs)
+        \item 4\nt = 2\clubs, 3+\diams (wszystkie odzywki uzgdaniają \diams)
+    \end{itemize}
+
+    \subsubsection*{... -- 4\diams\\
+                    4\hearts -- ?}
+    \begin{itemize}
+        \item 4\spades = uzgadnia \clubs
+        \item 4\nt = \soff
+        \item 5\clubs = uzgadnia \diams
+    \end{itemize}
+
+    Zamiast odpowiadać asami można po prostu dawać cue/silne przyjęcie.
+}
+
+\section*{\colorbox{blue!30}{Inne ważne rzeczy}}
+\addcontentsline{toc}{section}{Inne ważne rzeczy} {
+    \subsubsection*{1\major -- 1\spades/1\nt/2\minor\\ ?}
+    \begin{itemize}
+        \item 3\major = samoustalenie
+    \end{itemize}
+
+    \subsubsection*{1\major -- 2\minor \\ 2\major -- ?}
+    \begin{itemize}
+        \item 2\major+1 = \lsf
+    \end{itemize}
+}
+
+\end{document}
