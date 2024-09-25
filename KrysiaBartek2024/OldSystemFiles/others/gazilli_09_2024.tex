@@ -1,0 +1,208 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{import}
+
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{mathtools}  
+\usepackage{amsthm}  
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{enumerate}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    }
+
+\urlstyle{same}
+
+
+\import{../../../lib/}{bridge.sty}
+\setmainlanguage{english}
+
+\title{\fontsize{30pt}{30pt}\selectfont Gazilli}
+\author{Krysia Gasińska\\
+        \small{na podstawie pomysłów Bartka Słupika}}
+\begin{document}
+\maketitle
+
+\begin{formal}
+\href{https://www.youtube.com/@multi2diamonds}{nagranie wykładu} 
+\vspace{0.3cm}
+\end{formal}
+
+Poniżej wersja podstawowa. Niektóre odzywki zostały celowo pominięte. Dla lubiących ustalenia ich znaczenie
+zostanie zaproponowane na końcu.
+
+\subsubsection*{1\hearts\ -- ?}
+\begin{itemize}
+    \item 1\spades = 4+\spades, (3)4+ \hcp
+    \item \alrts{1\ntx} = 8-11 bez fitu lub dowolne (3)4-7 (półforsujące)
+\end{itemize}
+
+\subsubsection*{1\spades\ -- ?}
+\begin{itemize}
+    \item \alrts{1\ntx} = 8-11 bez fitu lub dowolne (3)4-7 (półforsujące)
+\end{itemize}
+
+\subsubsection*{1\hearts\ -- 1\spades\ \\ ?}
+\begin{itemize}
+    \item \alrts{2\clubs} = 5\hearts4\clubs\ 11-15 \textbf{lub 16+} \fonce \imp
+    \item 2\diams = 5\hearts4\diams\ 11-15
+    \item 2\hearts = 6+\hearts 11-14
+    \item 2\spades = 5\hearts4\spades\ 11-15
+    \item 3\hearts = 6+\hearts\ \inv
+    \item 3\spades = 5\hearts4\spades\ \inv
+\end{itemize}
+
+\subsubsection*{1\hearts\ -- 1\ntx\ \\ ?}
+\begin{itemize}
+    \item \pass = 12-14 (zwykle 5332)
+    \item \alrts{2\clubs} = 5\hearts\clubs\ 11-15 \textbf{lub 16+} \fonce \imp
+    \item 2\diams\ = 5\hearts4\diams\ 11-15
+    \item 2\hearts\ = 6+\hearts 11-14
+    \item 2\spades\ = rewers
+    \item 3\clubs\ = 5\hearts5\clubs\ \gf
+    \item 3\diams\ = 5\hearts5\diams\ \gf
+    \item 3\hearts\ = 6+\hearts\ \inv
+\end{itemize}
+
+\subsubsection*{1\spades\ -- 1\ntx\ \\ ?}
+\begin{itemize}
+    \item \pass\ = 12-14 (zwykle 5332)
+    \item \alrts{2\clubs} = 5\spades\clubs\ 11-15 \textbf{lub 16+} \fonce \imp
+    \item 2\diams\ = 5\spades4\diams\ 11-15
+    \item 2\hearts\ = 5\spades4\hearts\ 11-15
+    \item 2\spades\ = 6+\spades 11-14
+    \item 3\clubs\ = 5\spades5\clubs\ \gf
+    \item 3\diams\ = 5\spades5\diams\ \gf
+    \item 3\hearts\ = 5\spades5\hearts\ \gf
+    \item 3\spades\ = 6+\spades\ \inv
+\end{itemize}
+
+\subsubsection*{1\hearts\ -- 1\spades\ \\ 2\clubs\ -- ?}
+\begin{itemize}
+    \item \alrts{2\diams} = dowolne 8+ \imp
+    \item 2\hearts\ = 2-3\hearts\ 4-7
+    \item 2\spades\ = dobre 5\spades, krótkość \hearts 4-7
+    \item \alrts{2\ntx} = 1-\hearts\ 4-7
+    \item 3\clubs\ = 6+\clubs\ 4-7
+    \item 3\diams\ = 6+\diams\ 4-7
+\end{itemize}
+
+\subsubsection*{1\hearts\ -- 1\ntx\ \\ 2\clubs\ -- ?}
+\begin{itemize}
+    \item \alrts{2\diams} = dowolne 8+ \imp
+    \item 2\hearts\ = 2-3\hearts\ 4-7
+    \item \alrts{2\nt} = 1-\hearts\ 4-7
+    \item 3\clubs\ = 6+\clubs\ 4-7
+    \item 3\diams\ = 6+\diams\ 4-7
+\end{itemize}
+
+\subsubsection*{1\spades\ -- 1\ntx\ \\ 2\clubs\ -- ?}
+\begin{itemize}
+    \item \alrts{2\diams} = dowolne 8+ \imp
+    \item 2\hearts\ = 5\hearts\ 4-7
+    \item 2\spades\ = 2-3\spades\ 4-7
+    \item \alrts{2\ntx} = 1-\spades\ 4-7
+    \item 3\clubs\ = 6+\clubs\ 4-7
+    \item 3\diams\ = 6+\diams\ 4-7
+\end{itemize}
+
+\subsubsection*{1\hearts\ -- 1\spades\ \\ 2\clubs\ -- 2\diams \\ ?}
+\begin{itemize}
+    \item 2\hearts\ = 5\hearts4\clubs\ 11-15
+    \item 2\spades\ = 5\hearts =3\spades\ 16+
+    \item 2\ntx\ = 18-20 \bal, w tym 6322 (3\clubs = ask)
+    \item 3\clubs\ = 5\hearts4\clubs\ 16+
+    \item 3\diams\ = 5\hearts4\diams\ 16+
+    \item 3\hearts\ = 6\hearts\ \unbal, 16+
+    \item 3\spades\ = 5\hearts4\spades\ \gf (ustala piki)
+\end{itemize}
+
+\subsubsection*{1\hearts\ -- 1\ntx\ \\ 2\clubs\ -- 2\diams \\ ?}
+\begin{itemize}
+    \item 2\hearts\ = 5\hearts4\clubs\ 11-15
+    \item 2\spades\ = 5\hearts4\spades\ 16+
+    \item 2\ntx\ = 18-20 \bal, w tym 6322 (3\clubs = ask)
+    \item 3\clubs\ = 5\hearts4\clubs\ 16+
+    \item 3\diams\ = 5\hearts4\diams\ 16+
+    \item 3\hearts\ = 6\hearts\ \unbal, 16+
+\end{itemize}
+
+\subsubsection*{1\spades\ -- 1\ntx\ \\ 2\clubs\ -- 2\diams \\ ?}
+\begin{itemize}
+    \item 2\hearts\ = 5\spades4\hearts\ 16+
+    \item 2\spades\ = 5\spades4\clubs\ 11-15
+    \item 2\ntx\ = 18-20 \bal, w tym 6322 (3\clubs = ask)
+    \item 3\clubs\ = 5\spades4\clubs\ 16+
+    \item 3\diams\ = 5\spades4\diams\ 16+
+    \item 3\spades\ = 6\spades\ \unbal, 16+
+\end{itemize}
+
+\subsubsection*{1\major\ -- 1\ntx\ \\ 
+                2\clubs\ -- 2\major \\ ?}
+\begin{itemize}
+    \item 2\nt = silny inwit, \nf
+    \item 3\major = silny inwit, 6+
+    \item nowy kolor forsuje do 3\major
+\end{itemize}
+
+\subsubsection*{1\major\ -- 1\ntx\ \\ 
+                2\clubs\ -- 2\major \\ 
+                2\nt -- ?}
+\begin{itemize}
+    \item 3\major = \nf
+\end{itemize}
+
+\newpage
+Dodatkowe ustalenia dla chętnych:
+
+\subsubsection*{1\hearts\ -- 1\spades\ \\ ?}
+\begin{itemize}
+    \item 4\minor = słabszy splinter, około 16-18
+\end{itemize}
+
+\subsubsection*{1\hearts\ -- 1\spades\ \\ 
+                2\clubs\ -- 2\diams\ \\ ?}
+\begin{itemize}
+    \item 4\minor = silny splinter, 18-19+
+\end{itemize}
+
+\subsubsection*{1\hearts\ -- 1\nt\ \\ 2\clubs -- ?}
+\begin{itemize}
+    \item 2\spades = 8-11 z długim młodym (2\nt = ask)
+\end{itemize}
+
+\subsubsection*{1\hearts\ -- 1\spades/1\ntx\ \\ ?}
+\begin{itemize}
+    \item 2\nt = 6\hearts 4\minor \gf
+\end{itemize}
+
+\subsubsection*{1\spades\ -- 1\ntx\ \\ ?}
+\begin{itemize}
+    \item 2\nt = 6\spades 4\minor \gf
+\end{itemize}
+
+\subsubsection*{1\major -- 1\spades/1\nt\\
+                2\nt -- ?}
+\begin{itemize}
+    \item 3\clubs = \pass/correct
+    \item 3\diams = ask \gf
+    \item 3\major = uzgadnia \major
+    \item 3\twosuit{\spades}{\hearts} = \nat
+\end{itemize}
+
+\subsubsection*{1\major -- 1\spades/1\nt\\
+                2\nt -- 3\diams\\
+                ?}
+\begin{itemize}
+    \item 3\hearts = \clubs (3\spades = ask o siłę \then 3\nt = słabsze)
+    \item 3\spades = \diams dobra ręka
+    \item 3\nt = \diams słabsza ręka
+\end{itemize}
+
+\end{document}
