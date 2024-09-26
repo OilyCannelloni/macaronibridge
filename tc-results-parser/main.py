@@ -1,9 +1,9 @@
 """
-This script is used to parse the bridge hands from the TC Results website.
-It uses Selenium to scrape the data from the website and then uses the
-data to generate a LaTeX file with the results.
+This module is used to scrape the bridge hands from the TC Results website
+and generate a LaTeX file with the hand diagrams.
 """
 
+import argparse
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
@@ -85,7 +85,6 @@ class TCResultsDriver(webdriver.Chrome):
             print(f"Error loading element: {span_name}")
             return Hand("", "", "", "")
 
-
     def extract_cards(self, html_content, suit_img, suit_length):
         """
         This method extracts the card string that follows the suit image (gif).
@@ -100,7 +99,6 @@ class TCResultsDriver(webdriver.Chrome):
         result = result.replace('10', 'T')
         result = result.replace('1', 'T')
         return result, len(result)
-
 
     def load_board(self, board_number: int = 0):
         """
@@ -129,9 +127,33 @@ class TCResultsDriver(webdriver.Chrome):
 
 
 if __name__ == '__main__':
-    driver = TCResultsDriver("https://mzbs.pl/files/2021/wyniki/zs/240925/")
+    parser = argparse.ArgumentParser(description='Scrape bridge hands from TC Results')
+    parser.add_argument('-n', '--number', type=int, help='Number of boards to process')
+    parser.add_argument('-d', '--url', type=str,
+                        default="https://mzbs.pl/files/2021/wyniki/zs/240925/",
+                        help='Base URL of the results page')
+    parser.add_argument('-b', '--board', type=int, help='Specific board number to process')
 
-    for n in driver.board_numbers:
-        driver.load_board(n)
+    args = parser.parse_args()
 
+    driver = TCResultsDriver(args.url)
+
+    if args.board is not None and args.number is not None:
+        print("Error: Please provide either -n or -b, not both.")
+        exit()
+
+    if args.board is not None:
+        # If a specific board is provided, load only that one
+        if args.board in driver.board_numbers:
+            driver.load_board(args.board)
+        else:
+            print(f"Error: Board {args.board} not found.")
+    else:
+        # If -n is provided, process only the first n boards
+        num_boards = min(args.number, len(driver.board_numbers)) \
+            if args.number else len(driver.board_numbers)
+        for n in driver.board_numbers[:num_boards]:
+            driver.load_board(n)
+
+    # Generate the LaTeX file
     build_analysis_template(driver.board_data.values(), "test_python.tex", verbose=True)
