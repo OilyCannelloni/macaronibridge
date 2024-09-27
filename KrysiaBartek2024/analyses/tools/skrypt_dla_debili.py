@@ -1,14 +1,10 @@
 """
-This script modifies a .tex file so that after conversion to .pdf and .docx,
-bridge symbols can be easily inserted.
-The input file is provided as an argument.
-Output files:
-  - to_docx.tex
-  - to_docx.pdf (created using lualatex)
+This script is used to convert a .tex file to a .pdf file, with some modifications.
 """
 
 import sys
 import subprocess
+import os
 
 if len(sys.argv) != 2:
     print("Usage: python script.py <filename>")
@@ -16,13 +12,28 @@ if len(sys.argv) != 2:
 
 filename = sys.argv[1]
 
-with open(filename, 'r', encoding='utf-8') as f:
+OUTPUT_DIR = './tmp'
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+# Full paths for input and output files
+input_file = filename
+output_tex_file = os.path.join(OUTPUT_DIR, 'to_docx.tex')
+output_pdf_file = os.path.join(OUTPUT_DIR, 'to_docx.pdf')
+
+# Read the input file
+with open(input_file, 'r', encoding='utf-8') as f:
     lines = f.readlines()
 
-with open('to_docx.tex', 'w', encoding='utf-8') as f:
+# Write the modified content to the output .tex file
+with open(output_tex_file, 'w', encoding='utf-8') as f:
     i = 0
     while i < len(lines):
         line = lines[i]
+
+        if line.startswith('\\import{../../../lib/}{bridge.sty}'):
+            f.write('\\import{../../../../../../lib/}{bridge.sty}\n')
+            i += 1
+            continue
 
         if line.startswith('\\title{'):
             f.write('\\usepackage{fancyhdr}\n')
@@ -70,11 +81,15 @@ with open('to_docx.tex', 'w', encoding='utf-8') as f:
             i += 6
             continue
 
-        # Write the modified line
         f.write(line)
         i += 1
 
-subprocess.run(['lualatex', 'to_docx.tex'], check=True)
-subprocess.run(['rm', 'to_docx.aux', 'to_docx.log'], check=True)
+# Run lualatex to convert the .tex file to .pdf in the specified directory
+subprocess.run(['lualatex', '-output-directory=' + OUTPUT_DIR, output_tex_file], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
-print("Conversion complete.")
+# Clean up auxiliary files
+aux_file = os.path.join(OUTPUT_DIR, 'to_docx.aux')
+log_file = os.path.join(OUTPUT_DIR, 'to_docx.log')
+subprocess.run(['rm', aux_file, log_file], check=True)
+
+print("Conversion complete. Files saved in", OUTPUT_DIR)
