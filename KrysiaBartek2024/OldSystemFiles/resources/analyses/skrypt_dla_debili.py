@@ -60,7 +60,6 @@ with open('to_docx.tex', 'w', encoding='utf-8') as f:
             # add '}' at the end of the line
             line = line + '}'
 
-
         # If a line starts with \handdiagramv, comment out that line and the next 4
         if line.startswith('\\handdiagramv'):
             f.write(f'% {line}')
@@ -72,5 +71,6 @@ with open('to_docx.tex', 'w', encoding='utf-8') as f:
             i += 1
 
 subprocess.run(['lualatex', 'to_docx.tex'], check=True)
+subprocess.run(['rm', 'to_docx.aux', 'to_docx.log'], check=True)
 
 print("Conversion complete.")
