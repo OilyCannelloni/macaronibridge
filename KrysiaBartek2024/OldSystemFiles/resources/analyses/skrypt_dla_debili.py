@@ -24,51 +24,55 @@ with open('to_docx.tex', 'w', encoding='utf-8') as f:
     while i < len(lines):
         line = lines[i]
 
-        # Comment out lines starting with '\vspace{-'
+        if line.startswith('\\title{'):
+            f.write('\\usepackage{fancyhdr}\n')
+            f.write('\\pagestyle{fancy}\n')
+            f.write('\\rhead{Żaczek 25.09.24, Krysia \\& Bartek\\\\}\n')
+
+        # Skip lines starting with '\vspace{-'
         if line.startswith('\\vspace{-'):
-            f.write(f'% {line}')
             i += 1
             continue
 
         # Replace bridge symbols with their full representations
-        line = line.replace('\\spades\\', '!s!')
-        line = line.replace('\\clubs\\', '!c!')
-        line = line.replace('\\hearts\\', '!h!')
-        line = line.replace('\\diams\\', '!d!')
+        line = line.replace('\\spades\\', '{\\color{blue}!s!}')
+        line = line.replace('\\clubs\\', '{\\color{OliveGreen}!c!}')
+        line = line.replace('\\hearts\\', '{\\color{Maroon}!h!}')
+        line = line.replace('\\diams\\', '{\\color{BurntOrange}!d!}')
         line = line.replace('\\major\\', 'M')
         line = line.replace('\\minor\\', 'm')
-        line = line.replace('\\nt\\', 'NT')
-        line = line.replace('\\ntx\\', 'NT')
+        line = line.replace('\\ntx\\', '{\\footnotesize{NT}}')
+        line = line.replace('\\nt\\', '{\\footnotesize{NT}}')
 
-        line = line.replace('\\xspades', '!s!')
-        line = line.replace('\\xclubs', '!c!')
-        line = line.replace('\\xhearts', '!h!')
-        line = line.replace('\\xdiams', '!d!')
+        line = line.replace('\\xspades', '{\\color{blue}!s!}')
+        line = line.replace('\\xclubs', '{\\color{OliveGreen}!c!}')
+        line = line.replace('\\xhearts', '{\\color{Maroon}!h!}')
+        line = line.replace('\\xdiams', '{\\color{BurntOrange}!d!}')
 
-        line = line.replace('\\spades', '!s!')
-        line = line.replace('\\clubs', '!c!')
-        line = line.replace('\\hearts', '!h!')
-        line = line.replace('\\diams', '!d!')
+        line = line.replace('\\spades', '{\\color{blue}!s!}')
+        line = line.replace('\\clubs', '{\\color{OliveGreen}!c!}')
+        line = line.replace('\\hearts', '{\\color{Maroon}!h!}')
+        line = line.replace('\\diams', '{\\color{BurntOrange}!d!}')
         line = line.replace('\\major', 'M')
         line = line.replace('\\minor', 'm')
-        line = line.replace('\\nt', 'NT')
-        line = line.replace('\\ntx', 'NT')
+        line = line.replace('\\ntx', '{\\footnotesize{NT}}')
+        line = line.replace('\\nt', '{\\footnotesize{NT}}')
+
+        line = line.replace('\\pagebreak', '\\newpage\n')
 
         # Remove section headers
         if line.startswith('\\section*'):
-            line = line.replace('\\section*', '\\textbf{')
-            # add '}' at the end of the line
-            line = line + '}'
+            line = line.replace('\\section*{', '\n\n')
+            line = line[:-2] + '\n\n'
 
-        # If a line starts with \handdiagramv, comment out that line and the next 4
+        # Skip \handdiagramv and the next 4 lines
         if line.startswith('\\handdiagramv'):
-            f.write(f'% {line}')
-            for j in range(1, 6):
-                f.write(f'% {lines[i + j]}')
             i += 6
-        else:
-            f.write(line)
-            i += 1
+            continue
+
+        # Write the modified line
+        f.write(line)
+        i += 1
 
 subprocess.run(['lualatex', 'to_docx.tex'], check=True)
 subprocess.run(['rm', 'to_docx.aux', 'to_docx.log'], check=True)
