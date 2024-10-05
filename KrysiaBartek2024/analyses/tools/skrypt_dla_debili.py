@@ -30,15 +30,15 @@ with open(output_tex_file, 'w', encoding='utf-8') as f:
     while i < len(lines):
         line = lines[i]
 
-        if line.startswith('\\import{../../../lib/}{bridge.sty}'):
-            f.write('\\import{../../../../../../lib/}{bridge.sty}\n')
+        if line.startswith('\\import{../../lib/}{bridge.sty}'):
+            f.write('\\import{../../../lib/}{bridge.sty}\n')
             i += 1
             continue
 
         if line.startswith('\\title{'):
             f.write('\\usepackage{fancyhdr}\n')
             f.write('\\pagestyle{fancy}\n')
-            f.write('\\rhead{Żaczek 25.09.24, Krysia \\& Bartek\\\\}\n')
+            f.write('\\rhead{Żaczek 30.09.24, Krysia \\& Bartek\\\\}\n\n')
 
         # Skip lines starting with '\vspace{-'
         if line.startswith('\\vspace{-'):
@@ -55,10 +55,10 @@ with open(output_tex_file, 'w', encoding='utf-8') as f:
         line = line.replace('\\ntx\\', '{\\footnotesize{NT}}')
         line = line.replace('\\nt\\', '{\\footnotesize{NT}}')
 
-        line = line.replace('\\xspades', '{\\color{blue}!s!}')
-        line = line.replace('\\xclubs', '{\\color{OliveGreen}!c!}')
-        line = line.replace('\\xhearts', '{\\color{Maroon}!h!}')
-        line = line.replace('\\xdiams', '{\\color{BurntOrange}!d!}')
+        line = line.replace('\\xspades ', '{\\color{blue}!s!}')
+        line = line.replace('\\xclubs ', '{\\color{OliveGreen}!c!}')
+        line = line.replace('\\xhearts ', '{\\color{Maroon}!h!}')
+        line = line.replace('\\xdiams ', '{\\color{BurntOrange}!d!}')
 
         line = line.replace('\\spades', '{\\color{blue}!s!}')
         line = line.replace('\\clubs', '{\\color{OliveGreen}!c!}')
@@ -85,7 +85,7 @@ with open(output_tex_file, 'w', encoding='utf-8') as f:
         i += 1
 
 # Run lualatex to convert the .tex file to .pdf in the specified directory
-subprocess.run(['lualatex', '-output-directory=' + OUTPUT_DIR, output_tex_file], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+subprocess.run(['lualatex', '-output-directory=' + OUTPUT_DIR, output_tex_file]) # , check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
 # Clean up auxiliary files
 aux_file = os.path.join(OUTPUT_DIR, 'to_docx.aux')
