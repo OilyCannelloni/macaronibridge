@@ -1,0 +1,274 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{import}
+
+\import{../../../lib/}{bridge.sty}
+\setmainlanguage{english}
+
+\usepackage[colorlinks=true, linkcolor=blue]{hyperref}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
+\usepackage{changepage}
+
+\title{Strefa dla Marcina i Pietrasza na MPJ 2024}
+\author{Krysia}
+\begin{document}
+\maketitle
+
+Alertujemy!!! Otwarcia 2\clubs, 2\diams, 2\nt, wszystko po acolu,
+wszystko po 2\nt, Ogusta (i odpowiedzi), inwit z fitem (2\nt), magistra,
+[po 1\nt : 2\spades i 2\nt], \gf 2\clubs.
+
+Nie alertujemy nic powyżej 3\nt.
+
+\subsubsection*{1\clubs\ -- ?}
+\begin{itemize}
+    \item 1\diams = negat, 0-6pc
+    \item 1\major = 4+\major
+    \item 1\nt = 7-10pc, bez 4\major
+    \item 2\clubs = \gf z \clubs
+    \item 2\diams = \gf z \diams
+    \item 2\hearts = \gf z 6\hearts
+    \item 2\spades = \gf z 6\spades
+    \item 2\nt = 11-12pc, bez 4\major
+    \item 3\nt = do gry
+    \item 4\nt = 19-21pc (inwit do 6\nt)
+\end{itemize}
+
+\subsubsection*{1\clubs\ -- 1\diams\\
+                ?}
+\begin{itemize}
+    \item 1\major = 3+\major (z trójką nie pasujemy na to)
+    \item 1\nt = 18-20pc, potem system jak po otwarciu 1\nt
+    \item 2\clubs = 5+\clubs
+    \item 2\diams/2\hearts/2\spades = bardzo silna ręka (19+), rewers (5\clubs4\anysuit{x}), ale nie forsuje
+    \item 3\clubs = bardzo silna ręka z \clubs (ale nie forsuje)
+\end{itemize}
+
+\subsubsection*{1\diams\ -- ?}
+\begin{itemize}
+    \item 1\major = 4+\major
+    \item 1\nt = 7-10pc, bez 4\major
+    \item 2\clubs = \gf z \clubs
+    \item 2\diams = \invp, 4+\diams (potem pokazujemy zatrzymania, forsuje do 3\diams)
+    \item 2\hearts = \gf z 6\hearts
+    \item 2\spades = \gf z 6\spades
+    \item 2\nt = 11-12pc, bez 4\major
+    \item 3\diams = dużo \diams, blok
+    \item 3\nt = do gry
+    \item 4\nt = 19-21pc (inwit do 6\nt)
+\end{itemize}
+
+\subsubsection*{1\major\ -- ?}
+\begin{itemize}
+    \item \pass = 0-6pc
+    \item 1\nt = 7-11pc, bez fitu
+    \item \alrts{2\clubs} = \gf (niekoniecznie z treflami, dlatego alert)
+    \item 2\diams = \gf z \diams
+    \item 2\major = 7-10pc, fit
+    \item \alrts{2\nt} = inwit z fitem
+    \item 3\major = mixed raise (4+\major, 6-9pc)
+    \item 3\nt = do gry
+    \item 4\minor = splinter
+\end{itemize}
+
+\subsubsection*{1\hearts\ -- ?}
+\begin{itemize}
+    \item 1\spades = 4+\spades, bez fitu
+    \item 2\hearts = 7-10pc, fit
+    \item 2\spades = \gf z 6\spades
+    \item 3\spades = splinter
+\end{itemize}
+
+\subsubsection*{1\spades\ -- ?}
+\begin{itemize}
+    \item 2\hearts = \gf z \hearts
+    \item 2\spades = 7-10pc, fit
+    \item 4\hearts = splinter
+\end{itemize}
+
+\subsubsection*{1\nt\ -- ?}
+\begin{itemize}
+    \item 2\clubs = Stayman
+    \item 2\diams = transfer na \hearts
+    \item 2\hearts = transfer na \spades
+    \item 2\spades = transfer na \clubs lub inwit
+    \item 2\nt = transfer na \diams
+    \item 3\nt = do gry
+    \item 4\diams = Texas
+    \item 4\hearts = Texas
+    \item 4\nt = inwit do 6\nt
+\end{itemize}
+
+\subsubsection*{\alrts{2\clubs} -- ?}
+Po acolu jesteśmy sforsowani do końcówki!
+\begin{itemize}
+    \item \alrts{2\diams} = automatyczna odzwyka!!!
+\end{itemize}
+
+\subsubsection*{\alrts{2\clubs} -- \alrts{2\diams}\\
+                ?}
+\begin{itemize}
+    \item 2\hearts = 5+\hearts
+    \item 2\spades = 5+\spades
+    \item 2\nt = \bal -- potem system jak po otwarciu 2\nt
+    \item 3\clubs = 5+\clubs
+    \item 3\diams = 5+\diams
+\end{itemize}
+
+\subsubsection*{\alrts{2\clubs} -- \alrts{2\diams}\\
+                2\hearts -- ?}
+\begin{itemize}
+    \item \alrts{2\spades} = sztuczne pytanie o skład! bez fitu
+\end{itemize}
+
+\vspace{0.3cm}
+
+\alrts{2\diams}, 2\hearts, 2\spades = BLOKI z 6+\\
+\alrts{2\nt} = Ogust (pytanie o siłę)\\
+nowy kolor forsuje na kółko (\fonce)
+
+\subsubsection*{2\anysuit{x} -- \alrts{2\nt}\\
+                ?}
+\begin{itemize}
+    \item \alrts{3\clubs} = mało siły, słaby kolor
+    \item \alrts{3\diams} = mało siły, dobry kolor
+    \item \alrts{3\hearts} = dużo siły, słaby kolor
+    \item \alrts{3\spades} = dużo siły, dobry kolor
+    \item 3\nt = w sumie wyjęło mi się 2\anysuit{x} zamiast 1\anysuit{x}
+\end{itemize}
+
+\subsubsection*{\alrts{2\nt} -- ?}
+\alrts{2\nt} = 21-22pc, \bal, może być starsza piątka, młodsza szóstka, singlowa figura\\
+\begin{itemize}
+    \item \alrts{3\clubs} = Puppet Stayman
+    \item \alrts{3\diams} = transfer na \hearts
+    \item \alrts{3\hearts} = transfer na \spades
+    \item 3\nt = do gry
+    \item 4\clubs = \gf, ustala trefle, bezpośrednie 4\nt jest propozycją gry
+    \item 4\diams = \gf, ustala karo, bezpośrednie 4\nt jest propozycją gry
+\end{itemize}
+
+przyjęcie transferu = BRAK FITU\\
+z fitem dajemy cuebid lub 3\nt (propozycyjne z 3-kartowym fitem)
+
+\subsubsection*{\alrts{2\nt} -- \alrts{3\clubs}\\
+                ?}
+\begin{itemize}
+    \item \alrts{3\diams} = 4\major, brak 5\major
+    \item \alrts{3\hearts} = 5\hearts (3\spades fituje kiery! szlemikowe)
+    \item \alrts{3\spades} = 5\spades (4\hearts fituje piki! szlemikowe)
+    \item 3\nt = brak 4\major
+\end{itemize}
+
+\subsubsection*{\alrts{2\nt} -- \alrts{3\clubs}\\
+                3\diams -- ?}
+\begin{itemize}
+    \item \alrts{3\hearts} = 4\spades (!!!)
+    \item \alrts{3\spades} = 4\hearts (!!!)
+    \item 4\diams = obie starsze czwórki
+\end{itemize}
+
+odpowiedzi na pytanie o asy:\\
+\begin{itemize}
+    \item 4\clubs = 1/4 asy (król atu jest asem)
+    \item 4\diams = 0/3 asy
+    \item 4\hearts = 2 asy bez damy atu
+    \item 4\spades = 2 asy z damą atu
+\end{itemize}
+
+kolejna odzywka po odpowiedzi to pytanie o damę 
+(jeśli jeszcze nie pokazaliśmy damy lub jej braku), odpowiadamy:\\
+pierwsza odzywka = brak damy\\
+druga odzywka = dama
+
+kolejna odzywka jest pytaniem o króle, odpowiadamy:\\
+pierwsza odzywka = 0,\\
+druga odzywka = 1 itd.
+
+\newpage
+
+Rewersy\\
+pokazują 5-4 i \gf, 18+, na przykład:
+
+1\hearts -- 1\nt\\
+2\spades
+
+1\clubs -- 1\hearts\\
+2\diams
+
+\vspace{0.3cm}
+
+Magister\\
+\textbf{po 3 odzywkach na poziomie 1 bez negatu}\\ 2\clubs jest inwitem (2\diams automat),
+2\diams jest \gf.\\
+Uwaga na sekwencje w stylu:\\
+1\diams -- 1\hearts\\
+1\spades -- 2\diams\\
+2\diams jest \gf, nie do gry!\\
+Możemy też dawać 2\clubs z zamiarem spasowania na 2\diams.\\
+Obie odzywki {\color{red}alertujemy} (jako podwójny magister).
+
+\vspace{0.3cm}
+
+Licytacja dwustronna\\
+Po naszym wejściu na poziomie 1 nic nie forsuje, chyba że z przeskokiem,\\
+2\clubs jest naturalne, kolor przeciwnika jest z fitem (silniejsza ręka), np:\\
+(1\diams) -- 1\hearts -- (P) -- \alrts{2\diams}, albo:\\
+(1\clubs) -- 1\hearts -- (P) -- \alrts{2\clubs}, ale:\\
+(1\diams) -- 1\hearts -- (P) -- 2\clubs jest naturalne.\\
+Pamiętamy o istnieniu objaśniaka.\\
+Po naszym wejściu (nie-blokiem) na poziomie 2 nowy kolor jest z piątki i forsuje,
+kolor przeciwnika jest \invp, pyta o trzymanie, niekoniecznie jest z fitem.\\
+Po (naszej) kontrze licytujemy z bilansu -- nic poza kolorem przeciwnika nie forsuje.\\
+Kontra na trefla jest wywoławcza, negatywna (po niej 1\diams naturalne).\\
+Po wejściu przeciwnika na 1\ntx\ :\\
+- po wejściu 2\clubs : \dbl = Stayman, reszta tak jak bez wejścia\\
+- po innych wejściach odzywki na poziomie 2 są \nf, na poziomie 3: \gf.\\
+Po wejściu przeciwnika kontrą licytujemy tak jakby jej nie było.\\
+W ogólności, po wejściach przeciwnika, nowy kolor na poziomie 2 nie forsuje, na poziomie 3 jest \gf.\\
+Gramy \textbf{Drury}! (Ale tylko w jednostronnej).
+
+\newpage
+
+Licytacja:\\
+1\clubs -- (1\diams) -- 1\hearts\\
+pokazaliśmy 4 (nie 5) kierów.
+
+Po naszym bloku kontry są karne, np:\\
+2\spades -- (3\hearts) -- \dbl
+
+Wejścia na 1\nt :\\
+Wchodzimy tylko z układem! Z punktami (nawet 20pc pasujemy).\\
+Natomiast żeby wejść nie trzeba mieć 12pc, tylko solidne kolory i układ.\\
+\dbl = 4\major + 5\minor \then 2\clubs = spasuj/popraw, 2\diams = pokaż starszy\\
+2\clubs = \major (54) \then 2\diams = pokaż dłuższy, 2\major = wybór samodzielny.\\
+2\diams = multi (6+\major) \then 2\hearts = spasuj popraw\\
+2\major = 5\major i 4\minor \then 2\nt = pokaż młodszy\\
+2\nt = młode (55) \then 3\minor = wybór\\
+3\major = więcej starszego, bardziej blokujące
+
+\vspace{0.3cm}
+
+Do wistu dajemy małe jak chcemy kontynuacji w ten kolor, duże jak chcemy zmiany na inny,
+środkowe jak nie mamy preferencji. (marka/demarka).
+
+Potem zrzucamy Lavinthal, czyli preferencja koloru (w który kolor
+chcemy, żeby partner wyszedł lub w którym mamy figury).
+
+\vspace{0.3cm}
+
+Jak przeciwnicy pytają o system/zrzutki:
+\begin{itemize}
+    \item gramy strefą
+    \item staramy się wistować odmiennie (pierwszy wist, w środkowej fazie gry nie mamy ustaleń, ew. też odmiennie)
+    \item do wistu zrzucamy markę/demarkę, staramy się zrzucać Lavinthala
+    \item nie zrzucamy ilościówek
+    \item nie gramy potwierdzeniem wistu
+\end{itemize}
+
+\vspace{0.4cm}
+
+\center
+Good luck!
+
+\end{document}

@@ -4,11 +4,10 @@ and generate a LaTeX file with the hand diagrams.
 """
 
 import argparse
+import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 from models import Hand, BoardData
 from bridgetex import build_analysis_template
@@ -50,13 +49,15 @@ class TCResultsDriver(webdriver.Chrome):
         url = self.url_base + TCResultsDriver.get_url_tail(board_number)
         print(f"GET: {url}")
         self.get(url)
-        try:
-            WebDriverWait(self, 10).until(
-                EC.presence_of_element_located((By.ID, "tabB_wCards0"))
-            )
-        except TimeoutException as _err:
-            print(f"Error: Page for board {board_number} not fully loaded")
-            return
+        # hehe
+        time.sleep(0.5)
+        # TODO improve waiting maybe sth like that
+        # try:
+        #     WebDriverWait(driver, 30).until(
+        #         lambda d: d.execute_script("return document.readyState") == "complete"
+        #     )
+        # except TimeoutException as err:
+        #     raise TimeoutError("Page not loaded") from err
         self.active_board_number = board_number
 
     def get_cards(self, span_name) -> Hand:
