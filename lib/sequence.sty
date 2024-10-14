@@ -24,7 +24,7 @@
 \newcommand*{\sequence}[1]{%
   \par\noindent\relax
   \sequenceScan#1\relax\relax
-  \par
+  \relax{\color{CadetBlue}\rule[3mm]{2.5cm}{0.4mm}}
 }
 
 
@@ -45,11 +45,11 @@
 {%
     \ifcase#1\relax
     \or
-        \def\optionsunskip{-1.8em}
+        \def\optionsunskip{-1.4em}
         \def\optionsitemindent{4em}
         \def\optionslabelwidth{6em}
     \or 
-        \def\optionsunskip{-3em}
+        \def\optionsunskip{-1.4em}
         \def\optionsitemindent{4em}
         \def\optionslabelwidth{3.2em}
     \else
