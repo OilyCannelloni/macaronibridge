@@ -1,0 +1,49 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{import}
+
+\import{../lib/}{bridge.sty}
+\setmainlanguage{polish}
+
+\title{\vspace{-2cm}Negat}
+\date{}
+\author{Bartek Słupik}
+
+
+\begin{document}
+\maketitle
+
+\sequence{{1\clubs}{1\diams}}
+\begin{options}[1]
+    \item[1\hearts] dowolna ręka w miarę BAL do 14PC \vimp
+    \item[1\spades] 15+ 5+\clubs \vimp
+    \item[1\nt] 18-20 BAL
+    \item[2\clubs] 11-14 6\clubs  
+    \item[2\diams] acol \clubs | acol \clubs\diams \imp
+\end{options}
+
+\sequence{{1\clubs}{1\diams}{1\hearts}}
+\begin{options}[2]
+    \item[\pass] 5\hearts
+    \item[1\spades] 4+\spades 
+    \item[2\hearts] młode, krótkość \hearts\ \inv+
+    \item[2\spades] młode, krótkość \spades\ \inv+
+    \item[2\nt] młode (5\diams 4+\clubs), do wyboru na poziomie 3
+    \item[3\clubs] \gf\ \diams z krótkością \clubs
+    \item[3\diams] \gf\ \diams bez krótkości
+    \item[3\major] \gf\ \diams z krótkością   
+\end{options}
+
+\sequence{{1\clubs}{1\diams}{1\spades}}
+\begin{options}[2]
+    \item[1\nt] Brak fitu \clubs, 0-7PC
+    \item[2\clubs] 3+\clubs, 0-7PC
+    \item[2\diams] Do gry, 0-7PC
+    \item[2\hearts] młode, krótkość \hearts\ \inv+
+    \item[2\spades] młode, krótkość \spades\ \inv+
+    \item[2\nt] \inv (8-10) (3352 no bo co innego)
+    \item[3\clubs] \inv (8-10)  
+    \item[3\diams] \gf\ \diams bez krótkości lub z krótkością \clubs
+    \item[3\major] \gf\ \diams z krótkością 
+\end{options}
+
+\end{document}
