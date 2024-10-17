@@ -1,0 +1,191 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{import}
+
+\import{../lib/}{bridge.sty}
+\setmainlanguage{polish}
+
+\title{\vspace{-2cm}Transfery po wejściach przeciwnika blokiem}
+\date{}
+\author{Krysia \& Bartek}
+
+
+\begin{document}
+\maketitle
+
+{\Huge{\clubs}}\\
+\begin{itemize}
+    \item Po treflu gramy z grubsza jak po wejściu 
+    na 1\nt, czyli ludzie z jakiegoś powodu grają transferami i bez Lebensohla,
+    a my gramy to i to bo why not.
+    \item Transfer na KP to pytanie o trzymanie \gf. Wiem, że
+    to dokładnie na odwórt niż po 1\nt, ale nie da się odwrócić.
+    Możemy po \nt grać na odwrót.
+    \item Czasami (rzadko) cośtam wywalamy
+    na korzyść czegoś (patrz {\color{BurntOrange}{\textbf{\large!}}}).
+\end{itemize}
+
+\sequence{{1\clubs}{(2\diams)}}
+\begin{options}[1]
+    \item[\dbl] takeout
+    \item[2\major] \nat\ \nf
+    \item[2\nt] Lebensohl
+    \item[3\clubs] 54\major\ \gf \imp
+    \item[3\diams] \then\ \hearts\ \invp
+    \item[3\hearts] \then\ \spades\ \invp
+    \item[3\spades] ask \diams stopper \gf\ $\leftarrow$ gdzieś to trzeba upchać, 3\clubs to co innego
+\end{options}
+
+\sequence{{1\clubs}{(2\hearts)}}
+\begin{options}[1]
+    \item[\dbl] takeout
+    \item[2\spades] \nat\ \nf
+    \item[2\nt] Lebensohl
+    \item[3\clubs] \then\ \diams\ \invp
+    \item[3\diams] ask \hearts stopper \gf\
+    \item[3\hearts] \then\ \spades\ \invp
+    \item[3\spades] \minor \imp
+\end{options}
+
+\sequence{{1\clubs}{(2\spades)}}
+\begin{options}[1]
+    \item[\dbl] takeout
+    \item[2\nt] Lebensohl
+    \item[3\clubs] \then\ \diams\ \invp
+    \item[3\diams] \then\ \hearts\ \invp
+    \item[3\hearts] ask \spades stopper \gf\
+    \item[3\spades] \minor \imp
+\end{options}
+
+\sequence{{1\clubs}{(3\clubs)}}
+\begin{options}[1]
+    \item[\dbl] takeout \gf $\leftarrow$ niestety musi być \gf
+    \item[3\diams] \then\ \hearts\ \invp
+    \item[3\hearts] \then\ \spades\ \invp
+    \item[3\spades] \then\ \diams\ \gf
+\end{options}
+
+\sequence{{1\clubs}{(3\diams)}}
+\begin{options}[1]
+    \item[\dbl] takeout \gf
+    \item[3\hearts] \then\ \spades\ \invp
+    \item[3\spades] \then\ \hearts\ \gf
+\end{options}
+
+\sequence{{1\clubs}{(3\hearts)}}
+\begin{options}[1]
+    \item[\dbl] \spades\ \invp \imp
+    \item[3\spades] 4\spades, no \hearts\ stopper \gf $\leftarrow$ czyli jakby takeout
+\end{options}
+
+\sequence{{1\clubs}{(3\spades)}}
+\begin{options}[1]
+    \item[\dbl] takeout \gf
+\end{options}
+
+\newpage
+{\Huge{\diams}}\\
+\begin{itemize}
+    \item Po karo tak samo jak po treflu, tylko fajnie czasem karo
+    sfitować. 
+    \item Naturalne zalicytowanie kar (3\diams) jest \textit{competitive}.
+    \item Transfer na \diams; tak jak po treflu; \invp.
+    \item Nie mamy transferu na trefle, coś trzeba kombinować (np. Lebensohl i KP).
+\end{itemize}
+
+\sequence{{1\diams}{(2\hearts)}}
+\begin{options}[1]
+    \item[\dbl] takeout
+    \item[2\spades] \nat\ \nf
+    \item[2\nt] Lebensohl
+    \item[3\clubs] \then\ \diams\ \invp
+    \item[3\diams] competitive
+    \item[3\hearts] \then\ \spades\ \invp
+    \item[3\spades] \then\ \nt $\leftarrow$ ale można wywalić, albo dać coś fajnego po 3\nt
+\end{options}
+
+\sequence{{1\diams}{(2\spades)}}
+\begin{options}[1]
+    \item[\dbl] takeout
+    \item[2\nt] Lebensohl
+    \item[3\clubs] \then\ \diams\ \invp
+    \item[3\diams] competitive
+    \item[3\hearts] \nat\ \gf\ $\leftarrow$ bo do tej pory nie ma jak pokazać \hearts\ \imp
+    \item[3\spades] \then\ \nt
+\end{options}
+
+\sequence{{1\diams}{(3\clubs)}}
+\begin{options}[1]
+    \item[\dbl] takeout \gf
+    \item[3\diams] competitive
+    \item[3\hearts] \then\ \spades\ \invp
+    \item[3\spades] \then\ \hearts\ \gf
+\end{options}
+
+\sequence{{1\diams}{(3\hearts)}}
+\begin{options}[1]
+    \item[\dbl] \spades\ \invp
+    \item[3\spades] 4\spades, no \hearts\ stopper \gf
+\end{options}
+
+\sequence{{1\diams}{(3\spades)}}
+\begin{options}[1]
+    \item[\dbl] takeout \gf
+\end{options}
+
+\vspace{2cm}
+{\Huge{\hearts}}\\
+\begin{itemize}
+    \item Dokładnie tak samo, jeden splinter bez przeskoku,
+    ale to chyba i tak tak graliśmy.
+    \item 3\hearts zawsze competitive tak jak po \diams.
+    \item Właściwie jak mamy wspaniałego Lebensohla to można
+    jeszcze zrobić \then\ nasz kolor przez Lebensohla,
+    wtedy by było słabe, a bezpośrednie np. inwit.
+    \item Ale na razie zostawiam jak było.
+\end{itemize}
+
+\sequence{{1\hearts}{(2\spades)}}
+\begin{options}[1]
+    \item[\dbl] takeout
+    \item[2\nt] Lebensohl
+    \item[3\clubs] \then\ \diams\ \invp
+    \item[3\diams] \then\ \hearts\ \invp
+    \item[3\hearts] competitive
+    \item[3\spades] splinter
+    \item[4\minor] color + fit
+\end{options}
+
+\sequence{{1\hearts}{(3\clubs)}}
+\begin{options}[1]
+    \item[\dbl] takeout \gf
+    \item[3\diams] \then\ \hearts\ \invp
+    \item[3\hearts] competitive
+    \item[3\spades] \spades\ \gf
+    \item[4\clubs] slam try, no shortness
+    \item[4\diams] slam try, shortness
+\end{options}
+
+\sequence{{1\hearts}{(3\diams)}}
+\begin{options}[1]
+    \item[\dbl] takeout \gf
+    \item[3\hearts] competitive
+    \item[3\spades] \spades\ \gf
+    \item[4\clubs] slam try, no shortness
+    \item[4\diams] slam try, shortness
+\end{options}
+
+\sequence{{1\hearts}{(3\spades)}}
+\begin{options}[1]
+    \item[\dbl] takeout \gf
+    \item[4\clubs] slam try, no shortness
+    \item[4\diams] slam try, shortness
+    \item[4\spades] slam try, void 
+\end{options}
+
+\vspace{2cm}
+{\Huge{\spades}}\\
+\begin{itemize}
+    \item Dokładnie tak jak po kierze, muszę iść na zajęcia, kiedyś dopiszę.
+\end{itemize}
+
+\end{document}
