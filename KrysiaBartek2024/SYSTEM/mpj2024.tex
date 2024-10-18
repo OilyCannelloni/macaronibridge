@@ -1,0 +1,686 @@
+\documentclass[12pt, a4paper]{report}
+\usepackage{import}
+
+\import{../../lib/}{bridge.sty}
+\setmainlanguage{english}
+
+\usepackage[colorlinks=true, linkcolor=blue]{hyperref}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
+\usepackage{changepage}
+
+\title{\spades\clubs Strefa MPJ 2024 Mixty \xdiams\xhearts}
+\author{Krysia \& Bartek}
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+W niniejszym pliku znajdują się tylko rzeczy nowe, często zmieniane albo łatwe do pomylenia.
+
+\section{Sekwencje szczególne}
+
+Gramy \lsf, brak krótkości najpierw.
+
+\sequence{{1\diams}{1\spades}{2\diams}{2\hearts}}
+\begin{options}[1]
+    \item[3\clubs] 4+\hearts
+\end{options}
+
+\sequence{{1\ntx}}
+\begin{options}[2]
+    \item[2\nt] słabe \minor lub \diams
+    \item[3\diams] \diams\ \inv
+\end{options}
+
+\sequence{{2\ntx}{3\diams}{3\hearts}}
+\begin{options}[2]
+    \item[4\minor] cue, ustala \hearts
+    \item[3\spades] \then 3\nt \then minor puppet
+    \item[3\nt] 5\xhearts 4\spades, \fonce
+\end{options}
+
+Po magistrze:
+\sequence{{1\anysuit{x}}{1\major}{1\anysuit{z}}{2\clubs}{2\diams}}
+\begin{options}[2]
+    \item[3\major] 6+ \inv
+    \item[3\nt] 5332
+\end{options}
+
+\sequence{{1\anysuit{x}}{1\major}{1\anysuit{z}}}
+\begin{options}[2]
+    \item[3\major] samoustalenie \gf
+\end{options}
+
+\section{Negat}
+Z systemu Marka
+
+\sequence{{1\clubs}{1\diams}}
+\begin{options}[1]
+    \item[1\hearts] dowolna ręka w miarę BAL do 14PC \vimp
+    \item[1\spades] 15+ 5+\clubs \vimp
+    \item[1\nt] 18-20 BAL
+    \item[2\clubs] 11-14 6\clubs  
+    \item[2\diams] acol \clubs | acol \clubs\diams \imp
+\end{options}
+
+\sequence{{1\clubs}{1\diams}{1\hearts}}
+\begin{options}[2]
+    \item[\pass] 5\hearts
+    \item[1\spades] 4+\spades 
+    \item[2\hearts] młode, krótkość \hearts\ \inv+
+    \item[2\spades] młode, krótkość \spades\ \inv+
+    \item[2\nt] młode (5\diams 4+\clubs), do wyboru na poziomie 3
+    \item[3\clubs] \gf\ \diams z krótkością \clubs
+    \item[3\diams] \gf\ \diams bez krótkości
+    \item[3\major] \gf\ \diams z krótkością   
+\end{options}
+
+\sequence{{1\clubs}{1\diams}{1\spades}}
+\begin{options}[2]
+    \item[1\nt] Brak fitu \clubs, 0-7PC
+    \item[2\clubs] 3+\clubs, 0-7PC
+    \item[2\diams] Do gry, 0-7PC
+    \item[2\hearts] młode, krótkość \hearts\ \inv+
+    \item[2\spades] młode, krótkość \spades\ \inv+
+    \item[2\nt] \inv (8-10) (3352 no bo co innego)
+    \item[3\clubs] \inv (8-10)  
+    \item[3\diams] \gf\ \diams bez krótkości lub z krótkością \clubs
+    \item[3\major] \gf\ \diams z krótkością 
+\end{options}
+
+\section{Gadżet po 1\clubs}
+Odwrotny Gadżet Bartka
+
+\sequence{{1\clubs}{1\hearts}{2\ntx}}
+\begin{options}[2]
+    \item[3\clubs] ask \hearts i \clubs
+    \item[3\diams] ask \hearts i \diams
+    \item[3\hearts] 6+\hearts lub 5\xhearts 4\spades \imp
+    \item[3\spades] ask \hearts i \spades (44)
+\end{options}
+
+\sequence{{1\clubs}{1\spades}{2\ntx}}
+\begin{options}[2]
+    \item[3\clubs] ask \spades i \clubs
+    \item[3\diams] ask \spades i \diams
+    \item[3\hearts] 4\xhearts 5\spades
+    \item[3\spades] ustala \spades
+\end{options}
+
+\sequence{{1\clubs}{1\hearts}{2\ntx}{3\clubs}}
+\begin{options}[2]
+    \item[3\diams] 3\hearts
+    \item[3\hearts] ustala
+    \item[3\spades] 4\clubs, 2\hearts
+\end{options}
+
+\sequence{{1\clubs}{1\spades}{2\ntx}{3\clubs}}
+\begin{options}[2]
+    \item[3\diams] 3\spades
+    \item[3\hearts] 4\clubs, 2\spades
+    \item[3\spades] ustala
+\end{options}
+
+\section{Gadżet po 1\diams}
+Gadżet Krysi
+
+\sequence{{1\diams}{1\hearts}{2\nt}}
+\begin{options}[2]
+    \item[\pass]
+    \item[3\clubs] ask
+    \item[3\diams/3\hearts] to play
+    \item[3\spades] ask clubs
+\end{options}
+
+\sequence{{1\diams}{1\hearts}{2\nt}{3\clubs}}
+\begin{options}[1]
+    \item[3\diams] 3\hearts (3\hearts agreeing hearts, 3\spades ask clubs)
+    \item[3\hearts] 4\hearts (agreeing hearts)
+    \item[3\spades] long diamonds, 2\hearts (4\clubs agreeing hearts)
+\end{options}
+After any response 4\diams = agreeing diamonds.
+
+\sequence{{1\diams}{1\hearts}{2\nt}{3\spades}}
+\begin{options}[2]
+    \item[4\clubs] 4\hearts (agreeing)
+    \item[4\diams] 4+\clubs (agreeing)
+\end{options}
+
+\sequence{{1\diams}{1\spades}{2\nt}}
+\begin{options}[2]
+    \item[\pass]
+    \item[3\clubs] ask
+    \item[3\diams/3\spades] to play
+    \item[3\hearts] 4\hearts + 5\spades (ask)
+\end{options}
+
+\sequence{{1\diams}{1\spades}{2\nt}{3\clubs}}
+\begin{options}[1]
+    \item[3\diams] long diamonds or 4\clubs, 2\spades (3\hearts ask, 3\spades agreeing spades)
+    \item[3\hearts] 3\spades (3\spades agreeing spades)
+    \item[3\spades] 4\spades (agreeing spades)
+\end{options}
+
+\sequence{{1\diams}{1\spades}{2\nt}{3\hearts}}
+\begin{options}[1]
+    \item[3\spades] 3-4\spades (agreeing spades)
+    \item[4\clubs] 4\hearts (agreeing hearts)
+\end{options}
+
+\section{2\diams multi -- obrona}
+Połowy nie pamiętam
+
+\subsubsection*{(2\diams) -- ?}
+        \begin{itemize}
+            \item \dbl = (13)14-16 \bal, no 5\major, may have minor singleton \vimp
+            \item 2\hearts = 11-15, 5+\hearts
+            \item 2\spades = 11-15, 5+\spades
+            \item 2\nt = 17-19, \bal
+            \item 3\clubs = \clubs, not 5332/5422
+            \item 3\diams = \diams, not 5332/5422
+            \item 3\hearts, 3\spades = solid suit, weaker then power double
+            \item 3\nt = \minor \vimp
+            \item 4\clubs = \clubs+\major
+            \item 4\diams = \diams+\major
+        \end{itemize}
+
+        \subsubsection*{(2\diams) -- P -- (\alrts{P}) -- ?}
+        System like after 2\diams preempt.
+
+        \subsubsection*{(2\diams) -- P -- (2\hearts) -- ?}
+        \begin{itemize}
+            \item \pass = no suitable call OR takeout with \spades shortness
+            \item \dbl = 14-16 \bal \vimp
+            \item 2\spades = 11-15, 5+\spades, may be solid 4\spades with 1-\hearts
+            \item 2\nt = 17-19, \bal
+        \end{itemize}
+
+        \subsubsection*{(2\diams) -- P -- (2\spades) -- ?}
+        \begin{itemize}
+            \item \pass = no suitable call OR takeout with \hearts shortness \imp
+            \item \dbl = takeout with \spades shortness \imp
+            \item 2\nt = 17-19, \bal
+        \end{itemize}
+
+        \subsubsection*{(2\diams) -- P -- (>2\spades) -- ?}
+        \begin{itemize}
+            \item \dbl = takeout \imp
+        \end{itemize}
+
+        \subsubsection*{(2\diams) -- P -- (2\hearts) -- P \\
+                        (P) -- ?}        
+        \begin{itemize}
+            \item 2\nt = \minor
+        \end{itemize}
+
+        \subsubsection*{(2\diams) -- \dbl -- (\rdbl/\pass) -- ?}        
+        \begin{itemize}
+            \item \pass = want to defend, doubles are penalty
+            \item 2\major = 5+\major, to play
+            \item 2\nt = Lebensohl (see below)
+            \item 3\clubs = Stayman \vimp
+            \item 3\diams = \trsf{\hearts}, \gf\ + superaccepts
+            \item 3\hearts = \trsf{\spades}, \gf\ + superaccepts
+            \item 3\spades = \trsf{\nt}, no \major stoppers
+            \item 4\diams, 4\hearts = Texas
+        \end{itemize}
+
+        \subsubsection*{(2\diams) -- \dbl -- (\rdbl/\pass) -- 2\nt \\
+                        (P) -- 3\clubs -- (P) -- ?}        
+        \begin{itemize}
+            \item \pass = to play
+            \item 3\diams = \gf, no 4\major \vimp
+            \item 3\hearts, 3\spades = \inv
+        \end{itemize}
+
+        \subsubsection*{(2\diams) -- \dbl -- (\hearts/\spades) -- ?}        
+        \begin{itemize}
+            \item \dbl = 9+, \fton{2\nt}, no 5\major, no \major shortness
+            \item 2\nt = Lebensohl (see below)
+            \item 3\clubs = Stayman \vimp
+            \item 3\diams = \trsf{\hearts}, \gf\ + superaccepts
+            \item 3\hearts = \trsf{\spades}, \gf\ + superaccepts
+            \item 3\spades = takeout with opps' suit shortness, \gf
+            \item 4\diams, 4\hearts = Texas
+        \end{itemize}
+
+        \subsubsection*{(2\diams) -- \dbl -- (2\hearts/\spades) -- 2\nt \\
+                        (P) -- 3\clubs -- (P) -- ?}        
+        \begin{itemize}
+            \item \pass/3\diams = to play
+            \item 3\hearts, 3\spades = \inv
+        \end{itemize}
+
+        \subsubsection*{(2\diams) -- \dbl -- (2\hearts/\spades) -- \dbl \\
+                        (P) -- ?}        
+        \begin{itemize}
+            \item \pass = to play
+            \item 2\spades = 4\spades, \fonce
+            \item 2\nt = \nat, minimum
+            \item 3\clubs = \nat, minimum
+            \item 3\diams = \nat, minimum
+            \item 3\hearts over 2\spades = \nat, minimum
+            \item cue 3\hearts, 3\spades = maximum, no stopper, no 4\spades
+            \item 3\nt = maximum, stopper, no 4\spades
+        \end{itemize}
+
+        \subsubsection*{(2\diams) -- \dbl -- (2\hearts) -- \dbl \\
+                        (2\spades) -- ?}        
+        \begin{itemize}
+            \item \pass = \fonce
+            \item \dbl = penalty
+            \item 2\nt = do not want to defend, \gf
+            \item 3\clubs = \nat, \gf
+            \item 3\diams = \nat, \gf
+            \item 3\hearts = \nat, \gf
+            \item 3\spades = maximum, no \spades stopper
+            \item 3\nt = maximum, stopper
+        \end{itemize}
+
+        \subsubsection*{(2\diams) -- \dbl -- (2\hearts) -- \dbl \\
+                        (2\spades) -- P -- (P) -- ?}
+        \begin{itemize}
+            \item 3\spades = \spades shortness, \gf %%% Can be ask for stop??
+        \end{itemize}
+
+        \subsubsection*{(2\diams) -- \dbl -- (2\spades) -- \dbl \\
+                        (3\hearts) -- ?}  
+        \begin{itemize}
+            \item \pass = 14-16, no 4\spades OR power double, \fonce
+            \item \dbl = 14-16, 4\spades, defensive
+            
+        \end{itemize}
+
+\section{Podniesienia z 3}
+
+Nie rebidujemy 2\spades z 3(244).\\
+Z 43(42) rebidujemy 1\spades, a nie 2\hearts.
+
+\sequence{{1\clubs}{1\hearts}{2\hearts}}
+\begin{options}[1]
+    \item[2\spades] \gf
+    \item[2\nt] \inv\ \spades
+    \item[3\minor/3\hearts] \inv
+\end{options}
+
+\sequence{{1\clubs}{1\hearts}{2\hearts}{2\spades}}
+\begin{options}[1]
+    \item[2\nt] 4\hearts (3\clubs = ask)
+    \item[3\clubs] 3\hearts\ + shortness (3\diams = ask, does not agree \hearts)
+    \item[3\diams] 2326
+    \item[3\hearts] 2335
+    \item[3\spades] 3325
+    \item[3\nt] 2344
+\end{options}
+
+\sequence{{1\clubs}{1\hearts}{2\hearts}{2\spades}{3\clubs}}
+\begin{options}[1]
+    \item[3\diams] \bal
+    \item[3\hearts] 2425
+    \item[3\spades] 1435
+    \item[3\nt] 3415
+\end{options}   
+
+\sequence{{1\clubs}{1\spades}{2\spades}}
+\begin{options}[1]
+    \item[2\nt] \gf
+    \item[3\anysuit{x}] \inv
+\end{options}
+
+\sequence{{1\clubs}{1\spades}{2\spades}{2\nt}}
+\begin{options}[1]
+    \item[3\clubs] 4\spades (3\diams = ask)
+    \item[3\diams] 3\spades + shortness (3\hearts = ask, does not agree \spades)
+    \item[3\hearts] 3325
+    \item[3\spades] 3226
+    \item[3\nt] 3235
+\end{options}
+
+\sequence{{1\clubs}{1\spades}{2\spades}{2\nt}{3\clubs}}
+\begin{options}[1]
+    \item[3\diams] \bal
+    \item[3\hearts] 4225
+    \item[3\spades] 4135
+    \item[4\clubs] 4315
+\end{options}
+
+\sequence{{1\diams}{1\hearts}{2\hearts}}
+\begin{options}[1]
+    \item[2\spades] \gf
+    \item[2\nt] \inv\ \spades
+    \item[3\minor/3\hearts] \inv
+\end{options}
+
+\sequence{{1\diams}{1\hearts}{2\hearts}{2\spades}}
+\begin{options}[1]
+    \item[2\nt] 4\hearts (3\clubs = ask)
+    \item[3\clubs] 3\hearts\ + shortness (3\diams = ask, does not agree \hearts)
+    \item[3\diams] 2362
+    \item[3\hearts] 2353
+    \item[3\spades] 3332
+    \item[3\nt] 2352
+\end{options}
+
+\sequence{{1\diams}{1\hearts}{2\hearts}{2\spades}{3\diams}}
+\begin{options}[1]
+    \item[3\hearts] 1453/1444
+    \item[3\spades] 3451/4441
+\end{options}
+
+\sequence{{1\diams}{1\spades}{2\spades}}
+\begin{options}[1]
+    \item[2\nt] \gf
+    \item[3\anysuit{x}] \inv
+\end{options}
+
+\sequence{{1\diams}{1\spades}{2\spades}{2\nt}}
+\begin{options}[1]
+    \item[3\clubs] 4\spades (3\diams = ask)
+    \item[3\diams] 3\spades + shortness (3\hearts = ask, does not agree \spades)
+    \item[3\hearts] 3262
+    \item[3\spades] 3253
+    \item[3\nt] 3352
+\end{options}
+
+\sequence{{1\diams}{1\spades}{2\spades}{2\nt}{3\clubs}{3\diams}}
+\begin{options}[1]
+    \item[3\hearts] \bal
+    \item[3\spades] 4252
+    \item[3\nt] 4153
+    \item[4\clubs] 4351
+\end{options}
+
+\sequence{{1\hearts}{1\spades}{2\spades}}
+\begin{options}[1]
+    \item[2\nt] \gf
+    \item[3\anysuit{x}] \inv
+\end{options}
+
+\sequence{{1\hearts}{1\spades}{2\spades}{2\nt}}
+\begin{options}[1]
+    \item[3\clubs] 4\spades (3\diams = ask)
+    \item[3\diams] 3\spades + shortness (3\hearts = ask, does not agree \spades)
+    \item[3\hearts] 3622
+    \item[3\spades] 3523
+    \item[3\nt] 3532
+\end{options}
+
+\sequence{{1\hearts}{1\spades}{2\spades}{2\nt}{3\clubs}{3\diams}}
+\begin{options}[1]
+    \item[3\hearts] \bal
+    \item[3\spades] 4522
+    \item[3\nt] 4513
+    \item[4\clubs] 4531
+\end{options}
+
+\section{Szwedzkie otwarcie 2\major}
+
+\sequence{{\alrts{2\hearts}}}
+\begin{options}[1]
+    \item[2\spades] 5+\spades, \fton{3\major}
+    \item[2\nt] relay
+    \item[3\clubs] \minor\ \gf\ (3\diams = ask)
+    \item[3\diams] \hearts\ \invp
+    \item[3\hearts] preemptive
+    \item[3\spades/4\minor] splinter
+    \item[3\nt] to play
+\end{options}
+
+\sequence{{2\hearts}{2\spades}}
+\begin{options}[1]
+    \item[2\nt] \spades shortness, better hand
+    \item[3\clubs] 2\spades, \clubs feature \textbf{cośtam bo featurami nie gramy}
+    \item[3\diams] 2\spades, \diams feature
+    \item[3\hearts] \spades shortness, weak
+    \item[3\spades] 3\spades, weak
+    \item[3\nt] 3\spades, no shortness
+    \item[4\minor] splinter, 3+\spades
+\end{options}
+
+\sequence{{2\hearts}{2\nt}}
+\begin{options}[1]
+    \item[3\clubs] 4+\twosuit{\minor}{\spades} (3\diams = ask)
+    \item[3\diams] \minor\ feature (3\hearts = ask)
+    \item[3\hearts] bad hand
+    \item[3\spades] \spades feature
+    \item[3\nt] very good \hearts
+\end{options}
+
+\sequence{{2\hearts}{2\nt}{3\clubs}{3\diams}}
+\begin{options}[1]
+    \item[3\hearts] 4\spades
+    \item[3\spades] 4\clubs
+    \item[3\nt] 4\diams
+\end{options}
+
+\sequence{{2\hearts}{2\nt}{3\diams}{3\hearts}}
+\begin{options}[1]
+    \item[3\spades] \clubs feature
+    \item[3\nt] \diams feature
+\end{options}
+
+\sequence{{2\hearts}{3\diams}}
+\begin{options}[1]
+    \item[3\hearts] weak
+    \item[3\spades] better hand, no shortness
+    \item[3\nt/4\minor] shortness (3\nt = \spades shortness)
+\end{options}
+
+\sequence{{\alrts{2\spades}}}
+\begin{options}[1]
+    \item[2\nt] relay
+    \item[3\clubs] 5+\hearts\ \fonce
+    \item[3\diams] \minor\ \gf\ (3\hearts = ask)
+    \item[3\hearts] \spades\ \invp
+    \item[3\spades] preemptive
+    \item[4\minor] splinter
+    \item[3\nt] to play
+\end{options}
+
+\sequence{{2\spades}{2\nt}}
+\begin{options}[1]
+    \item[3\clubs] 4+\twosuit{\minor}{\hearts} (3\diams = ask)
+    \item[3\diams] \minor\ feature (3\hearts = ask)
+    \item[3\hearts] \hearts feature
+    \item[3\spades] weak hand
+    \item[3\nt] very good \spades
+\end{options}
+
+\sequence{{2\spades}{2\nt}{3\clubs}{3\diams}}
+\begin{options}[1]
+    \item[3\hearts] 4\hearts
+    \item[3\spades] 4\clubs
+    \item[3\nt] 4\diams
+\end{options}
+
+\sequence{{2\spades}{2\nt}{3\diams}{3\hearts}}
+\begin{options}[1]
+    \item[3\spades] \clubs feature
+    \item[3\nt] \diams feature
+\end{options}
+
+\sequence{{2\spades}{3\clubs}}
+\begin{options}[1]
+    \item[3\diams] 2\hearts
+    \item[3\hearts] 3\hearts weak
+    \item[3\spades] \hearts shortness, weak
+    \item[3\nt] \hearts shortness, better hand
+    \item[4\minor] splinter, 3+\hearts
+\end{options}
+
+\sequence{{2\spades}{3\diams}{3\hearts}}
+\begin{options}[1]
+    \item[3\spades] \clubs
+    \item[3\nt] \diams
+\end{options}
+
+\sequence{{2\spades}{3\hearts}}
+\begin{options}[1]
+    \item[3\spades] weak hand
+    \item[3\nt] good hand, no shortness
+    \item[cue] shortness
+\end{options}
+
+\section{Forsujący rebid 1\spades}
+
+Tu mieliśmy jakieś ustalenia ale ich nie pamiętam,
+grajmy nat
+
+\section{Lebensohl}
+
+Wszystkie sekwencje:
+
+\begin{itemize}
+    \item po wejściach przeciwnika na 1\nt
+    \item po wejściach przeciwnika blokiem
+    \item (2\major) \dbl (\pass) \hspace{1cm} better minor
+    \item (1\major) \dbl (2\major) \hspace{1cm} better minor
+    \item (\alrts{2\diams}) \dbl (\rdbl)
+    \item coś jeszcze?
+\end{itemize}
+
+\section{Acol}
+
+\sequence{{2\clubs}{2\diams}}
+\begin{options}[1]
+    \item[3\clubs] long \diams\ \then 3\diams\ \lsf
+    \item[3\diams] 5+\xdiams 4\major
+\end{options}
+
+\section{Szlemiki}
+Pytanie o asy na \major; 4\nt\\
+Na kierach, po przekroczeniu 4\nt; 5\spades\\
+Odpowiadamy na asy bez króli.\\
+Odpowiedzi z renonsem: po kolei powyżej zwykłych odpowiedzi.\\
+Kolorowe króle.\\
+Odpowiedzi na pytanie o asy po (naszym) bloku: 0/1-Q/1+Q/2-Q/2+Q
+
+\end{document}
+
+
+% \sequence{{(2\diams)}}
+% \begin{options}[1]
+%     \item[2\hearts] 5+\hearts
+%     \item[2\spades] 5+\spades
+%     \item[2\nt] \bal
+%     \item[3\clubs] \clubs
+%     \item[3\diams] \diams
+%     \item[3\hearts] solid \hearts
+%     \item[3\spades] solid \spades
+%     \item[3\nt] \minor
+%     \item[4\clubs] \clubs+\major
+%     \item[4\diams] \diams+\major
+% \end{options}
+
+% \sequence{{(2\diams)}{P}{(P)}}
+% System jak po 2\diams preempt.
+
+% \sequence{{(2\diams)}{P}{(2\hearts)}}
+% \begin{options}[1]
+%     \item[\pass] no suitable call OR takeout with \spades shortness
+%     \item[\dbl] 14-16 \bal \vimp
+%     \item[2\spades] 11-15, 5+\spades, may be solid 4\spades with 1-\hearts
+%     \item[2\nt] 17-19, \bal
+% \end{options}
+
+% \sequence{{(2\diams)}{P}{(2\spades)}}
+% \begin{options}[1]
+%     \item[\pass] no suitable call OR takeout with \hearts shortness \imp
+%     \item[\dbl] takeout with \spades shortness \imp
+%     \item[2\nt] 17-19, \bal
+% \end{options}
+
+% \sequence{{(2\diams)}{P}{(>2\spades)}}
+% \begin{options}[1]
+%     \item[\dbl] takeout \imp
+% \end{options}
+
+% \sequence{{(2\diams)}{P}{(2\hearts)}{P}{(P)}}
+% \begin{options}[1]
+%     \item[2\nt] \minor
+% \end{options}
+
+% \sequence{{(2\diams)}{\dbl}{(\rdbl/\pass)}} 
+% \begin{options}[1]
+%     \item[\pass] want to defend, doubles are penalty
+%     \item[2\major] 5+\major, to play
+%     \item[2\nt] Lebensohl (see below)
+%     \item[3\clubs] Stayman \vimp
+%     \item[3\diams] \trsf{\hearts}, \gf\ + superaccepts
+%     \item[3\hearts] \trsf{\spades}, \gf\ + superaccepts
+%     \item[3\spades] \trsf{\nt}, no \major stoppers
+%     \item[4\diams, 4\hearts] Texas
+% \end{options}
+
+% \sequence{{(2\diams)}{\dbl}{(\rdbl/\pass)}{2\nt}{(P)}{3\clubs}{(P)}}
+% \begin{options}[1]
+%     \item[\pass] to play
+%     \item[3\diams] \gf, no 4\major \vimp
+%     \item[3\hearts, 3\spades] \inv
+% \end{options}
+
+% \sequence{{(2\diams)}{\dbl}{(2\hearts/2\spades)}}
+% \begin{options}[1]
+%     \item[\dbl] 9+, \fton{2\nt}, no 5\major, no \major shortness
+%     \item[2\nt] Lebensohl (see below)
+%     \item[3\clubs] Stayman \vimp
+%     \item[3\diams] \trsf{\hearts}, \gf\ + superaccepts
+%     \item[3\hearts] \trsf{\spades}, \gf\ + superaccepts
+%     \item[3\spades] takeout with opps' suit shortness, \gf
+%     \item[4\diams, 4\hearts] Texas
+% \end{options}
+
+% \sequence{{(2\diams)}{\dbl}{(2\hearts/2\spades)}{2\nt}{(P)}{3\clubs}{(P)}}
+% \begin{options}[1]
+%     \item[\pass/3\diams] to play
+%     \item[3\hearts, 3\spades] \inv
+% \end{options}
+
+% \sequence{{(2\diams)}{\dbl}{(2\hearts/2\spades)}{\dbl}{(P)}}
+% \begin{options}[1]
+%     \item[\pass] to play
+
+
+%%%
+
+
+        % \subsubsection*{(2\diams) -- \dbl -- (2\hearts/\spades) -- \dbl \\
+        %                 (P) -- ?}        
+        % \begin{itemize}
+        %     \item \pass = to play
+        %     \item 2\spades = 4\spades, \fonce
+        %     \item 2\nt = \nat, minimum
+        %     \item 3\clubs = \nat, minimum
+        %     \item 3\diams = \nat, minimum
+        %     \item 3\hearts over 2\spades = \nat, minimum
+        %     \item cue 3\hearts, 3\spades = maximum, no stopper, no 4\spades
+        %     \item 3\nt = maximum, stopper, no 4\spades
+        % \end{itemize}
+
+        % \subsubsection*{(2\diams) -- \dbl -- (2\hearts) -- \dbl \\
+        %                 (2\spades) -- ?}        
+        % \begin{itemize}
+        %     \item \pass = \fonce
+        %     \item \dbl = penalty
+        %     \item 2\nt = do not want to defend, \gf
+        %     \item 3\clubs = \nat, \gf
+        %     \item 3\diams = \nat, \gf
+        %     \item 3\hearts = \nat, \gf
+        %     \item 3\spades = maximum, no \spades stopper
+        %     \item 3\nt = maximum, stopper
+        % \end{itemize}
+
+        % \subsubsection*{(2\diams) -- \dbl -- (2\hearts) -- \dbl \\
+        %                 (2\spades) -- P -- (P) -- ?}
+        % \begin{itemize}
+        %     \item 3\spades = \spades shortness, \gf %%% Can be ask for stop??
+        % \end{itemize}
+
+        % \subsubsection*{(2\diams) -- \dbl -- (2\spades) -- \dbl \\
+        %                 (3\hearts) -- ?}  
+        % \begin{itemize}
+        %     \item \pass = 14-16, no 4\spades OR power double, \fonce
+        %     \item \dbl = 14-16, 4\spades, defensive
+            
+        % \end{itemize}
