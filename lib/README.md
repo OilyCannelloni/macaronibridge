@@ -40,9 +40,13 @@ Create .tex file, you can do it using command:
 touch file.tex
 ```
 
+![Zrzut ekranu 2024-10-21 222048](https://github.com/user-attachments/assets/068c0815-0e82-47d7-93ce-3944aaa18ba1)
+
 Note that file.tex appeared in ./macaronibridge directory.
 
 Open this file using TeXworks. This editor should be installed with MikTex.
+
+![Zrzut ekranu 2024-10-21 214728](https://github.com/user-attachments/assets/de1522b5-7129-4478-bad6-fe188218cdb9)
 
 4. Write your TeX file, for example copy & paste this:
 
@@ -71,7 +75,13 @@ This file is an example LaTeX file, using bridge.sty library.
 \end{document}
 ```
 
-5. Choose LuaLaTeX as compiler and press 'run' (green arrow). On the first time it may take a while to compile. If the application asks you if you want to install dependencies; agree (you can choose not to be ased every time).
+5. Choose LuaLaTeX as compiler and press 'run' (green arrow).
+
+![Zrzut ekranu 2024-10-21 215220](https://github.com/user-attachments/assets/82e958e8-cd0b-4008-95c3-5ec4ccd61280)
+
+On the first time it may take a while to compile (see screenshot below). If the application asks you if you want to install dependencies; agree (you can choose not to be ased every time).
+
+![Zrzut ekranu 2024-10-21 213716](https://github.com/user-attachments/assets/61f9b604-892c-4354-aa66-b4bdc742c017)
 
 You should see the pdf on the right side of your page. The file.pdf file has been created in the same directory as file.tex.
 
