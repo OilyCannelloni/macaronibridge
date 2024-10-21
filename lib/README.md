@@ -1,3 +1,102 @@
+# How to use LaTeX bridge library?
+
+## Windows
+
+1. Get MikTex from here:
+
+https://miktex.org/download
+
+You can use default configuration during installation.
+
+2. Get Git from here:
+
+https://gitforwindows.org/
+
+You can use default settings during installation.
+
+3. Open Git Console (git bash). Navigate to desired directory, for example (type this in Git Console):
+
+```
+cd Desktop
+```
+
+Clone our repository:
+
+```
+ git clone https://github.com/OilyCannelloni/macaronibridge.git
+```
+
+You should see cloned repository in the chosen directory (for example on your Desktop).
+
+Navigate to this directory:
+
+```
+cd macaronibridge
+```
+
+Create .tex file, you can do it using command:
+
+```
+touch file.tex
+```
+
+Note that file.tex appeared in ./macaronibridge directory.
+
+Open this file using TeXworks. This editor should be installed with MikTex.
+
+4. Write your TeX file, for example copy & paste this:
+
+```
+\documentclass[12pt, a4paper]{report}
+\usepackage{import}
+
+\import{./lib/}{bridge.sty}
+\setmainlanguage{english}
+
+\title{Example LaTeX file}
+\author{Krysia \& Bartek}
+\begin{document}
+\maketitle
+
+This file is an example LaTeX file, using bridge.sty library.
+
+\sequence{{1\diams}{1\hearts}{2\nt}}
+\begin{options}[2]
+    \item[\pass]
+    \item[3\clubs] ask
+    \item[3\diams/3\hearts] to play
+    \item[3\spades] ask clubs
+\end{options}
+
+\end{document}
+```
+
+5. Choose LuaLaTeX as compiler and press 'run' (green arrow). On the first time it may take a while to compile. If the application asks you if you want to install dependencies; agree (you can choose not to be ased every time).
+
+You should see the pdf on the right side of your page. The file.pdf file has been created in the same directory as file.tex.
+
+### remarks
+
+1. Note, that the file.tex created directly in macaronibridge directory imports bridge library like this:
+
+```
+\import{./lib/}{bridge.sty}
+```
+
+If you decide to put your file somewhere else, you have to edit this line. For example, if you put your file in macaronibridge/myfiles directory, you have to change import line to:
+
+```
+\import{../lib/}{bridge.sty}
+```
+
+2. Investigate other files in macaronibridge repo to see other examples of what else you can do using bridge LaTeX library.
+
+## Linux
+
+Clone repo and compile your .tex files using LuaLaTeX.
+
+# Some advanced remarks 
+
 ## Handling spaces
 
 The `\xspace` package is used to handle spaces at the end of macros. `\xspace` after popular
