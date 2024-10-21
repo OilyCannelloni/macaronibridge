@@ -4,6 +4,7 @@ and generate a LaTeX file with the hand diagrams.
 """
 
 import argparse
+import re
 import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -21,7 +22,7 @@ class TCResultsDriver(webdriver.Chrome):
         options.add_argument("--headless=new")
         super().__init__(options=options)
         self.url_base = url_base
-        self.active_board_number: int | None = None
+        self.active_board_nr: int | None = None
         self.board_numbers = []
         self.board_data = {}
 
@@ -58,7 +59,13 @@ class TCResultsDriver(webdriver.Chrome):
         #     )
         # except TimeoutException as err:
         #     raise TimeoutError("Page not loaded") from err
-        self.active_board_number = board_number
+        self.active_board_nr = board_number
+
+    def get_true_board_number(self) -> int:
+        element = self.find_element(By.ID, "tabB_bTitle0")
+        html_content = element.get_attribute("innerHTML")
+        match = re.match(r'<h1 class="mb-0"> *([0-9]*) *</h1>', html_content)
+        return int(match.groups()[0])
 
     def get_cards(self, span_name) -> Hand:
         """
@@ -112,10 +119,13 @@ class TCResultsDriver(webdriver.Chrome):
         for span_name in ("tabB_nCards0", "tabB_eCards0", "tabB_sCards0", "tabB_wCards0"):
             hands.append(self.get_cards(span_name))
 
+        true_number = self.get_true_board_number()
         # pylint: disable=E1120
-        board = BoardData(self.active_board_number, *hands)
-        self.board_data[self.active_board_number] = board
-        print(f"Loaded board #{self.active_board_number}:")
+        board = BoardData(self.active_board_nr, true_number, *hands)
+        self.board_data[self.active_board_nr] = board
+
+        true_number_str = '' if self.active_board_nr == true_number else f'({true_number})'
+        print(f"Loaded board #{self.active_board_nr}{true_number_str}:")
         print(str(board))
 
     # pylint: disable=E0202
@@ -134,14 +144,16 @@ if __name__ == '__main__':
                         default="https://mzbs.pl/files/2021/wyniki/zs/240925/",
                         help='Base URL of the results page')
     parser.add_argument('-b', '--board', type=int, help='Specific board number to process')
+    parser.add_argument('-o', '--output-file', type=str, help='Output TEX file')
 
     args = parser.parse_args()
-
     driver = TCResultsDriver(args.url)
 
-    if args.board is not None and args.number is not None:
+    if not ((args.board is not None) ^ (args.number is not None)):
         print("Error: Please provide either -n or -b, not both.")
         exit()
+
+    print_tex_output = args.output_file is None
 
     if args.board is not None:
         # If a specific board is provided, load only that one
@@ -157,4 +169,4 @@ if __name__ == '__main__':
             driver.load_board(n)
 
     # Generate the LaTeX file
-    build_analysis_template(driver.board_data.values(), "test_python.tex", verbose=True)
+    build_analysis_template(driver.board_data.values(), args.output_file, verbose=print_tex_output)

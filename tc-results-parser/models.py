@@ -21,6 +21,7 @@ class Hand:
 
 @dataclass
 class BoardData:
+    sequence_number: int
     number: int
     west: Hand
     north: Hand

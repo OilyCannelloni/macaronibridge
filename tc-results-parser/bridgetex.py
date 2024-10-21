@@ -23,7 +23,7 @@ def bidding_header(board_n):
 def build_analysis_page(board: BoardData):
     ss = ""
     ss += "\n\\pagebreak\n"
-    ss += f"\\section*{{Rozdanie {board.number}}}\n"
+    ss += f"\\section*{{Rozdanie {board.sequence_number or board.number}}}\n"
     ss += board.to_handdiagramv()
     ss += r"""
 \begin{table}[h!]
