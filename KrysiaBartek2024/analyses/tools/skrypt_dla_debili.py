@@ -7,7 +7,7 @@ import subprocess
 import os
 
 if len(sys.argv) != 2:
-    print("Usage: python script.py <filename>")
+    print("Usage: python skrypt_dla_debili.py <filename>")
     sys.exit(1)
 
 filename = sys.argv[1]
