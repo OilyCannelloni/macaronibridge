@@ -41,6 +41,7 @@ class TCResultsDriver(webdriver.Chrome):
         extracting the board numbers.
         """
         self.get(self.url_base)
+        time.sleep(0.5)
         self.board_numbers = self.execute_script("return settings.BoardsNumbers")
 
     def set_active_board(self, board_number):
@@ -143,24 +144,25 @@ if __name__ == '__main__':
     parser.add_argument('-d', '--url', type=str,
                         default="https://mzbs.pl/files/2021/wyniki/zs/240925/",
                         help='Base URL of the results page')
-    parser.add_argument('-b', '--board', type=int, help='Specific board number to process')
+    parser.add_argument('-b', '--boards', type=int, nargs="+", help='Specific board numbers to process')
     parser.add_argument('-o', '--output-file', type=str, help='Output TEX file')
 
     args = parser.parse_args()
     driver = TCResultsDriver(args.url)
 
-    if not ((args.board is not None) ^ (args.number is not None)):
+    if not ((args.boards is not None) ^ (args.number is not None)):
         print("Error: Please provide either -n or -b, not both.")
         exit()
 
     print_tex_output = args.output_file is None
 
-    if args.board is not None:
-        # If a specific board is provided, load only that one
-        if args.board in driver.board_numbers:
-            driver.load_board(args.board)
-        else:
-            print(f"Error: Board {args.board} not found.")
+    if args.boards is not None:
+        # If a specific boards are provided, load only those
+        for board in args.boards:
+            if board in driver.board_numbers:
+                driver.load_board(board)
+            else:
+                print(f"Error: Board {args.board} not found.")
     else:
         # If -n is provided, process only the first n boards
         num_boards = min(args.number, len(driver.board_numbers)) \

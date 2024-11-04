@@ -20,6 +20,21 @@ def bidding_header(board_n):
     return ss
 
 
+def bidding_shift_dashes(board_n):
+    dealer = get_dealer(board_n)
+    match dealer:
+        case "W":
+            return "\\\\\n"
+        case "N":
+            return "  -  & & & \\\\\n"
+        case "E":
+            return "  -  &  -  & & \\\\\n"
+        case "S":
+            return "  -  &  -  &  -  & \\\\\n"
+        case _:
+            return ""
+
+
 def build_analysis_page(board: BoardData):
     ss = ""
     ss += "\n\\pagebreak\n"
@@ -31,6 +46,7 @@ def build_analysis_page(board: BoardData):
     \begin{tabular}{cccc}
         """
     ss += bidding_header(board.number)
+    ss += "\t\t" + bidding_shift_dashes(board.number)
 
     ss += r"""
     \end{tabular}
