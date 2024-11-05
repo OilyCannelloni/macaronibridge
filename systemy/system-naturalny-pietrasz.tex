@@ -1,0 +1,153 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{import}
+
+
+\makeatletter
+\ExplSyntaxOn
+\clist_new:N\l_gtext_First_clist
+\clist_new:N\l_gtext_Last_clist
+\int_new:N\l_gtext_MaxIndex_int
+\int_new:N\l_gtext_Ratio_int
+\newcommand{\gr@dient}[8]{
+  \int_set:Nn\l_gtext_MaxIndex_int{\int_eval:n{\str_count:n{#1}}}
+  \int_step_inline:nnn{1}{\l_gtext_MaxIndex_int}{
+      \exp_args:Ne\str_if_eq:nnTF{\str_item:Nn{#1}{##1}}{~}{}{
+        \int_set:Nn\l_gtext_Ratio_int{\int_eval:n{\l_gtext_Ratio_int+1}}
+      }
+        \color_select:nn{#8}{
+          \int_eval:n{(\int_use:N\l_gtext_Ratio_int*#5+(\l_gtext_MaxIndex_int-##1)*#2)/\l_gtext_MaxIndex_int},
+          \int_eval:n{(\int_use:N\l_gtext_Ratio_int*#6+(\l_gtext_MaxIndex_int-##1)*#3)/\l_gtext_MaxIndex_int},
+          \int_eval:n{(\int_use:N\l_gtext_Ratio_int*#7+(\l_gtext_MaxIndex_int-##1)*#4)/\l_gtext_MaxIndex_int}
+      }\str_item:Nn{#1}{##1}
+  }
+}
+
+\NewDocumentCommand\gradient{mmmm}{{
+  \clist_set:Nn\l_gtext_First_clist {#3}
+  \clist_set:Nn\l_gtext_Last_clist {#4}
+  \gr@dient{#2}
+  {\clist_item:Nn\l_gtext_First_clist{1}}
+  {\clist_item:Nn\l_gtext_First_clist{2}}
+  {\clist_item:Nn\l_gtext_First_clist{3}}
+  {\clist_item:Nn\l_gtext_Last_clist{1}}
+  {\clist_item:Nn\l_gtext_Last_clist{2}}
+  {\clist_item:Nn\l_gtext_Last_clist{3}}
+  {#1}
+}}
+\ExplSyntaxOff
+
+\NewDocumentCommand\gradientRGB{mmm}{
+  \gradient{RGB}{#1}{#2}{#3}
+}
+\NewDocumentCommand\gradientHSB{mmm}{
+  \gradient{HSB}{#1}{#2}{#3}
+}
+\makeatother
+
+\newcommand{\rainbow}[1]{\!\!\textbf{\gradientHSB{#1}{0,240,200}{240,240,200}}}
+
+
+\import{../lib/}{bridge.sty}
+\setmainlanguage{polish}
+
+\title{\vspace{-2cm}System Naturalny ,,PIETRASZ''}
+\date{}
+\author{Bartek Słupik \and Marta Pietraszek}
+
+
+\begin{document}
+\maketitle
+
+\section*{Założenia}
+
+\begin{itemize}
+    \item Otwarcia 1\clubs, 2\clubs, 2\diams oraz odpowiedzi 1\clubs - 1\diams  i 1\clubs - 2\diams są sztuczne.
+    \item Pozostała licytacja jest całkowicie \textbf{naturalna} zgodnie z poprawną techniką naturalnego bilansowania.
+    Kolory z piątki, potem z czwórki.
+    \item Licytacja szybka, do celu pokazuje słabą kartę. Np 1\hearts -- 4\hearts zalicytujemy z kartą słabe 12pc z 3-kartowym fitem.
+    \item Licytacja wolniejsza pokazuje znaczące nadwyżki, np 1\hearts -- 2\clubs -- 2\diams -- 4\hearts to jakieś marne 14pc.
+\end{itemize}
+
+\section*{Otwarcia}
+\vspace*{0.8cm}
+\begin{options}
+    \item[1\clubs] Skład równy (4441, 5\xdiams332) 12-14 lub 18-20 \orr NAT \clubs
+    \item[1\diams] \xdiams, skład nierówny 
+    \item[1\hearts] \hearts
+    \item[1\spades] \spades
+    \item[1\nt] 15-17 skład w miarę równy
+    \item[2\clubs] Acol
+    \item[2\diams] \rainbow{WILKOSZ} = Dowolne 5-5 oprócz 5-5 na młodych, 0-9 PC
+\end{options}
+
+\pagebreak
+
+\section*{Odpowiedzi}
+\sequence{{1\clubs}}
+\begin{options}[2]
+    \item[1\diams\alrt] Nie mam starszej piątki ale coś w karcie jest \vimp 
+    \item[1\hearts] 5+\hearts
+    \item[1\spades] 5+\spades
+    \item[1\nt] Gramy
+    \item[2\clubs] 5+\clubs\ \gf
+    \item[2\diams] \rainbow{WILKOSZ} 5-5 oprócz młodych
+    \item[2\hearts] 6+\hearts\ blok
+    \item[2\spades] 6+\spades\ blok
+    \item[2\nt] inwit     
+\end{options}
+
+\sequence{{1\diams}}
+\begin{options}[2]
+    \item[1\hearts] (4)5+\hearts
+    \item[1\spades] (4)5+\spades
+    \item[1\nt] Brak starszej piątki, brak kar
+    \item[2\clubs] 5+\clubs\ \gf
+    \item[2\diams] jakiś syf, może być bez kar, ale gramy
+    \item[2\hearts] 6+\hearts blok
+    \item[2\spades] 6+\spades blok
+    \item[2\nt] inwit     
+\end{options}
+
+\sequence{{1\hearts}}
+\begin{options}[2]
+    \item[1\spades] (4)5+\spades
+    \item[1\nt] Gramy
+    \item[2\clubs] \gf SZTUCZNY
+    \item[2\diams] \gf 
+    \item[2\hearts] \hearts
+    \item[2\nt] inwit
+    \item[3\hearts] inwit
+    \item[3\nt] Gramy
+    \item[4\hearts] Gramy        
+\end{options}
+
+\pagebreak
+\section*{Rebidy}
+\sequence{{1\clubs}{1\hearts}}
+\begin{options}[1]
+    \item[2\nt] 18-20 \nf
+    \item[3\hearts] Dużo pkt, 3+\hearts (z trójki, partner ma 5)
+\end{options}
+
+\sequence{{1\diams}{1\hearts}}
+\begin{options}[1]
+    \item[2\nt] 18-20 F do 3\diams
+    \item[3\hearts] Dużo pkt, 3+\hearts (z trójki, zakładasz że partner ma 5)
+\end{options}
+
+\section*{Wejścia}
+
+\compsequence{{(1\clubs)}}
+\begin{compoptions}[2]
+    \item[2\diams] \rainbow{WILKOSZ}
+\end{compoptions}
+
+\section*{Strefa szlemowa}
+\begin{itemize}
+    \item \textbf{Nie gramy sigma pytaniem o asy, bo to sztuczna konwencja}
+    \item 5\major = inwit do szlemika
+\end{itemize}
+
+
+
+\end{document}
