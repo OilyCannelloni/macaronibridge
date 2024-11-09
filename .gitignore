@@ -8,3 +8,6 @@
 .vscode
 /KrysiaBartek2024/source/*.pdf
 *.tmp
+/bridge_story/media/*
+/bridge_story/drawing/media/*
+*.pyc

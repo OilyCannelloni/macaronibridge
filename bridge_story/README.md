@@ -9,7 +9,7 @@
 
 ## Usage
 Create a file named example.py:  
-```
+```py
 from drawing.hands import Deal, Position, HandData
 from drawing.deal_animator import DealAnimator
 
@@ -38,7 +38,7 @@ What happened here?
 ### Playing the cards
 
 At the bottom of the file, before the final `wait()`, add  
-```
+```py
 animator.animate_trick(Position.NORTH, Position.NORTH, "Ah", "Th", "3h", "7h")
 animator.animate_trick(Position.NORTH, Position.EAST, "xs", "As", "xs", "xs")
 animator.animate_trick(Position.EAST, Position.SOUTH, "xs", "xs", "xs", "xs")
@@ -51,7 +51,7 @@ and the cards played from each hand. You can use 'xs' as the smallest spade, eve
 
 As you can see here, South blundered by not giving correct suit preference on the first trick.
 Let's give him another chance! Add the following lines:
-```
+```py
 self.wait(2)
 animator.restore_state("start")
 animator.animate_trick(Position.NORTH, Position.NORTH, "Ah", "xh", "9h", "xh")
