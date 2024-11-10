@@ -41,9 +41,9 @@ What happened here?
 
 At the bottom of the file, before the final `wait()`, add  
 ```py
-animator.animate_trick(NORTH, NORTH, "Ah", "Th", "3h", "7h")
-animator.animate_trick(NORTH, EAST, "xs", "As", "xs", "xs")
-animator.animate_trick(EAST, SOUTH, "xs", "xs", "xs", "xs")
+animator.animate_trick(Position.NORTH, Position.NORTH, "Ah", "Th", "3h", "7h")
+animator.animate_trick(Position.NORTH, Position.EAST, "xs", "As", "xs", "xs")
+animator.animate_trick(Position.EAST, Position.SOUTH, "xs", "xs", "xs", "xs")
 ```
 
 Animating a trick requires you to specify the player on lead, the player taking the trick

@@ -1,5 +1,3 @@
-from .common import load_config
-
 import abc
 import dataclasses
 from copy import copy
@@ -10,8 +8,6 @@ from collections.abc import Iterable
 
 import numpy.typing
 from manim import *
-
-config = load_config()
 
 class Position(Enum):
     """
@@ -90,16 +86,10 @@ class Suit(Enum):
         symbol: str
         color: tuple[int, int, int]
 
-    if config.get("use_alternative_font", False):
-        CLUBS = SuitData('c', (20, 220, 20))
-        DIAMS = SuitData('1', (255, 160, 20))
-        HEARTS = SuitData('2', (255, 26, 26))
-        SPADES = SuitData('s', (50, 183, 255))
-    else:
-        CLUBS = SuitData(']', (20, 220, 20))  # what
-        DIAMS = SuitData('[', (255, 160, 20))
-        HEARTS = SuitData('{', (255, 26, 26))
-        SPADES = SuitData('}', (50, 183, 255))  # see README if still confused lol
+    CLUBS = SuitData(']', (21, 220, 20))  # what
+    DIAMS = SuitData('[', (255, 160, 20))
+    HEARTS = SuitData('{', (255, 26, 26))
+    SPADES = SuitData('}', (50, 183, 255))  # see README if still confused lol
 
     @classmethod
     def suits(cls) -> Iterable[SuitData]:
@@ -144,15 +134,13 @@ class Card(Text):
     """
     def __init__(self, value, **kwargs):
         self.value = value
-        if config.get("use_alternative_font", False):
-            super().__init__(value, font="Cards", **kwargs)
-        else:
-            super().__init__(value, font="Card Characters", **kwargs)
+        super().__init__(value, font="Card Characters", **kwargs)
         # There is the answer, this font encodes '=' as a single-space 10, '[' as ♦, '}' as ♠ etc.
 
 
 CARD_SPACING = 0.20
 CARD_SYMBOL_OFFSET = 0.30
+WRITE_TEN_AS_10 = True
 
 
 class Holding(VMobject):
@@ -167,31 +155,21 @@ class Holding(VMobject):
         self._create()
 
     def _create(self):
-        suit_font = "Cards" if config.get("use_alternative_font", False) else "Card Characters"
-        card_font = "Arial Rounded MT" if config.get("use_alternative_font", False) else "Card Characters"
-
         symbol = Text(
             self.suit.symbol(),
             font_size=self.font_size,
             color=self.suit.color(),
-            font=suit_font
+            font="Card Characters"
         )
         self.add(symbol)
 
         for i, card_value in enumerate(self.cards_str):
-            if not config.get("use_alternative_font", True):
+            if WRITE_TEN_AS_10:
                 text = card_value.replace("T", "=")
             else:
                 text = card_value
-            
-            card = Text(
-                text,
-                font_size=self.font_size,
-                color=self.suit.color(),
-                font=card_font,
-                weight=BOLD
-            )
 
+            card = Card(text, font_size=self.font_size, color=self.suit.color(), weight=BOLD)
             offset = CARD_SYMBOL_OFFSET + i * CARD_SPACING
             card.shift(offset * RIGHT)
             self.add(card)
@@ -208,14 +186,21 @@ class Holding(VMobject):
         :param card_value: The value of the card to get, ex. 9 or Q. Use 'x' for smallest available card.
         :return: Card object corresponding to the value.
         """
-        if not config.get("use_alternative_font", True) and card_value == "T":
+        if WRITE_TEN_AS_10 and card_value == "T":
             value = "="
         else:
             value = card_value
 
         if value == 'x':
-            return max(enumerate(self.cards()))[1]  # what
-        return next(c for c in self.cards() if c.value == value)
+            return max(enumerate(self.cards()))[1]  
+        
+        try:
+            for card in self.cards():
+                if card.value == value:
+                    return card
+            # return next(c for c in self.cards() if c.value == value)
+        except StopIteration:
+            raise ValueError(f"Card {value} not found in holding {self.cards_str}")
 
 
 class HandData(dict):
