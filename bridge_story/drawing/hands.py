@@ -5,7 +5,7 @@ import dataclasses
 from copy import copy
 from typing import cast
 from abc import ABC
-from enum import Enum
+from enum import Enum, EnumMeta
 from collections.abc import Iterable
 
 import numpy.typing
@@ -72,8 +72,14 @@ class Position(Enum):
             base = base.next()
 
     @classmethod
-    def positions(cls):
-        yield from cls.trick(cls.WEST)
+    def all(cls):
+        return tuple(cls.trick(cls.WEST))
+
+
+WEST = Position.WEST
+NORTH = Position.NORTH
+EAST = Position.EAST
+SOUTH = Position.SOUTH
 
 
 class Suit(Enum):
@@ -275,6 +281,7 @@ class VerticalHand(Hand):
         """
         Creates a Vertical Hand on the scene. The Holdings are stacked on top of each other.
         """
+        super()._create()
         for i, suit, cards in zip(range(4), Suit.suits(), self.hand_data.str_holdings()):
             holding = Holding(suit, cards)
             holding.shift(i * V_HOLDING_SPACING * DOWN)

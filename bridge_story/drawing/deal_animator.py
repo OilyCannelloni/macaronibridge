@@ -13,6 +13,7 @@ class DealAnimator:
         self.cached_states: dict[str, Deal] = {}
         self.active_trick = {}
         self.caption = None
+        self.hidden: dict[Position, bool] = {p: True for p in Position.all()}
 
         circle = Circle(0.1, WHITE).center()
         self.scene.play(Create(circle))
@@ -28,14 +29,35 @@ class DealAnimator:
         """
         Creates a given hand at the Scene.
         """
+        self.hidden[hand.position] = False
         self.scene.play(Create(hand), run_time=0.8)
 
-    def create_deal(self):
+    def create_hands(self, *positions: Position):
         """
         Creates all hands at the scene. All hands must be registered using initialize(deal)
         """
-        for position in Position.WEST.trick():
+        for position in positions:
             self.create_hand(self.hands[position])
+
+    def hide_hands(self, *positions_to_hide: Position):
+        hiding_hands = []
+        for pos in positions_to_hide:
+            if not self.hidden[pos]:
+                hiding_hands.append(self.hands[pos])
+            self.hidden[pos] = True
+        self.scene.play(
+            *[FadeOut(hand) for hand in hiding_hands]
+        )
+
+    def reveal_hands(self, *positions_to_reveal: Position):
+        revealing_hands = []
+        for pos in positions_to_reveal:
+            if self.hidden[pos]:
+                revealing_hands.append(self.hands[pos])
+            self.hidden[pos] = False
+        self.scene.play(
+            *[FadeIn(hand) for hand in revealing_hands]
+        )
 
     def create_state(self, tag: str, deal: Deal):
         """
@@ -51,7 +73,7 @@ class DealAnimator:
         :param tag: A name of the state to be saved.
         """
         self.cached_states[tag] = Deal(
-            *(deepcopy(self.hands[pos].hand_data) for pos in Position.positions())
+            *(deepcopy(self.hands[pos].hand_data) for pos in Position.all())
         )
 
     def restore_state(self, tag: str):
@@ -79,13 +101,28 @@ class DealAnimator:
         card = holding.get_card(card_value[0])
         self.active_trick[hand.position] = card
         holding.remove(card)  # remove card from screen
-
         new_holding_str = hand.hand_data.remove_card(card_value)  # remove card from memory
+
         new_holding = Holding(holding.suit, new_holding_str)
         new_holding.move_to(holding.get_left())
         new_holding.shift(new_holding.width / 2 * RIGHT)
+
+        if self.hidden[hand.position]:
+            hand.remove(holding)  # silent transform
+            hand.add(new_holding)
+            card.move_to(hand.position.hand_position())
+            self.scene.play(
+                card.animate.move_to(hand.position.card_target())
+                            .set(font_size=24)
+                            .set_opacity(1),
+                run_time=0.8
+            )
+            return
+
         self.scene.play(
-            card.animate.move_to(hand.position.card_target()).set(font_size=24),
+            card.animate.move_to(hand.position.card_target())
+                        .set(font_size=24)
+                        .set_opacity(1),
             Transform(holding, new_holding, replace_mobject_with_target_in_scene=True),
             run_time=0.8
         )

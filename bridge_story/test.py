@@ -1,5 +1,4 @@
-from manim import *
-from drawing.hands import Deal, Position, HandData
+from drawing.hands import *
 from drawing.deal_animator import DealAnimator
 
 
@@ -23,14 +22,14 @@ class Test(Scene):
         self.wait(3)
         animator.remove_caption()
 
-        animator.animate_trick(Position.NORTH, Position.EAST, "Kh", "Ah", "5h", "7h")
-        animator.animate_trick(Position.EAST, Position.WEST, "xh", "xh", "xs", "xh")
-        animator.animate_trick(Position.WEST, Position.EAST, "xc", "xc", "Ac", "xc")
-        animator.animate_trick(Position.EAST, Position.WEST, "xh", "xh", "xs", "xh")
-        animator.animate_trick(Position.WEST, Position.EAST, "xs", "xs", "Qs", "xs")
-        animator.animate_trick(Position.EAST, Position.WEST, "xh", "Qc", "xs", "xh")
-        animator.animate_trick(Position.WEST, Position.WEST, "As", "xs", "xs", "xs")
-        animator.animate_trick(Position.WEST, Position.SOUTH, "xc", "xc", "xc", "xc")
+        animator.animate_trick(NORTH, EAST, "Kh", "Ah", "5h", "7h")
+        animator.animate_trick(EAST, WEST, "xh", "xh", "xs", "xh")
+        animator.animate_trick(WEST, EAST, "xc", "xc", "Ac", "xc")
+        animator.animate_trick(EAST, WEST, "xh", "xh", "xs", "xh")
+        animator.animate_trick(WEST, EAST, "xs", "xs", "Qs", "xs")
+        animator.animate_trick(EAST, WEST, "xh", "Qc", "xs", "xh")
+        animator.animate_trick(WEST, WEST, "As", "xs", "xs", "xs")
+        animator.animate_trick(WEST, SOUTH, "xc", "xc", "xc", "xc")
 
         animator.save_state("endplay")
 
@@ -38,18 +37,18 @@ class Test(Scene):
         self.wait(2)
         animator.set_caption("If he leads a diamond, \nhe breaks a frozen suit")
         self.wait(1)
-        animator.animate_trick(Position.SOUTH, Position.NORTH, "xd", "xd", "Ad", "xd")
-        animator.animate_trick(Position.NORTH, Position.WEST, "xd", "xd", "xd", "Qd")
-        animator.animate_trick(Position.WEST, Position.SOUTH, "xd", "xc", "Jd", "Kd")
-        animator.animate_trick(Position.SOUTH, Position.EAST, "xd", "xd", "xc", "xs")
+        animator.animate_trick(SOUTH, NORTH, "xd", "xd", "Ad", "xd")
+        animator.animate_trick(NORTH, WEST, "xd", "xd", "xd", "Qd")
+        animator.animate_trick(WEST, SOUTH, "xd", "xc", "Jd", "Kd")
+        animator.animate_trick(SOUTH, EAST, "xd", "xd", "xc", "xs")
         self.wait(2)
 
         animator.restore_state("endplay")
         animator.set_caption("If he leads a club, \nhe gives declarer a ruff-sluff \nand an entry to the "
                              "established heart")
         self.wait(1)
-        animator.animate_trick(Position.SOUTH, Position.EAST, "xc", "xd", "xc", "xs")
-        animator.animate_trick(Position.EAST, Position.EAST, "xh", "xd", "xd", "xc")
+        animator.animate_trick(SOUTH, EAST, "xc", "xd", "xc", "xs")
+        animator.animate_trick(EAST, EAST, "xh", "xd", "xd", "xc")
 
         self.wait(5)
 
