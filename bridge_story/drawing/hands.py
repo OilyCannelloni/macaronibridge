@@ -10,9 +10,6 @@ import numpy.typing
 from manim import *
 
 
-delattr(EnumMeta, "__iter__")
-
-
 class Position(Enum):
     """
     Represents properties of compass positions, including:
@@ -71,8 +68,8 @@ class Position(Enum):
             base = base.next()
 
     @classmethod
-    def iter(cls):
-        yield from cls.trick(cls.WEST)
+    def all(cls):
+        return tuple(cls.trick(cls.WEST))
 
 
 WEST = Position.WEST
@@ -267,6 +264,7 @@ class VerticalHand(Hand):
         """
         Creates a Vertical Hand on the scene. The Holdings are stacked on top of each other.
         """
+        super()._create()
         for i, suit, cards in zip(range(4), Suit.suits(), self.hand_data.str_holdings()):
             holding = Holding(suit, cards)
             holding.shift(i * V_HOLDING_SPACING * DOWN)
@@ -302,8 +300,3 @@ class Deal(dict):
             hands[pos].shift(pos.hand_position())
         return hands
 
-
-if __name__ == '__main__':
-    W = Position.WEST
-    for i in Position.iter():
-        print(i)

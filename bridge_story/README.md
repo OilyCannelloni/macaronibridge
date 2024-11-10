@@ -24,7 +24,7 @@ class Example(Scene):
         
         animator = DealAnimator(self)
         animator.initialize(deal)
-        animator.create_deal()
+        animator.create_hands(Position.all())
         self.wait(3)
 ```
 
