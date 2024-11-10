@@ -10,7 +10,7 @@
 ## Usage
 Create a file named example.py:  
 ```py
-from drawing.hands import Deal, Position, HandData
+from drawing.hands import *
 from drawing.deal_animator import DealAnimator
 
 class Example(Scene):
@@ -39,9 +39,9 @@ What happened here?
 
 At the bottom of the file, before the final `wait()`, add  
 ```py
-animator.animate_trick(Position.NORTH, Position.NORTH, "Ah", "Th", "3h", "7h")
-animator.animate_trick(Position.NORTH, Position.EAST, "xs", "As", "xs", "xs")
-animator.animate_trick(Position.EAST, Position.SOUTH, "xs", "xs", "xs", "xs")
+animator.animate_trick(NORTH, NORTH, "Ah", "Th", "3h", "7h")
+animator.animate_trick(NORTH, EAST, "xs", "As", "xs", "xs")
+animator.animate_trick(EAST, SOUTH, "xs", "xs", "xs", "xs")
 ```
 
 Animating a trick requires you to specify the player on lead, the player taking the trick
@@ -54,9 +54,9 @@ Let's give him another chance! Add the following lines:
 ```py
 self.wait(2)
 animator.restore_state("start")
-animator.animate_trick(Position.NORTH, Position.NORTH, "Ah", "xh", "9h", "xh")
-animator.animate_trick(Position.NORTH, Position.NORTH, "Ad", "xd", "xd", "xd")
-animator.animate_trick(Position.NORTH, Position.SOUTH, "xd", "xd", "xs", "xd")
+animator.animate_trick(NORTH, NORTH, "Ah", "xh", "9h", "xh")
+animator.animate_trick(NORTH, NORTH, "Ad", "xd", "xd", "xd")
+animator.animate_trick(NORTH, SOUTH, "xd", "xd", "xs", "xd")
 ```
 
 Now if declarer takes the spade hook, the contract is down!

@@ -51,7 +51,7 @@ class DealAnimator:
         :param tag: A name of the state to be saved.
         """
         self.cached_states[tag] = Deal(
-            *(deepcopy(self.hands[pos].hand_data) for pos in Position.positions())
+            *(deepcopy(self.hands[pos].hand_data) for pos in Position.iter())
         )
 
     def restore_state(self, tag: str):

@@ -3,11 +3,14 @@ import dataclasses
 from copy import copy
 from typing import cast
 from abc import ABC
-from enum import Enum
+from enum import Enum, EnumMeta
 from collections.abc import Iterable
 
 import numpy.typing
 from manim import *
+
+
+delattr(EnumMeta, "__iter__")
 
 
 class Position(Enum):
@@ -68,8 +71,14 @@ class Position(Enum):
             base = base.next()
 
     @classmethod
-    def positions(cls):
+    def iter(cls):
         yield from cls.trick(cls.WEST)
+
+
+WEST = Position.WEST
+NORTH = Position.NORTH
+EAST = Position.EAST
+SOUTH = Position.SOUTH
 
 
 class Suit(Enum):
@@ -293,3 +302,8 @@ class Deal(dict):
             hands[pos].shift(pos.hand_position())
         return hands
 
+
+if __name__ == '__main__':
+    W = Position.WEST
+    for i in Position.iter():
+        print(i)
