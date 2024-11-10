@@ -2,19 +2,21 @@
 ### A [Manim](https://github.com/ManimCommunity/manim) based framefork to create cute bridge movies.
 
 ## Installation
-1. Install manim:  
+1. Install [ffmpeg](https://www.ffmpeg.org/)
+2. Install manim:  
 `pip install manim`
-2. Install the [Card Characters](https://font.download/font/card-characters) font
-3. Install [ffmpeg](https://www.ffmpeg.org/)
+This might not work with python newer then 3.10.
+3. Install the [Card Characters](https://font.download/font/card-characters) font
 
 ## Usage
 Create a file named example.py:  
 ```py
+from manim import Scene
 from drawing.hands import Deal, Position, HandData
 from drawing.deal_animator import DealAnimator
 
 class Example(Scene):
-    def construct():
+    def construct(self):
         deal = Deal(
             west=HandData("QJT98", "Q872", "KQ96", ""),
             north=HandData("43", "AKJ65", "A872", "62"),
