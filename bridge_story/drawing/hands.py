@@ -11,7 +11,6 @@ from collections.abc import Iterable
 import numpy.typing
 from manim import *
 
-
 config = load_config()
 
 class Position(Enum):
@@ -154,7 +153,6 @@ class Card(Text):
 
 CARD_SPACING = 0.20
 CARD_SYMBOL_OFFSET = 0.30
-WRITE_TEN_AS_10 = True
 
 
 class Holding(VMobject):
@@ -169,19 +167,33 @@ class Holding(VMobject):
         self._create()
 
     def _create(self):
-        if config.get("use_alternative_font", False):
-            symbol = Text(self.suit.symbol(), font_size=self.font_size,
-                      color=self.suit.color(), font="Cards")
-        else:
-            symbol = Text(self.suit.symbol(), font_size=self.font_size,
-                      color=self.suit.color(), font="Card Characters")
+        # Choose font for suit symbol
+        suit_font = "Cards" if config.get("use_alternative_font", False) else "Card Characters"
+        # Choose font for card values
+        card_font = "Arial" if config.get("use_alternative_font", False) else "Card Characters"
+
+        # Create the suit symbol text
+        symbol = Text(
+            self.suit.symbol(),
+            font_size=self.font_size,
+            color=self.suit.color(),
+            font=suit_font
+        )
         self.add(symbol)
+
         for i, card_value in enumerate(self.cards_str):
-            if WRITE_TEN_AS_10:
-                text = card_value.replace("T", "=")  # see above
+            if not config.get("use_alternative_font", True):
+                text = card_value.replace("T", "=")
             else:
                 text = card_value
-            card = Card(text, font_size=self.font_size, color=self.suit.color())
+            
+            card = Text(
+                text,
+                font_size=self.font_size,
+                color=self.suit.color(),
+                font=card_font
+            )
+
             offset = CARD_SYMBOL_OFFSET + i * CARD_SPACING
             card.shift(offset * RIGHT)
             self.add(card)
@@ -198,7 +210,7 @@ class Holding(VMobject):
         :param card_value: The value of the card to get, ex. 9 or Q. Use 'x' for smallest available card.
         :return: Card object corresponding to the value.
         """
-        if WRITE_TEN_AS_10 and card_value == "T":
+        if not config.get("use_alternative_font", True) and card_value == "T":
             value = "="
         else:
             value = card_value
