@@ -14,7 +14,7 @@ from drawing.hands import *
 from drawing.deal_animator import DealAnimator
 
 class Example(Scene):
-    def construct():
+    def construct(self):
         deal = Deal(
             west=HandData("QJT98", "Q872", "KQ96", ""),
             north=HandData("43", "AKJ65", "A872", "62"),
@@ -24,7 +24,7 @@ class Example(Scene):
         
         animator = DealAnimator(self)
         animator.initialize(deal)
-        animator.create_hands(Position.all())
+        animator.create_hands(*Position.all())
         self.wait(3)
 ```
 
