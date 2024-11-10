@@ -167,12 +167,9 @@ class Holding(VMobject):
         self._create()
 
     def _create(self):
-        # Choose font for suit symbol
         suit_font = "Cards" if config.get("use_alternative_font", False) else "Card Characters"
-        # Choose font for card values
-        card_font = "Arial" if config.get("use_alternative_font", False) else "Card Characters"
+        card_font = "Arial Rounded MT" if config.get("use_alternative_font", False) else "Card Characters"
 
-        # Create the suit symbol text
         symbol = Text(
             self.suit.symbol(),
             font_size=self.font_size,
@@ -191,7 +188,8 @@ class Holding(VMobject):
                 text,
                 font_size=self.font_size,
                 color=self.suit.color(),
-                font=card_font
+                font=card_font,
+                weight=BOLD
             )
 
             offset = CARD_SYMBOL_OFFSET + i * CARD_SPACING

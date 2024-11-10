@@ -10,6 +10,5 @@
 *.tmp
 /bridge_story/media/*
 /bridge_story/example.py
-/bridge_story/drawing/config.json
 /bridge_story/drawing/media/*
 *.pyc
