@@ -56,9 +56,9 @@ Let's give him another chance! Add the following lines:
 ```py
 self.wait(2)
 animator.restore_state("start")
-animator.animate_trick(NORTH, NORTH, "Ah", "xh", "9h", "xh")
-animator.animate_trick(NORTH, NORTH, "Ad", "xd", "xd", "xd")
-animator.animate_trick(NORTH, SOUTH, "xd", "xd", "xs", "xd")
+animator.animate_trick(Position.NORTH, Position.NORTH, "Ah", "xh", "9h", "xh")
+animator.animate_trick(Position.NORTH, Position.NORTH, "Ad", "xd", "xd", "xd")
+animator.animate_trick(Position.NORTH, Position.SOUTH, "xd", "xd", "xs", "xd")
 ```
 
 Now if declarer takes the spade hook, the contract is down!

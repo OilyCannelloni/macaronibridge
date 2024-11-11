@@ -127,14 +127,31 @@ class DealAnimator:
             run_time=0.8
         )
 
+    def play_card_from_position(self, position: Position, card_value: str) -> None:
+        self.play_card(self.hands[position], card_value)
+
     def play_trick(self, on_lead: Position, *sequence):
         """
         Animates the play of a trick.
         :param on_lead: The player who starts the trick.
         """
-        assert len(sequence) <= 4
+        assert len(sequence) <= 4 + 3
         for i, position in enumerate(on_lead.trick()):
             self.play_card(self.hands[position], sequence[i])
+
+    def play_trick_with_comments(self, on_lead: Position, seq_len=4, comment_after_cards=5, *sequence):
+        """
+        Animates the play of a trick.
+        :param on_lead: The player who starts the trick.
+        """
+        comments_len = len(sequence) - seq_len
+        for i, position in enumerate(on_lead.trick()):
+            if i == comment_after_cards:
+                for j in range(seq_len, seq_len + comments_len):
+                    self.print_caption(sequence[j])
+            self.play_card(self.hands[position], sequence[i])
+            if i >= seq_len:
+                break
 
     def give_trick_to(self, winner: Position):
         """
@@ -158,6 +175,12 @@ class DealAnimator:
         self.give_trick_to(winner)
         self.scene.wait(0.5)
 
+    def animate_trick_with_comments(self, on_lead: Position, winner: Position, seq_len=4, comment_after_cards=5, *sequence):
+        self.play_trick_with_comments(on_lead, seq_len, comment_after_cards, *sequence)
+        self.scene.wait(0.5)
+        self.give_trick_to(winner)
+        self.scene.wait(0.5)
+
     def set_caption(self, str):
         """
         Creates a caption on lower-right of the screen.
@@ -170,6 +193,20 @@ class DealAnimator:
         else:
             self.scene.play(Transform(self.caption, text, replace_mobject_with_target_in_scene=True))
         self.caption = text
+
+    def set_contract_info(self, str):
+        CAPT = UP * 2.5 + LEFT * 4
+        text = Text(str, font_size=24, font="Cambria").shift(CAPT)
+        if self.caption is None:
+            self.scene.play(Create(text))
+        else:
+            self.scene.play(Transform(self.caption, text, replace_mobject_with_target_in_scene=True))
+        self.caption = text
+
+    def print_caption(self, str, time=3):
+        self.set_caption(str)
+        self.scene.wait(time)
+        self.remove_caption()
 
     def remove_caption(self):
         """
