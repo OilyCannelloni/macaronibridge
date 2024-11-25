@@ -1,0 +1,209 @@
+\documentclass[12pt, a4paper]{report}
+\usepackage{import}
+
+\import{../../lib/}{bridge.sty}
+\setmainlanguage{english}
+
+\usepackage[colorlinks=true, linkcolor=blue]{hyperref}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
+\usepackage{changepage}
+
+\newcommand{\qqq}{{\color{white}{\textbf{\colorbox{red}{\large{?}}}}}}
+\newcommand{\iii}{{\color{white}{\textbf{\colorbox{green}{\large{!}}}}}}
+
+\title{\spades\clubs Strefa \xdiams\xhearts}
+\author{Krysia \& Oliwia}
+\begin{document}
+\maketitle
+
+\section*{\colorbox{blue!30}{Ogólne ustalenia}}
+\addcontentsline{toc}{section}{Ogólne ustalenia}
+\begin{itemize}
+    \item Strefa
+    \item Acol Bartka (brak kontroli + transfery + Kokish)
+    \item 2 over 1 bez pokazywania siły
+    \item niepoważne 3\nt
+    \item proste Gazilli
+    \item LSF
+    \item Michaels (pełen przedział siły)
+    \item \nat\ bloki (2\diams też) -- albo patrz: \textbf{propozycja} na końcu \qqq
+    \item \textbf{brak pytania o asy 4\nt na młodych} 4\nt = \nat\ \iii
+    \item W dwustronnej podnienia z trójki + kontra bilansowa (nie fit) \iii
+    \item Exclusion 03/14
+    \item 1\diams - 2\diams = inverted (\invp, po nim trzymania, nie nat) \qqq
+    \item rewersy nie-\gf\ \qqq
+    \item na pytanie o asy odpowiadamy bez króli
+    \item kolorowe króle (ustalony kolor = brak króli)
+    \item DONT (obrona po 1\nt\dbl) \qqq
+    \item Transfer Lebensohl po wejściach na 1\nt
+    \item obrona Jassema (na 1\nt)
+    \item obrona na Multi Kokisha (pała punkty) \qqq
+    \item CRASH po silnych otwarciach \qqq
+    \item transfer na karo po (1\major) 1\nt i po (2\major) 2\nt\
+    \item transfery po 1\major (\dbl)
+    \item do (naszego) wejścia na poziomie 1 wszystko \fonce\ z czwórki \qqq
+    \item do (naszego) wejścia na poziomie 2 wszystko \nf\ (z piątki...?) \qqq
+    \item Lavithal, wist odmienny, zrzutki wiadomo
+\end{itemize} 
+
+\newpage
+
+\section*{\colorbox{blue!30}{Po otwarciu 1\major }}
+\addcontentsline{toc}{section}{Po otwarciu 1\major }
+
+-- TODO --
+
+\section*{\colorbox{blue!30}{1\major\ (\dbl)}}
+\addcontentsline{toc}{section}{1\major x}
+
+-- TODO --
+
+\section*{\colorbox{blue!30}{Sekwencje z LSF}}
+\addcontentsline{toc}{section}{Sekwencje z LSF}
+
+-- TODO --
+
+\section*{\colorbox{blue!30}{Rewersy \qqq}}
+\addcontentsline{toc}{section}{Rewersy}
+
+-- TODO --
+
+\section*{\colorbox{blue!30}{Podniesienia z trójki \iii}}
+\addcontentsline{toc}{section}{Podniesienia z trójki}
+
+-- TODO --
+
+\section*{\colorbox{blue!30}{Obrona na Multi Kokisha \qqq}}
+\addcontentsline{toc}{section}{Obrona na Multi Kokisha}
+
+-- TODO --
+
+\section*{\colorbox{blue!30}{Licytacja szlemikowa na \minor \iii}}
+\addcontentsline{toc}{section}{Licytacja szlemikowa na \minor}
+
+-- TODO --
+
+\section*{\colorbox{blue!30}{Michaels -- nasz lub przeciwnika}}
+\addcontentsline{toc}{section}{Michaels}
+
+-- TODO: coś tam trzeba ustalić kiedyś --
+
+\section*{\colorbox{blue!30}{Propozycja: szwedzkie otwarcia 2\major \qqq}}
+\addcontentsline{toc}{section}{Propozycja: szwedzkie otwarcia 2\major}
+
+Z Bartkiem gram teraz otwarcia 2\major w sile 9-12 i to jest imo super.\\
+Mamy wtedy 2\diams jako Multi czyli jak wszyscy.\\
+Co to daje? Mamy co zrobić z rękami za silnymi na blok, za słabymi na otwarcie,
+np.
+\chhand{AKJxxx}{Qxx}{xx}{xx}
+albo
+\chhand{x}{AQJxxx}{Kx}{xxx}
+Fajnie by było z nimi blokować, ale fajnie by też było nie grać 2\major zamiast końcówki.\\
+Destruktywne bloki $\leq$ 8 nadal są (w Multi).
+
+Po tym jest trochę systemu, ale w sumie głównie \nat, jedyna przeszkoda to
+znajdowanie kierów po 2\spades (bo 2\major jest z dowolną ręką 9-12, może mieć 4OM).
+
+Dodatkowy argument: Kacper tak gra.
+
+Oczywiście są też wady, czasem zagramy bezszansowną końcówkę, gdy cała sala zagra 2\hearts (patrz system poniżej),
+ale rzadko znajdziemy się w złej końcówce.
+
+\textbf{I jeszcze jedna propozycja}, w sumie niezależna od powyższej:\\
+Ażeby nasze wejścia 2\major na 1\minor były \textbf{silne} (tzn. też jakieś 9-12).\\
+To jest podobno w mecie i mi się mega podoba: po pierwsze jak z silniejszą ręką i 6\major
+wchodzimy 1\major, i przeciwnicy coś tam jeszcze mówią, to nie odprzedaliśmy ani siły
+ani 6-kartu, np:
+
+\noindent
+(1\clubs) -- 1\hearts -- (1\spades) -- P\\
+(2\spades) -- ?
+
+\noindent
+Trzymamy: \chhand{xx}{AQJxxx}{xx}{KQx}
+
+Po drugie wchodząc słabe 2\major specjalnie nie utrudnimy licytacji, jak przeciwnicy mają bilans
+to i tak zagrają końcówkę, a po trzecie słabe 2\major łatwo spałować.
+
+Tzn. ,,specjalnie nie utrudnimy'' to głównie w odniesieniu do lepszych przeciwników,
+bo na takich, którzy się w dowolnej dwustronnej rozjeżdżają, to może nie.
+
+Po tym nie ma specjalnych ustaleń, wszystko tak jak normalnie po wejściu na poziomie 2.
+
+\noindent
+(1\clubs) -- 1\hearts -- (P) -- 1\nt\\
+(P) -- ?
+
+Tu 2\hearts jest słabą wersją (8-), 3\hearts z nadwyżką (13+).
+
+\vspace{0.5cm}
+
+Szwedzkie otwarcia:
+
+\subsubsection*{\alrts{2\hearts} -- ?}
+\begin{itemize}
+    \item 2\spades = 5+\spades\ \fonce
+    \item 2\nt = ask \invp\ (bez fitu lub dowolny \gf)
+    \item 3\clubs = \gf na młodym (3\diams = 2+ w obu \minor, 3\hearts = 1-\clubs, 3\spades = 1-\diams)
+    \item 3\diams = \invp\ z fitem (przyjęcie: 3\nt bez krótkości, inne: cue z krótkości)
+    \item 3\hearts = do gry (podniesienie ,,bloku'')
+    \item 3\spades/4\minor = splinter
+    \item 3\nt = do gry
+\end{itemize}
+
+\subsubsection*{\alrts{2\hearts} -- 2\spades \\ ?}
+\begin{itemize}
+    \item 2\nt = krótkość \spades, lepsza ręka (\fton 3\hearts)
+    \item 3\minor = 2\spades, z wartości
+    \item 3\hearts = bez fitu, gorsza ręka
+    \item 3\spades = z fitem \nf
+    \item 3\nt = z fitem bez krótkości, pozostałe cue z krótkości
+\end{itemize}
+
+\subsubsection*{\alrts{2\hearts} -- 2\nt \\ ?}
+\begin{itemize}
+    \item 3\clubs = boczna czwórka (3\diams = ask: \spades/\clubs/diams)
+    \item 3\diams = krótkość \minor (3\hearts = do gry, 3\spades = ask)
+    \item 3\hearts = słaba ręka bez krótkości
+    \item 3\spades = krótkość \spades (nawet jak nie mamy na przyjęcie inwitu!)
+    \item 3\nt = lepsza ręka bez krótkości
+    \item 4\minor = 7\hearts + krótkość
+\end{itemize}
+
+Czasem przekraczamy treshold inwitu nie mając na przyjęcie (np 3\spades = krótkość).
+Efekt jest taki, że częściej gramy końcówki :)
+
+\subsubsection*{\alrts{2\spades} -- ?}
+\begin{itemize}
+    \item 2\nt = ask \invp\ (bez fitu lub dowolny \gf)
+    \item 3\clubs = 5+\hearts\ \fonce\ (to jedno bardzo sztuczne miejsce) \imp
+    \item 3\diams = \gf\ na młodym (podobnie jak po 2\hearts)
+    \item 3\hearts = \invp\ z fitem (przyjęcie: 3\nt bez krótkości, inne: cue z krótkości)
+    \item 3\spades = do gry (podniesienie ,,bloku'')
+    \item 3\nt = do gry
+    \item 4\anysuit{x} = splinter
+\end{itemize}
+
+\subsubsection*{\alrts{2\spades} -- 3\clubs \\ ?}
+\begin{itemize}
+    \item 3\diams = 2\hearts, lepsza ręka
+    \item 3\hearts = fit, gorsza ręka
+    \item 3\spades = gorsza ręka bez fitu
+    \item 3\nt = krótkość \hearts, lepsza ręka
+    \item 4\minor = fit + krótkość
+\end{itemize}
+
+Po 2\spades -- 2\nt tak jak po 2\hearts.
+
+Ofc tu jest dużo zrobione źle, fit w drugim starym można znajdować znacznie lepiej,
+\nt można nie zajmować z nierównej (otwierającej) ręki itd, ale
+to usztucznia system (a nie wiem czy Ci się wgl podoba pomysł).
+To jest wersja jest do zapamiętania w 3 minuty.
+
+Fun fact: na lidze strzeliłam blefa otwarciem 2\spades trzymając coś w stylu:
+\chhand{KJxxxx}{Qxxxx}{xxx}{--}
+na trzeciej w zielonych. Bardzo się zmartwiłam, gdy na stole wyjechał podwójny fit.
+Na szczęście nam żadna końcówka nie szła, a przeciwnikom szło 3\nt (które grała zała sala) :)
+
+\end{document}
