@@ -2,7 +2,8 @@ from dataclasses import dataclass
 
 
 def get_vul(board_n):
-    return ["", "NS", "EW", "NSEW", "NS", "EW", "NSEW", "", "EW", "NSEW", "", "NS", "NSEW", "", "NS", "EW"][(board_n - 1) % 16]
+    return ["", "NS", "EW", "NSEW", "NS", "EW", "NSEW", "", "EW",
+            "NSEW", "", "NS", "NSEW", "", "NS", "EW"][(board_n - 1) % 16]
 
 
 def get_dealer(board_n):

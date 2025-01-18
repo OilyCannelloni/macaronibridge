@@ -1,9 +1,6 @@
 from models import *
 
 
-
-
-
 def bidding_header(board_n):
     vul = get_vul(board_n)
     ss = ""
@@ -61,7 +58,7 @@ def build_analysis_template(boards, target_file, verbose=False):
 \documentclass[12pt, a4paper]{article}
 \usepackage{import}
 
-\import{../lib/}{bridge.sty}
+\import{../../lib/}{bridge.sty}
 
 \title{Board Set Analysis}
 \author{... using MacaroniBridge/TCResultsParser}

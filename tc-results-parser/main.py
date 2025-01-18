@@ -77,6 +77,7 @@ class TCResultsDriver(webdriver.Chrome):
             html_content = element.get_attribute("innerHTML")
 
             spades, hearts, diamonds, clubs = "", "", "", ""
+            spades_length, hearts_length, diamonds_length = 0, 0, 0
 
             if 'spades.gif' in html_content:
                 spades, spades_length = self.extract_cards(html_content, 'spades.gif', -1)
@@ -144,13 +145,14 @@ if __name__ == '__main__':
     parser.add_argument('-d', '--url', type=str,
                         default="https://mzbs.pl/files/2021/wyniki/zs/240925/",
                         help='Base URL of the results page')
-    parser.add_argument('-b', '--boards', type=int, nargs="+", help='Specific board numbers to process')
+    parser.add_argument('-b', '--boards', type=int, nargs="+",
+                        help='Specific board numbers to process')
     parser.add_argument('-o', '--output-file', type=str, help='Output TEX file')
 
     args = parser.parse_args()
     driver = TCResultsDriver(args.url)
 
-    if not ((args.boards is not None) ^ (args.number is not None)):
+    if (args.boards is not None) and (args.number is not None):
         print("Error: Please provide either -n or -b, not both.")
         exit()
 
