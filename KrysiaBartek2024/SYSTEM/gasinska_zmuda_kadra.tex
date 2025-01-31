@@ -1,0 +1,371 @@
+\documentclass[12pt, a4paper]{report}
+\usepackage{import}
+
+\import{../../lib/}{bridge.sty}
+\setmainlanguage{english}
+
+\usepackage[colorlinks=true, linkcolor=blue]{hyperref}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
+\usepackage{changepage}
+
+\title{\spades\clubs Strefa \xdiams\xhearts}
+\author{Krysia Gasińska \& Oliwia Żmuda}
+\begin{document}
+\maketitle
+
+\renewcommand{\contentsname}{Spis treści}
+\tableofcontents
+
+\chapter*{\colorbox{Plum!30}{Ogólne ustalenia}}
+\addcontentsline{toc}{chapter}{Ogólne ustalenia} {
+
+    \vspace{-0.4cm}
+
+    \section*{\colorbox{blue!30}{Licytacja jednostronna}}
+    \addcontentsline{toc}{section}{Licytacja jednostronna}
+    Otwarcia:
+    \begin{itemize}
+        \item Strefa (1\clubs = 2+)
+        \item 1\diams w słabej sile obiecuje niezbalansowaną rękę\\
+        otwarcie 1\clubs zawiera 12-14 \bal z 5\diams
+        \item 1\nt = 15-17 \bal
+        \item Z 18-20 \bal z 5\diams otwieramy 1\diams
+        \item 2\nt = 21-22 \bal
+        \item 2\clubs = Acol (\gf lub 23-24 \bal)
+        \item 2\diams = Multi
+        \item 2\major = 6+\major, 9-12 (szwedzkie)
+        \item 3\nt = kontruktywny blok na kolorze starszym
+    \end{itemize}
+
+    Dalsza licytacja:
+    \begin{itemize}
+        \item półpreferencja kolorów starszych
+        \item Gazilli po 1\major i po 1\diams (!)
+        \item rewersy \textbf{nie są} \gf
+        \item schemat \lsf\ (brak krótkości pierwszy)
+        \item nie sprzedajemy siły po 2/1 (tylko skład)
+        \item niepoważne 3\nt
+        \item Blackwood 4\nt tylko na kolorze starszym!\\
+        na młodym 4\nt = \nat
+        \item Exclusion 03/14
+        \item \textit{Kolorowe Króle} (pierwsza odzywka  = brak króli)
+        \item na pytanie o asy \textbf{nie} odpowiadamy z królami
+        \item pytanie o asy na młodym (szlemowe): 5\minor+1
+        \item po acolu \textbf{nie} gramy kontrolami (2\diams = automat)\\
+        drugi kolor otwierającego pokazujemy transferem
+        \item silne przyjęcia po 1\nt i po 2\nt
+        \item oryginalny system uzgadniania koloru młodszego po Puppet Staymanie\\
+        patrz: Minor Puppet Stayman
+    \end{itemize}
+
+    \section*{\colorbox{blue!30}{Licytacja dwustronna}}
+    \addcontentsline{toc}{section}{Licytacja dwustronna}
+    \begin{itemize}
+        \item Drury i KP (kolor przeciwnika) po wejściu
+        \item po naszym wejściu na poziomie 1 nic nie forsuje chyba
+        że z przeskokiem (lub KP lub 2\clubs = drury)
+        \item po naszym wejściu na poziomie 2 nowy kolor jest \nf
+        \item po wejściu przeciwnika nowy kolor na poziomie 2 = \nf,\\
+        na poziomie 3 = \gf
+        \item niższa z odzywek 2\nt/KP = \invp, wyższa = mixed raise
+        \item podniesienia z trójki! (tylko w dwustronnej)
+        \item transfery po 1\major (\dbl)
+        \item DONT po 1\nt (\dbl)
+        \item Lebensohl + Rubensohl po wejściu na 1\nt
+        \item Jassem
+        \item pełen przedział Michaelsa (nie mini-maxi)
+        \item obrona Kokisha na 2\diams = Multi (Wilkosz): \dbl = 14-16 \bal
+    \end{itemize}
+
+    \section*{\colorbox{blue!30}{Sygnalizacja}}
+    \addcontentsline{toc}{section}{Sygnalizacja}
+    \begin{itemize}
+        \item wist odmienny
+        \item do wistu marka/demarka
+        \item Lavinthal (dużo)
+        \item ilościówki niezwykle rzadko (w ewidentnych sytuacjach)
+        \item w środkowej fazie rozdania wychodzimy zazwyczaj odmiennie,
+        czasem Lavinthalem (czasem losowo)
+    \end{itemize}
+
+}
+
+\part*{\colorbox{RoyalPurple!30}{Licytacja jednostronna}}
+\addcontentsline{toc}{chapter}{Licytacja jednostronna} {
+
+    \chapter*{\colorbox{Plum!30}{Otwarcia na poziomie 1}}
+    \addcontentsline{toc}{chapter}{Otwarcia na poziomie 1} {
+
+        \section*{\colorbox{blue!30}{1\clubs}}
+        \addcontentsline{toc}{section}{1\clubs} {  
+            \subsubsection*{1\clubs\ -- ?}
+            \begin{itemize}
+                \item 1\diams = negat/młode (bez ręki 16+!)
+                \item 2\clubs = \gf\ \nat\ lub \bal (może mieć 4\major)
+                \item 2\diams = \gf \nat (półpreferencja)
+                \item 2\hearts = Flannery (2\nt = \lsf)
+                \item 2\spades = trsf na \nt\ \invp
+                \item 3\clubs = blok
+                \item 3\anysuit{x} = splinter
+            \end{itemize}
+
+            \subsubsection*{1\clubs\ -- \alrts{2\clubs} \\ ?}
+            \begin{itemize}
+                \item 2\diams\ = \bal (może mieć 4\major) !
+                \item 2\major = 5\clubs4\major
+                \item 2\nt\ = 5\clubs4\diams !
+                \item 3\clubs\ = \clubs
+            \end{itemize}
+
+            \subsubsection*{1\clubs\ -- 2\clubs \\
+                            2\diams -- ?}
+            \begin{itemize}
+                \item 2\nt = 12-14 lub 18-20 \bal
+                \item 3\nt = 15-17 \bal
+                \item inne odzywki pokazują \gf na treflach
+            \end{itemize}
+        }
+
+        \section*{\colorbox{blue!30}{1\diams}}
+        \addcontentsline{toc}{section}{1\diams} { 
+            \subsubsection*{1\diams -- ?}
+            \begin{itemize}
+                \item 2\diams = inverted raise (\invp\ 4+\diams)\\
+                    po nim sprzedajemy trzymania! Forsuje do 3\diams
+                \item 2\hearts = Flannery
+                \item 2\spades = trsf na \nt
+                \item 3\diams = blok
+                \item 3\anysuit{x} = splinter
+            \end{itemize}
+
+            \subsubsection*{1\diams -- 1\major \\
+                            ?}
+            \begin{itemize}
+                \item 1\spades forsuje
+                \item 1\nt = Gazilli! dowolne 16+
+            \end{itemize}
+
+            \subsubsection*{1\diams -- 1\major \\
+                            1\nt -- ?}
+            \begin{itemize}
+                \item 2\clubs = dowolne 8+ \gf
+                \item pozostałe odzywki słabe \nf
+            \end{itemize}
+
+            \subsubsection*{1\diams -- 1\hearts \\
+                            1\nt -- 2\clubs\\
+                            ?}
+            \begin{itemize}
+                \item 2\diams = 3\hearts
+                \item 2\hearts = ustala
+                \item 2\nt = 18-20 \bal z 2\hearts
+            \end{itemize}
+
+            \subsubsection*{1\diams -- 1\spades \\
+                            1\nt -- 2\clubs\\
+                            ?}
+            \begin{itemize}
+                \item 2\diams = 4\hearts
+                \item 2\hearts = 3\spades
+                \item 2\spades = 4\spades
+                \item 2\nt = 18-20 \bal z 2\spades i 2-3\hearts
+            \end{itemize}
+        }
+
+        \section*{\colorbox{blue!30}{1\major}}
+        \addcontentsline{toc}{section}{1\major} { 
+            \subsubsection*{1\major -- ?}
+            \begin{itemize}
+                \item 1\nt = półforsujące
+                \item 2\clubs = dowolny \gf
+                \item 2\major = 8-10
+                \item 2\nt = \invp
+                \item 3\clubs = mixed raise
+                \item 3\diams = mini splinter
+                \item 3\major = blok
+                \item 3\nt = niewygodny splinter
+            \end{itemize}
+            
+            \subsubsection*{1\hearts -- ?}
+            \begin{itemize}
+                \item 2\spades = blok
+            \end{itemize}
+            
+            \subsubsection*{1\spades -- ?}
+            \begin{itemize}
+                \item 3\hearts = \nat\ \inv\ \nf
+                \item 4\hearts = do gry !!!
+            \end{itemize}
+        }
+
+        \section*{\colorbox{blue!30}{1\nt}}
+        \addcontentsline{toc}{section}{1\ntx} {
+            \subsubsection*{1\nt -- ?}
+        \begin{itemize}
+            \item 2\spades = trsf na \clubs lub \inv
+            \item 2\nt = trsf na \diams
+            \item 3\clubs = Puppet Stayman
+            \item 4\clubs = 5\hearts 5\spades
+        \end{itemize}
+
+        \vspace{0.3cm}
+        Po transferach: Supperaccepty.\\
+        Po transferze na kolor starszy, drugi kolor starszy ustala go silnie.\\
+        Po 3\clubs również można zastosować Minor Puppet Stayman (patrz: 2\nt).
+
+        \vspace{0.3cm}
+        Smolen:\\
+        Z (54) \major licytujemy:
+        \begin{itemize}
+            \item w słabej sile: Stayman, a po 2\diams swoją piątkę 2\major
+            \item w sile inwitu: transfer na piątkę, potem drugi stary
+            \item silne: Stayman, po 2\diams swoją \textbf{czwórkę} 3\major
+        \end{itemize}
+        }
+
+        \section*{\colorbox{blue!30}{Podwójny magister}}
+        \addcontentsline{toc}{section}{Podwójny magister} {  
+            Również w licytacji dwustronnej! Gdy ma to sens.
+
+            Licytacja:
+            \vspace{-0.3cm}
+            \subsubsection*{1\clubs -- 1\spades\\
+                            1\nt -- 2\hearts}
+            pokazuje rękę silniejszą niż na Flannery (10-11pc), \then 2\nt = \lsf
+
+            \vspace{0.4cm}
+            Po rebidzie 1\spades na 2\clubs nie trzeba odpowiadać 2\diams!
+            Zwłaszcza po otwarciu 1\diams, z silną ręką.. Otwierający może
+            chcieć spasować na 2\diams.
+        }
+
+        \section*{\colorbox{blue!30}{Rewersy}}
+        \addcontentsline{toc}{section}{Rewersy} {
+            Rebid 1\spades jest forsujący.
+            Powtórzenie swojego koloru po rewersie jest slow-downem,
+            pokazuje minimum i zwalnia z \gf. Nie obiecuje więcej kart w
+            swoim kolorze. Np:
+            \subsubsection*{1\clubs -- 1\spades\\
+                            2\diams -- 2\spades\\
+                            ?}
+            2\spades = minimum (7-8pc), 4+\spades\ !
+            \begin{itemize}
+                \item 2\nt = \gf
+                \item 3\minor = \nf
+            \end{itemize}
+
+        }
+    }
+
+    \chapter*{\colorbox{Plum!30}{Acol 2\clubs}}
+    \addcontentsline{toc}{chapter}{Acol 2\clubs} {
+        \subsubsection*{2\clubs -- ?}
+        \begin{itemize}
+            \item 
+        \end{itemize}
+    }
+
+    \chapter*{\colorbox{Plum!30}{Multi 2\diams}}
+    \addcontentsline{toc}{chapter}{Multi 2\diams} {
+        \subsubsection*{2\diams -- ?}
+        \begin{itemize}
+            \item 
+        \end{itemize}
+    }
+
+    \chapter*{\colorbox{Plum!30}{Otwarcia 2\major}}
+    \addcontentsline{toc}{chapter}{Otwarcia 2\major} {
+
+        \section*{\colorbox{blue!30}{2\hearts}}
+        \addcontentsline{toc}{section}{2\hearts} { 
+            \subsubsection*{2\hearts -- ?}
+            \begin{itemize}
+                \item 
+            \end{itemize}
+        }
+
+        \section*{\colorbox{blue!30}{2\spades}}
+        \addcontentsline{toc}{section}{2\spades} { 
+            \subsubsection*{2\spades -- ?}
+            \begin{itemize}
+                \item 
+            \end{itemize}
+        }
+    }
+
+    \chapter*{\colorbox{Plum!30}{2{\Large{NT}} i Minor Puppet Stayman}}
+    \addcontentsline{toc}{chapter}{2\ntx\ i Minor Puppet Stayman} {
+        2\nt = 21-22 \bal, może zawierać 5\major / 6\minor
+        \subsubsection*{2\nt -- ?}
+        \begin{itemize}
+            \item 3\clubs = Puppet Stayman
+            \item 3\spades = trsf na 3\nt\ !!!
+            \item 3\nt = 5\spades 4\hearts\ !!!
+            \item 4\clubs = 5\hearts 5\spades (\then 4\diams = lepsza ręka)
+        \end{itemize}
+    }
+
+    \vspace{0.5cm}
+
+    W każdej sekwencji, w której nie został ustalony kolor starszy,\\
+    (np. 2\nt -- 3\hearts -- 3\spades -- ?)\\
+    odzywki 4\minor to \textbf{Minor Puppet Stayman}.
+
+    4\clubs = pytanie o młodsze 5-tki i 4-ki,\\
+    4\diams = pytanie o młodsze czwórki.
+
+    \vspace{0.1cm}
+
+    Przykłady:    
+    \subsubsection*{2\nt -- 3\clubs\\
+                    3\diams -- 3\hearts\\
+                    3\nt -- 4\diams\\
+                    4\hearts -- 4\nt\\
+                    5\clubs -- 5\hearts\\
+                    5\spades -- 7\diams}
+
+    Otwierający pokazał: starszą czwórkę (3\diams), brak 4\spades (3\nt),
+    obie starsze trójki (4\hearts), lepszą rękę (5\clubs) -- mógł dać 5\diams,
+    1/3 asy (5\spades).
+
+    Odpowiadający: zapytał o kolory starsze (3\clubs), pokazał 4\spades,
+    zapytał o młodsze trójki (4\diams), ustalił karo (4\nt),
+    zapytał o asy (5\hearts).
+
+    \subsubsection*{2\nt -- 3\hearts\\
+                    3\spades -- 4\clubs\\
+                    4\diams -- 4\hearts\\
+                    4\nt -- \pass
+                    }
+
+    Otwierający pokazał: 2\spades (brak fitu), brak młodszej piątki,
+    ale młodszą czwórkę (4\diams), brak fitu -- 4 trefli (4\nt).
+    Wiemy, więc, że ma 2 piki, 4 kara, 2-3 trefli, 4-5 kierów.
+
+    Odpowiadający: pokazał 5 pików, zapytał o młode (4\clubs),
+    zapytał o fit do (4) trefli (4\hearts).
+
+    \vspace{0.5cm}
+
+    \textbf{Wyjątkiem}, w którym 4\diams \textbf{nie jest} pytaniem o trójki, jest sekwencja:
+    \subsubsection*{2\nt -- 3\clubs\\
+                    3\diams -- 4\diams\\
+                    ...}
+    4\diams pokazuje obie starsze czwórki (ale 4\clubs jest normalnie pytaniem o młode).
+
+
+
+    \chapter*{\colorbox{Plum!30}{3\ntx}}
+    \addcontentsline{toc}{chapter}{3\ntx} {
+        Otwarcie 3\nt jest konstruktywnym blokiem na kolorze starszym 
+        (może być w sile otwarcia -- \textit{konstruktywność} zależy od pozycji i założeń)
+        \subsubsection*{3\nt -- ?}
+        \begin{itemize}
+            \item 4\clubs = pokaż kolor transferem
+            \item 4\diams = pokaż kolor
+        \end{itemize}
+    }
+}
+
+\end{document}
