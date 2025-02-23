@@ -1,0 +1,334 @@
+\documentclass[a4paper]{article}
+\usepackage{lscape}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{pdflscape}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage[left=0in, right=0.2in, top=0.2in, bottom=0in]{geometry}
+
+\usepackage{import}
+\import{../../lib/}{bridge.sty}
+
+\newcommand{\bl}{{\color{white}\textbf{-}}}
+\newcommand{\szt}{x}
+\newcommand{\twosuitsp}[2]{%
+    #1\unskip\hspace{-2pt}#2%
+}
+\newcommand{\tsuit}{
+    3\twosuitsp{\twosuitsp{\diams}{\hearts}}{\spades}
+}
+
+\newcommand{\ojc}{
+    \makecell[l]{
+        12-14 \bal, może zawierać 5\diams\\
+        11-21 5+\clubs (4441\diams)\\
+        18-19 \bal\ bez 5\diams\hearts\spades\\
+        22+ 5+\clubs
+    }
+}
+
+\newcommand{\ojd}{  
+    \makecell[l]{
+        12-17 4+\diams\ \textbf{skład niezrównoważony}\\
+        18-21 5+\diams
+    }
+}
+
+\newcommand{\ojm}{11-21 5+\major}
+
+\newcommand{\ojn}{ 
+        \makecell[l]{
+            15-17 \bal, może zawierać\\
+            5\major, 6\minor, singlową figurę
+        }
+}
+
+\newcommand{\odc}{ 
+        \makecell[l]{
+            Acol (z wyłączeniem Acola z \clubs)\\
+            lub 22-23 \bal\\
+            (\bal\ zdarza się z singlem lub szóstką)
+        }
+}
+
+\newcommand{\odd}{ 
+        \makecell[l]{
+            mini Multi: blok (5)6+\major\\
+            na 3-ciej: 20-21 \bal, na 4-tej: \nat
+        }
+}
+
+\newcommand{\odm}{
+    \makecell[l]{
+        \textbf{9-12, 6+\major}
+    }
+}
+
+\newcommand{\odn}{
+    \makecell[l]{
+        20-21, skład tak jak 1\nt
+    }
+}
+
+\newcommand{\otc}{
+    \makecell[l]{
+        blok, przed partią agresywny
+    }
+}
+
+\newcommand{\otn}{
+    \makecell[l]{
+        konstruktywny blok z \hearts lub \spades
+    }
+}
+
+\newcommand{\occ}{
+    \makecell[l]{
+        blok
+    }
+}
+
+\newcommand{\odpjc}{
+        \makecell[l]{
+            1\diams = 0-6 dowolne | 7-10 \bal bez 4\major | \gf\ \diams\\
+            \textbf{1{\footnotesize{NT}} = 11-12 {\footnotesize{BAL}}} (2\diams = \gf\ Stayman)\\
+            2\clubs = \gf\ \bal | \gf\ \clubs (może zawierać 4\major)\\
+            2\diams = \textbf{Multi} 6+\major\ 0-8pc\\
+            2\hearts = Flannery 5+\spades4+\hearts 6-9pc\\
+            2\spades = \clubs blok/\gf\ \\
+            2\nt = młode blok/\gf\ \\
+            3\clubs = mixed raise 6+\clubs 6-8pc
+        }
+}
+
+\newcommand{\odpjd}{
+        \makecell[l]{
+            1\nt = 7-9 bez 4\major; 3\diams = inverted\\
+            2\hearts = Flannery 5-10; 2\spades = trsf \nt; 2\nt = \inv;\\
+            3\clubs = blok \diams lub \gf\ \diams z krótkością\\
+            3\diams = mixed raise 4+\diams 6-8pc
+        }
+}
+
+\newcommand{\odpjm}{
+        \makecell[l]{
+            1\nt = semi-forsujące; 2\clubs = dowolny \gf\\
+            2\nt = \inv\ + fit; 3\clubs = mixed raise\\
+            3\diams = mini splinter 9-11; 3\major = blok\\
+            1\hearts - 2\spades = blok; 1\spades - 3\hearts = \inv\ \nat\ \nf\\
+            3\nt = niewygodny splinter; 1\spades - 4\hearts = \nat do gry\\
+            1\hearts - 4\diams = bilansowe podniesienie
+        }
+}
+
+\newcommand{\odpjn}{
+        \makecell[l]{
+            2\spades = \inv\ lub \clubs; 2\nt = \diams lub \minor\\
+            3\clubs = Puppet; 3\diams = \inv\ \nat; 4\clubs = \major; 4\spades = \minor
+        }
+}
+
+\newcommand{\odpdc}{
+    \makecell[l]{
+        2\diams = automat; po wejściu z lewej: \dbl = 0-5, \pass = 6+\\
+        po wejściu z prawej: \dbl = negatywna, \pass = \textasciitilde\bal
+    }
+}
+
+\newcommand{\odpdd}{
+    \makecell[l]{
+        2\major = pasuj/popraw; 2\nt = ask; 3\clubs = \gf na młodym;\\
+        3\diams = \gf na własnym starym; 3\hearts = blok z fitem w obu
+    }
+}
+
+\newcommand{\odpdh}{
+    \makecell[l]{
+        2\spades = \nat\ \fonce; 2\nt = ask \gf; 3\clubs = \gf\ na młodym\\
+        3\diams = \invp\ z fitem; 3\hearts = blok
+    }
+}
+
+\newcommand{\odpds}{
+    \makecell[l]{
+        2\nt = ask \gf; 3\clubs = 5+\hearts\ \fonce; 3\diams = \gf\ na młodym\\
+        3\hearts = \invp\ z fitem; 3\spades = blok
+    }
+}
+
+\newcommand{\odpdn}{
+    \makecell[l]{
+        3\clubs = puppet; 3\diams\hearts = trsf\\
+        3\spades = trsf \nt | 6+\minor | \minor; 4\clubs = \major
+    }
+}
+
+\newcommand{\odptc}{
+    \makecell[l]{
+        4\diams = asy 0/1/1Q/2
+    }
+}
+
+\newcommand{\odptd}{
+    \makecell[l]{
+        4\clubs = asy 0/1/1Q/2
+    }
+}
+
+\newcommand{\odptn}{
+    \makecell[l]{
+        4\clubs = pokaż kolor trsf; 4\diams = pokaż kol.
+    }
+}
+
+\newcommand{\odpcc}{
+    \makecell[l]{
+        4\nt = do gry
+    }
+}
+
+\newcommand{\dljc}{
+    \makecell[l]{
+        1\clubs - 1\diams{:} \textbf{1\hearts = 2+}; 1\spades = 4+; 1\nt = 18-19 \bal; 2\diams = Acol z \clubs\\
+        1\clubs - 1\major{:} 1\nt = 12-14 \bal; \textbf{2\major = 3+\major\ 12-14}; 2\nt = 18-19 \bal\\
+        1\clubs - 1\hearts{:} 1\spades = \fonce; 2\diams = rewers 15+; 2\spades = \gf\ \clubs\\
+        1\clubs - 1\spades{:} 2\diams/\hearts = rewers 15+; 3\diams = \gf\ z \clubs\\
+        1\clubs - 1\nt{:} 2\clubs = do gry; 2\diams = stayman; 2\major = rewers\\
+        1\clubs - 2\clubs - 2\nt = \bal, może mieć 4\major; 2\anysuit{x} = 5+\clubs4+\anysuit{x}\\
+        1\minor - 2\hearts - 2nt = ask krt\\
+        1\clubs - 2\spades{:} 2\nt/3\minor = pref. dalej 3\major = krótkośc\\
+    }
+}
+
+\newcommand{\dljd}{
+    \makecell[l]{
+        1\diams - 1\hearts - 1\nt = \textbf{gazilli} dowolne 16+ \then 2\clubs = dowolne 8+ \gf\\
+        - inne = słabe \then 2\diams = 3\hearts; 2\hearts = fit; 2\spades = 4\spades\\
+        - 1\diams - 1\spades - 1\nt = \textbf{gazilli} dowolne 16+ \then 2\clubs = dowolne 8+ \gf\\
+        inne = słabe \then 2\diams = 4\hearts; 2\hearts = 3\spades; 2\spades = fit\\
+        1\diams - \diams - dalej trzymania
+    }
+}
+
+\newcommand{\dljm}{
+    \makecell[l]{
+        1\major - 3\clubs - 3\diams = Last train; 1\major - 3\diams - 3\hearts = ask krt\\
+        Po 2/1 \gf\ \textbf{nie pokazujemy siły do poziomu 3}\\
+        z wyjątkami np: 1\major - 2\anysuit{x} - 2\major = 6+\major 13+pc\\
+        Po pasie Drury: 1\hearts - 2\clubs - 2\spades = ask krt\\
+        1\hearts - 2\clubs - 2\nt = \spades; 1\spades - 2\clubs - 2\nt = ask krt\\
+        3\major+1 = spl z singlem, wyżej spl z renonsu
+    }
+}
+
+\newcommand{\dljn}{
+    \makecell[l]{
+        trsf \major\ \then OM = \inv\ 54; Stayman \then OM = silne ustalenie\\
+        1\nt - 3\clubs - dalej jak po otw. 2\nt\\
+        Uwagi: zdarza się zaniżanie przedziału do 13, blefy, singlowe blotki
+    }
+}
+
+\newcommand{\dldc}{
+    \makecell[l]{
+        2\clubs - 2\diams{:} 2\hearts = kokish relay (2\spades = relay, drugi kolor transferem)\\
+        - 2\spades = \nat\ (2\nt relay, drugi kolor transferem)\\
+        - 3\clubs = \diams + 4\major; - 3\diams = \diams; - 3\nt = \minor
+    }
+}
+
+\newcommand{\dldd}{
+    \makecell[l]{
+        2\diams - 2\nt{:} 3\clubs = min (3\diams = pokaż OM; 3\hearts = pasuj/popraw)\\
+        3\diams = max \hearts; 3\hearts = max \spades; na 3-ciej: 2\diams - 2\nt = \clubs
+    }
+}
+
+\newcommand{\dldh}{
+    \makecell[l]{
+        2\hearts-2\spades{:} 2\nt = max, krt \spades; 3\minor = 2\spades; 3\hearts = krt \spades min\\
+        3\nt = 3622, 4\minor = 3+\spades + krt \minor\\
+        2\hearts - 2\nt{:} 3\clubs = czwórka bokiem (3\diams = ask \then \hearts/\clubs/\diams); 3\diams = krt \minor\\
+        - 3\hearts = 6322; 3\spades = krt \spades; 3\nt = dobre \hearts\ \bal; 4\minor = dobre \hearts +krt \minor
+    }
+}
+
+\newcommand{\dlds}{
+    \makecell[l]{
+        analogicznie do 2\spades
+    }
+}
+
+\newcommand{\dldn}{
+    \makecell[l]{
+        2\nt - 3\diams - 3\hearts{:} 3\spades = trsf \nt (\then 4\minor = ask młode); 4\clubs = cue na \hearts\\
+        2\nt - 3\spades-3\nt{:} 4\minor=6+\minor; 4\major = \minor + krt \major; 4\nt = \minor +krt \spades słab.
+    }
+}
+
+\newcommand{\konwstrszltit}{
+    \multicolumn{1}{c|}{KONWENCJE STREFY SZLEMOWEJ}
+}
+
+\newcommand{\konwstrszl}{
+    \multirow{3}{*}{
+        \makecell[l]{
+            Blackwood 4\nt na kolorze starszym (5W+Q) odp. bez króli\\
+            Pytanie o damę, odp. bez króli\\
+            Exclusion (03/14), cuebidy + III stopnia, inwit do szlema\\
+            Niepoważne 3\nt/3\spades, Last train\\
+            Pytanie o asy 5\minor+1 oraz 5\spades na kierach (jeśli 4\nt przekroczone)
+        }
+    }
+}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+\begin{document}
+
+\begin{landscape}
+\pagestyle{empty}
+\begin{center}
+\begin{tabular}{c|c|c|c|l|l|l|}
+\cline{2-7}
+
+\rule{0pt}{12pt} & 
+\rotatebox[origin=c]{90}{\footnotesize{\bl OTWARCIA\bl}} & 
+\rotatebox[origin=c]{90}{\footnotesize{\bl SZTUCZNE\bl}} & 
+\rotatebox[origin=c]{90}{\footnotesize{\bl MIN. KART\bl}} &  
+\multicolumn{1}{c|}{\makecell[c]{OPIS}} &  
+\multicolumn{1}{c|}{\makecell[c]{ODPOWIEDZI}} &  
+\multicolumn{1}{c|}{\makecell[c]{DALSZA LICYTACJA}} \\ \cline{2-7}
+
+\rule{0pt}{12pt} & 1\clubs        &                           & 2                      & \ojc                        & \odpjc                          & \dljc                                 \\ \cline{2-7}
+\rule{0pt}{12pt} & 1\diams        &                           & 4                      & \ojd                        & \odpjd                          & \dljd                                 \\ \cline{2-7}
+\rule{0pt}{12pt} & 1\major        &                           & 5                      & \ojm                        & \odpjm                          & \dljm                                 \\ \cline{2-7}
+\rule{0pt}{12pt} & 1\nt           &                           & -                      & \ojn                        & \odpjn                          & \dljn                                 \\ \cline{2-7}
+\rule{0pt}{12pt} & 2\clubs        &  \szt                     & -                      & \odc                        & \odpdc                          & \dldc                                 \\ \cline{2-7}
+\rule{0pt}{12pt} & 2\diams        &  \szt                     & 5                      & \odd                        & \odpdd                          & \dldd                                 \\ \cline{2-7}
+\rule{0pt}{12pt} & 2\hearts       &  \multirow{2}{*}{\szt}    & \multirow{2}{*}{6}     & \multirow{2}{*}{\odm}       & \odpdh                          & \dldh                                 \\ \cline{2-2} \cline{6-7}
+\rule{0pt}{12pt} & 2\spades       &                           &                        &                             & \odpds                          & \dlds                                 \\ \cline{2-7}
+\rule{0pt}{12pt} & 2\nt           &  \szt                     & -                      & \odn                        & \odpdn                          & \dldn                                 \\ \cline{2-7}
+\rule{0pt}{12pt} & 3\clubs        &                           & \multirow{2}{*}{5}     & \multirow{2}{*}{\otc}       & \odptc                          & \konwstrszltit                        \\ \cline{2-2} \cline{6-7}
+\rule{0pt}{12pt} & \tsuit         &                           &                        &                             & \odptd                          & \konwstrszl                           \\ \cline{2-6}
+\rule{0pt}{20pt} & 3\nt           &  \szt                     & 6                      & \otn                        & \odptn                          &                                       \\ \cline{2-6}
+\rule{0pt}{20pt} & 4\clubs        &                           & 6                      & \occ                        & \odpcc                          &                                       \\ \cline{2-7}
+\end{tabular}
+\end{center}
+\end{landscape}
+
+% \begin{tabular}{|c|c|c|}
+%     \hline
+%     \multirow{2}{*}{Multirow Cell} & Column 2 & Column 3 \\ \cline{2-3}
+%                                        & Column 2b & Column 3b \\ \hline
+%     \end{tabular}
+
+%     \begin{tabular}{@{}c|c@{}} 
+%         D4a & D4b 
+%       \end{tabular} \\ \hline
+
+\end{document}
