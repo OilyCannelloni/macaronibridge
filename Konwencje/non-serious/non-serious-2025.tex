@@ -1,0 +1,150 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{import}
+\usepackage[left=70px,right=70px,top=100px,bottom=100px,paperheight=30in]{geometry}
+
+
+\import{../../lib/}{bridge.sty}
+\setmainlanguage{polish}
+
+\title{Amerykańskie Two-Over-One (Non-Serious 3\spades/3\nt)}
+\date{}
+\author{Bartek Słupik }
+
+
+\begin{document}
+\maketitle
+
+\section*{Co to jest?}
+Jest to schemat licytacji po two-over-one, który pozwala pokazywać \textbf{kształt ręki bez ograniczeń}, a mimo to złapać bilans przed szlemikiem.
+
+
+\subsubsection*{Dlaczego nikt oprócz mnie tak nie gra?}
+To nie do końca prawda. System jest bardzo popularny w USA i jest tam używany nawet przez jedne z najlepszych na świecie par.
+W Polsce też znajduje zastosowanie, choć w nieco innych sekwencjach i nie jest tak popularne.
+
+Ja uczyłem się grać z materiałów amerykańskich, dlatego ``zaimportowałem'' ten schemat do naszego środowiska i gram nim z powodzeniem od kilku lat.
+
+
+\subsubsection*{Skoro to jest takie dobre, to czemu Polska tego nie adoptowała?}
+Porównajmy istniejące schematy:
+\begin{itemize}
+	\item 1\hearts -- 2\clubs -- 2\spades jest nadwyżkowe + brak dalszych ustaleń. Trudność: 4/10, precyzja: 4/10
+	\item Układ bez nadwyżek. Trudność: 1/10, precyzja: 3/10 
+	\item Non-Serious. Trudność 5/10, precyzja 8/10
+	\item Rewersy nadwyżkowe + transfery + fragmenty. Trudność: 8/10, precyzja 9/10	
+\end{itemize}
+
+I teraz odpowiedź - bo istnieje bardziej precyzyjny system, który jednak jest \textbf{bardzo trudny}. Polacy lubią robić sobie niepotrzebne problemy. Taka tradycja.
+
+W przyszłości prawdopodobnie nadejdzie u Was czas na zmianę, ale to jeszcze długa droga. A to i tak trzeba umieć.
+
+\vspace{2cm}
+\section*{Level 1 - Jak to działa?}
+
+\subsubsection*{Do poziomu 3 włącznie pokazujemy tylko układ ręki nie zwracając uwagi na bilans.}
+
+\sequence{{1\hearts}{2\clubs}}
+\begin{options}[1]
+	\item[2\diams] 4+\diams, siła do nieba
+	\item[2\hearts] 6+\hearts, siła do nieba
+	\item[2\spades] 4+\spades, siła od 11 do nieba
+	\item[2\nt] 5\xhearts332, słabe lub silne - W każde 5M332 15-17 otwieramy 1\nt.
+	\item[3\clubs] 4+\clubs, ale raczej nie 2524 (damy 2\nt)
+	\br
+	\item[3\diams] 4+\clubs, krótkość \diams (to już bardziej zaawansowane, ale to nie silne z karami!)
+	\item[3\hearts] samoustalenie \hearts. Tworzy pozycję niepoważnego bilansowania!!!
+\end{options}
+
+
+\subsubsection*{Na kolorze starszym łapiemy bilans na wysokości 3\spades lub 3\nt}
+
+Klasyfikujemy naszą rękę do jednego z 3 przedziałów:
+\begin{itemize}
+	\item \textbf{Zjazd.} Dolne 10\% rąk. Licytujemy 4 w nasz kolor.
+	\item \textbf{Non-serious.} Ręka w przedziale 11-50\%. Licytujemy \textbf{odzywkę niepoważną}
+	\item \textbf{Serious.} Ręka w przedziale 51\%+. Licytujemy od razu \textbf{cue-bid} informując partnera, że mamy rękę mocno nadwyżkową.
+\end{itemize}
+
+
+Poniższe ustalenia stosujemy w każdej sekwencji, w której ustalono kolor na poziomie 3\major lub niżej.
+\sequence{{1\spades}{2\clubs}{2\spades}{3\spades}}
+\begin{options}[1]
+	\item[3\nt] Non-Serious (ręka 11-50\%). Nie mówi nic o składzie ani cue-bidach. \imp
+	\item[4\clubs] Cue-bid (ręka 51+\%).
+	\item[4\diams] Cue bid (ręka 51+\%).
+	\item[4\spades] Zjazd (ręka 0-10\%).
+\end{options}
+
+\sequence{{1\hearts}{2\diams}{3\clubs}{3\hearts}}
+\begin{options}[1]
+	\item[3\spades] \textbf{Non-Serious} (ręka 11-50\%). Nie mówi nic o składzie ani cue-bidach. \vimp
+	\item[3\nt] \textbf{Cue-bid \spades} (ręka 51+\%) \vimp
+	\item[4\clubs] Cue-bid (ręka 51+\%).
+	\item[4\diams] Cue bid (ręka 51+\%).
+	\item[4\hearts] Zjazd (ręka 0-10\%).
+\end{options}
+
+Dlaczego tak dziwnie zamienione? \textbf{Tak jest prościej!} Cue-bid przed niepoważnym 3\nt powodowałby dziwne sytuacje z brakiem zbilansowania. Da się do tego bardzo szybko przyzwyczaić,
+a zagranie kilka razy 3\nt zamiast 7\hearts juz na pewno utrwali tą podmiankę. 
+
+\subsubsection*{I po co to wszystko?}
+
+Na pocieszenie przeanalizujmy tą drugą sekwencję. Co ma partner?
+\begin{itemize}
+	\item Na pewno 5\hearts, 4+\clubs
+	\item Ale mając 3 kara może dałby 3\diams? Czyli raczej nie ma.
+	\item Mając 5422 dałby często 2\nt. Jeśli ma taki skład, to karta jest bardzo asowa.
+	\item Czyli najczęściej ma 3514 lub 5-5. Bez większego systemu nie da się stwierdzić.
+\end{itemize}
+
+Ale co by się stało bez Non-Serious? Pewnie 1\hearts -- 2\diams -- 2\hearts -- 3\hearts. O składzie nie wiemy nic. 
+
+\subsubsection*{Przykład}
+\handdiagramv{}{\vhand{K84}{K75}{AT975}{AQ}}{}{\vhand{AT2}{AQ986}{9}{K953}}{}{}{}{}{}
+
+\vspace*{-1cm}
+\begin{center}
+	\webidding{
+		1\hearts & 2\diams \\
+		3\clubs & 3\hearts \\
+		3\spades\alrt & 3\nt\alrt \\
+		4\clubs & 4\nt \\
+		5\spades & 6\hearts 
+	}
+\end{center}
+
+\begin{itemize}
+	\item 3\spades = Niepoważne - mamy tylko 13 punktów, ale dobre, grające figury i aż 2 asy z damą. Kartę oceniam na około 35\%. Piąty trefl dawałby już okolice 45\%, ale nadal za mało na cue-bid.
+	\item 3\nt = Cue-bid pik. Mamy duże nadwyżki i do większości niepoważnych rąk partnera chcemy jeszcze wymieniać informacje.
+	\item 4\clubs = Współpracujemy. Ręka jest dużo lepsza niż jakieś tam losowe 13 pkt. To bliżej góry przedziału Non-Serious niż dołu.
+	\item 4\nt = Liczymy lewy. Czwartego trefla przebijamy, w karach pewnie jest singiel - super! Szlemik będzie dobry. Sprawdźmy, czy nie oddajemy dwóch asów.
+	\item 6\hearts = Na 7 szanse są marne. Partner pokazał już 13 punktów i cały skład (wiemy o AAQ i \xclubs K). Z dodatkową damą pik dałby raczej już serious. Teoretycznie szlema daje piąty trefl - ale nie ma jak sprawdzić. I tak by był na podziale 3-2 pewnie, więc zysk z grania go byłby statystycznie niewielki.
+\end{itemize}
+
+
+\pagebreak
+\section*{Level 2 - Last Train}
+
+\vspace{2cm}
+\section*{Level 3 - Pytanie o krótkość}
+
+\vspace{2cm}
+\section*{Level 4 - Dodatkowe mini-ustalenia}
+
+\vspace{2cm}
+\section*{Level 5 - Bilansowanie na kolorze młodszym}
+
+\vspace{2cm}
+\section*{Level 6 - Bilansowanie, jeśli nie znajdziemy fitu}
+
+\vspace{2cm}
+\section*{Level 7 - Pytanie o skład i silne ustalenia koloru}
+
+\vspace{2cm}
+\section*{Level 8 - Two-Way-Set}
+
+
+
+
+\end{document}
+
