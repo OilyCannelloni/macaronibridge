@@ -122,26 +122,143 @@ Ale co by się stało bez Non-Serious? Pewnie 1\hearts -- 2\diams -- 2\hearts --
 \end{itemize}
 
 
+\vspace{2cm}
+\section*{Level 2 - Pytanie o krótkość}
+
+Kiedy umiemy już podstawy schematu, pora wycisnąć z niego zyski. Rozważmy następujące rozdanie:
+
+\handdiagramv{}{\vhand{KQ6}{A9}{87432}{KJ6}}{}{\vhand{AJ84}{KQJ754}{-}{Q43}}{}{}{}{}{}
+\vspace*{-1cm}
+
+Na szlemika mamy 12 górnych lew. Ale jak go znaleźć? Normalnie poszłoby pewnie coś w rodzaju
+
+\begin{center}
+	\webidding{
+		1\hearts & 2\clubs \\
+		2\hearts & 2\nt \\
+		3\hearts & 4\hearts
+	}
+\end{center}
+
+E nie wie nic o ręce partnera. Nawet nie było blisko znalezienia dobrze sparowanej \textbf{krótkości z wyłączeniem}. Ale niewielkim nakładem pracy może być inaczej!
+
+Jeśli partner pokazał 6 kierów lub pików, odzywka +1 \textbf{ustala kolor} i pyta o krótkość.
+
+\sequence{{1\spades}{2\clubs}{2\spades}{2\ntx\alrt}}
+\begin{options}[1]
+	\item[3\clubs] Krótkość \clubs
+	\item[3\diams] Krótkość \diams
+	\item[3\hearts] Krótkość \hearts
+	\item[3\spades] Brak krótkości
+\end{options}
+
+\sequence{{1\hearts}{2\clubs}{2\hearts}{2\spades\alrt}}
+\begin{options}[1]
+	\item[2\nt]  Brak krótkości
+	\item[3\clubs] Krótkość \clubs
+	\item[3\diams] Krótkość \diams
+	\item[3\hearts] Krótkość \spades
+\end{options}
+ 
+Używając tego schematu licytacja układowych rąk staje się dużo prostsza:
+
+\begin{center}
+	\webidding{
+		1\hearts & 2\clubs \\
+		2\hearts & 2\spades\alrt \\
+		3\diams\alrt & 3\nt\alrt \\
+		4\diams\alrt & 6\hearts
+	}
+\end{center}
+
+\begin{itemize}
+	\item 2\spades = pytanie o krótkość
+	\item 3\diams = krótkość \diams
+	\item 3\nt = Cue-bid \spades. Do krótkości karo wartość naszej ręki urosła bardzo wysoko. Potrzebujemy \xspades A, \xhearts KQ, \xclubs A. To z jednej strony niewiele, z drugiej są to same asy - karty, które w układowych szlemikach są warte duzo więcej niż 4 punkty. Pokazaliśmy silną rękę, ale sami nie przekroczymy poziomu 4\hearts. Chyba że...
+	\item 4\diams = A to co? Przecież partner pokazał już krótkość karo? Ma renons! Nigdy nie dajemy cue-bidu z singlowego Asa, jeśli wcześniej pokazaliśmy krótkość. Nawet jeśli krótkość była pokazana przez domysł.
+	\item 6\hearts = Partner musi mieć \xspades A i \xhearts KQ - inaczej nie ma na otwarcie. Do tego jeszcze jakaś dama i mamy 12 lew.
+\end{itemize}
+
+\subsubsection*{Schemat LSF}
+Odpowiadanie na pytanie o krótkość może powodować niemałe rozjazdy. Dlaczego bowiem na kierach 2\nt to brak a 3\hearts to krótkość \spades? Czemu nie na odwrót?
+Okazuje się, że nieco bardziej sztuczny system może powodować znacznie mniej rozjazdów. Moglibyśmy odpowiadać schodkami, tak jak na pytanie o Asy:
+
+\sequence{{1\spades}{2\clubs}{2\spades}{2\ntx\alrt}}
+\begin{options}[1]
+	\item[3\clubs] Brak krótkości
+	\item[3\diams] Krótkość \clubs (niska)
+	\item[3\hearts] Krótkość \diams (średnia)
+	\item[3\spades] Krótkość \hearts (wysoka)
+\end{options}
+
+\sequence{{1\hearts}{2\clubs}{2\hearts}{2\spades\alrt}}
+\begin{options}[1]
+	\item[2\nt] Brak krótkości
+	\item[3\clubs] Krótkość \clubs (niska)
+	\item[3\diams] Krótkość \diams (średnia)
+	\item[3\hearts] Krótkość \spades (wysoka)
+\end{options}
+
+
+Jest to Schemat LSF (Low Shortness First). Ja aktualnie gram pytaniem o krótkość w około 20 sekwencjach, w połowie z których pokazywanie krótkości naturalnie jest niewykonalne.
+Dzięki LSF szansa na rozjazd jest bardzo mała, bo zawsze policzę schodki.
+
+Pamiętajmy, że umieszczając LSF w innych pozycjach należy zwrócić uwagę na to, jakie krótkości są dostępne. Np po pytaniu 3\spades\alrt\ w poniższej sekwencji są tylko 3 możliwości - brak, niska lub wysoka.
+\sequence{{1\clubs}{1\hearts}{3\hearts}{3\spades\alrt}}
+\begin{options}
+	\item[3\nt] Brak krótkości
+	\item[4\clubs] Krótkość \diams (niska, bo \clubs nie może być!)
+	\item[4\diams] Krótkość \spades (wysoka)
+\end{options}
+
+A czasami któtkość jest dostępna zawsze, na przykład w popularnym na AGH schemacie odpowiedzi na otwarcie 1\spades (2\nt = słaby splinter 9-11PC na jeszcze nieokreślonym kolorze, 3\clubs = pytanie)
+\sequence{{1\spades}{2\ntx\alrt}{3\clubs\alrt}}
+\begin{options}[2]
+	\item[3\diams] = krótkość \clubs (niska, bo brak nie jest możliwy!)
+	\item[3\hearts] = krótkość \diams (średnia)
+	\item[3\spades] = krótkość \hearts (wysoka)
+\end{options}
+
+\subsubsection*{Układ a powaga}
+
+W poprzednim rozdaniu dokonaliśmy upgrade'u karty ze względu na pasującą krótkość. A co jeśli krótkość nie pasuje?
+
+\handdiagramv{}{\vhand{KQ6}{A9}{87432}{KJ6}}{}{\vhand{AJ84}{KQJ754}{Q43}{-}}{}{}{}{}{}
+\vspace*{-1cm}
+
+\begin{center}
+	\webidding{
+		1\hearts & 2\clubs \\
+		2\hearts & 2\spades\alrt \\
+		3\clubs\alrt & 4\hearts
+	}
+\end{center}
+
+\begin{itemize}
+	\item 2\spades = Pytanie o krótkość
+	\item 3\clubs = Krótkośc \clubs
+	\item 4\hearts = Zjazd. Ale partner może z tego dużo wyczytać! Nie zjechaliśmy od razu po 2\hearts, więc w karcie musi być coś interesującego, nieminimalnego, czego wartość dramatycznie spadła po informacji o krótkości \clubs. Czyli pewnie 2 zmarnowane figury trefl i łącznie ok 13-14PC, które do innej krótkości lub braku \textbf{oceniłoby swoją siłę na co najmniej niepoważną}
+\end{itemize}
+
+Teraz zaczynamy rozumieć, dlaczego ten system jest taki dobry. Bilansowanie powinno zostać przeprowadzone \textbf{w oparciu o dopasowanie układowe rąk}, a nie tylko na podstawie patrzenia w punkty i układ własnej ręki. Dlatego większa wolność w szybkim pokazaniu składu przynosi duze zyski.
+
+
+
 \pagebreak
-\section*{Level 2 - Last Train}
+\vspace{2cm}
+\section*{Level 3 - Dodatkowe mini-ustalenia}
 
 \vspace{2cm}
-\section*{Level 3 - Pytanie o krótkość}
+\section*{Level 4 - Bilansowanie na kolorze młodszym}
 
 \vspace{2cm}
-\section*{Level 4 - Dodatkowe mini-ustalenia}
+\section*{Level 5 - Bilansowanie, jeśli nie znajdziemy fitu}
 
 \vspace{2cm}
-\section*{Level 5 - Bilansowanie na kolorze młodszym}
+\section*{Level 6 - Pytanie o skład i silne ustalenia koloru}
 
 \vspace{2cm}
-\section*{Level 6 - Bilansowanie, jeśli nie znajdziemy fitu}
-
-\vspace{2cm}
-\section*{Level 7 - Pytanie o skład i silne ustalenia koloru}
-
-\vspace{2cm}
-\section*{Level 8 - Two-Way-Set}
+\section*{Level 7 - Two-Way-Set}
 
 
 

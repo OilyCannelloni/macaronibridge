@@ -1,0 +1,142 @@
+\documentclass[12pt, a4paper]{report}
+\usepackage{import}
+
+\import{../../lib/}{bridge.sty}
+\setmainlanguage{polish}
+
+\title{Acol bez kontroli - wersja 2025}
+\author{Bartek Słupik}
+\begin{document}
+\maketitle
+
+
+\subsubsection{Podstawy}
+
+\sequence{{2\clubs}}
+\begin{options}[2]
+    \item[2\diams] Automat
+\end{options}
+
+\sequence{{2\clubs}{2\diams}}
+\begin{options}[1]
+	\item[2\hearts] 5+\hearts \orr 25+ BAL \imp \qquad
+	\item[2\spades] 5+\spades
+	\item[2\nt] 23-24 BAL
+	\item[3\clubs\alrt] 6+\diams bez starszej czwórki \vimp
+	\item[3\diams\alrt] 5+\diams, 4\major \imp
+	\item[3\hearts] Samoustalenie
+	\item[3\spades] Samoustalenie
+	\item[3\nt\alrt] 5+/5+ \minor \vimp
+	\item[4\clubs] Samoustalenie
+	\item[4\diams] Samoustalenie
+\end{options}
+
+\sequence{{2\clubs}{2\diams}{2\hearts}}
+\begin{options}[2]
+	\item[2\spades\alrt] Automat
+\end{options}
+
+\sequence{{2\clubs}{2\diams}{2\spades}}
+\begin{options}[2]
+	\item[2\nt\alrt] Semi-automatyczne pytanie
+	\item[3\clubs\alrt] Słaba ręka bez fitu, która bardzo nie chce zajmować \nt
+	\item[3\spades] W podstawowej wersji - ustala kolor.
+\end{options}
+
+
+
+\subsubsection{Transfery po pytaniu}
+\sequence{{2\clubs}{2\diams}{2\hearts}{2\spades}}
+\begin{options}[1]
+	\item[2\nt] 23-24 BAL
+	\item[3\clubs\alrt] 5+\hearts, 4+\diams
+	\item[3\diams\alrt] 6+\hearts
+	\item[3\hearts\alrt] 5+\hearts, 4\spades
+	\item[3\spades\alrt] 5+\hearts, 4+\clubs
+\end{options}
+
+\sequence{{2\clubs}{2\diams}{2\spades}{2\ntx}}
+\begin{options}[1]
+	\item[3\clubs\alrt] 5+\spades, 4+\diams
+	\item[3\diams\alrt] 5+\spades, 4+\hearts
+	\item[3\hearts\alrt] 6+\spades
+	\item[3\spades\alrt] 5+\spades, 4+\clubs
+\end{options}
+
+
+
+\subsubsection{Po transferze - przykłady (można grać już naturalnie)}
+\sequence{{2\clubs}{2\diams}{2\hearts}{2\spades}{3\clubs}}
+\begin{options}[2]
+	\item[3\diams] Fit \diams
+	\item[3\hearts] Dubel \hearts, w razie gdyby partner miał 6-4
+	\item[3\spades\alrt] Silne ustalenie kierów
+\end{options}
+
+\sequence{{2\clubs}{2\diams}{2\spades}{2\ntx}{3\hearts}}
+\begin{options}[2]
+	\item[3\spades] 2+\spades, ustala
+	\item[3\nt] Propozycja
+\end{options}
+
+
+
+\subsubsection{Acol na karach}
+\sequence{{2\clubs}{2\diams}{3\clubs}}
+\begin{options}[2]
+	\item[3\diams\alrt] Pytanie o krótkosć, ustala \diams
+	\item[3\hearts] 5+\hearts
+	\item[3\spades] 5+\spades
+\end{options}
+
+\sequence{{2\clubs}{2\diams}{3\diams}}
+\begin{options}[2]
+	\item[3\hearts] 4+\hearts
+	\item[3\spades] 4+\spades, brak 4\hearts
+\end{options}
+
+\sequence{{2\clubs}{2\diams}{3\diams}{3\hearts}}
+\begin{options}[1]
+	\item[3\spades] 4\spades
+	\item[4\clubs] Ustalenie kierów
+\end{options}
+
+
+\sequence{{2\clubs}{2\diams}{3\diams}{3\spades}}
+\begin{options}[1]
+	\item[4\clubs] Ustalenie pików
+\end{options}
+
+
+
+\subsubsection{Acol na treflach - w otwarciu 1\clubs}
+\sequence{{1\clubs}{1\hearts}}
+\begin{options}[1]
+	\item[2\spades\alrt] \gf na długich \clubs
+\end{options}
+
+\sequence{{1\clubs}{1\spades}}
+\begin{options}[1]
+	\item[3\diams\alrt] \gf na długich \clubs
+\end{options}
+
+\sequence{{1\clubs}{1\diams}}
+\begin{options}[1]
+	\item[2\diams\alrt] 5+\clubs, 4+\diams, ~19+PC \orr 6+\clubs, 19+PC (potem można nat)
+\end{options}
+
+\sequence{{1\clubs}{1\diams}{2\diams}}
+\begin{options}[2]
+	\item[2\hearts\alrt] Słaba ręka 0-4 PC
+	\item[2\spades\alrt] 5+PC \gf (2\nt \then\ \clubs, 3\clubs \then\ \diams)
+\end{options}
+
+\sequence{{1\clubs}{1\diams}{2\diams}{2\hearts}}
+\begin{options}[1]
+	\item[2\spades\alrt] 19-22, 5\clubs 4\diams
+	\item[2\nt\alrt] 19+, 6+\clubs (automat 3\clubs \nf)
+	\item[3\clubs\alrt] 23+, 5\clubs 4\diams, \gf
+\end{options}
+
+
+\end{document}
