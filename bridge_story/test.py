@@ -1,5 +1,6 @@
 from drawing.hands import *
 from drawing.deal_animator import DealAnimator
+import manim
 
 
 config.max_files_cached = 200
@@ -7,9 +8,11 @@ config.max_files_cached = 200
 
 class Test(Scene):
     def construct(self):
+        print(manim.register_font("resources/CARDC___.TTF"))
+
         deal = Deal(
-            west=HandData("AKJ974", "7", "Q962", "96"),
-            north=HandData("T6", "KQ92", "A3", "J8532"),
+            west=HandData("AKJT74", "7", "Q962", "96"),
+            north=HandData("96", "KQ92", "A3", "J8532"),
             east=HandData("Q82", "A8643", "J74", "A4"),
             south=HandData("53", "JT5", "KT85", "KQT7")
         )
@@ -17,7 +20,7 @@ class Test(Scene):
         animator = DealAnimator(self)
         animator.initialize(deal)
 
-        animator.create_deal()
+        animator.create_hands(*Position.all())
         animator.set_caption("4♠ by West")
         self.wait(3)
         animator.remove_caption()

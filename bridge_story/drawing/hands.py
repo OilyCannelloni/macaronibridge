@@ -20,8 +20,9 @@ class Position(Enum):
     class PositionData:
         vector: numpy.typing.NDArray
         id: int = -1
-        HAND_MPL = 2
+        HAND_MPL = 2.5
         TARGET_MPL = 0.5
+        BID_TARGET_MPL = 1
 
         def __eq__(self, other):
             return self.id == other.id  # Must be so, because NDArrays do not define __eq__, which is necessary in Enums
@@ -36,6 +37,13 @@ class Position(Enum):
         Returns the vector pointing to the place, where a played card lands.
         """
         return self.value.vector * self.value.TARGET_MPL
+
+    def bid_target(self):
+        """
+        Returns the vector pointing to the place, where a player's bid lands.
+        """
+        return self.value.vector * self.value.BID_TARGET_MPL
+
 
     def hand_position(self):
         """
@@ -218,6 +226,10 @@ class HandData(dict):
 
     def __str__(self):
         return " ".join(self[s] for s in Suit.suits())
+
+    @staticmethod
+    def from_str(ss):
+        return HandData(*ss.split(" "))
 
     def str_holdings(self) -> Iterable[str]:
         """

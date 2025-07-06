@@ -1,4 +1,6 @@
 from copy import deepcopy
+
+from .bids import Bid
 from .hands import *
 
 
@@ -24,13 +26,15 @@ class DealAnimator:
         """
         self.create_state("start", deal)
         self.hands = deal.to_hands()
+        for position in Position.all():
+            self.hidden[position] = True
 
     def create_hand(self, hand: Hand):
         """
         Creates a given hand at the Scene.
         """
-        self.hidden[hand.position] = False
-        self.scene.play(Create(hand), run_time=0.8)
+        if not self.hidden[hand.position]:
+            self.scene.play(Create(hand), run_time=0.8)
 
     def create_hands(self, *positions: Position):
         """
@@ -45,9 +49,11 @@ class DealAnimator:
             if not self.hidden[pos]:
                 hiding_hands.append(self.hands[pos])
             self.hidden[pos] = True
-        self.scene.play(
-            *[FadeOut(hand) for hand in hiding_hands]
-        )
+
+        if hiding_hands:
+            self.scene.play(
+                *[FadeOut(hand) for hand in hiding_hands]
+            )
 
     def reveal_hands(self, *positions_to_reveal: Position):
         revealing_hands = []
@@ -55,9 +61,11 @@ class DealAnimator:
             if self.hidden[pos]:
                 revealing_hands.append(self.hands[pos])
             self.hidden[pos] = False
-        self.scene.play(
-            *[FadeIn(hand) for hand in revealing_hands]
-        )
+
+        if revealing_hands:
+            self.scene.play(
+                *[FadeIn(hand) for hand in revealing_hands]
+            )
 
     def create_state(self, tag: str, deal: Deal):
         """
@@ -215,4 +223,9 @@ class DealAnimator:
         self.scene.play(FadeOut(self.caption))
         self.caption = None
 
-
+    def bid(self, pos: Position, bid_str: str):
+        bid = Bid(pos, bid_str)
+        self.scene.play(
+            bid.animate.move_to(pos.bid_target())
+                .set_opacity(1)
+        )

@@ -1,0 +1,157 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{import}
+
+
+\makeatletter
+\ExplSyntaxOn
+\clist_new:N\l_gtext_First_clist
+\clist_new:N\l_gtext_Last_clist
+\int_new:N\l_gtext_MaxIndex_int
+\int_new:N\l_gtext_Ratio_int
+\newcommand{\gr@dient}[8]{
+  \int_set:Nn\l_gtext_MaxIndex_int{\int_eval:n{\str_count:n{#1}}}
+  \int_step_inline:nnn{1}{\l_gtext_MaxIndex_int}{
+      \exp_args:Ne\str_if_eq:nnTF{\str_item:Nn{#1}{##1}}{~}{}{
+        \int_set:Nn\l_gtext_Ratio_int{\int_eval:n{\l_gtext_Ratio_int+1}}
+      }
+        \color_select:nn{#8}{
+          \int_eval:n{(\int_use:N\l_gtext_Ratio_int*#5+(\l_gtext_MaxIndex_int-##1)*#2)/\l_gtext_MaxIndex_int},
+          \int_eval:n{(\int_use:N\l_gtext_Ratio_int*#6+(\l_gtext_MaxIndex_int-##1)*#3)/\l_gtext_MaxIndex_int},
+          \int_eval:n{(\int_use:N\l_gtext_Ratio_int*#7+(\l_gtext_MaxIndex_int-##1)*#4)/\l_gtext_MaxIndex_int}
+      }\str_item:Nn{#1}{##1}
+  }
+}
+
+\NewDocumentCommand\gradient{mmmm}{{
+  \clist_set:Nn\l_gtext_First_clist {#3}
+  \clist_set:Nn\l_gtext_Last_clist {#4}
+  \gr@dient{#2}
+  {\clist_item:Nn\l_gtext_First_clist{1}}
+  {\clist_item:Nn\l_gtext_First_clist{2}}
+  {\clist_item:Nn\l_gtext_First_clist{3}}
+  {\clist_item:Nn\l_gtext_Last_clist{1}}
+  {\clist_item:Nn\l_gtext_Last_clist{2}}
+  {\clist_item:Nn\l_gtext_Last_clist{3}}
+  {#1}
+}}
+\ExplSyntaxOff
+
+\NewDocumentCommand\gradientRGB{mmm}{
+  \gradient{RGB}{#1}{#2}{#3}
+}
+\NewDocumentCommand\gradientHSB{mmm}{
+  \gradient{HSB}{#1}{#2}{#3}
+}
+\makeatother
+
+\newcommand{\rainbow}[1]{\!\!\textbf{\gradientHSB{#1}{0,240,200}{240,240,200}}}
+
+
+\import{../lib/}{bridge.sty}
+\setmainlanguage{polish}
+
+\title{\vspace{-2cm}System Słabych Otwarć ,,GERBER''}
+\date{}
+\author{Bartek Słupik \and Krystyna Gasińska}
+
+
+\begin{document}
+\maketitle
+
+\section*{Otwarcia}
+\vspace*{0.8cm}
+\begin{options}
+	\item[\pass] 0-8 skład zrównoważony
+    \item[1\clubs] 13+ dowolne z wyłączeniem otwarć na poziomie 2
+    \item[1\diams] 5+\diams, 0-12
+    \item[1\hearts] 5+\hearts, 0-12
+    \item[1\spades] 5+\spades, 0-12
+    \item[1\nt] 9-12 skład równy
+    \br
+    \item[2\clubs] Precision: 5+\clubs i 4\major lub 6+\clubs, 10-15
+    \item[2\diams] \rainbow{WILKOSZ}, 10-15
+    \item[2\hearts] 6+\hearts 10-15
+    \item[2\spades] 6+\spades 10-15
+    \item[2\nt] Blok na młodych 0-12
+\end{options}
+
+
+\section*{Licytacja relayowa}
+\sequence{{1\clubs}}
+\begin{options}[2]
+    \item[1\diams] 8+PC skład dowolny. Jeśli przeciwnik wchodzi - PF do 2\diams
+    \item[1\hearts] 4+\hearts 0-7 PC itd.
+\end{options}
+
+\sequence{{1\clubs}{1\diams}}
+\begin{options}[1]
+    \item[2\clubs] 15+ dowolne, Jeśli wchodzą - PF do 2\nt
+    \item[2\diams\hearts\spades\!\nt, 3\clubs] 4+\hearts 0-7 PC itd.
+    \item[3\diams] Dwukolorówka bez kar GF
+    \item[3\hearts] Dwukolorówka bez kierów GF 
+    \item[3\spades] Dwukolorówka bez pików GF
+\end{options}
+
+\sequence{{1\clubs}{1\diams}{2\clubs}}
+\begin{options}[2]
+    \item[2\diams] 10+ dowolne \gf. 
+\end{options}
+
+\subsection*{Przeciwnik wchodzi}
+\begin{itemize}
+	\item \dbl = silny relay raczej na składzie równym
+	\item \pass = Może być silny na ukłdazie jeśli jest forsujący
+	\item kolor = od 0 pc jeśli ładny kolor
+\end{itemize}
+
+\subsection*{Przeciwnik otwiera}
+\begin{itemize}
+	\item \dbl = im wyżej tym bardziej wywoławcza, objaśniak od 14 pkt
+	\item 2\diams, 2\hearts, 2\spades z przeskokiem = 9-12
+\end{itemize}
+
+\pagebreak
+
+\section*{Gerber}
+\begin{itemize}
+	\item Na 4 Asy, 4 Króle, 4 Damy i 4 Walety, bez żadnych niższych figur atutowych, one i tak stoją
+	\item +1 na odpowiedź jest o kolejną figurę chyba że jest ryzyko że jest do gry to +2/+3
+	\item 4\nt jest do gry lub ``wybierz kolor'' jeśli do gry nie ma sensu
+	\item 5\nt jest zawsze wybierz kolor
+\end{itemize}
+
+\sequence{{...}{4\clubs}}
+\begin{options}[2]
+    \item[4\diams] = mam naciągnięte gówno (4\hearts re-ask jak po bloku - 0/1/2)
+    \item[4\hearts] = 0 ale decent ręka lub 3
+    \item[4\spades] = 1 ale decent ręka lub 4
+    \item[4\nt] = 2
+\end{options}
+
+\section*{Uciekanie z NT}
+\compsequence{{1\ntx}{\dbl}}
+\begin{compoptions}[3]
+    \item[\pass] = daj \rdbl, silne lub 4\clubs i 4 wyższy lub 4\diams i 4\major
+    \item[\rdbl] = \clubs
+    \item[2\clubs] = \diams
+    \item[2\diams] = \hearts
+    \item[2\hearts] = \spades
+\end{compoptions}
+
+
+\compsequence{{1\ntx}{P}{P}{\dbl}}
+\begin{compoptions}[1]
+    \item[\pass] = 0-3 \clubs
+    \item[\rdbl] = 4 \clubs
+    \item[2\clubs] = gramy
+\end{compoptions}
+
+\compsequence{{1\ntx}{P}{P}{\dbl}{P}{P}}
+\begin{compoptions}[3]
+    \item[\rdbl] = \diams i \major
+    \item[2\clubs] = gramy
+    \item[2\diams] = gramy
+\end{compoptions}
+
+
+\end{document}
