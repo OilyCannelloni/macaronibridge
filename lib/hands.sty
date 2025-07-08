@@ -70,11 +70,11 @@
     % this argument empty (if neither side is vulnerable).
     % You can leave any of the arguments empy (for example
     % provide only N and S hands or omit HCP)
-    \newcommand{\handdiagramv}[5]{
+    \newcommand{\handdiagramv}[6][\ ]{
     % The lines are expanded and can overlap the margins.
     \begin{adjustwidth}{-0.9cm}{-0.4cm}
         % Calculating the size of the diagram.
-        \savebox{\VHandBox}{#4}
+        \savebox{\VHandBox}{#5}
         \setlength{\VHandHeight}{\dimexpr 0.41\linewidth - \wd\VHandBox \relax}
         \vspace{0.5cm}
         
@@ -82,36 +82,36 @@
         \begin{tabular}{
         % Tbh no idea what is this line for.
         >{\raggedleft\arraybackslash}m{0.41\linewidth}
-        m{0.021\linewidth}
-        m{0.02\linewidth}
-        m{0.025\linewidth}
+        >{\raggedleft\arraybackslash}m{0.022\linewidth}
+        >{\centering\arraybackslash}m{0.021\linewidth}
+        >{\raggedright\arraybackslash}m{0.024\linewidth}
         >{\raggedright\arraybackslash}m{0.42\linewidth}
         }
 
         % The cards of N.
-        & \multicolumn{4}{l}{#1}
+        & \multicolumn{4}{l}{#2}
         \\ [5pt]
 
         % The cards of W.
-        \multicolumn{1}{l}{\multirow{3}{*}{\hspace{\VHandHeight}#4}}
+        \multicolumn{1}{l}{\multirow{3}{*}{\hspace{\VHandHeight}#5}}
         % 'N' with appropriate vulnerability color.
-        &  & \IfSubStr{#5}{N}{{\textbf{\vul N}}}{{\textbf{\nvul N}}}
+        &  & \IfSubStr{#6}{N}{{\textbf{\vul N}}}{{\textbf{\nvul N}}}
         % The cards of E.
-        &  & \multirow{3}{*}{#2} \\
+        &  & \multirow{3}{*}{#3} \\
         \\ [-10pt]
 
         % 'E' and 'W' with appropriate vulnerability color.
-        & \IfSubStr{#5}{W}{{\textbf{\vul W}}}
-            {{\textbf{\nvul W}}} & & \IfSubStr{#5}{E}{{\textbf{\vul E}}}
+        & \IfSubStr{#6}{W}{{\textbf{\vul W}}}
+            {{\textbf{\nvul W}}}& \makebox[0.03\linewidth][c]{\textbf{#1}} &\IfSubStr{#6}{E}{{\textbf{\vul E}}}
             {{\textbf{\nvul E}}} &  \\
 
         % 'S' with appropriate vulnerability color.
         \\ [-10pt]  
-        & & \IfSubStr{#5}{S}{{\textbf{\vul S}}}{{\textbf{\,\nvul S}}} &  &  \\
+        & & \IfSubStr{#6}{S}{{\textbf{\vul S}}}{{\textbf{\nvul S}}} &  &  \\
         
         \\ [5pt]
         % The cards of S.
-        & \multicolumn{4}{l}{#3} \\
+        & \multicolumn{4}{l}{#4} \\
 
         \end{tabular}
 

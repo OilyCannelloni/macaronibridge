@@ -1,0 +1,82 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{import}
+
+
+
+\import{../lib/}{bridge.sty}
+\setmainlanguage{polish}
+
+\title{\vspace{-2cm}System Naturalny ,,2NT GF''}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{options}
+	\item[1\clubs] Dowolna ręka bez 5-kartu (każde 4441), 12-20, oprócz przedziału otwarcia 1\nt, lub 5+\clubs
+	\item[1\diams] 5+\diams, 11-21
+	\item[1\hearts] 5+\hearts, 11-21
+	\item[1\spades] 5+\spades, 11-21
+	\item[1\nt] 15-17
+	\item[2\clubs] Acol
+	\item[2\diams, 2\hearts, 2\spades] Naturalny blok, w zielonych z 5-6, w czerwonych 6
+	\item[2\nt] 21-22
+\end{options}
+
+\sequence{{1\clubs}}
+\begin{options}[2]
+	\item[1\diams] 0-6 dowolna ręka lub 7-10 bez starszej czwórki. Np. \\
+					\hhand{xxx}{Qxx}{x}{AQxxxx} - 1\diams \then 2\clubs
+	\item[1\hearts] 4+\hearts, \fonce
+	\item[1\spades] 4+\spades, \fonce
+	\item[1\nt] 11-12 na składzie około równym, bez starszej czwórki \vimp
+	\item[2\clubs] \gf na 5+\clubs
+	\item[2\diams] \gf na 5+\diams
+	\item[2\hearts] Blok (0-8) na 5-6 w zielonych i 6 w czerwonych 
+	\item[2\spades] Blok (0-8)
+	\item[2\nt] \gf na składzie dobrym do zajęcia \nt \imp
+\end{options}
+
+\sequence{{1\diams}}
+\begin{options}[2]
+	\item[1\hearts] 4+\hearts, \fonce
+	\item[1\spades] 4+\spades, \fonce
+	\item[1\nt] 5-10 na składzie około równym, bez starszej czwórki
+	\item[2\clubs] \gf na 5+\clubs
+	\item[2\diams] \inv 10-12 z \textbf{2+}\diams \vimp \\
+					Ta głupia ręka z 2\diams to np. \hhand{Axx}{xxx}{Kx}{KJxxx}
+	\item[2\hearts] Blok (0-8) na 5-6 w zielonych i 6 w czerwonych 
+	\item[2\spades] Blok (0-8)
+	\item[2\nt] \gf na składzie dobrym do zajęcia \nt \imp
+\end{options}
+
+\sequence{{1\hearts}}
+\begin{options}[2]
+	\item[1\spades] 4+\spades, \fonce
+	\item[1\nt] 5-12 bez fitu lub 5-7 z 3\hearts
+	\item[2\clubs] \gf na składzie dowolnym
+	\item[2\diams] \gf, 5+ dobrych \diams
+	\item[2\hearts] 8-10 3\hearts
+	\item[2\spades] Blok (0-8)
+	\item[2\nt] \gf na składzie dobrym do zajęcia \nt \imp
+	\item[3\clubs] \inv 6+\clubs
+	\item[3\diams] \inv 6+\diams
+	\item[3\hearts] \inv 3+\hearts
+\end{options}
+
+
+\sequence{{1\spades}}
+\begin{options}[2]
+	\item[1\nt] 5-12 bez fitu lub 5-7 z 3\spades
+	\item[2\clubs] \gf na składzie dowolnym
+	\item[2\diams] \gf, 5+ dobrych \diams
+	\item[2\hearts] \gf, 5+ \hearts
+	\item[2\nt] \gf na składzie dobrym do zajęcia \nt \imp
+	\item[3\clubs] \inv 6+\clubs
+	\item[3\diams] \inv 6+\diams
+	\item[3\hearts] \inv 6+\hearts
+	\item[3\spades] \inv 3+\spades
+\end{options}
+
+
+\end{document}

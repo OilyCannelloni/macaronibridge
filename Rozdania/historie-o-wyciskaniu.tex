@@ -1,0 +1,181 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{import}
+\usepackage[paperwidth=21cm,paperheight=40cm,margin=1in]{geometry}
+
+\import{../lib/}{bridge.sty}
+
+\title{Historie o wyciskaniu}
+
+\author{Bartek Słupik}
+
+\newcounter{board}
+\newcommand\nextboard{\stepcounter{board}\theboard}
+
+\begin{document}
+\subsection*{Planowanie podwójnego R na 10 lew do przodu}
+Nawet na turnieju czwartkowym nie można tracić koncentracji. Ostatnie rozdanie dnia 22 maja 2025 prezentowało się następująco:
+
+\handdiagramv[\nextboard]{\vhand{K976}{J}{AJT73}{JT3}}
+				{\vhand{8}{KQ753}{986}{Q852}}
+				{\vhand{AQ}{AT64}{KQ42}{AK7}}
+				{\vhand{JT5432}{982}{5}{964}}{NSEW}
+				
+Po pełnej braków ustaleń licytacji jednostronnej skończyliśmy w nienajlepszym kontrakcie 6\nt. Szlem w karo jest górny, ale jesteśmy, gdzie jesteśmy.
+
+Wist \xspades J. Liczę lewy - 11. Czy impas trefl jest jedyną szansą? Natychmiast zauważam jednak dobrze położoną za wistującym \xspades 9. Być może uda się postawić jakiś przymus!
+Pytanie jaki będzie drugi kolor. Kiery - nie mają komunikacji. Trefle? Groźbą byłaby \xclubs 7, trochę za nisko. A może by tak oba kolory?
+
+Zabiłem wist w ręce, przeszedłem do stołu i zagrałem \xhearts J. E wskoczył Królem - czy rzeczywiście przejrzał moje plany, i, grając na \xhearts Q u partnera zwolnił zatrzymanie? To by było jedno z lepszych zagrań, jakie kiedykolwiek widziałem przy stole. Król nie jest także któtki, bo wist pikowy nie miałby sensu. Zatem E ma \xhearts KQ. Oczywiście kiera przepuściłem, to jedyny sposób na bezpieczną redukcję. 
+
+To zagranie dobrze pokazuje motyw \textbf{sterowania rozmieszczeniem zatrzymań}. Przy rozdzielonych figurach kier, lewę musi wziąć W, bo wtedy nasza \xhearts 10 będzie za \xhearts Q. Dlatego właśnie gramy waleta w koło, a nie kiera z ręki, którego W z Królem często przepuści.
+
+Teraz pozostaje tylko rzeźbienie. Odwrót kierowy zabiłem Asem (po co ryzykować, przymus jest stuprocentowy!), ściągnąłem \xspades Q, \xclubs A, \xspades K (wyrzucony kier) i wszystkie kara. Ustawiła się końcówka:
+
+\handdiagramv[\theboard]{\vhand{9}{}{3}{J}}
+				{\vhand{}{Q}{}{Q8}}
+				{\vhand{}{T}{}{K7}}
+				{\vhand{J}{}{}{96}}{NSEW}
+				
+Wzorek przymusu podwójnego typu R jest zauważyć dość ciężko, bo stawiamy go z dziadka. Zagrałem \xdiams 3 i ostatnią lewę wzięła \xclubs 7.
+
+
+
+\pagebreak
+\subsection*{Nie mów o astroprzymusach przed zobaczeniem tego}
+
+W czerwcu 2025 pojechałem na Otwarte Mistrzostwa Europy oglądać zmagania mojej wychowanki Krystyny. Pod koniec drugiego dnia turnieju par mikstowych przyszło takie rozdanie:
+
+\handdiagramv[\nextboard]{\vhand{AK52}{QT42}{K3}{763}}
+				{\vhand{843}{87}{T965}{QJT8}}
+				{\vhand{Q9}{K63}{AQ84}{AK42}}
+				{\vhand{JT76}{AJ95}{J72}{95}}{}
+
+Gramy 3\nt po, tym razem, oczywistej licytacji. Wist \xspades J. Krysia wzięła w ręce i, mając nadmiar możliwości, zagrała kiera do \xhearts T, która utrzymała się. 
+Teraz trefl przepuszczony do \xclubs 9 i odwrót w \xdiams 7. Zabijamy i gramy kiera do \xhearts K i A. Znowu karo, bijemy w ręce. Teraz z perspektywy rozgrywającej rozdanie wygląda tak:
+
+\handdiagramv[\theboard]{\vhand{AK5}{Q4}{}{76}}
+				{\vhand{?}{-}{?}{?}}
+				{\vhand{9}{6}{A8}{AK4}}
+				{\vhand{?}{Jx}{?}{?}}{}
+				
+Brakuje nam jeszcze jednej lewy. Sprawdzenie podziału trefli byłoby bardzo naiwne - szanse na podział są bardzo małe, gdyż W praktycznie nie może mieć 4 trefli, a często ma 2.
+Zastanówmy się jednak nad innymi szansami. Możemy postawić tu co najmniej kilka przymusów. Spróbuj wygrać w widne przy dowolnym ustawieniu kolorów! A teraz patrz, jak można wygrać zawsze na zakrytych kartach:
+
+Problem polega na tym, że nie znamy rozkładu żadnego z kolorów ze 100\% pewnością. Nie możemy sprawdzić trefli, bo stracimy komunikację. Ale możemy pociągnąć \xdiams A (wyrzucamy trefla) i \xhearts Q. 
+Teraz wiemy, że W ma 3+\diams i 4\hearts, a zatem:
+\begin{itemize}
+	\item Trefle są 3-3, lub
+	\item W ma =4432, więc ściągając trefle ustawimy go w przymusie typu R na \spades i \hearts, lub
+	\item W ma =3442, więc, po ściągnięciu \xhearts Q, E będzie w przymusie typu C na \spades i \clubs, lub
+	\item W ma =2434 (wtf), a E =5242, wtedy E będzie w przymusie typu C na \spades i \diams.
+\end{itemize}
+
+Poradzimy sobie z każdą sytuacją, gdyż do \xhearts Q E musi wyrzucić zawsze pika, więc W zostaje jedynym potencjalnie trzymającym ten kolor. Ściągamy trefle, do Króla wyrzucając odwrotnie do W i jedna z blotek weźmie ostatnią lewę.
+
+Dla mnie niesamowite w tej pozycji jest to, że my tak na prawdę nie musimy nic wiedzieć o rozdaniu, ani o tym jaki przymus na kogo ustawiamy. Po prostu gramy karty w zachłannej kolejności,
+która nas nic nie kosztuje, a dowiadujemy się coraz więcej. A potem możemy się pochwalić partnerowi, jak pięknie rozliczyliśmy rozdanie i ustawiliśmy przymus w ciemne! A jaki to był przymus - to już powie nam partner, analizując rozdanie. 
+
+
+
+
+
+\pagebreak
+\section*{Przymus wpustkowy}
+
+Bardzo nie lubię tej nazwy, gdyż nie zawsze odpowiada ona temu, co wydarzy się przy stole. Angielskie ``Strip Squeeze'', czyli \textbf{przymus eliminacyjny}, nazywa ten manewr według mnie zdecydowanie lepiej.
+
+Nie da się go wytłumaczyć na wzorkach, gdyż może on wystąpić w bardzo różnych konfiguracjach, często oddając przeciwnikowi w jego trakcie nawet kilka lew.
+Dlatego postaram się go wytłumaczyć na podobnej zasadzie, jak pierwszy poznany przez Was przymus typu C. Skupimy się na tym, że w ustalonej N-kartowej końcówce w rękach naszej i dziadka,
+przeciwnik musi utrzymać N+1 kart. Zobaczmy zatem na prosty przykład.
+
+\handdiagramv[\nextboard]{\vhand{}{}{xx}{x}}
+				{\vhand{}{}{}{}}
+				{\vhand{}{}{AQ}{x}}
+				{\vhand{}{}{Kx}{AK}}{NSEW}
+				
+W tej 3-kartowej końcówce W chciałby zatrzymać wszystkie 4 karty - 2 dobre lewy oraz niestojącego \xdiams K. Niestety, musiał wyrzucić jedną z kart.
+
+\begin{itemize}
+	\item Jeśli wyrzuci karo, nasze kara są dobre
+	\item Jeśli wyrzuci trefla, możemy mu oddać lewę na nasz nietrzymany kolor, żeby zapewnić sobie 2 lewy karowe.
+\end{itemize}
+
+Zauważmy, że tutaj nie działa zasada ``wyrzuć to, co zostawił przeciwnik'' ani ``rozegraj zachłannie''. Musimy podjąć naszą decyzję w oparciu o policzenie układu rozdania!
+
+Przymus wpustkowy wymaga zatem dwóch rzeczy u przeciwnika:
+\begin{itemize}
+	\item Co najmniej \textbf{dwóch wyrobionych lew}
+	\item \textbf{Koloru wrażliwego}, czyli takiego, w którym możemy wziąć lewy tylko, jeśli to przeciwnik w niego zagra.
+\end{itemize}
+
+
+\pagebreak
+\subsection*{Maksy generują pięknego brydża}
+
+Nie powinno Was wcale już dziwić, że w przedstawionych tu przykładach gramy kontrakty absurdalnie głupie. Ale to świetnie pokazuje, że znajomość techniki rozgrywkowej jest w stanie wyciągnąć nas z dowolnej opresji.
+
+\handdiagramv[\nextboard]{\vhand{KQJ98653}{K7}{T4}{T}}
+				{\vhand{T7}{98653}{J}{K9654}}
+				{\vhand{A2}{QJT}{AK962}{A32}}
+				{\vhand{4}{A32}{Q8753}{QJ87}}{NS}
+
+Umieszczenie ręki z pikowym longerem w dziadku już rodzi pewne wątpliwości, dlatego potwierdzę - tak, gramy niewygrywalny kontrakt 6\nt po wiście \xclubs Q.
+
+Prawidłowa technika nakazuje pobić damę Królem, by dać znać partnerce, że mamy dziewiątkę - W może odrzucuć wszystkie trefle. Damę pobił jednak dopiero zniesmaczony sytuacją rozgrywający.
+Mając tylko 11 lew, w akcie desperacji zaczął ściągać piki, licząc na cud. I boska interwencja nastąpiła. Do któregoś z kolei pika E wyrzuciła niedbale kluczowego \xdiams J, 
+powodując \textbf{uwrażliwienie} koloru karowego W i umożliwiając piękny manewr.
+
+Po wyrzuceniu dwóch kierów, dwóch kar i dwóch trefli ustawiła się końcówka, w której W musi pozbyć się jednej z kart:
+
+\handdiagramv[\theboard]{\vhand{}{K7}{T4}{}}
+				{\vhand{}{98}{}{K9}}
+				{\vhand{}{Q}{AK9}{}}
+				{\vhand{}{A}{Q87}{J}}{NS}
+				
+Przy stole wyrzucone zostało karo, dlatego rozgrywający nie mógł wykonać wpustu, który nastąpiłby po wyrzuceniu trefla. Niemniej kolejny bezszansowny kontrakt został wygrany.
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

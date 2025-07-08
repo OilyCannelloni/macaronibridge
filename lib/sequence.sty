@@ -44,21 +44,17 @@
 % 1 = left, 2 = right
 \newenvironment{options}[1][1]
 {%
+    \def\optionsunskip{-1.4em}
     \ifcase#1\relax
     \or
-        \def\optionsunskip{-1.4em}
-        \def\optionsitemindent{4em}
-        \def\optionslabelwidth{6em}
+        \def\optionslabelwidth{5.5em}
     \or 
-        \def\optionsunskip{-1.4em}
-        \def\optionsitemindent{4em}
-        \def\optionslabelwidth{3.2em}
+        \def\optionslabelwidth{2.8em}
     \else
-        \def\optionsitemindent{1em}
         \def\optionslabelwidth{5em}
     \fi
 
-    \begin{itemize}[align=left, itemindent=\optionsitemindent, labelwidth=\optionslabelwidth, itemsep=-0.5em]
+    \begin{itemize}[align=left, labelwidth=\optionslabelwidth, leftmargin=6em, itemsep=-0.5em]
         \vspace*{\optionsunskip}
         
 }
