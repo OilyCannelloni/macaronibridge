@@ -6,7 +6,7 @@
 \newcommand*{\compsequence}[1]{%
   \par\noindent\relax
   \compSequenceScan#1\relax\relax\relax\relax
-  \par\relax\relax
+  \relax\relax
   \relax{\color{CadetBlue}\rule[3mm]{4.5cm}{0.4mm}}
 }
 
@@ -70,10 +70,8 @@
 \newenvironment{compoptions}[1][1]
 {%
     \def\optionsunskip{-1.4em}
-    \def\optionsitemindent{9em}
     \ifcase#1\relax
     \or
-        \def\optionsunskip{-1.8em}
         \def\optionslabelwidth{11.1em}
     \or 
         \def\optionslabelwidth{8.2em}
@@ -85,7 +83,7 @@
         \def\optionslabelwidth{11em}
     \fi
 
-    \begin{itemize}[align=left, itemindent=\optionsitemindent, labelwidth=\optionslabelwidth, itemsep=-0.5em]
+    \begin{itemize}[align=left, labelwidth=\optionslabelwidth, leftmargin=11.5em, itemsep=-0.5em]
         \vspace*{\optionsunskip}
         
 }

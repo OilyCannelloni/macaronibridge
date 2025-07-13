@@ -1,0 +1,441 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{import}
+\usepackage[paperwidth=21cm,paperheight=500cm,margin=1in]{geometry}
+
+
+\makeatletter
+\ExplSyntaxOn
+\clist_new:N\l_gtext_First_clist
+\clist_new:N\l_gtext_Last_clist
+\int_new:N\l_gtext_MaxIndex_int
+\int_new:N\l_gtext_Ratio_int
+\newcommand{\gr@dient}[8]{
+  \int_set:Nn\l_gtext_MaxIndex_int{\int_eval:n{\str_count:n{#1}}}
+  \int_step_inline:nnn{1}{\l_gtext_MaxIndex_int}{  
+      \exp_args:Ne\str_if_eq:nnTF{\str_item:Nn{#1}{##1}}{~}{}{
+        \int_set:Nn\l_gtext_Ratio_int{\int_eval:n{\l_gtext_Ratio_int+1}}
+      }
+        \color_select:nn{#8}{
+          \int_eval:n{(\int_use:N\l_gtext_Ratio_int*#5+(\l_gtext_MaxIndex_int-##1)*#2)/\l_gtext_MaxIndex_int},
+          \int_eval:n{(\int_use:N\l_gtext_Ratio_int*#6+(\l_gtext_MaxIndex_int-##1)*#3)/\l_gtext_MaxIndex_int},
+          \int_eval:n{(\int_use:N\l_gtext_Ratio_int*#7+(\l_gtext_MaxIndex_int-##1)*#4)/\l_gtext_MaxIndex_int}
+      }\str_item:Nn{#1}{##1}
+  }
+}
+
+\NewDocumentCommand\gradient{mmmm}{{
+  \clist_set:Nn\l_gtext_First_clist {#3}
+  \clist_set:Nn\l_gtext_Last_clist {#4}
+  \gr@dient{#2}
+  {\clist_item:Nn\l_gtext_First_clist{1}}
+  {\clist_item:Nn\l_gtext_First_clist{2}}
+  {\clist_item:Nn\l_gtext_First_clist{3}}
+  {\clist_item:Nn\l_gtext_Last_clist{1}}
+  {\clist_item:Nn\l_gtext_Last_clist{2}}
+  {\clist_item:Nn\l_gtext_Last_clist{3}}
+  {#1}
+}}
+\ExplSyntaxOff
+
+\NewDocumentCommand\gradientRGB{mmm}{
+  \gradient{RGB}{#1}{#2}{#3}
+}
+\NewDocumentCommand\gradientHSB{mmm}{
+  \gradient{HSB}{#1}{#2}{#3}
+}
+\makeatother
+
+\newcommand{\rainbow}[1]{\!\!\textbf{\gradientHSB{#1}{0,240,200}{240,240,200}}}
+
+
+\import{../lib/}{bridge.sty}
+\setmainlanguage{polish}
+
+\title{\vspace{-2cm}Lista ważnych sekwencji w systemie ,,GŁĄB''}
+\date{}
+\author{Bartek Słupik \and Krystyna Gasińska}
+
+
+\begin{document}
+\maketitle
+
+
+
+
+
+
+\section*{Otwarcia}
+\vspace*{0.8cm}
+\begin{options}
+    \item[1\clubs] Strefowy trefl, może zawierać 5\diams w składzie zrównoważonym
+    \item[1\diams] 5+\diams, 11-22, skład niezrównoważony
+    \br
+    \item[2\clubs] Acol
+    \item[2\diams] Multi, 5/6\major 0-8 w zależności od założeń \\
+                    Na 3 ręce: Naturalny blok 5+\diams \\
+                    Na 4 ręce: 6+\diams, 8-13
+    \item[2\hearts] 6+\hearts 9-12 \\
+                    Na 3 ręce: Naturalny blok 5+\hearts
+    \item[2\spades] 6+\spades 9-12 \\
+                    Na 3 ręce: Naturalny blok 5+\spades
+\end{options}
+
+
+\section*{1\clubs}
+\sequence{{1\clubs}}
+\begin{options}[2]
+    \item[1\diams] 0-6 dowolny (oprócz innych odp), \\
+    7-10 BAL, może mieć 4\major jeśli bardzo \nt ręka \\
+    7+ co najmniej 5-4 \minor
+    \item[1\nt] \inv do 3\nt
+    \item[2\clubs] \gf na 5+\clubs, 5+\diams lub składzie równym, nie daje możliwości uzgodnienia fitu 4-4\major
+    \item[2\diams] Multi, 0-8
+    \item[2\hearts] 5\spades, 4+\hearts, 4-9
+    \item[2\spades] Blok na \clubs \\
+                    \inv na \clubs \\
+                    Układowy \gf na \clubs z krótkością   
+    \item[2\nt] Blok na \minor co najmniej 5/4, 0-8
+    \item[3\clubs] Mixed raise, (5)6+\clubs
+    \item[3\diams] \inv, 6+\diams   
+\end{options}
+
+\subsection*{1\diams = Pseudo Negat}
+\sequence{{1\clubs}{1\diams}}
+\begin{options}[1]
+    \item[1\hearts] 2+\hearts
+    \item[1\spades] 4\spades
+    \item[2\diams] Acol na 5+\clubs i bocznej czwórce lub długich \clubs, \gf
+    \item[2\hearts] 19-22 5\clubs 4\hearts, \nf
+    \item[2\nt] 19-22 5\clubs, 4\diams  
+\end{options}
+
+\sequence{{1\clubs}{1\diams}{1\hearts}}
+\begin{options}[2]
+    \item[1\spades] Transfer na \nt \\
+                      9-11 z 5\clubs lub 5\diams (wyniesienie 1\nt w 2\minor)
+    \item[1\nt] 4\hearts \vimp
+    \item[2\minor] 0-8 NAT
+    \item[2\major] \inv na młodych 5-4 z krótkością  (2\nt bez)
+\end{options}
+
+\sequence{{1\clubs}{1\diams}{1\spades}}
+\begin{options}[2]
+    \item[2\hearts] \minor i krótkość \hearts (nat dajemy multi)
+    \item[2\spades] NAT
+    \item[2\nt] \minor bez krótkości \hearts
+\end{options}
+
+\sequence{{1\clubs}{1\diams}{2\diams}}
+\begin{options}[2]
+    \item[2\hearts] ASK (odp 2\spades NAT, wyżej TRSF)
+\end{options}
+
+\subsection*{1\ntx\ = \inv BAL}
+\sequence{{1\clubs}{1N}}
+\begin{options}[1]
+    \item[2\clubs] do gry
+    \item[2\diams] Stayman
+    \item[2\major] krótkość licytowana 
+\end{options}
+
+\subsection*{2\clubs = \gf na \clubs, \diams lub równym}
+\sequence{{1\clubs}{2\clubs}}
+\begin{options}[1]
+    \item[2\diams] Skład zrównoważony
+    \item[2\major] 5\clubs, 4\major (schemat 2\nt do \diams)
+    \item[2\nt] 5\clubs, 4\diams (3m ustala i ASK LSF n/l/h)
+    \item[3\clubs] 6+\clubs (3\diams ASK LSF n/l/m/h), nie ustala! ODP może mieć \diams
+    \item[3\diams, 3\major] 4441 z licytowaną krótkością
+    \item[3\nt] 4441\clubs  
+\end{options}
+
+\sequence{{1\clubs}{2\clubs}{2\diams}}
+\begin{options}[2]
+    \item[2\hearts] ASK
+\end{options}
+
+\sequence{{1\clubs}{2\clubs}{2\diams}{2\hearts}}
+\begin{options}[1]
+    \item[2\spades] Co najwyżej 4/3 w młodych (2\nt ASK - odp 3\minor NAT)
+    \item[2\nt] Dokładnie 4/4 w młodych
+    \item[3\minor] 5+\minor (5332)  
+\end{options}
+
+
+\subsection*{2\hearts Flannery}
+\sequence{{1\clubs}{2\hearts}}
+\begin{options}[1]
+    \item[2\nt] ASK \gf
+    \item[3\clubs] do gry
+    \item[3\diams] \inv na punkty
+\end{options}
+
+\sequence{{1\clubs}{2\hearts}{2N}}
+\begin{options}[2]
+    \item[3\clubs] 5-5+ (3\diams ASK LSF l/h/rl/rh)
+    \item[3\diams] brak krótkości
+    \item[3\hearts] krótkość \clubs
+    \item[3\spades] krótkość \diams  
+\end{options}
+
+\subsection*{2\spades BlokoInwitoSplinterka}
+\sequence{{1\clubs}{2\spades}}
+\begin{options}[1]
+    \item[2\nt] góra (zajmuję NT z BAL ręki)
+    \item[3\clubs] dół
+    \item[3X] krótkość, F \then 4\clubs
+\end{options}
+
+
+\subsection*{Rebid 2\clubs}
+\sequence{{1\clubs}{1\spades}{2\clubs}}
+\begin{options}[2]
+    \item[2\diams] \gf
+    \item[2\hearts] \inv na 5/4+
+    \item[2\spades] 6+\spades 9-10
+    \item[2\nt] \inv\ \nf   
+\end{options}
+
+
+
+\vspace{3cm}
+\section*{1\diams}
+
+\sequence{{1\diams}}
+\begin{options}
+  \item[1\nt] 4-10 bez 4\major
+  \item[2\clubs] GF \clubs, \diams lub równy
+  \item[2\diams] 10-12 bez 4\major, może mieć tylko 2\diams \vimp
+  \item[2\major] NAT blok 7-9
+  \item[2\nt] BlokoInwitoSplinterka, blok na \diams, inwit z fitem lub \gf z krótkością
+  \item[3\clubs] \inv na \clubs
+  \item[3\diams] Mixed raise
+  \item[3\major] Splinter słabszy niż przez 2\nt     
+\end{options}
+
+\subsection*{2\ntx\ BlokoInwitoSplinterka}
+\sequence{{1\diams}{2N}}
+\begin{options}
+  \item[3\clubs] Góra
+  \item[3\diams] Dół 
+\end{options}
+
+\subsection*{Gazilli 1\ntx}
+\sequence{{1\diams}{1\spades}{1N\alrt}}
+\begin{options}[1]
+    \item[2\clubs] 8+
+    \item[2\diams] do gry
+    \item[2\hearts] 5/5 \major\ \fonce (2\spades po 1\hearts = słabe z jakimś singlem karo)   
+    \item[2\spades] 5\spades, 5\clubs\ \nf (2\hearts po 1\hearts = 5\hearts, 5\clubs)
+\end{options}
+
+\sequence{{1\diams}{1\spades}{1N\alrt}{2\clubs}}
+\begin{options}[1]
+    \item[2\diams] 5+\diams, 4\hearts słabe
+    \item[2\hearts] 3\spades, \gf 
+    \item[2\spades] 4\spades, \gf  
+    \item[2\nt] 4\clubs (3\minor ustala i \lsf\ n/l/h)
+    \item[3\clubs] 6+\diams (3\diams\ \lsf\ n/l/h!! - z 6/4\clubs dajemy 2\nt od razu, nie ma krt \hearts) \imp 
+    \item[3\diams] dużo dobrych \diams
+    \item[3\hearts] 5/5 \minor, krótkość
+    \item[3\spades] 5/5 \minor, krótkość
+    \item[3\nt] 5\diams 332\spades    
+\end{options}
+
+
+
+
+
+\vspace{3cm}
+\section*{1\hearts}
+
+
+\sequence{{1\hearts}{1\spades}{2\clubs}{2\diams}}
+\begin{options}
+  \item[2\spades] 3\spades (2\nt = \lsf\ n/l/h)
+  \item[2\nt] 4+\clubs (3\clubs = \lsf\ n/l/h)
+  \item[3\clubs] 4+\diams
+  \item[3\diams] 6\hearts (tylko brak krt lub krt \spades, bo nie ma 6-4! 3\hearts\ \lsf\ n/\spades)
+  \item[3\hearts] dużo \hearts
+  \item[3\spades] =4522 
+  \item[3\nt] =5\hearts 332\spades 
+\end{options}
+
+\sequence{{1\hearts}{1\spades}{2N}}
+\begin{options}
+  \item[3\clubs] ASK (\clubs, \diams)
+  \item[3\hearts] \nf 
+\end{options}
+
+
+\vspace{3cm}
+\section*{1\spades}
+\sequence{{1\spades}{1N}{2\clubs}{2\diams}}
+\begin{options}
+  \item[2\nt] 4+\clubs (3\clubs = \lsf\ n/l/h)
+  \item[3\clubs] 4+\diams
+  \item[3\diams] 3\hearts \vimp 
+  \item[3\hearts] 6\spades (3\hearts\ \lsf\ n/l/m/h)
+  \item[3\spades] dużo \spades
+  \item[3\nt] =5\spades 332\hearts 
+\end{options}
+ 
+
+
+\section*{Transfery}
+
+
+\subsection*{1\clubs}
+Tak jak po otwarciu 1\nt
+
+\subsection*{1\diams}
+\compsequence{{1\diams}{2\clubs}}
+\begin{compoptions}[3]
+  \item[\dbl] neg 4/3
+  \item[2\hearts, 2\spades] \fonce (wyższe niz kolor otw są \fonce)
+  \item[2\nt] weak \clubs \orr \gf\ \clubs
+  \item[3\clubs] \inv \diams 
+  \item[3\diams, 3\major] preempt 
+\end{compoptions}
+
+\compsequence{{1\diams}{2\hearts}}
+\begin{compoptions}[3]
+  \item[\dbl] neg 4
+  \item[2\spades] \fonce 
+  \item[2\nt] weak \clubs \orr \gf\ \clubs
+  \item[3\clubs] \inv \diams \orr \then 3\nt
+  \item[3\diams, 3\spades] preempt 
+\end{compoptions}
+
+\compsequence{{1\diams}{2\spades}}
+\begin{compoptions}[3]
+  \item[\dbl] neg 4
+  \item[2\nt] weak \clubs \orr \gf\ \clubs \orr \inv \diams
+  \item[3\clubs] \invp\ 5+\hearts
+  \item[3\diams] weak 
+  \item[3\hearts] GF 6+ 
+  \item[3\spades] krótkość 
+\end{compoptions}
+
+
+\compsequence{{1\diams}{3\clubs}}
+\begin{compoptions}[3]
+  \item[\dbl] neg 4/3+\major
+  \item[3\diams] weak
+  \item[3\hearts] 5+\spades\ \invp
+  \item[3\spades] 5+\hearts\ \gf
+  \item[4\minor] super/hyper (4\diams = krótkość \clubs!)    
+\end{compoptions}  
+
+
+\compsequence{{1\diams}{3\hearts}}
+\begin{compoptions}[3]
+  \item[\dbl] 5+\spades\ \invp
+  \item[3\spades] 4\spades    
+  \item[4\minor] super/hyper (4\diams = krótkość \hearts!)   
+\end{compoptions}  
+
+
+\compsequence{{1\diams}{3\spades}}
+\begin{compoptions}[3]
+  \item[\dbl] 4-5\hearts  
+  \item[4\minor] super/hyper (4\diams = krótkość \spades!)   
+\end{compoptions}  
+
+
+
+
+
+
+\subsection*{1\major}
+
+
+\compsequence{{1\hearts}{2\clubs}}
+\begin{compoptions}[3]
+  \item[\dbl] neg 4
+  \item[2\diams] \nf 
+  \item[2\spades] \fonce 
+\end{compoptions}
+
+\compsequence{{1\hearts}{2\spades}}
+\begin{compoptions}[3]
+  \item[\dbl] neg
+  \item[2\nt] weak \clubs \orr \gf \clubs
+\end{compoptions}
+
+
+
+\compsequence{{1\hearts}{3\clubs}}
+\begin{compoptions}[3]
+  \item[\dbl] neg 4-5\spades (lub 6 śmieciowych)
+  \item[3\diams] \invp\ \hearts. Wszystkie takie inwity+ tworzą PF ponad końcówką i 
+  są limitowane przez 4\clubs Super.
+  \item[3\hearts] weak
+  \item[3\spades] \then \nt \orr \diams   
+  \item[4\minor] super/hyper 
+\end{compoptions}  
+
+
+
+\compsequence{{1\hearts}{3\diams}}
+\begin{compoptions}[3]
+  \item[\dbl] neg 4-5\spades
+  \item[3\hearts] weak 
+  \item[3\spades] \then \nt \orr \clubs   
+  \item[4\minor] super/hyper 
+\end{compoptions}
+
+  
+
+\compsequence{{1\spades}{3\clubs}}
+\begin{compoptions}[3]
+  \item[\dbl] neg 4\hearts \orr \then \nt (po kontrze 3\spades) \orr \diams
+  \item[3\diams] \invp\ \hearts
+  \item[3\hearts] \invp\ \spades
+  \item[3\spades] weak   
+  \item[4\clubs] super/hyper 
+\end{compoptions}
+
+\compsequence{{1\spades}{3\diams}}
+\begin{compoptions}[3]
+  \item[\dbl] neg 4-5\hearts \orr \then \nt (po kontrze 3\spades) \orr \clubs
+  \item[3\hearts] \invp\ \spades
+  \item[3\spades] weak   
+  \item[4\minor] super/hyper
+\end{compoptions}
+
+\compsequence{{1\spades}{3\hearts}}
+\begin{compoptions}[3]
+  \item[\dbl] neg
+  \item[3\spades] weak
+  \item[4\minor] super/hyper 
+\end{compoptions}
+
+\subsubsection*{Reagowanie na kontry}
+\compsequence{{1\hearts}{3\diams}{\dbl}{P}}
+\begin{compoptions}[1]
+  \item[\pass] pamiętaj, bierzemy zapis zamiast ryzykować rozjazdu
+  \item[3\hearts] 2-\spades, raczej brak trzymania, nic o extra kierach
+  \item[3\spades] 3+\spades
+  \item[3\nt] gramy
+  \item[4\clubs] natural
+  \item[4\diams] 4\spades i spora nadwyżka
+  \item[4\hearts] dużo \hearts, ale minimum      
+  \item[4\spades] 4\spades
+\end{compoptions}
+
+\compsequence{{1\spades}{3\diams}{\dbl}{P}}
+\begin{compoptions}[1]
+  \item[\pass] pamiętaj, bierzemy zapis zamiast ryzykować rozjazdu
+  \item[3\hearts] 3+\hearts
+  \item[3\spades] 2-\hearts, dupa wołowa
+  \item[3\nt] gramy
+  \item[4\clubs] natural
+  \item[4\diams] 4\spades i spora nadwyżka
+  \item[4\hearts] propozycja z niezłej 4   
+  \item[4\spades] dużo \spades
+\end{compoptions}
+
+
+
+\end{document}
