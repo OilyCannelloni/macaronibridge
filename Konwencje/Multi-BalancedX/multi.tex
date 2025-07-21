@@ -1,0 +1,103 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[paperwidth=21cm,paperheight=70cm,margin=1in]{geometry}
+\usepackage{import}
+
+\import{../../lib/}{bridge.sty}
+\setmainlanguage{polish}
+
+
+
+\title{Yo momma opens 2\diams Multi and gives up 1100}
+\date{}
+\author{Bartek Slupik}
+\begin{document}
+\maketitle
+\section*{Basic bids}
+\compsequence{{2\diams\alrt}}
+\begin{compoptions}[2]
+    \item[\pass] Normal T/O with M shortness (X later)
+    \item[\dbl](13)14-16 \bal, no 5M. 4441m OK \vimp
+    \item[2\hearts] \hearts
+    \item[2\spades] \spades
+    \item[2\nt] 17-19 \bal, can have 5M \imp \br
+    \item[3\clubs] \clubs, but not 5332/5422
+    \item[3\diams] \diams, as above
+    \item[3\hearts, 3\spades] good suit too weak for power X
+    \item[3\nt] \minor \vimp
+    \item[4\clubs] \clubs\ + \major
+    \item[4\diams] \diams\ + \major
+\end{compoptions}
+
+
+
+\section*{Balanced Double}
+\compsequence{{2\diams\alrt}{\dbl\alrt}{\rdbl\alrt}}
+\begin{compoptions}[4]
+    \item[\pass] Weak \\
+                 Shortness in a major (Xs are T/O) \\
+                 PEN against 2\diams Wilkosz (all ssq doubles PEN)
+    \item[2\major] To play \br
+    \item[2\nt] Lebensohl: \\ weak with \clubs or \diams \\ \inv\ with 5\major 
+    \item[3\clubs] Stayman
+    \item[3\diams\hearts] Trsf \gf
+    \item[3\spades] Trsf \nt   
+\end{compoptions}
+
+\compsequence{{2\diams\alrt}{\dbl\alrt}{2\major\alrt}}
+\begin{compoptions}[4]
+    \item[\pass] Weak
+    \item[\dbl] T/O of bid suit (but PEN against 2\diams Wilkosz)
+    \item[*] System on as after \rdbl 
+\end{compoptions}
+
+
+
+\subsection*{Rebids}
+\compsequence{{2\diams\alrt}{\dbl\alrt}{2\hearts\alrt}{\dbl}{P}}
+\begin{compoptions}[2]
+    \item[2\spades] 4\spades\ \nf
+    \item[2\nt] pick minor, likely no stopper 
+    \item[*] NAT \nf
+\end{compoptions}
+
+\compsequence{{2\diams\alrt}{\dbl\alrt}{2\hearts\alrt}{\dbl}{2\spades}}
+\begin{compoptions}[2]
+    \item[\dbl] PEN (partners X also PEN)
+    \item[2\nt] pick minor, likely no stopper 
+    \item[*] NAT \nf
+\end{compoptions}
+
+\compsequence{{2\diams\alrt}{\dbl\alrt}{\rdbl\alrt}{P}{2\hearts}{P}{P}{\dbl}{P}}
+\begin{compoptions}[2]
+    \item[2\spades] 4\spades\ \nf
+    \item[2\nt] pick minor, likely no stopper 
+    \item[*] NAT \nf
+\end{compoptions}
+
+\compsequence{{2\diams\alrt}{\dbl\alrt}{\rdbl\alrt}{P}{2\hearts}}
+\begin{compoptions}[2]
+    \item[\dbl] PEN
+    \item[*] Power X
+\end{compoptions}
+
+
+\section*{4th hand overcalls}
+\compsequence{{2\diams\alrt}{P}{2\hearts\alrt}}
+\begin{compoptions}[4]
+    \item[\pass] Contains T/O with \spades shortness
+    \item[\dbl] 14-16 BAL
+    \item[2\spades] Might be 4+ sometimes  
+\end{compoptions}
+
+\compsequence{{2\diams\alrt}{P}{2\spades\alrt}}
+\begin{compoptions}[4]
+    \item[\pass] Contains T/O with \hearts shortness
+    \item[\dbl] 14-16 BAL
+\end{compoptions}
+
+\compsequence{{2\diams\alrt}{P}{3\hearts+}}
+\begin{compoptions}[4]
+    \item[\dbl] T/O of bid suit
+\end{compoptions}
+
+\end{document}

@@ -8,7 +8,7 @@
 .vscode
 /KrysiaBartek2024/source/*.pdf
 *.tmp
-/bridge_story/media/*
-/bridge_story/example.py
-/bridge_story/drawing/media/*
+/src/bridge_story/media/*
+/src/bridge_story/example.py
+/src/bridge_story/drawing/media/*
 *.pyc

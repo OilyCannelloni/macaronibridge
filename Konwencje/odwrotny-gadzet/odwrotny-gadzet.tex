@@ -1,6 +1,6 @@
 \documentclass[12pt, a4paper]{article}
 \usepackage{import}
-\import{../lib}{bridge.sty}
+\import{../../lib}{bridge.sty}
 
 \title{\vspace{-2.5cm}Odwrócony Gadżet 3\clubs}
 \author{}
@@ -13,28 +13,20 @@
 W każdej sekwencji po rebidzie 2NT odpowiadający wybiera \textbf{2 interesujące kolory}, które eksplorujemy.
 Dalsza licytacja jest tylko w kontekście tych kolorów.
 
-\noindent
-\begin{minipage}{.3\textwidth}
-    \sequence{{1\clubs}{1\hearts}{2\ntx}}
-    \begin{itemize}[align=left, itemindent=4em, labelwidth=3.2em, itemsep=0em]
-        \vspace*{-2.3em}
-        \item[3\clubs] \hearts i \clubs
-        \item[3\diams] \hearts i \diams
-        \item[3\hearts] \hearts i \spades \vimp
-        \item[3\spades] \hearts i \spades 
-    \end{itemize}
-\end{minipage}\hspace{2cm}%
-\begin{minipage}{.6\textwidth}
-    \sequence{{1\clubs}{1\spades}{2\ntx}}
-    \begin{itemize}[align=left, itemindent=4em, labelwidth=3.2em, itemsep=0em]
-        \vspace*{-2.3em}
-        \item[3\clubs] \spades i \clubs
-        \item[3\diams] \spades i \diams
-        \item[3\hearts] \spades i \hearts
-        \item[3\spades] \spades
-    \end{itemize}
-\end{minipage}
-\vspace*{1em}
+\sequence{{1\clubs}{1\hearts}{2\ntx}}
+\begin{options}[2]
+    \item[3\clubs] \hearts i \clubs
+    \item[3\diams] \hearts i \diams
+    \item[3\hearts] \hearts i \spades \vimp
+    \item[3\spades] \hearts i \spades 
+\end{options}
+\sequence{{1\clubs}{1\spades}{2\ntx}}
+\begin{options}[2]
+    \item[3\clubs] \spades i \clubs
+    \item[3\diams] \spades i \diams
+    \item[3\hearts] \spades i \hearts
+    \item[3\spades] \spades
+\end{options}
 
 Dodatkowo:
 \begin{itemize}
@@ -54,7 +46,7 @@ Nieoczywiste zalety:
     czy tam na odwrót
 \end{itemize}
 
-\pagebreak
+\pagebreak 
 \subsection*{Rebid 2\nt po otwarciu 1\clubs i odwrócony gadżet}
 
 \sequence{{1\clubs}{1\hearts}{2\ntx}}
