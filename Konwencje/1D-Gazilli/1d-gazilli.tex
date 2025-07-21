@@ -1,0 +1,94 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[paperwidth=21cm,paperheight=70cm,margin=1in]{geometry}
+\usepackage{import}
+
+\import{../../lib/}{bridge.sty}
+\setmainlanguage{polish}
+
+\title{1\diams Unbalanced with Gazilli}
+\author{Bartek Słupik}
+\begin{document}
+\maketitle
+
+ 
+\subsubsection*{Basic stuff}
+
+\begin{itemize}
+    \item 1\diams opener promises 5+\diams.
+    \item That means you need to open 1\clubs with ALL 4441s and (31)45s.
+    \item By playing 1\nt rebid as Gazilli (undisclosed strong) the 2\hearts = \major response is no longer needed.
+    \item The 2\spades NT transfer is a crime opposite an unbalanced hand.
+    \item Hence, the response structure should define these bids as natural and weak:
+\end{itemize}
+
+\sequence{{1\diams}}
+\begin{options}[2]
+    \item[2\hearts] Natural 6+\hearts, 6-9, but can be weaker if 4th hand has not made a bid yet
+    \item[2\spades] Natural 6+\spades, 6-9,
+    \item[3\clubs] Natural 6+\clubs, \inv 
+\end{options}
+ 
+Gazilli position arises after a 1\hearts or 1\spades response.
+\sequence{{1\diams}{1\hearts}}
+\begin{options}[1]
+    \item[1\spades] \nf
+    \item[1\nt\alrt] \textbf{16+ ANY hand} except those below \br
+    \item[2\clubs] Natural 11-15
+    \item[2\diams] Natural 11-14
+    \item[2\hearts] Natural
+    \item[2\spades] 19+ Natrual \gf
+    \item[2\nt] 16+ 6+\diams 4\clubs     
+    \item[3\clubs] 15-17 5\diams 5\clubs 
+\end{options}
+
+\sequence{{1\diams}{1\hearts}{1N}}
+\begin{options}[2]
+    \item[2\clubs\alrt] \textbf{8+ ANY hand} except those below
+    \item[2\diams] To play
+    \item[2\hearts] 10-11  6\hearts
+\end{options}
+
+After the \gf\ relay, we use transfers:
+\sequence{{1\diams}{1\hearts}{1N\alrt}{2\clubs\alrt}}
+\begin{options}[1]
+    \item[2\diams] Exactly 3\hearts
+    \item[2\hearts] 4\hearts
+    \item[2\spades] unused
+    \item[2\nt] 4+\clubs (3\clubs and 3\diams \lsf\ Unknown)
+    \item[3\clubs] 6+\diams (3\diams \lsf\ Unknown)   
+    \item[3\diams] Solid suit
+\end{options}
+
+The 1\spades response has an issue with opener having 5-4\hearts and a weak hand. 
+This is solved by inserting it into the 1\nt response:
+
+\sequence{{1\diams}{1\spades}}
+\begin{options}[1]
+    \item[1\nt\alrt] \textbf{16+ ANY hand} except those below \orr 4+\hearts WEAK \vimp \br
+    \item[2\clubs] Natural 11-15
+    \item[2\diams] Natural 11-14
+    \item[2\hearts] Natural 16+
+    \item[2\spades] Natural
+    \item[2\nt] 16+ 6+\diams 4\clubs     
+    \item[3\clubs] 15-17 5\diams 5\clubs 
+\end{options}
+
+\sequence{{1\diams}{1\spades}{1N}}
+\begin{options}[2]
+    \item[2\clubs\alrt] \textbf{8+ ANY hand} except those below
+    \item[2\diams] To play
+    \item[2\hearts] Natural, 5-7
+    \item[2\spades] 10-11 6\spades
+\end{options} 
+
+\sequence{{1\diams}{1\hearts}{1N\alrt}{2\clubs\alrt}}
+\begin{options}[1]
+    \item[2\diams] Weak with 4\hearts
+    \item[2\hearts] 3\spades
+    \item[2\spades] 4\spades
+    \item[2\nt] 4+\clubs (3\clubs and 3\diams \lsf\ Unknown)
+    \item[3\clubs] 6+\diams (3\diams \lsf\ Unknown)   
+    \item[3\diams] Solid suit
+\end{options}
+
+\end{document}

@@ -1,0 +1,57 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[paperwidth=21cm,paperheight=70cm,margin=1in]{geometry}
+\usepackage{import}
+
+\import{../../lib/}{bridge.sty}
+\setmainlanguage{polish}
+
+\title{Gazilli after 1\hearts - 1\spades}
+\author{Bartek Słupik}
+\begin{document}
+\maketitle
+
+\subsubsection*{Basic stuff}
+
+\begin{itemize}
+    \item It has been long known that in order to achieve more precision in this sequence, you need to play
+    1\hearts -- 2\spades as natural, 5-9
+    \item This system assumes that 1\hearts -- 1\spades contains a \hearts fit only when 8+
+\end{itemize}
+
+\sequence{{1\hearts}{1\spades}}
+\begin{options}
+    \item[2\nt] 6\hearts, 4\minor 16+ (3\clubs ASK, resp. \clubs/\diams). 3\hearts = to play with trash
+    \item[3\clubs] 15-17 5/5
+    \item[3\diams] 15-17 5/5
+    \item[3\hearts] Good 14-15 with shape
+    \item[3\spades] \inv
+    \item[4\clubs+] Weak SPL     
+\end{options}
+
+\sequence{{1\hearts}{1\spades}{2\clubs}}
+\begin{options}
+    \item[2\diams] 8+ ANY
+    \item[2\hearts] 5-7
+    \item[2\spades] 9-11 (stronger than direct 2\spades)
+    \item[2\nt] Shit hand with 1\hearts 
+\end{options}
+
+\sequence{{1\hearts}{1\spades}{2\clubs}{2\diams}}
+\begin{options}
+    \item[2\hearts] 11-15 with 4+\clubs
+    \item[2\spades] 3\spades ANY hand
+    \item[2\nt] S-BAL hand (5332 with 3\spades or 6\hearts322)
+    \item[3\clubs] NAT
+    \item[3\diams] NAT
+    \item[3\hearts] Almost solid suit
+    \item[3\nt] 5332\spades 
+\end{options}
+
+\sequence{{1\hearts}{1\spades}{2\clubs}{2\diams}{2N}{3\clubs}}
+\begin{options}
+    \item[3\diams] 6\hearts without 3\spades
+    \item[3\hearts] 53\spades 32
+    \item[3\spades] 6\hearts 3\spades 22  
+\end{options}
+
+\end{document}
