@@ -23,8 +23,8 @@
 
 \sequence{{1\diams}}
 \begin{options}[2]
-    \item[2\hearts] Natural 6+\hearts, 6-9, but can be weaker if 4th hand has not made a bid yet
-    \item[2\spades] Natural 6+\spades, 6-9,
+    \item[2\hearts] Natural 6+\hearts, 5-9, vul-dependent, can be weaker if 4th hand has not made a bid yet
+    \item[2\spades] Natural 6+\spades, 5-9,
     \item[3\clubs] Natural 6+\clubs, \inv 
 \end{options}
  
@@ -54,9 +54,13 @@ After the \gf\ relay, we use transfers:
     \item[2\diams] Exactly 3\hearts
     \item[2\hearts] 4\hearts
     \item[2\spades] unused
-    \item[2\nt] 4+\clubs (3\clubs and 3\diams \lsf\ Unknown)
-    \item[3\clubs] 6+\diams (3\diams \lsf\ Unknown)   
-    \item[3\diams] Solid suit
+    \item[2\nt] 6\diams 322\spades or 5\diams 4\clubs 22\spades ("balanced" hand) \then 3\clubs ASK
+    \item[3\clubs] 5\diams 4+\clubs with \spades shortness
+    \item[3\diams] 6+\diams with \spades shortness
+    \item[3\hearts] unused (maybe 4\hearts with void?)
+    \item[3\spades] SPL stronger than direct
+    \item[4\clubs] SPL stronger than direct   
+    \item[4\diams] 4\hearts and long \diams
 \end{options}
 
 The 1\spades response has an issue with opener having 5-4\hearts and a weak hand. 
@@ -64,7 +68,7 @@ This is solved by inserting it into the 1\nt response:
 
 \sequence{{1\diams}{1\spades}}
 \begin{options}[1]
-    \item[1\nt\alrt] \textbf{16+ ANY hand} except those below \orr 4+\hearts WEAK \vimp \br
+    \item[1\nt\alrt] \textbf{16+ ANY hand} except those below \orr 4\hearts WEAK \vimp \br
     \item[2\clubs] Natural 11-15
     \item[2\diams] Natural 11-14
     \item[2\hearts] Natural 16+
@@ -81,14 +85,24 @@ This is solved by inserting it into the 1\nt response:
     \item[2\spades] 10-11 6\spades
 \end{options} 
 
-\sequence{{1\diams}{1\hearts}{1N\alrt}{2\clubs\alrt}}
+\sequence{{1\diams}{1\spades}{1N\alrt}{2\clubs\alrt}}
 \begin{options}[1]
     \item[2\diams] Weak with 4\hearts
     \item[2\hearts] 3\spades
     \item[2\spades] 4\spades
-    \item[2\nt] 4+\clubs (3\clubs and 3\diams \lsf\ Unknown)
-    \item[3\clubs] 6+\diams (3\diams \lsf\ Unknown)   
-    \item[3\diams] Solid suit
+    \item[2\nt] 6\diams 322\spades or 5\diams 4\clubs 22\spades ("balanced" hand) \then 3\clubs ASK
+    \item[3\clubs] 5\diams 4+\clubs with \spades shortness
+    \item[3\diams] 6+\diams with \spades shortness
 \end{options}
+
+One can also ditch the double check-back as it no longer has any purpose:
+\sequence{{1\diams}{1\hearts}{1\spades}}
+\begin{options}[2]
+    \item[1\nt] To play
+    \item[2\clubs] \invp any hand (2\diams rejects)
+    \item[2\diams] To play  
+    \item[2\hearts] 10-11 6\hearts 
+\end{options} 
+
 
 \end{document}

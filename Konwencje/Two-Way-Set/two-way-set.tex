@@ -1,0 +1,135 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[paperwidth=21cm,paperheight=75cm,margin=1in]{geometry}
+\usepackage{import}
+
+\import{../../lib/}{bridge.sty}
+\setmainlanguage{polish}
+
+\title{Two Way Set}
+\author{Bartek Słupik}
+\begin{document}
+\maketitle
+
+ 
+\subsubsection*{Basic stuff}
+
+\begin{itemize}
+    \item Two Way Set is a slam convention which enables you to forcingly show a strong hand with support to a suit on
+    the 4 level.
+    \item It is most profitable in sequences, where other strength-showing conventions, such as Non-Serious, cannot 
+    be used.
+\end{itemize}
+
+The algorithm follows a simple principle - the suit, in which the nearest game is the closest, is agreed via the cheapest
+artificial bid. Let's see an example (4\clubs = \spades\ + \clubs):
+
+\compsequence{{2\hearts}{4\clubs\alrt}{P}}
+\begin{compoptions}[4]
+    \item[4\diams] Strong with \spades
+    \item[4\hearts] Strong with \clubs  
+\end{compoptions}
+
+Here, 2\nt is \gf asking for shape
+
+\sequence{{1\diams}{1\spades}{2\clubs}{2N}{3\spades}}
+\begin{options}[2]
+    \item[3\nt] To play
+    \item[4\clubs] Strong with \spades
+    \item[4\diams] Strong with \clubs
+    \item[4\hearts] Strong with \diams   
+\end{options}
+
+As you can see, this 2\nt with a natural responce scheme produces really silly auctions. 
+But we can do better!
+
+\sequence{{1X}{1Y}{1Z}{2N}}
+\begin{options}
+    \item[3\clubs] 3 of Y (everything agreed naturally)
+    \item[3\diams] 5X 4Z 22
+    \item[3\hearts] 5-5 or 6-4 in XZ (depending on the context) with doubleton Y
+    \item[3\spades] 5-5 or 6-4 in XZ with Y shortness
+    \item[3\nt] 5X-4Y-3-1Y    
+\end{options}
+
+It might seem complicated at first, but this arrangement of responses guarantees a forcing raise in every suit in every sequence!
+
+\sequence{{1\hearts}{2\clubs}{2\diams}{2\ntx}{3\spades\alrt}}
+\begin{options}[2]
+    \item[4\clubs] Strong with \hearts
+    \item[4\diams] Strong with \diams 
+\end{options}
+
+
+Here, we can set all 3 suits! (partner has 6\hearts4\spades)
+\sequence{{1\hearts}{2\diams}{2\spades}{2\ntx}{3\hearts}}
+\begin{options}[2]
+    \item[3\spades] Sets \spades (non-serious ON)
+    \item[3\nt] To play
+    \item[4\clubs] Sets \hearts
+    \item[4\diams] Sets \diams   
+\end{options}
+
+It works after reverses as well (partner has 6-4 with 2\spades):
+\sequence{{1\clubs}{1\spades}{2\hearts}{2\ntx}{3\hearts\alrt}}
+\begin{options}
+    \item[3\spades] Sets \spades (non-serious ON)
+    \item[3\nt] To play
+    \item[4\clubs] Strong with \hearts \vimp
+    \item[4\diams] Strong with \clubs
+\end{options}
+
+An absurd, 5-level case. 4\clubs = \diams\ + \major
+\compsequence{{3\clubs}{4\clubs\alrt}{P}}
+\begin{compoptions}[4]
+    \item[4\diams] Show your major
+    \item[4\hearts] Strong with \diams 
+\end{compoptions}
+
+\compsequence{{3\clubs}{4\clubs\alrt}{P}{4\diams}{P}{4\hearts}{P}}
+\begin{compoptions}[4]
+    \item[4\spades] Strong with \diams
+    \item[4\nt] Strong with \hearts (5\hearts is higher than 5\diams!)
+\end{compoptions}
+
+\compsequence{{3\clubs}{4\clubs\alrt}{P}{4\diams}{P}{4\spades}{P}}
+\begin{compoptions}[4]
+    \item[4\nt] Strong with \diams (After all this, we gained some space for a much needed 5\clubs Last Train bid!)
+    \item[5\clubs] Strong with \spades
+\end{compoptions}
+
+
+The absolute pinnacle of Two-Way Set in practice.
+\handdiagramv{\vhand{KQJT76}{6}{Q9}{Q987}}
+{\vhand{A2}{QJT74}{T843}{T2}}
+{\vhand{}{A53}{AKJ652}{AKJ5}}
+{\vhand{98543}{K982}{7}{643}}
+{EW}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{cccc}
+        \vul{W} & \nvul{N} & \vul{E} & \nvul{S}\\
+		  -  & 2\spades\alrt & \pass & 2\nt\alrt \\
+		  \pass & 3\clubs\alrt & \pass & 3\diams\alrt \\
+		  \pass & 3\spades\alrt & \pass & 4\diams\alrt \\
+		  \pass & 4\spades\alrt & \pass & 5\diams\alrt \\
+		  \pass & 5\spades\alrt & \pass & 5\nt\alrt \\
+		  \pass & 7\clubs\alrt & \pass & \pass \\
+		  \pass
+    \end{tabular}
+\end{table}
+
+\begin{itemize}
+    \item 2\nt = ASK gf
+    \item 3\clubs = Any 6-4
+    \item 3\diams = ASK
+    \item 3\spades = 4\clubs
+    \item 4\diams = Strong with \clubs (4\clubs sets \spades)
+    \item 4\spades = \hearts shortness (lo/hi)
+    \item 5\diams = keycard ask
+    \item 5\spades = 0/3
+    \item 5\nt = queen ask
+\end{itemize}
+
+
+\end{document}
