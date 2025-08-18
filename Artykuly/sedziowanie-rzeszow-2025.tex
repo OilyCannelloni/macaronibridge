@@ -1,0 +1,399 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{import}
+\usepackage[paperwidth=21cm,paperheight=40cm,margin=1in]{geometry}
+
+\import{../lib/}{bridge.sty}
+\title{Podkarpacki Mityng Brydżowy 2025}
+
+\author{Bartek Słupik}
+
+\newcounter{board}
+\newcommand\nextboard{\stepcounter{board}\theboard}
+
+\begin{document}
+\maketitle
+
+\subsection*{Zbyt szybka przebitka}
+S gra 4\hearts. Z ręki \xspades J, którego zamierza przebić w stole dziewiątką.
+Jednak niespodziewanie kolor nie dzieli się, a W wbija się \xhearts 10. Rozgrywający prosi o dołożenie dziewiątki, od razu orientując 
+się w sytuacji.
+
+Czy możemy pozwolić mu na wycofanie karty?
+
+\textbf{Nie.} Przepis 45C4(b) mówi jasno, że możliwość wycofania karty jest tylko w przypadku przejęzyczenia,
+ale nie po utracie koncentracji, która miała miejsce przy stole.
+
+\subsection*{Panie sędzio założenia!}
+Dostałem wezwanie, by zweryfikować, czy w rozdaniu 26 na pewno 
+obie strony są po partii. Zaiste tak jest. Pamiętając stringa
+\textbf{,,oneb-nebo-ebon-bone''} i indeksując go numerem rozdania modulo 16,
+otrzymujemy założenia (o = nikt, b = both po partii).
+
+\subsection*{Sędziowski Clash Squeeze}
+Grane jest 3\hearts\dbl, ale atutów już nie ma. Rozgrywający S ma
+\xdiams Qx i wychodzi blotką. W tym momencie E poza kolejnością dokłada do lewy Asa z \xdiams Ax.
+W tymczasem miał \xdiams Kx. Co robimy?
+
+\textbf{Przepis 57A.} Rozgrywający może nakazać W dołożenie najstarszej 
+lub najmłodszej karty w kolorze lewy. Oczywiście As będzie zagrany.
+
+
+\subsection*{Skradziono mi odzywkę}
+
+\handdiagramv[\nextboard]{\vhand{AJ5}{AQ9872}{-}{J543}}
+				{\vhand{-}{K53}{96543}{KT972}}
+                {\vhand{9432}{6}{KQJT72}{86}}
+                {\vhand{KQT876}{JT4}{A8}{AQ}}{}
+
+\allbidding{
+    \nvul{W} & \nvul{N} & \nvul{E} & \nvul{S} \\
+     \pass & 1\spades & 2\hearts & \dbl\alrt \\
+     \pass & 4\spades & \dbl & \pass \\
+     5\diams & \dbl & 5\hearts & \dbl
+}
+
+Kontra - po stronie NE brak alertu, po stronie SW - silny bergen.
+S twierdzi, że zalicytował 5\diams, bo założył, że partner ma renons
+pik. W KK EW mają zapis 1\spades - 2\hearts = bergen (jednostronna),
+uparcie twierdzą, że ustalali kontrę ,,skradziono mi odzywkę'', ale tego w systemie nie ma.
+Co robimy?
+
+\textbf{Zmiana wyniku na 4\spades\dbl\ W -4.}
+Sędzia zakłada, że ma do czynienia z błędnym wyjaśnieniem, a nie błędną zapowiedzią,
+jeśli nie ma dowodów, że jest inaczej. Na gębę w takie absurdalne ustalenia nie wierzymy.
+Wykonujemy panel z ręką S w pozycji zbiegającego 4\spades \dbl.
+
+
+
+\subsection*{Transferowy blok}
+
+\handdiagramv[\nextboard]{\vhand{A}{A6}{Q652}{AQJ854}}
+				{\vhand{QJ2}{QJ975}{3}{KT97}}
+                {\vhand{65}{KT84}{AKJ974}{3}}
+                {\vhand{KT98743}{32}{T8}{62}}{}
+
+\allbidding{
+    \nvul{W} & \nvul{N} & \nvul{E} & \nvul{S} \\
+        - & - & - & 1\diams \\
+        3\hearts\alrt & 4\hearts & \pass & \pass \\
+        \pass
+}
+
+3\hearts - W do S: Transferowy blok na piki, E do N: brak alertu
+Wynik: bez jednej. EW grają ze sobą pierwszy raz, nie mają systemu.
+Ustalili, że ,,grają transferowymi blokami'', co oboje potwierdzają przekonująco.
+Co robimy?
+
+\textbf{Zmiana wyniku na +3/-3 IMP.}
+Nie ma dowodu, że takie ustalenie odnosi się również do wejść blokiem.
+Tak jak w poprzednim problemie, odzywka 3\hearts jest tak nieschematyczna,
+że nie można bezdyskusyjnie zaufać, że obowiązuje również na wejściu.
+Zatem przyjmujemy, że prawidłowe tłumaczenie wejścia 3\hearts to naturalne.
+
+
+\subsection*{Zaginiony pas}
+
+\allbidding{
+    \nvul{W} & \nvul{N} & \nvul{E} & \nvul{S} \\
+    - & 1\diams & \pass & 2\clubs \\
+    \pass & 3\diams & \pass\alrt & 4\nt \\
+    \pass & 4\hearts & \pass\alrt 
+}
+
+Gramy na zasłonach. Zapowiedź niewystarczająca przyjechała na 
+stronę SW. W przegródce deski należącej do E znajdowały się wtedy dwa pasy.
+Co robimy?
+
+\textbf{Zbieramy fakty.}
+Przepytujemy graczy, żeby dowiedzieć się, czy brakujący pas
+(pewnie puknięcie) nastąpił teraz, czy w poprzednim okrążeniu.
+Okazuje się, że teraz pas był fizycznie położony, a brakło go po 3\diams.
+
+\textbf{E zaakceptował zapowiedź niewystarczającą.}
+Na zasłonach, dopóki nieprawidłowość nie zostanie przesunięta na 
+drugą stronę zasłony, musi być poprawiona bez dalszych konsekwencji.
+
+Gdy jednak dostanie się na drugą stronę, obowiązują przepisy MPB.
+
+
+\pagebreak
+\subsection*{Duży brak transferu}
+
+\handdiagramv[\nextboard]{\vhand{QT}{KQ5}{AT76}{A832}}
+				{\vhand{753}{8742}{J54}{K64}}
+                {\vhand{42}{AJT963}{9}{Q975}}
+                {\vhand{AKJ986}{-}{KQ832}{JT}}{}
+
+\allbidding{
+    \nvul{W} & \vul{N} & \nvul{E} & \vul{S} \\
+    & 1\nt & \pass & 4\hearts\alrt \\
+    4\spades\alrt & \pass & 4\nt & \dbl \\
+    5\diams & \pass & \pass & \dbl \\
+    \pass & \pass & 5\hearts & \dbl \\
+    5\spades & \pass & 6\diams & \dbl
+}
+
+4\hearts: S do W: Naturalne, N do E - transfer.
+4\spades: E do N: dwukolorówka.
+
+Największym problemem w tym rozdaniu jest znalezienie odpowiedzi na
+pytanie: jak brzmi poprawne wyjaśnienie? W tej sekwencji 
+nie możemy przyjąć ,,braku ustaleń''. Gracze mają swoje wersje głęboko we krwi
+i zawsze po jednej stronie padnie jakieś konkretne wyjaśnienie.
+
+Podjąłem decyzję o przeanalizowaniu dwóch równoległych problemów,
+przyjmując za poprawne obie wersje, a następnie wzięciu wyniku bardziej korzystnego
+dla niewykraczających.
+
+W pierwszym przypadku, dla 4\hearts = NAT, E spasuje na 4\spades.
+Ze względu na format BAM i absurdalny wynik na drugim stole nie panelowałęm,
+ale należałoby sprawdzić, co licytuje S na zbiegające 4\spades.
+
+W drugim przypadku (4\hearts = trsf) W nie wejdzie pikami,
+N da 4\spades, a S wyniesie w 5\hearts, które przegra.
+
+Werdykt (jeśli byłby potrzebny): \textbf{Wynik ważony, 
+4\spades\dbl +1 i 5\hearts -1} w zależności od odpowiedzi panelowanych.
+
+\pagebreak
+\subsection*{Marks próbuje ugrać maksa u sędziego}
+
+\handdiagramv[\nextboard]{\vhand{QJT5}{QJ9}{A85}{K32}}
+				{\vhand{4}{T72}{964}{QT9876}}
+                {\vhand{6}{653}{KJT732}{AJ4}}
+                {\vhand{AK98732}{AK84}{Q}{5}}{NSEW}
+
+\allbidding{
+    \vul{W} & \vul{N} & \vul{E} & \vul{S} \\
+    1\clubs & \dbl & \pass & 1\diams \\
+    3\spades & \pass & \pass & 4\diams \\
+    4\hearts & \pass\alrt & \pass & \dbl   
+}
+
+Pas nastąpił po około 3-minutowym namyśle, potwierdzonym po drugiej stronie zasłony.
+Przepanelowałem rękę S w końcowej pozycji. 
+\begin{itemize}
+    \item 4 graczy kontruje nie rozważając alternatyw
+    \item 1 gracz kontruje, rozważając pasa
+    \item 1 gracz pasuje, rozważając kontrę
+\end{itemize}
+
+Namysł jednoznacznie sugeruje chęć skontrowania.
+
+Trzeba sprawdzić, czy pas jest logiczną alternatywą. Rzeczywiście, 
+niektóry go wybierają, ale nie można powiedzieć, że znaczna część graczy go rozważa.
+Zdecydowałem się \textbf{utrzymać wynik.}
+
+
+\subsection*{Czy otwieramy kiery?}
+
+\handdiagramv[\nextboard]{\vhand{AJT974}{93}{62}{A76}}
+				{\vhand{Q832}{K6}{AQT94}{J2}}
+                {\vhand{K65}{AJ2}{K5}{KQT54}}
+                {\vhand{-}{QT8754}{J873}{983}}{NSEW}
+
+\allbidding{
+    \vul{W} & \vul{N} & \vul{E} & \vul{S} \\
+    1\diams & 1\nt & 2\hearts\alrt & \pass \\
+    2\spades\alrt & \pass & 3\diams & 3\nt 
+}
+
+2\hearts: W do S - naturalne, E do N - transfer na piki.
+Na drugim stole w piki wzięto 11 lew. 
+
+Poprawnym wyjaśnieniem było ,,naturalne''. NS, po otrzymaniu prawidłowego
+wyjaśnienia, znajdą piki i zagrają 4\spades. Ale E zorientuje się w sytuacji 
+i przypomni sobie system (do 1\diams grają NAT, a do innych otwarć - transferami).
+Zawistuje w \xhearts K, EW wezmą 3 lewy.
+\textbf{Wynik utrzymany.}
+
+
+
+
+\pagebreak
+\subsection*{Książkowy namysł}
+
+\handdiagramv[\nextboard]{\vhand{K754}{KQ96}{T62}{J9}}
+				{\vhand{Q862}{T}{Q53}{KT752}}
+                {\vhand{T}{AJ542}{97}{Q8643}}
+                {\vhand{AJ93}{873}{AKJ84}{A}}{EW}
+
+\allbidding{
+    \vul{W} & \nvul{N} & \vul{E} & \nvul{S} \\
+     & \pass & \pass & 2\hearts\alrt \\
+    \dbl & 3\hearts & 3\spades & \pass \\
+    4\spades & \pass\alrt & \pass & 5\hearts \\
+    \dbl
+}
+
+2\hearts - dwukolorówka \\
+\pass - po długim namyśle 
+
+Aby zmienić wynik należy wykazać, czy pas jest logiczną alternatywą
+dla S. Wystarczyło przepanlelować dwie osoby. Dla obydwu pas 
+był oczywisty. To wystarcza, by stwierdzić, że ,,niektórzy go
+wybierają''.
+
+
+\subsection*{Ciekawa fałszywka}
+
+Dziadek zagrywa kiera, do którego E dokłada karo. Puszczamy w ręce
+i W bije waletem. W tym momencie E zauważa, że został mu jeszcze \xhearts K.
+
+Jako, że strona wykraczająca nie zagrała w kolejnej lewie, 
+fałszywka musi zostać poprawiona. Każda karta wycofana przez obrońców
+zostaje przygwożdżona. Zatem w tej lewie \xhearts J został pobity \xhearts K,
+a następnie E musiał zagrać przygwożdżone karo.
+
+\subsection*{O kartę za późno}
+
+S gra \xspades A, do którego E nie dokłada. Następnie \xspades K, którego W przebija \xhearts 9.
+Teraz E orientuje się, że ma jeszcze do pika.
+
+Jako, że strona EW zagrała w kolejnej leewie po fałszywym renonsie, 
+nie można już go poprawić. Gra toczy się dalej, a E dokłada pika, któ©eko powinien był
+dołożyć wcześniej.
+
+Wykraczający nie wziął lewy z fałszywką, ale strona wykraczająca wzięła
+przebitkę w kolejnej lewie. Zatem należy się jedna lewa rekompensaty.
+
+
+\subsection*{Pasywny wist w siódemkę karo}
+
+\handdiagramv[\nextboard]{\vhand{752}{J9}{KJT532}{98}}
+				{\vhand{Q6}{A864}{AQ}{AKQJ2}}
+                {\vhand{AKT9}{KQ32}{974}{T4}}
+                {\vhand{J843}{T65}{87}{7653}}{NS}
+
+\allbidding{
+    \nvul{W} & \vul{N} & \nvul{E} & \vul{S} \\
+    1\clubs & \pass & 1\spades\alrt & \dbl\alrt \\
+    \pass & 3\spades & \pass & 3\nt
+}
+
+1\spades - dowolna ręka bez starszych czwórek, \textbf{od 0 pc}.
+
+\dbl - E do N: brak alertu i pytania, W do S - koniecznie zawsze 5 pików.
+
+S zawistował w \xdiams 7. Argumentuje, że przy tłumaczeniu 
+,,piki lub objaśniak'' zawistuje agresywnie \xspades A, a następnie w kiera.
+
+Pozostaje zatem przeprowadzić panel wistowy. S to zawodnik światowej klasy,
+także ciężko było znaleźć osoby na podobnym poziomie.
+Odpowiedzi prezentują się tak:
+
+\begin{itemize}
+    \item Zawsze w \xhearts Q
+    \item Zawsze w \xdiams 7
+    \item Zawsze w \xspades A (dwukrotnie),
+    \item Przy wyjaśnieniu ,,5 pików zawsze'' w \xhearts 2, 
+    a z dopuszczonym silnym wariantem w \xspades A.
+\end{itemize}
+
+Należy jednak zauważyć, że wist w karo jest pasywny. Jedyny panelowany,
+który zmienił zdanie pod wpływem wyjaśnienia już wcześniej 
+wyciągał agresywnego kiera. 
+
+Zatem nie znaleźlismy żadnego poparcia dla argumentacji S o zmianie 
+wistu karowego na kierowy. \textbf{Wynik utrzymany.} Teoretycznie, 
+,,wątpliwości należy rozstrzygać na korzyść strony niewykraczającej''. 
+Zatem wystarczyłby choć jeden przypadek zmiany decyzji z argumentacją identyczną
+do wistującego, by zmienić wynik.
+
+
+\subsection*{Nietrafiony claim}
+
+\handdiagramv[\nextboard]{}
+				{\vhand{AK}{K}{95}{-}}
+                {\vhand{9}{-}{JT87}{-}}
+                {}{NS}
+
+Rozgrywamy 5\diams\dbl. Zostały dwa atuty, ale nie wiemy jak się dzielą.
+Mamy lekkie podejrzenia, że E ma oba, bo to on skontrował.
+
+Deklaracja brzmiałą: ,,Gram pika, reszta moja''. Jednak E po wzięciu
+gra ponownie pika i teraz S musi zgadnąć, czym przebić. Oczywiście od razu broni się,
+że to oczywiste, że małym, bo E skontrował, więc ma więcej kar.
+
+Przepisy o deklaracjach jednak nie mają litości. Przebicie dużym na podział 1-1
+to normalne zagranie. Gracz mógłby w cwany sposób sprawdzać podział - jeśli są 1-1 z
+dziewiątką z prawej, EW natychmiast się poddadzą. W innym przypadku zagramy na podział 0-2,
+bo jeden z 1-1 już wykluczyliśmy. 
+
+
+\subsection*{Stare i Multi, czyli klasyka}
+
+\handdiagramv[\nextboard]{\vhand{T832}{AJ642}{Q62}{8}}
+				{\vhand{Q5}{Q7}{KJT9}{AKQJ4}}
+                {\vhand{AKJ74}{T9853}{8}{T5}}
+                {\vhand{96}{K}{A7543}{97632}}{}
+
+\allbidding{
+    \nvul{W} & \vul{N} & \nvul{E} & \vul{S} \\
+     & & 1\clubs & 2\diams\alrt \\
+    \dbl\alrt & 2\hearts & \dbl & \pass \\
+    3\clubs & \pass & 3\hearts & \pass \\
+    3\nt
+}
+
+2\diams: S do W: stare, N do E: multi. Gracze nie mieli systemu.
+Prawidłowe wyjaśnienie to zatem brak ustaleń.
+E, przepytywany, stwierdził, że do wyjaśnienia ,,stare'' nie zalicytuje 
+pytania o trzymanie 3\hearts, bo ,,będzie się bał o obydwa kolory''.
+Do wyjaśnienia ,,brak ustaleń'' nie był w stanie udzielić odpowiedzi.
+
+Rozdanie było ciężkie w analizie, bo gracz, który z 5-4 w starych 
+licytuje 2\hearts do multi, może być bardzo nieprzewidywalny w dalszej licytacji.
+
+3\nt-2 płaciło 35\% dla EW mimo chodzącego 4\major na drugiej linii.
+5\clubs-1 płaciło 65\%.
+
+Przez brak możliwości dokładnej analizy potencjalnych przebiegów rozdania
+bez wykroczenia, zdecydowaliśmy sie rozdać \textbf{60-40}.
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
