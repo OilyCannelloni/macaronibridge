@@ -14,7 +14,7 @@
 3. Paste the following code replacing the default content:
 
 ```
-\documentclass{article}
+\documentclass[12pt, a4paper]{article}
 \usepackage{import}
 \import{./lib/}{bridge.sty}
 
