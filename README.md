@@ -44,6 +44,8 @@
 5. Now you should be able to compile the project.
 <img width="400" height="587" alt="image" src="https://github.com/user-attachments/assets/b0fb987b-f335-4b73-8674-591cc9c696ad" />
 
+## [Library Documentation](https://github.com/OilyCannelloni/macaronibridge/blob/master/first_steps_with_bridgetex.pdf)
+
 ## Downloading board sets from TournamentCalculator
 
 Navigate to [Multi2Diamonds.com](https://multi2diamonds.com). Paste a link to the base site of a tournament (just like in the example). Pick some interesting boards and submit.
