@@ -6,7 +6,7 @@
 ## How to use?
 ### 1. Configure Overleaf
 
-1. Register on [overleaf.com](overleaf.com) and create a blank project.
+1. Register on [overleaf.com](https://overleaf.com) and create a blank project.
 2. Download [the bridgetex files](https://github.com/OilyCannelloni/macaronibridge/releases/download/0.2.1/lib.zip), unpack them, and upload to your project.
 
 <img width="400" height="599" alt="image" src="https://github.com/user-attachments/assets/67f1da0b-fcc8-4cee-b32b-a9d50d29538a" />
