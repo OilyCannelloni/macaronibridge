@@ -1,0 +1,9 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Users/kryst/Desktop/krysieq/macaronibridge/bridge_story/media/videos/emperor/1080p60/partial_movie_files/Example/3529212410_572319398_223132457.mp4'
+file 'file:C:/Users/kryst/Desktop/krysieq/macaronibridge/bridge_story/media/videos/emperor/1080p60/partial_movie_files/Example/3040924799_605258914_3678317323.mp4'
+file 'file:C:/Users/kryst/Desktop/krysieq/macaronibridge/bridge_story/media/videos/emperor/1080p60/partial_movie_files/Example/3040924799_1497292806_1265559798.mp4'
+file 'file:C:/Users/kryst/Desktop/krysieq/macaronibridge/bridge_story/media/videos/emperor/1080p60/partial_movie_files/Example/3040924799_3447302131_1046601083.mp4'
+file 'file:C:/Users/kryst/Desktop/krysieq/macaronibridge/bridge_story/media/videos/emperor/1080p60/partial_movie_files/Example/3040924799_4006449137_905480576.mp4'
+file 'file:C:/Users/kryst/Desktop/krysieq/macaronibridge/bridge_story/media/videos/emperor/1080p60/partial_movie_files/Example/3040924799_2075468602_89779806.mp4'
+file 'file:C:/Users/kryst/Desktop/krysieq/macaronibridge/bridge_story/media/videos/emperor/1080p60/partial_movie_files/Example/3040924799_2997753738_3788873123.mp4'
+file 'file:C:/Users/kryst/Desktop/krysieq/macaronibridge/bridge_story/media/videos/emperor/1080p60/partial_movie_files/Example/3040924799_784179552_2585825763.mp4'

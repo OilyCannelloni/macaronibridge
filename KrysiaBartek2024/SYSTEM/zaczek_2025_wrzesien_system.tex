@@ -1,0 +1,226 @@
+\documentclass[12pt, a4paper]{report}
+\usepackage{import}
+
+\import{../../lib/}{bridge.sty}
+\setmainlanguage{english}
+
+\usepackage[colorlinks=true, linkcolor=blue]{hyperref}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
+\usepackage{changepage}
+
+\title{\spades\clubs Strefa Żaczek 2025 \xdiams\xhearts}
+\author{--}
+\begin{document}
+\maketitle
+
+%\tableofcontents
+
+%\section{Otwarcia}
+
+Ogólne ustalenia:
+\begin{itemize}
+	\item Drury
+	\item Michaels
+	\item Gazilli (proste - do dogadania w poniedziałek)
+	\item Podwójny Magister
+	\item Puppet Stayman po 2\nt
+	\item nowy kolor na poziomie 3 - \gf, na poziomie 2 - \nf
+	\item do wejścia na poziomie 2 nowy kolor \textbf{forsuje}, np:\\ (1\spades) - 2\clubs - (\pass) - 2\hearts
+	\item do wejścia na poziomie 2 nowy kolor \textbf{nie} forsuje, np:\\ (1\clubs) - 1\hearts - (\pass) - 1\spades
+	\item jeśli do dyspozycji jest kolor przeciwnika, to 2\clubs jest \nat (nie Drury)
+	\item pytanie o asy 14/03 (odpowiedź 2+Q bez króli)
+	\item ,,Kolorowe Króle" (brak, najmłodszy lub 2 pozostałe, ...)
+	\item kontra fit (nie lubię jej ale tak chyba będzie najłatwiej)
+	\item po wejściu przeciwnika kontrą: rekontra siłowa, reszta tak jak bez kontry
+	\item wejścia blokiem 2\hearts/2\spades w sile 8-12!!! (trzeba alertować)
+	\item wejście 2\diams\ na 1\clubs = stare
+\end{itemize}
+
+%\sequence{{?}}
+\vspace{2cm}
+
+\begin{options}[1]
+	\item[1\diams] 5\diams w dowolnej sile (18-19\bal z 5\diams również, potem 2\nt)
+\item[] lub 4441 - ale np z 4\xspades1\xhearts4\xdiams4\clubs wolę otwierać karo
+\item[] (mam wygodny rebid)
+    \item[2\clubs] 22-23 \bal\ lub Acol
+    \item[2\diams/\hearts/\spades] blok \nat (2\nt\ pytanie)
+    \item[2\nt] 20-21 \bal
+\end{options}
+
+\sequence{{1\hearts}{?}}
+\begin{options}[2]
+    \item[1\nt] półforsujące (potem Gazilli)
+    \item[2\clubs/2\diams] \gf
+    \item[2\hearts] konstruktywne 8-10 + fit
+    \item[2\spades] blok \nat
+    \item[2\nt] \inv\ + fit
+    \item[3\clubs] \inv\ \nat
+    \item[3\diams] \inv\ \nat
+    \item[3\hearts] blok
+\end{options}
+
+\sequence{{1\spades}{?}}
+\begin{options}[2]
+    \item[1\nt] półforsujące (potem Gazilli)
+    \item[2\clubs/2\diams/2\hearts] \gf
+    \item[2\spades]konstruktywne 8-10 + fit
+    \item[2\nt] \inv\ + fit
+    \item[3\clubs] \inv\ \nat
+    \item[3\diams] \inv\ \nat
+    \item[3\hearts] \inv\ \nat\ \nf
+    \item[3\spades] blok
+\end{options}
+
+\sequence{{1\nt}{?}}
+\begin{options}[2] 
+	\item[2\spades] transfer na \clubs lub inwit
+	\item[2\nt] transfer na młode lub kara (odpowiadamy lepszym młodszym)
+	\item[3\major] młode z singlem \major
+	\item[4\diams/\hearts] Texas (również po wejściu przeciwnika)
+\end{options}
+Po wejściu przeciwnika na 1\nt:\\
+kolory na poziomie 2 do gry, na poziomie 3 \gf\\
+2\nt Lebensohl
+
+\sequence{{2\clubs}{?}}
+\begin{options}[2] 
+	\item[2\diams] Automat! (nie kontrole)
+\end{options}
+
+\sequence{{2\clubs}{2\diams}{?}}
+\begin{options}[1] 
+	\item[2\hearts] Kokish (kiery lub 24+ \bal
+	\item[2\spades] \nat
+	\item[2\nt] 22-23 \bal\ (dalej jak po otw 2\nt)
+\end{options}
+
+\newpage
+
+Gazilli
+
+\subsubsection*{1\hearts\ -- 1\spades\ \\ ?}
+\begin{itemize}
+    \item 2\clubs\ = 5\hearts4\clubs\ 11-15 lub 16+ HCP \fonce
+    \item 2\nt = 6\hearts4\minor, (15)16+
+\end{itemize}
+
+\subsubsection*{1\hearts\ -- 1\ntx\ \\ ?}
+\begin{itemize}
+    \item 2\clubs\ = 5\hearts\clubs\ 11-15 lub 16+ HCP \fonce
+    \item 2\diams\ = 5\hearts4\diams\ 11-15
+    \item 2\hearts\ = 11-15
+    \item 2\spades\ = 6\hearts5\spades\ \gf
+    \item 2\ntx\ = 6\hearts4\minor\ (15)16+
+    \item 3\clubs\ = 5\hearts5\clubs\ \invp
+    \item 3\diams\ = 5\hearts5\diams\ \invp
+    \item 3\hearts\ = autouzgodnienie
+\end{itemize}
+
+\subsubsection*{1\spades\ -- 1\ntx\ \\ ?}
+\begin{itemize}
+    \item \pass\ = 5332 12-14
+    \item 2\clubs\ = 5\spades\clubs\ 11-15 lub 16+ HCP \fonce
+    \item 2\diams\ = 5\spades4\diams\ 11-15
+    \item 2\hearts\ = 5\spades4\hearts\ 11-15
+    \item 2\spades\ = 11-15
+    \item 2\ntx\ = 6\spades4\minor\ (15)16+
+    \item 3\clubs\ = 5\spades5\clubs\ \invp
+    \item 3\diams\ = 5\spades5\diams\ \invp
+    \item 3\hearts\ = 5\spades5\hearts\ \invp
+    \item 3\spades\ = autouzgodnienie
+\end{itemize}
+
+\subsubsection*{1\hearts\ -- 1\spades\ \\ 2\clubs\ -- ?}
+\begin{itemize}
+    \item \diams\ = 8+
+    \item \hearts\ = 2\hearts\ 5-7
+    \item \spades\ = dobre 5\spades\ 5-7
+    \item 2\ntx\ = 1-\hearts\ 5-7
+    \item 3\clubs\ = 6+\clubs\ 5-7
+    \item 3\diams\ = 6+\diams\ 5-7
+    \item 3\hearts = \hearts\ fit, \gf
+\end{itemize}
+
+\subsubsection*{1\hearts\ -- 1\ntx\ \\ 2\clubs\ -- ?}
+\begin{itemize}
+    \item 2\diams\ = 8+
+    \item 2\hearts\ = 2-3\hearts\ 5-7
+    \item 2\spades\ = 55\minor\ 5-7
+    \item 2\nt\ = 1-\hearts\ 5-7
+    \item 3\clubs\ = 6+\clubs\ 5-7
+    \item 3\diams\ = 6+\diams\ 5-7
+\end{itemize}
+
+\subsubsection*{1\spades\ -- 1\ntx\ \\ 2\clubs\ -- ?}
+\begin{itemize}
+    \item 2\diams\ = 8+
+    \item 2\hearts\ = 5\hearts\ 5-7
+    \item 2\spades\ = 2-3\spades\ 5-7
+    \item 2\ntx\ = 1-\spades\ 5-7
+    \item 3\clubs\ = 6+\clubs\ 5-7
+    \item 3\diams\ = 6+\diams\ 5-7
+\end{itemize}
+
+\subsubsection*{1\hearts\ -- 1\spades\ \\ 2\clubs\ -- 2\diams \\ ?}
+\begin{itemize}
+    \item 2\hearts\ = 5\hearts4\clubs\ 11-15
+    \item 2\spades\ = 5\hearts, =3\spades\ 16+
+    \item 2\ntx\ = 5332 18-20
+    \item 3\clubs\ = 5\hearts4\clubs\ 16+
+    \item 3\diams\ = 5\hearts4\diams\ 16+
+    \item 3\hearts\ = 6\hearts\ 16+
+    \item 3\spades\ = 5\hearts4\spades\ \gf
+\end{itemize}
+
+\subsubsection*{1\hearts\ -- 1\ntx\ \\ 2\clubs\ -- 2\diams \\ ?}
+\begin{itemize}
+    \item 2\hearts\ = 5\hearts4\clubs\ 11-15
+    \item 2\spades\ = 5\hearts4\spades\ 16+
+    \item 2\ntx\ = 5332 18-20
+    \item 3\clubs\ = 5\hearts4\clubs\ 16+
+    \item 3\diams\ = 5\hearts4\diams\ 16+
+    \item 3\hearts\ = 6\hearts\ 16+
+\end{itemize}
+
+\subsubsection*{1\spades\ -- 1\ntx\ \\ 2\clubs\ -- 2\diams \\ ?}
+\begin{itemize}
+    \item 2\hearts\ = 5\spades4\hearts\ 16+
+    \item 2\spades\ = 5\spades4\clubs\ 11-15
+    \item 2\ntx\ = 5332 18-20
+    \item 3\clubs\ = 5\spades4\clubs\ 16+
+    \item 3\diams\ = 5\spades4\diams\ 16+
+    \item 3\spades\ = 6\spades\ 16+
+\end{itemize}
+
+\subsubsection*{1\major -- 1\spades/1\nt\\
+                2\nt -- ?}
+\begin{itemize}
+    \item 3\clubs = \pass/popraw
+    \item 3\diams = pytanie, \gf
+    \item 3\major = ustala \major
+    \item 3\twosuit{\spades}{\hearts} = \nat
+\end{itemize}
+
+\subsubsection*{1\major -- 1\spades/1\nt\\
+                2\nt -- 3\diams\\
+                ?}
+\begin{itemize}
+    \item 3\hearts = \clubs (3\spades = pytanie o siłę, 3\nt = słabsze)
+    \item 3\spades = \diams dobra ręka
+    \item 3\nt = \diams
+\end{itemize}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+

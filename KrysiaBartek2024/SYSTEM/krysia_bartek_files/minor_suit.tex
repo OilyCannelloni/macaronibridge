@@ -1,0 +1,208 @@
+\documentclass[12pt, a4paper]{report}
+\usepackage{import}
+\usepackage[left=50px,right=50px,top=100px,bottom=100px,paperwidth=8in,paperheight=50in]{geometry}
+
+\import{../../lib/}{bridge.sty}
+\setmainlanguage{english}
+
+\usepackage[colorlinks=true, linkcolor=blue]{hyperref}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
+\usepackage{changepage}
+
+\makeatletter
+\renewcommand{\maketitle}{%
+  \begin{center}
+    {\LARGE \bfseries Minor suit openings \par}
+    \vspace{0.5cm}
+    {\Large \spades\clubs Strefa \xdiams\xhearts \par}
+    \vspace{0.5cm}
+    {\Large \@author \par}
+    \vspace{2cm}
+  \end{center}
+}
+\makeatother
+
+\title{\spades\clubs Strefa \xdiams\xhearts}
+\author{Krysia Gasińska \& Bartek Słupik}
+\begin{document}
+\maketitle
+
+        \section*{\colorbox{blue!30}{1\clubs\ opening}}
+        \addcontentsline{toc}{section}{1\clubs\ opening} {
+            \sequence{{1\clubs}{?}}
+            \begin{thoptions}
+                \item[1\diams] negative or 7-10 w/o 4\major or \minor\ or \gf\ \diams
+                \item[1\nt] \inv\ to 3\nt
+                \item[2\clubs] \gf\ \bal
+                \item[2\diams] Multi
+                \item[2\hearts] Flannery
+                \item[2\spades] \then\ \nt
+                \item[2\nt] \then\ \clubs, preempt or strong splinter
+                \item[3\clubs] mixed raise
+                \item[3\diams] \inv\nat
+            \end{thoptions}
+
+            \sequence{{1\clubs}{2\clubs}{?}}
+            \begin{thoptions}
+                \item[2\diams] \qqq
+                \item[2\major] 5\clubs4\major
+                \item[2\nt] \bal\ (may have 4\major)
+                \item[3\clubs] \clubs
+                \item[3\nt] 15-17 \bal
+            \end{thoptions}
+        }
+
+        \section*{\colorbox{blue!30}{1\diams\ opening}}
+        \addcontentsline{toc}{section}{1\diams\ opening} {
+
+            \sequence{{1\diams}{?}}
+            \begin{thoptions}
+                \item[2\diams] 4+\diams, \invp
+                \item[2\hearts] 5\spades4\hearts\ 5-11
+                \item[2\spades] 11+ \bal, no 4\major
+                \item[2\nt] 11-12 \bal
+                \item[3\clubs] \then 3\diams, preempt or strong splinter
+                \item[3\diams] mixed raise
+                \item[3\nt] 15-17 \bal
+            \end{thoptions}
+
+            \sequence{{1\diams}{1\major}{2\diams}{?}}
+            \begin{thoptions}
+                \item[2\major] \nf
+                \item[3rd suit] stopper, \gf
+                \item[2\nt] \gf
+                \item[3\diams] \inv
+            \end{thoptions}
+
+            \sequence{{1\diams}{2\diams}{?}}
+            \begin{thoptions}
+                \item[2\hearts] \hearts\ stopper
+                \item[2\spades] \spades\ stopper
+                \item[2\nt] both major stoppers
+                \item[3\clubs] \nat
+                \item[3\diams] sign off (threshold for invite)
+            \end{thoptions}
+
+            Bidding higher suit denies lower stopper.
+
+            \sequence{{1\diams}{2\spades}{?}}
+            \begin{thoptions}
+                \item[2\nt] \bal min
+                \item[3\clubs] \nat\ \nf\ (4+)
+                \item[3\diams] \nat\ \nf
+                \item[3\hearts] 1-\hearts, 5+\diams\ \gf
+                \item[3\spades] 1-\spades, 5+\diams\ \gf
+                \item[3\nt] to play
+            \end{thoptions}
+
+            \sequence{{1\diams}{3\clubs}{3\diams}{?}}
+            \begin{thoptions}
+                \item[3\hearts] \hearts\ shortness
+                \item[3\spades] \spades\ shortness
+                \item[3\nt] \clubs\ shortness
+            \end{thoptions}
+        }
+
+        \section*{\colorbox{blue!30}{Negative 1\diams}}
+        \addcontentsline{toc}{section}{Negative 1\diams} {
+
+            \sequence{{1\clubs}{1\diams}{?}}
+            \begin{thoptions}
+                \item[1\hearts] almost any hand
+                \item[1\spades] 4\spades
+                \item[1\nt] 18-19 \bal
+                \item[2\clubs] 5+\clubs
+                \item[2\diams] \gf\ \clubs\ + other
+                \item[2\major] reverse \nf
+                \item[2\nt] Acol \clubs
+                \item[3\clubs] \clubs strong hand \nf
+            \end{thoptions}
+
+            \sequence{{1\clubs}{1\diams}
+                      {1\hearts}{?}}
+            \begin{thoptions}
+                \item[1\spades] \then 1\nt
+                \item[1\nt] \minor\ weak
+                \item[2\minor] \nat\ 7-10
+            \end{thoptions}
+        }
+
+        \section*{\colorbox{blue!30}{Forcing 1\spades rebid}}
+        \addcontentsline{toc}{section}{Forcing 1\spades rebid} {
+
+            % \subsubsection*{1\clubs -- 1\hearts\\
+            %                 1\spades -- ?}
+            % \begin{itemize}
+            %     \item 1\nt = 7-10 \bal
+            %     \item 2\clubs = two-way checkback (does not always force 2\diams)
+            %     \item 2\diams = any \gf
+            %     \item 2\hearts = 5+\hearts, \nf
+            %     \item 2\spades = 4+\spades
+            % \end{itemize}
+
+            % \subsubsection*{1\clubs -- 1\hearts\\
+            %                 1\spades -- 1\nt\\}
+            % \begin{itemize}
+            %     \item 2\clubs = 5+\clubs, 11-14
+            %     \item 2\diams = art, any 15+ \unbal
+            %     \item 2\hearts = 3\hearts, 11-14
+            %     \item 2\nt = 18-19 \bal\ \gf
+            % \end{itemize}
+        }
+
+        \section*{\colorbox{blue!30}{Jump reverses}}
+        \addcontentsline{toc}{section}{Jump reverses} {
+            \sequence{{1\clubs}{1\hearts}{?}}
+            \begin{thoptions}
+                \item[2\spades] \clubs\ \gf
+            \end{thoptions}
+
+            \sequence{{1\clubs}{1\spades}{?}}
+            \begin{thoptions}
+                \item[3\diams] \clubs\ \gf
+            \end{thoptions}
+
+            \sequence{{1\diams}{1\hearts}{?}}
+            \begin{thoptions}
+                \item[2\spades] \diams\ \gf
+            \end{thoptions}
+
+            \sequence{{1\diams}{1\spades}{?}}
+            \begin{thoptions}
+                \item[3\hearts] \diams\ \gf
+            \end{thoptions}
+        }
+
+        \section*{\colorbox{blue!30}{Two-way checkback}}
+        \addcontentsline{toc}{section}{Two-way checkback} {
+
+            % After any 1\anysuit{x}\ -- 1\anysuit{y}\ -- 1\anysuit{z}\ sequence (except:
+            % 1\clubs -- 1\diams = negative).
+
+            % \subsubsection*{1\anysuit{x}\ -- 1\anysuit{y} \\ 1\anysuit{z} -- ?}
+            % \begin{itemize}
+            %     \item 2\clubs\ = \then 2\diams
+            %     \item 2\diams\ = any \gf
+            %     \item 2\nt = \then 3\clubs, weak or 55
+            % \end{itemize}
+
+            % \subsubsection*{1\anysuit{x}\ -- 1\anysuit{y} \\ 
+            %                 1\anysuit{z} -- 2\nt\\
+            %                 3\clubs -- ?}
+            % \begin{itemize}
+            %     \item 3\diams = 5\anysuit{y}5\diams
+            %     \item 3\hearts = 5\anysuit{y}5\hearts
+            %     \item 3\spades = 5\anysuit{y}5\clubs
+            % \end{itemize}
+        }
+
+        \section*{\colorbox{blue!30}{Flannery}}
+        \addcontentsline{toc}{section}{Flannery} {
+            % \subsubsection*{1\minor\ -- 2\hearts \\ ?}
+            % \begin{itemize}
+            %     \item 2\nt\ = \lsf \vimp
+            % \end{itemize}
+        }
+
+\end{document}
