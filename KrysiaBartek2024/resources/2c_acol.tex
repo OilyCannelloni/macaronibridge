@@ -1,0 +1,113 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{import}
+
+\import{../../lib/}{bridge.sty}
+\setmainlanguage{polish}
+
+\author{Krystyna Gasińska\\\small{troche tekstu ukradzione od}\\Bartek Słpuik}
+\date{}
+\title{2\clubs\ Acol bez kontroli}
+
+\begin{document}
+\maketitle
+\section{Granie bez kontroli}
+\begin{itemize}
+    \item System jest prosty i przejrzysty, nie wymaga szczegółowych ustaleń
+    \item Miejsce na pokazanie składu, brak rozjazdów bez fitu na poziomie 5
+    \item Silne ręce odpowiadającego i tak da się rozlicytować
+\end{itemize}
+
+\section{Otwieranie acola}
+Ręka musi spełniać jeden z dwóch warunków:
+\begin{itemize}
+    \item 23+ PC
+    \item 9 lew w ręce lub $\leq 4$ przegrywające
+\end{itemize}
+
+\section{Odpowiedzi na acola}
+\begin{itemize}
+    \item 2\diams\ - dowolna sensowna ręka
+    \item 2\hearts, 2\spades, 2\nt, 3\clubs, 3\diams\ = naturalne z piątki,
+    co najmniej (3)4 honory (z AKQJT) w kolorze (lub coś co gra jak 4 honory)
+\end{itemize}
+
+
+\pagebreak
+\section{2\clubs\ - 2\diams\ --- ?}
+\begin{itemize}
+    \item 2\hearts - Kokish
+    \item 2\spades\ - naturalne, ręka raczej niezrównoważona
+    \item 2\nt\ - \bal\ 23-24 PC, może być ze 5\major\ i 4\minor lub 6\anysuit{x}
+    \item 3\clubs\ - (5)6+\clubs
+    \item 3\diams\ - 6+\diams, raczej tylko długie kara, bo jest problem z pokazywaniem dwukolorówek. 
+    Z rękami dwukolorowymi na karach - 1\diams.
+    \item 3\hearts, 3\spades, 4\clubs, 4\diams\ - samoustalenia
+\end{itemize}
+
+\section{Licytacja relayowa odpowiadającego}
+\raggedright
+Odpowiadający w swojej drugiej odzywce może zalicytować odzywkę o 1 wyższą, by zapytać się OTW o skład.
+Przykładowo: \\[1em]
+\webidding{
+    2\clubs & 2\diams \\
+    2\hearts & \conventional{2\spades}
+}
+\webidding{
+    2\clubs & 2\diams \\
+    2\spades & \conventional{2\ntx}
+} \\[1em]
+\raggedright
+Te odzywki nie są naturalne i tylko pytają o skład.
+
+\begin{formal}
+    W sekwencji 2\clubs\ - 2\diams\ --- 3\diams\ relay \textbf{nie występuje}. 3\hearts\ i 3\spades\ są naturalne,
+    z piątki. Dlatego należy uważać z acolem na karach i ręce z 6\diams\ i 4\major\ otwierać 1\diams.
+\end{formal}
+
+Kiedy nie dawać relay'a? Kolor 5+ z czterama z pięciu honorów mogliśmy pokazać w pierwszym kółku.
+W drugim kółku - pokazujemy kolor naturalnie, jeśli ma \textbf{dokładnie 3 honory}. No i oczywiście
+\diams QJTxx nie jest warte pokazywania - dajmy OTW się odlicytować!
+
+\pagebreak
+\section{Smaczki dla zaawansowanych}
+\raggedright
+Pojawia sie problem w sekwencjach typu: \\[1em]
+
+\webidding{
+    2\clubs\ & 2\diams \\
+    2\spades\ & 2\nt \\
+    3\spades\ & ?
+} \\[1em] \raggedright
+
+Jak tu silnie ustalić piki? Rozwiązanie - transfery po pytającym relay'u!
+
+\subsection*{2\clubs\ --- 2\diams\ \\ 2\spades\ --- 2\nt\ \\ ?}
+\begin{itemize}
+    \item 3\clubs\ = 5\spades, 4+\diams
+    \item 3\diams\ = 5\spades, 4\hearts
+    \item 3\hearts\ = 6+\spades
+    \item 3\spades\ = 5\spades, 4\clubs
+\end{itemize}
+
+Takie transfery przyjmujemy \textbf{tylko z fitem!} Bez fitu licytujemy naturalnie. Np:
+
+\webidding{
+    2\clubs\ & 2\diams \\
+    2\spades\ & 2\nt \\
+    \conventional{3\hearts} & 3\spades
+} \\[1em] \raggedright
+
+3\diams\ pokazało szóstego pika, więc 3\spades\ ustala kiery silnie! Bez fitu dajemy 3\nt.
+
+\raggedright
+Jak to się łączy z Kokishem: \\[1em]
+\subsection*{2\clubs\ --- 2\diams\ \\ 2\hearts\ --- 2\spades\ \\ ?}
+\begin{itemize}
+    \item 2\nt\ = \bal\ 24+
+    \item 3\clubs = 5\hearts4\diams
+    \item 3\diams = 6+\hearts
+    \item 3\hearts = 5\hearts4\spades
+    \item 3\spades = 5\hearts4\clubs
+\end{itemize}
+
+\end{document}
