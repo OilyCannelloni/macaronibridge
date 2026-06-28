@@ -1,0 +1,387 @@
+\documentclass[12pt, a4paper]{report}
+\usepackage{import}
+% \usepackage[left=50px,right=50px,top=100px,bottom=100px,paperwidth=8in,paperheight=50in]{geometry}
+
+\import{../../lib/}{bridge.sty}
+\setmainlanguage{english}
+
+\usepackage[colorlinks=true, linkcolor=blue]{hyperref}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
+\usepackage{changepage}
+
+\title{\spades\clubs Strefa \xdiams\xhearts}
+\author{Krystyna Gasińska | Jacek Stasica}
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\chapter*{\colorbox{Plum!30}{General assumptions}}
+\addcontentsline{toc}{chapter}{General assumptions} {
+
+    \section*{\colorbox{blue!30}{Offensive bidding}}
+    \addcontentsline{toc}{section}{Offensive bidding}
+    
+    \section*{\colorbox{blue!30}{Competitive bidding}}
+    \addcontentsline{toc}{section}{Competitive bidding}
+
+    \section*{\colorbox{blue!30}{Defensive bidding}}
+    \addcontentsline{toc}{section}{Defensive bidding}
+
+    \section*{\colorbox{blue!30}{Defensive signaling}}
+    \addcontentsline{toc}{section}{Defensive signaling}
+
+}
+
+\part*{\colorbox{RoyalPurple!30}{Offensive bidding}}
+\addcontentsline{toc}{part}{Offensive bidding} {
+
+    % MINOR SUIT
+
+    \chapter*{\colorbox{Plum!30}{Major suit openings}}
+    \addcontentsline{toc}{chapter}{Major suit openings} {
+
+        \section*{\colorbox{blue!30}{1\major\ opening}}
+        \addcontentsline{toc}{section}{1\major\ opening} {
+        }
+
+        \section*{\colorbox{blue!30}{Drury}}
+        \addcontentsline{toc}{section}{Drury} {
+
+        }
+    }
+
+    \chapter*{\colorbox{Plum!30}{2 over 1 \gf}}
+    \addcontentsline{toc}{chapter}{2 over 1 \gf} {
+
+    }
+
+    \chapter*{\colorbox{Plum!30}{Rebid 2\ntch}}
+    \addcontentsline{toc}{chapter}{Rebid 2\ntx} {
+
+    }
+
+    \chapter*{\colorbox{Plum!30}{\strut American rebid}\\
+                \colorbox{Plum!30}{\strut (with 3-card support)}}
+    \addcontentsline{toc}{chapter}{American rebid (with 3-card support)} {
+
+    }
+
+    \chapter*{\colorbox{Plum!30}{Ask shape 2\ntch\ schema}
+            \colorbox{Plum!30}{(reverses, 2/1, 2\ntch\ rebid)}}
+    \addcontentsline{toc}{chapter}{Ask shape 2\ntx\ schema (reverses, 2/1, 2\ntx\ rebid)} {
+        
+        \section*{\colorbox{blue!30}{3-color auction}}
+        \addcontentsline{toc}{section}{3-color auction} {
+
+        }
+
+        \section*{\colorbox{blue!30}{Reverses}}
+        \addcontentsline{toc}{section}{Reverses} {
+
+        }
+    }
+
+    \chapter*{\colorbox{Plum!30}{1\ntch\ opening}}
+    \addcontentsline{toc}{chapter}{1\ntx\ opening} {
+
+    }
+
+    \chapter*{\colorbox{Plum!30}{2\ntch\ opening}}
+    \addcontentsline{toc}{chapter}{2\ntx\ opening} {
+        
+        \section*{\colorbox{blue!30}{Minor Puppet Stayman}}
+        \addcontentsline{toc}{section}{Minor Puppet Stayman} {
+
+        }
+
+    }
+}
+
+\part*{\colorbox{RoyalPurple!30}{Competitive bidding}}
+\addcontentsline{toc}{part}{Competitive bidding} {
+
+    \chapter*{\colorbox{Plum!30}{1-level opening -- opponents' overcalls}}
+    \addcontentsline{toc}{chapter}{1-level opening -- opponents' overcalls} {
+
+        \section*{\colorbox{blue!30}{Opponents' overcalls over 1\clubs\ opening}}
+        \addcontentsline{toc}{section}{Opponents' overcalls over 1\clubs\ opening} {
+            \subsubsection*{1\clubs -- (\dbl) -- ?}
+            \begin{itemize}
+                \item \rdbl = strength
+                \item 1\diams = \trsf{\hearts}
+                \item 1\hearts = \trsf{\spades}
+                \item 1\spades = \trsf{\nt/\clubs}
+                \item 1\nt = \nat
+                \item 2\clubs/2\diams/2\hearts = transfer, weak/\gf
+                \item 2\spades = \clubs, preempt/\inv/\gf\ (\then\ 2\nt = accept, 3\clubs = weak)
+                \item 2\nt = \minor, weak/\gf
+                \item 3\clubs = \mixed
+                \item 3\diams = preempt
+                \item 3\hearts/3\spades = splinter (weaker than through 2\spades)
+            \end{itemize}
+        }
+
+        \section*{\colorbox{blue!30}{Opponents' overcalls over 1\diams\ opening}}
+        \addcontentsline{toc}{section}{Opponents' overcalls over 1\diams\ opening} {
+
+        }
+
+        \section*{\colorbox{blue!30}{Opponents' overcalls over 1\hearts\ opening}}
+        \addcontentsline{toc}{section}{Opponents' overcalls over 1\hearts\ opening} {
+
+            \subsubsection*{1\hearts -- (\dbl) -- ?}
+            \begin{itemize}
+                \item 1\spades = \nat\ 4+\spades
+                \item 1\nt = \trsf{\clubs}
+                \item 2\clubs = \trsf{\diams}
+                \item 2\diams = \hearts\ constructive+
+                \item 2\hearts = \hearts\ weak
+                \item 2\spades = \nat\ preempt
+                \item 2\nt = \invp, (3)4+\hearts
+                \item 3\clubs = \mixed
+                \item 3\diams = mini splinter \gf
+                \item 3\hearts = preempt
+                \item 3\spades/4\clubs/4\diams = splinter
+                \item 4\spades = to play
+            \end{itemize}
+
+            \subsubsection*{1\hearts -- (1\spades) -- ?}
+            \begin{itemize}
+                \item \dbl = takeout
+                \item 1\nt = \trsf{\clubs}
+                \item 2\clubs = \trsf{\diams}
+                \item 2\diams = \hearts\ constructive+
+                \item 2\hearts = \hearts\ weak
+                \item 2\spades = \invp\ \small{OFF}
+                \item 2\nt = \invp\ \small{DEF}
+                \item 3\clubs = \mixed
+                \item 3\diams = mini splinter \gf
+                \item 3\spades = splinter
+                \item 4\clubs/4\diams = color + fit
+                \item 4\spades = exclusion
+            \end{itemize}
+
+            \subsubsection*{1\hearts -- (1\nt) -- ?}
+            \begin{itemize}
+                \item \dbl = penalty
+                \item other = \nat
+            \end{itemize}
+
+            \subsubsection*{1\hearts -- (2\clubs) -- ?}
+            \begin{itemize}
+                \item 2\diams/2\hearts/2\spades = \nat\ \nf
+                \item 2\nt = \invp, fit
+                \item 3\clubs = \mixed
+                \item 3\diams/3\spades = \nat\ \gf
+                \item 3\hearts = preempt
+            \end{itemize}
+
+            \vspace{0.3cm}
+            General rule: level 2 = \nf, level 3 = \gf. Of 2\nt\ and the cue-bid, the lower = \invp\ (fit), the higher = \mixed.
+
+        
+        }
+
+        \section*{\colorbox{blue!30}{Opponents' overcalls over 1\spades\ opening}}
+        \addcontentsline{toc}{section}{Opponents' overcalls over 1\spades\ opening} {
+
+            \subsubsection*{1\spades -- (\dbl) -- ?}
+            \begin{itemize}
+                \item 1\nt = \trsf{\clubs}
+                \item 2\clubs = \trsf{\diams}
+                \item 2\diams = \trsf{\hearts}
+                \item 2\hearts = \spades\ constructive+
+                \item 2\spades = \spades\ weak
+                \item 2\nt = \invp, (3)4+\spades
+                \item 3\clubs = \mixed
+                \item 3\diams = mini splinter \gf
+                \item 3\hearts = \hearts\ \inv
+                \item 3\spades = preempt
+                \item 3\nt = splinter, \hearts\ shortness
+                \item 4\clubs/4\diams = splinter
+                \item 4\hearts = to play
+            \end{itemize}
+
+            \subsubsection*{1\spades -- (1\nt) -- ?}
+            \begin{itemize}
+                \item \dbl = penalty
+                \item other = \nat
+            \end{itemize}
+
+        }
+
+        \section*{\colorbox{blue!30}{Opponents' overcalls over 1\ntx\ opening}}
+        \addcontentsline{toc}{section}{Opponents' overcalls over 1\ntx\ opening} {
+
+            \subsubsection*{1\ntx\ -- (\alrts{2\clubs/2\diams}) -- ?}
+            2\clubs/2\diams\ = \major
+            \begin{itemize}
+                \item \dbl = penalty
+                \item 2\diams/2\hearts = \nat\ \nf
+                \item 2\spades = \minor, weak/\gf
+                \item 2\nt = \leb
+                \item 3\clubs/3\diams/3\hearts = transfer, \invp
+                \item 3\spades = \trsf{\clubs}, \gf
+                \item 3\nt = to play, w/o stopper
+            \end{itemize}
+
+            \subsubsection*{1\ntx\ -- (2\clubs/2\diams) -- 2\nt -- (P)\\
+                            3\clubs -- (P) -- ?}
+            \begin{itemize}
+                \item \pass/3\diams = \soff
+                \item 3\hearts/3\spades = ask stopper
+                \item 3\nt = to play, with stopper
+            \end{itemize}
+
+            \subsubsection*{1\ntx\ -- (2\clubs) -- ?}
+            2\clubs\ = \nat
+            \begin{itemize}
+                \item \dbl = Stayman
+                \item other = as without interference
+            \end{itemize}
+
+            \subsubsection*{1\ntx\ -- (2\diams) -- ?}
+            2\diams\ = \nat
+            \begin{itemize}
+                \item \dbl = takeout (may be weak!)
+                \item 2\hearts/2\spades = \nat\ \nf
+                \item 2\nt = \leb
+                \item 3\diams/3\hearts = transfer, \invp
+                \item 3\clubs = ask stopper
+            \end{itemize}
+
+            \subsubsection*{1\ntx\ -- (\alrts{2\diams}) -- ?}
+            2\diams\ = multi
+            \begin{itemize}
+                \item \dbl = strength (subsequent \dbl = penalty)
+                \item 2\hearts/2\spades = \nat\ \nf
+                \item 2\nt = \leb
+                \item 3\clubs/3\diams/3\hearts = transfer, \invp
+                \item \pass\ then opponents' suit = ask stopper
+            \end{itemize}
+
+            \subsubsection*{1\ntx\ -- (2\hearts) -- ?}
+            2\hearts\ = \nat\ or \hearts\ + other suit
+            \begin{itemize}
+                \item \dbl = takeout (may be weak!)
+                \item 2\spades = \nat
+                \item 2\nt = \leb
+                \item 3\clubs/3\hearts/3\spades = transfer, \invp
+                \item 3\diams = ask stopper
+                \item 3\nt = to play, w/o stopper
+                \item 4\hearts = Texas
+                \item 4\spades = to play
+            \end{itemize}
+
+            \subsubsection*{1\ntx\ -- (2\spades) -- ?}
+            2\spades\ = \nat\ or \spades\ + other suit
+            \begin{itemize}
+                \item \dbl = takeout (may be weak!)
+                \item 2\nt = \leb
+                \item 3\clubs/3\diams/3\spades = transfer, \invp
+                \item 3\hearts = ask stopper
+                \item 3\nt = to play, w/o stopper
+                \item 4\diams = Texas
+                \item 4\hearts = to play
+            \end{itemize}
+
+            \subsubsection*{1\ntx\ -- (2\nt) -- ?}
+            2\nt\ = \minor
+            \begin{itemize}
+                \item \dbl = penalty
+                \item 3\clubs = majors, \hearts\ $\geq$ \spades
+                \item 3\diams = majors, \hearts\ $<$ \spades
+                \item 3\hearts/3\spades = to play
+            \end{itemize}
+
+            \subsubsection*{1\ntx\ -- (3\clubs) -- ?}
+            \begin{itemize}
+                \item \dbl = takeout \gf
+                \item 3\diams = \trsf{\hearts}, \invp
+                \item 3\hearts = \trsf{\spades}, \invp
+                \item 3\spades = \trsf{\diams}, \invp
+                \item 3\nt = to play
+                \item 4\diams/4\hearts = Texas
+            \end{itemize}
+
+            \subsubsection*{1\ntx\ -- (3\diams) -- ?}
+            \begin{itemize}
+                \item \dbl = takeout \gf
+                \item 3\hearts = \trsf{\spades}, \invp
+                \item 3\spades = \trsf{\hearts}, \gf
+                \item 3\nt = to play
+                \item 4\diams/4\hearts = Texas
+            \end{itemize}
+
+            \subsubsection*{1\ntx\ -- (3\hearts) -- ?}
+            \begin{itemize}
+                \item \dbl = \trsf{\spades}, \invp \vimp
+                \item 3\spades = takeout \gf \vimp
+                \item 3\nt = to play
+                \item 4\hearts = Texas
+                \item 4\spades = to play
+            \end{itemize}
+
+            \subsubsection*{1\ntx\ -- (3\spades) -- ?}
+            \begin{itemize}
+                \item \dbl = takeout \gf
+            \end{itemize}
+
+        }
+
+        \section*{\colorbox{blue!30}{Dealing with 2-suited overcalls}}
+        \addcontentsline{toc}{section}{Dealing with 2-suited overcalls} {
+
+        }
+
+    }
+
+    \chapter*{\colorbox{Plum!30}{Other opponents' overcalls}}
+    \addcontentsline{toc}{chapter}{Other opponents' overcalls} {
+
+        \section*{\colorbox{blue!30}{RKCB interference}}
+        \addcontentsline{toc}{section}{RKCB interference} {
+
+        }
+
+    }
+
+}
+
+\part*{\colorbox{RoyalPurple!30}{Defensive bidding}}
+\addcontentsline{toc}{part}{Defensive bidding} {
+
+    \chapter*{\colorbox{Plum!30}{1\ntx\ defense}}
+    \addcontentsline{toc}{chapter}{1\ntx\ defense} {
+
+        \subsubsection*{(1\ntx) -- ?}
+        \begin{itemize}
+            \item \dbl = Wilkosz: 5+ \major, 4+ another suit
+            \item 2\clubs = \minor
+            \item other = \nat
+        \end{itemize}
+
+        The same in the direct position.
+
+        When vulnerable, the two-suiter should be 5-5 (common sense).
+
+    }
+
+    \chapter*{\colorbox{Plum!30}{Strong 1\clubs\//Acol defense (Timbuktu)}}
+    \addcontentsline{toc}{chapter}{Strong 1\clubs\//Acol defense (Timbuktu)} {
+
+    }
+
+    \chapter*{\colorbox{Plum!30}{Michaels \textit{\&} Unusual 2\ntx}}
+    \addcontentsline{toc}{chapter}{Michaels \textit{\&} Unusual 2\ntx} {
+    }
+
+    \chapter*{\colorbox{Plum!30}{Kokish 2\diams\ Multi (Wilkosz) defense}}
+    \addcontentsline{toc}{chapter}{Kokish 2\diams\ Multi (Wilkosz) defense} {
+
+    }
+}
+
+\end{document}

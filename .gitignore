@@ -5,6 +5,8 @@
 *.log
 *.out
 *.toc
+*.fls
+*.fdb_latexmk
 .vscode
 /KrysiaBartek2024/source/*.pdf
 *.tmp
